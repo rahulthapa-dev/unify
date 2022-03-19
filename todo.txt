@@ -1,0 +1,29 @@
+- star percentage for 4.65
+- missing icons - vue, Laravel, CodeIgniter, CakePHP3, Symfony, Yii2, and Phalcon, SQL, Node, MongoDB, Git, Express.js, Google cloud, AWS
+Sections
+- Home -> Image with text box init.
+- About us -> 3 reviews.
+- services -> 
+WEB DESIGN
+BRANDING DESIGN
+UX & UI
+Agile Software Development
+Enterprise Application Development
+Mobile App Development
+Devops
+MVP & Prototyping
+
+Our primary focus is on the development and designing part of the application. Our software development agency has perfected agile teams with highly experienced team members.
+
+
+What this type of software development agency offers
+
+Scalable, fully managed services
+
+Business strategy
+Product management
+Software engineering
+UX/UI
+QA management
+DevOps
+Agile
