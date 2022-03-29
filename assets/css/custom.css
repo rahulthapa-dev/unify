@@ -518,3 +518,8 @@ body, .color-description {
 .work-img .card-img-top {
     border-radius: 0;
 }
+@media (min-width: 1200px) {
+    .tab-pane .col-xl-2 {
+        width: calc(100%/5);
+    }
+}
