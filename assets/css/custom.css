@@ -2,6 +2,9 @@
     font-family: 'JaapokkiRegular';
     src: url('../font/jaapokki-regular.woff');
   }
+  p {
+      letter-spacing: 1px;
+  }
   .font-jaapokki {
     font-family: 'JaapokkiRegular' !important;
   }
@@ -517,6 +520,36 @@ body, .color-description {
 }
 .work-img .card-img-top {
     border-radius: 0;
+}
+.card-inner {
+    padding: 1rem;
+    border-radius: 15px;
+    background-color: rgba(0,0,0,1);
+}
+.card-inner .t-describe {
+    font-weight: 400;
+    margin: 0 auto;
+    font-family: 'Roboto', sans-serif !important;
+    line-height: 1.4;
+    font-size: 16px;
+    color: #fff;
+}
+.t-author {
+    font-size: 16px;
+    color: #fff;
+    margin: 0;
+}
+.tns-nav [data-nav] {
+    width: 12px;
+    height: 12px;
+    box-shadow: inset 0 0 0 1px #9a9ea4;
+}
+.tns-controls {
+    display: none;
+}
+.list-inline-item img {
+    width: 17px;
+    margin: 0 1px;
 }
 @media (min-width: 1200px) {
     .tab-pane .col-xl-2 {
