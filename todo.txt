@@ -13,6 +13,16 @@ Mobile App Development
 Devops
 MVP & Prototyping
 
+Sections
+    - Home -> background image, Greeting text and agency name.
+    - About us -> ABOUT AGENCY -> second level text.
+    - services -> list out all services we provided and finalize the designing part.
+    - WORK PROCESS -> 
+Things to do
+    - background image for home page. 
+    - text finalize for "Hello Visitor WE ARE UNIFY CODER Web, Mobile App Development & Designing Agency"
+    - 
+
 Our primary focus is on the development and designing part of the application. Our software development agency has perfected agile teams with highly experienced team members.
 
 
