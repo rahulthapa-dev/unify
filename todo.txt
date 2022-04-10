@@ -18,6 +18,26 @@ Sections
     - About us -> ABOUT AGENCY -> second level text.
     - services -> list out all services we provided and finalize the designing part.
     - WORK PROCESS -> 
+
+Skills Need to adjust - Django, flask, Phalcon, RestAPIs using OAuth 1.0 and 2.0 protocol, Redux, RxJs, AJAX, Service Workers, Web notification.
+- RxJs, Graphql, Elsatice search, Git
+
+Team Skills
+    - Web Development
+        - PHP, Python, Javascript, Node.js, Typescript.
+        - Laravel, Yii2, Symfony, CakePHP, Codeigniter.
+        - React, Vue, Angular, Backbone js, Express.js.
+        - MySql, MariaDB, Redis, MongoDB, Apache Cassandra.
+    - Cloud computing
+        - AWS, Google Cloud, Microsoft Azure.
+    - Mobile Development
+        - React Native, PWA, Flutter.
+    - UI/UX
+        - Photoshop, Illustrator, Figma, Invision
+        - HTML, css3, tailwind, bootstrap, jQuery
+        - sass, less, 
+    - Graphic design
+        - Photoshop, Figma, XD, Illustrator, Invision
 Things to do
     - background image for home page. 
     - text finalize for "Hello Visitor WE ARE UNIFY CODER Web, Mobile App Development & Designing Agency"
