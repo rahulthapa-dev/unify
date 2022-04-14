@@ -20,14 +20,14 @@ Sections
     - WORK PROCESS -> 
 
 Skills Need to adjust - Django, flask, Phalcon, RestAPIs using OAuth 1.0 and 2.0 protocol, Redux, RxJs, AJAX, Service Workers, Web notification.
-- RxJs, Graphql, Elsatice search, Git
+- RxJs, Elsatice search, Git
 
 Team Skills
     - Web Development
-        - PHP, Python, Javascript, Node.js, Typescript.
-        - Laravel, Yii2, Symfony, CakePHP, Codeigniter.
-        - React, Vue, Angular, Backbone js, Express.js.
-        - MySql, MariaDB, Redis, MongoDB, Apache Cassandra.
+        - PHP, Python, Javascript, Node.js, Typescript, Go.
+        - Laravel, Yii2, Symfony, CakePHP, Codeigniter, Phalcon.
+        - React, Vue, Angular, Backbone js, Express.js, Graphql
+        - MySql, PostgrewSQL, MariaDB, Redis, MongoDB, Apache Cassandra.
     - Cloud computing
         - AWS, Google Cloud, Microsoft Azure.
     - Mobile Development
