@@ -551,6 +551,25 @@ body, .color-description {
     width: 17px;
     margin: 0 1px;
 }
+.process svg {
+    width: 50px;
+}
+.process:hover .discuss-svg {
+    fill: #5dbb00;
+    stroke: #448900;
+}
+.process:hover .creative-svg {
+    fill: #E80200;
+    stroke: #000;
+}
+.process:hover .production-svg {
+    fill: #0091ff;
+    stroke: #005697;
+}
+.process:hover .heart-svg {
+    fill: #ff0000;
+    stroke: #cf0101;
+}
 @media (min-width: 1200px) {
     .tab-pane .col-xl-2 {
         width: calc(100%/5);
