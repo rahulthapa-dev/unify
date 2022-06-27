@@ -547,13 +547,24 @@ body, .color-description {
     margin: .1rem
 }
 .card-inner {
-    padding: 1rem;
+    padding: 2rem 1rem;
     border-radius: 5px;
     background-color: rgba(0,0,0,.9);
     min-height: 240px;
     align-items: center;
     display: flex;
     justify-content: center;
+    position: relative;
+}
+.card-inner:after {
+    position: absolute;
+    left: 2rem;
+    top: -12px;
+    content: url(../images/quote-left-solid.svg);
+    color: #fff;
+    width: 7rem;
+    height: 8rem;
+    z-index: -1;
 }
 .center .slick-center .card {
     opacity: 1;
@@ -643,11 +654,4 @@ body, .color-description {
     position: absolute;
     top: 110%;
 }
-@media (min-width: 1200px) {
-    .tab-pane .col-xl-2 {
-        width: calc(100%/5);
-    }
-    #project-pills-tabs-1.tab-pane .col-xl-2 {
-        width: calc(100%/6);
-    }
-}
+

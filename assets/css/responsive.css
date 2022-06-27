@@ -2,6 +2,12 @@
     header.navbar-sticky-on {
         padding: 15px 0;
     }
+    .tab-pane .col-xl-2 {
+        width: calc(100%/5);
+    }
+    #project-pills-tabs-1.tab-pane .col-xl-2 {
+        width: calc(100%/6);
+    }
 }
 @media (min-width: 992px) {
     section.section {
@@ -48,4 +54,10 @@
     #portfolio h2 {
         text-align: center;
     }
+    .slick-arrow.slick-next {
+        right: 34%;
+      }
+      .slick-arrow.slick-prev {
+        left: 34%;
+      }
 }
