@@ -54,10 +54,10 @@
     #portfolio h2 {
         text-align: center;
     }
-    .slick-arrow.slick-next {
+    .center .slick-arrow.slick-next {
         right: 34%;
       }
-      .slick-arrow.slick-prev {
+      .center .slick-arrow.slick-prev {
         left: 34%;
       }
 }

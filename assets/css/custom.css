@@ -121,14 +121,13 @@
     padding: 10px;
     border: 1px solid #f2f2f2;
     width: 200px;
+    margin:0 auto;
     box-shadow: 0 0 15px rgb(0 0 0 / 20%);
-    margin-bottom: 15px;
     border-radius: 8px;
-    margin: 5px;
 }
 .team-outer {
-    height: 170px;
-    overflow: hidden;
+    /* height: 170px;
+    overflow: hidden; */
     border-radius: 0;
 }
 .team .slick-slide {
