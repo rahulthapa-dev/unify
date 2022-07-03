@@ -57,7 +57,13 @@
     .center .slick-arrow.slick-next {
         right: 34%;
       }
-      .center .slick-arrow.slick-prev {
-        left: 34%;
+    .center .slick-arrow.slick-prev {
+    left: 34%;
+    }
+    .team .slick-arrow.slick-next {
+        right: 34%;
       }
+    .team .slick-arrow.slick-prev {
+        left: 34%;
+    }
 }

@@ -653,4 +653,8 @@ body, .color-description {
     position: absolute;
     top: 110%;
 }
+.team-wrapper {
+    margin: 0 auto;
+    max-width:800px;
+}
 
