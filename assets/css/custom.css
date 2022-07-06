@@ -116,17 +116,29 @@
     display: none;
 }
 /*  */
+
 .team-member {
-    position: relative;
-    text-align: center;
-    padding-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #f2f2f2;
+    width: 200px;
+    margin:0 auto;
+    box-shadow: 0 0 15px rgb(0 0 0 / 20%);
+    border-radius: 8px;
 }
-.soc-net {
+.team-outer {
+    /* height: 170px;
+    overflow: hidden; */
+    border-radius: 0;
+}
+.team .slick-slide {
+    padding: .5rem;
+}
+/* .soc-net {
     position: absolute;
     top: 0;
     width: 100%;
     padding-top: 30px;
-}
+} */
 .team-member .member, 
 .team-member p, 
 .team-member h5, 
@@ -148,21 +160,25 @@
     z-index: 1;
 }
 .team-member h5 {
-    font-size: 13px;
+    font-size: 17px;
     font-family: 'jaapokkiRegular';
-    margin-top: 30px;
-    text-transform: uppercase;
+    margin-top: 12px;
+    text-transform: capitalize;
     text-align: center;
     opacity: 1;
+    color: #000;
+    margin-bottom: 0;
 }
 .team-member p {
     font-size: 14px;
     color: #acafba;
-    margin-top: 5px;
+    margin-top: -1px;
     text-align: center;
     opacity: 1;
+    margin-bottom: 0;
+    letter-spacing: 0;
 }
-.team-member:after {
+/* .team-member:after {
     content: '';
     position: absolute;
     top: 0;
@@ -173,7 +189,7 @@
 }
 .team-member:hover .member {
     top: 80px;
-}
+} */
 .member-social {
     position: relative;
     z-index: 1;
@@ -181,12 +197,12 @@
     margin: 0 20px;
     color: #acafba;
 }
-.team-member:hover h5 {
+/* .team-member:hover h5 {
     opacity: 0;
 }
 .team-member:hover p {
     opacity: 0;
-}
+} */
 /*  */
 .our-progress {
     margin-top: 45px;
@@ -521,10 +537,42 @@ body, .color-description {
 .work-img .card-img-top {
     border-radius: 0;
 }
+.slider-container {
+    max-width: 768px;
+    margin: 0 auto;
+    position: relative;
+}
+.slick-slide .card {
+    margin: .1rem
+}
 .card-inner {
-    padding: 1rem;
-    border-radius: 15px;
-    background-color: rgba(0,0,0,1);
+    padding: 2rem 1rem;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,.9);
+    min-height: 240px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.card-inner:after {
+    position: absolute;
+    left: 2rem;
+    top: -12px;
+    content: url(../images/quote-left-solid.svg);
+    color: #fff;
+    width: 7rem;
+    height: 8rem;
+    z-index: -1;
+}
+.center .slick-center .card {
+    opacity: 1;
+    transform: scale(1);
+}
+.center .card {
+    transform: scale(0.95);
+    transition: all 300ms ease;
+    opacity: .8;
 }
 .card-inner .t-describe {
     font-weight: 400;
@@ -553,28 +601,61 @@ body, .color-description {
 }
 .process svg {
     width: 50px;
+    stroke-width: inherit;
 }
 .process:hover .discuss-svg {
-    fill: #5dbb00;
-    stroke: #448900;
+    fill: none;
+    stroke: #399CB6;
+    stroke-width: 2px;
 }
 .process:hover .creative-svg {
-    fill: #E80200;
-    stroke: #000;
+    fill: none;
+    stroke: #970000;
 }
 .process:hover .production-svg {
-    fill: #0091ff;
+    fill: none;
     stroke: #005697;
 }
 .process:hover .heart-svg {
-    fill: #ff0000;
+    fill: none;
     stroke: #cf0101;
 }
-@media (min-width: 1200px) {
-    .tab-pane .col-xl-2 {
-        width: calc(100%/5);
-    }
-    #project-pills-tabs-1.tab-pane .col-xl-2 {
-        width: calc(100%/6);
-    }
+.slick-arrow {
+    top: 115%;
+    height: 40px;
+    width: 40px;
+    background: #000;
+    border-radius: 25px;
+    opacity: .8;
+    transition: all 300ms ease;
 }
+.slick-prev:hover, .slick-prev:focus, .slick-next:hover, .slick-next:focus {
+    opacity: 1;
+    background: #000;
+}
+.slick-arrow.slick-prev {
+    left: 44%;
+}
+.slick-arrow.slick-next {
+    right: 44%;
+}
+.slick-arrow:before {
+    content:'';
+}
+.slick-arrow .fa {
+    color: #fff;
+    font-size: 24px;
+}
+.pagingInfo {
+    font-family: 'jaapokkiRegular';
+    color: #000;
+    font-size: 18px;
+    right: 0;
+    position: absolute;
+    top: 110%;
+}
+.team-wrapper {
+    margin: 0 auto;
+    max-width:800px;
+}
+
