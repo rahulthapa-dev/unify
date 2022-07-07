@@ -605,16 +605,15 @@ body, .color-description {
 }
 .process:hover .discuss-svg {
     fill: none;
-    stroke: #399CB6;
-    stroke-width: 2px;
+    stroke: #00abfb;
 }
 .process:hover .creative-svg {
-    fill: none;
-    stroke: #970000;
+    fill: #a905b6;
+    stroke: none;
 }
 .process:hover .production-svg {
     fill: none;
-    stroke: #005697;
+    stroke: #009988;
 }
 .process:hover .heart-svg {
     fill: none;
