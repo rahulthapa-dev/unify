@@ -1,3 +1,11 @@
+@media (min-width: 1340px) {
+    .navbar-light .navbar-nav .nav-link {
+        font-size: 14px;
+    }
+    header.navbar-sticky-on .navbar-brand .navbar-brand-item {
+        height: 34px;
+    }
+}
 @media (min-width: 1200px) {
     header.navbar-sticky-on {
         padding: 15px 0;
