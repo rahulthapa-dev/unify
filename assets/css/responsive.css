@@ -22,7 +22,34 @@
         padding-top:2.8rem !important ;
     }
 }
-
+@media screen and (max-width: 1199.98px) {
+    .service-tabs li button br, .service-tabs li button img {
+        display: none;
+    }
+    .service-tabs li {
+        width: auto;
+        text-align: center;
+        margin-bottom: 10px;
+        padding: 0 15px;
+    }
+    .service-tabs li button {
+        color: #fff;
+        margin-bottom: 0 !important;
+    }
+    #services .py-md-6 {
+        padding: 2rem 0 2rem!important;
+        display: block;
+    }
+    #services .tabs-wrap .py-md-6 {
+        padding: 0 !important;
+    }
+    .tab-output-wrap {
+        position: relative;
+    }
+    .tab-box h2 {
+        font-weight: 400;
+    }
+}
 @media screen and (max-width: 991px) {
     .top-section {
         min-height: auto;
@@ -35,12 +62,14 @@
         margin-top: 25px !important;
     }
     .service-tabs {
-        padding-top: 30px;
+        padding-top: 0;
     }
     .service-tabs li {
         margin-bottom: 1rem;
     }
-
+    .tab-content {
+        padding: 0 10px;
+    }
 }
 @media screen and (max-width: 767.98px) {
     .process .number {

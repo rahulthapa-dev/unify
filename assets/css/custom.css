@@ -496,6 +496,7 @@ body, .color-description {
 }
 .service-tabs li button img {
     margin-bottom: 1.3rem;
+    width:55px;
 }
 .service-tabs li button span {
     font-family: 'jaapokkiRegular';
