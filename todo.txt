@@ -1,3 +1,28 @@
+Rahul
+- about agency responsive image issue.
+- service section comment.
+- footer and copyright merge.
+- 
+
+Sachin
+- set alt for image.
+- move extra images to one folder.
+- rename the image.
+- remove extra assets.
+- read more in testimonials section
+
+- Work process should be in working mode. 
+- ask vaibhav for image
+- contact us, services section dribble ref search.
+- title change for each team member.
+
+Final work
+- remove unneccesory files.
+- remove dead code.
+- deploy on aws.
+- Head meta tag change for SEO.
+
+
 - star percentage for 4.65
 - missing icons - vue, Laravel, CodeIgniter, CakePHP3, Symfony, Yii2, and Phalcon, SQL, Node, MongoDB, Git, Express.js, Google cloud, AWS
 Sections
@@ -57,3 +82,44 @@ UX/UI
 QA management
 DevOps
 Agile
+
+Review
+
+The output was delivered on time and the quality was great. We will order other projects in the future.
+    - Erika Ishikawa
+
+Great working with Sachin on a longer term Vue3 Project. Will continue to work on other projects
+    - Kiran Kumar
+
+great work
+    - Moshe Herr
+
+Sachin is a super talented individual. I loved working with him, he grasp of complex issues is very very quick. Would love to work with again!
+    - Vikas Singhal
+
+Sachin did a very good job on our Vue 2 to Vue 3 conversion. He provided various detailed solutions in cases of packages that didn't easily convert over. Highly recommend.
+    - Kiran Kumar
+
+Working with Sachin was a great experience. He works fast and effectively. He follows the best practices for APIs development. Communication was clear at all times and he provided all the support needed to troubleshoot and successfully deploy the solution. Highly recommended.
+    - Sumit Aneja
+
+Thank you for your work on this project.
+    - Nathan Gwilliam
+
+Excellent work delivered by Sachin! I am glad that I got the opportunity to work with him. His communication was top-notch, he met all deadlines, and his skills were reasonably strong. At one point I asked for an additional milestone and he accepted it and finished it smoothly. He gave proper time to this project, he solved all of my doubts and provide detailed comments. I enjoyed working with Sachin and will likely have additional jobs for him in the future.
+    - Nisha Bhatt
+
+Very happy with Sachins work, he follows best practices and uses modern techniques. And that at a competitive rate and with quick response to messages.
+    - Jan Bijster
+
+He is well experienced in technical skill, He completed the job on time
+    - Sumit Aneja
+
+Rahul delivered good work on this website HTML/CSS development and I enjoyed working with him. His communication was top-notch, he met all deadlines, and his skills were reasonably strong. I delivered pixel to pixel response pages on time. I enjoyed working with Rahul and will likely have additional jobs for him in the future.
+    - Docket Team
+
+Rahul delivered good work and everything nice in time.
+    - Jan Bijster
+
+Rahul is a skilled web designer. He went above and beyond to meet our expectation. Highly recommended.
+    - Rabiul Islam
