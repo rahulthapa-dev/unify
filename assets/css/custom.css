@@ -604,19 +604,19 @@ body, .color-description {
     width: 50px;
     stroke-width: inherit;
 }
-.process:hover .discuss-svg {
+.process:hover .discuss-svg, button.active .process .discuss-svg, li.active .process .discuss-svg {
     fill: none;
     stroke: #00abfb;
 }
-.process:hover .creative-svg {
+.process:hover .creative-svg, button.active .process .creative-svg, li.active .process .creative-svg {
     fill: #a905b6;
     stroke: none;
 }
-.process:hover .production-svg {
+.process:hover .production-svg, button.active .process .production-svg, li.active .process.production-svg {
     fill: none;
     stroke: #009988;
 }
-.process:hover .heart-svg {
+.process:hover .heart-svg, button.active .process .heart-svg, li.active  .process .heart-svg{
     fill: none;
     stroke: #cf0101;
 }
