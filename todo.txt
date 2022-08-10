@@ -1,3 +1,19 @@
+web development - Our agency follows different stages of web development which include information Gathering, Planning, Design, Coding, Testing, Review and Launch, and Maintenance.
+
+WEB & MOBILE DESIGN - To optimize the web experience for mobile users, our designer team always focuses on Mobile-first and responsive design.
+
+Mobile development - Our main focus is on Cross-Platform, Hybrid-Web, and Progressive Web Applications. Creating installable software bundles, implementing backend services such as data access with an API, and testing the application on target devices. 
+
+- determining whether a product or service meets specified requirements. Our QA person performs both manual and automatic testing for the product.
+
+- We also provide other software development such as API development, backend development, Security Software Development, and cloud computing.
+
+- For the e-commerce platforms, our team has great experience with online stores, B2B and B2C Marketplace, Logistics, and Warehouse Management. We can develop E-commerce ERP, and integrate different payment solutions.
+
+- Under this service, each team member follows the Agile process. Understanding customer requirements, Implementing various development, testing, automation tools, and IT infrastructure, Planning the team structure, activities, and involvement in project management activities are the major concept we follow for DevOps.
+
+- we can build mocks and prototyping using different tools like Figma, Adobe XD, and Sketch. By using these tools we provide interactive prototypes with different UI components with responsive support.
+
 Agile Software Development
 Enterprise Application Development
 Mobile App Development

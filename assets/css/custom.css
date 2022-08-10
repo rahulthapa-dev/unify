@@ -111,8 +111,8 @@
     margin-top: 22px;
     text-transform: uppercase;
 }
-#work-pills-tab-1 .number::after,
-#work-pills-tab-1 .number::before {
+#discuss-wp-tab .number::after,
+#discuss-wp-tab .number::before {
     display: none;
 }
 /*  */
