@@ -127,7 +127,7 @@
         <!-- Logo Nav END -->
     </header>
     <main>
-        <section id="home" class="section top-section position-relative overflow-hidden pt-5 pt-lg-3">
+        <section id="home" class="section top-section position-relative overflow-hidden">
             <div class="container">
                 <div class="mx-auto custom-center text-center">
                     <div class="text-center px-4 py-3 border-5 border border-dark">
@@ -236,7 +236,7 @@
             </div>
         </section>
 
-        <section id="services" class="p-0 mt-5">
+        <section id="services" class="">
             <div class="container-fluid">
                 <div class="row g-4 g-lg-5 align-items-center tab-output-wrap">
                     <div class="tab-output col-xl-6 order-2 order-xl-1 px-xl-6 py-md-6 my-0">
@@ -456,7 +456,7 @@
             </div>
         </section>
         
-        <section id="work-process" class="pt-5 pt-lg-6 mt-4 section">
+        <section id="work-process" class="pt-5 pt-lg-6 section">
             <div class="container">
                 <div class="row">
                     <div class="col-12 text-center">
@@ -1548,7 +1548,7 @@
             </div>
         </section>
         
-        <section id="team" class="pb-5 pt-5 pt-lg-6 section">
+        <section id="team" class="pb-5 section">
             <div class="container">
                 <div class="row mb-4">
                     <div class="col-lg-8 mx-auto text-center">
@@ -1733,7 +1733,7 @@
             // Now we loop through sections to get height, top and ID values for each
             sections.forEach(current => {
                 const sectionHeight = current.offsetHeight;
-                const sectionTop = current.offsetTop - 50;
+                const sectionTop = current.offsetTop - 96;
                 sectionId = current.getAttribute("id");
 
                 if (

@@ -13,13 +13,16 @@
     .tab-pane .col-xl-2 {
         width: calc(100%/5);
     }
-    #project-pills-tabs-1.tab-pane .col-xl-2 {
+    #web-developement-skills-tabs.tab-pane .col-xl-2 {
         width: calc(100%/6);
     }
 }
 @media (min-width: 992px) {
-    section.section {
+    /* section.section {
         padding-top:2.8rem !important ;
+    } */
+    section, .pt-lg-6 {
+        padding-top: 6rem !important;
     }
 }
 @media screen and (max-width: 1199.98px) {
