@@ -95,24 +95,9 @@ var e = {
         e.toolTipFunc(),
         e.popOverFunc(),
         e.backTotop(),
-        e.lightBox(),
         e.enableIsotope(),
         e.choicesSelect(),
-        e.aosFunc(),
-        e.dashboardChart(),
-        e.earningChart(),
-        e.earningChart2(),
-        e.trafficChart(),
-        e.activeChart(),
-        e.activeChart2(),
-        e.reviewChart(),
-        e.quill(),
-        e.stepper(),
-        e.videoPlyr(),
-        e.darkMode(),
-        e.pricing(),
-        e.stickyElement(),
-        e.overlayScrollbars();
+        e.aosFunc()
         
     },
     isVariableDefined: function (el) {
