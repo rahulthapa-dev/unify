@@ -1605,7 +1605,7 @@
     </main>
 
     <div class="bg-black py-4 text-center">
-        <div class="row">
+        <div class="">
             <div class="col-lg-12 text-center my-5">
                 <a class="me-0 mb-4" href="index.html">
                     <img class="h-40px" src="assets/images/logo-light.svg" alt="logo">
