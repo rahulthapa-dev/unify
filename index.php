@@ -5,15 +5,6 @@
 <html lang="en">
 
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PHZCVLZ4EB"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-PHZCVLZ4EB');
-    </script>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="Cache-control" content="public">
     
@@ -39,17 +30,30 @@
     <link rel="icon" type="image/png" href="assets/images/favicon-32x32.png" sizes="32x32" />
     <link rel="icon" type="image/png" href="assets/images/favicon-16x16.png" sizes="16x16" />
     <!-- Plugins CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/slick/slick-theme.css" />
-    <link rel="stylesheet" type="text/css" href="assets/slick/slick.css" />
+    <link rel="stylesheet" async type="text/css" href="assets/slick/slick-theme.css" />
+    <link rel="stylesheet" async type="text/css" href="assets/slick/slick.css" />
     <!-- <link rel="stylesheet" type="text/css" href="assets/vendor/tiny-slider/tiny-slider.css"> -->
     <!-- Theme CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/custom.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <link rel="stylesheet" async type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" async type="text/css" href="assets/css/custom.css">
+    <link rel="stylesheet" async type="text/css" href="assets/css/responsive.css">
+    <link rel="stylesheet" async type="text/css" href="assets/css/animate.min.css" />
 
-    <script src="assets/js/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PHZCVLZ4EB"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-PHZCVLZ4EB');
+    </script>
+    <script type="text/javascript" src="assets/js/jquery-3.6.0.min.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="assets/slick/slick.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <!-- Vendors -->
+    <script src="assets/js/functions.js"></script>
 </head>
 
 <body>
@@ -1618,151 +1622,147 @@
     </div>
 
     <div class="back-top"><img src="assets/images/fa-replace/up-arrow.svg" class="position-absolute top-50 start-50 translate-middle"></div>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <!-- Vendors -->
-
-    <script src="assets/js/functions.js"></script>
-    <script>
-        var $status = $('.pagingInfo');
-        var $slickElement = $('.slideshow');
-
-        $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-        //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
-        var i = (currentSlide ? currentSlide : 0) + 1;
-        $status.text(i + '/' + slick.slideCount);
-        });
-        $('.center').slick({
-            centerMode: true,
-            centerPadding: '60px',
-            slidesToShow: 1,
-            adaptiveHeight: true,
-            prevArrow:"<button type='button' class='slick-prev pull-left align-custom'><img src='assets/images/fa-replace/previous.svg' aria-hidden='true' /></button>",
-            nextArrow:"<button type='button' class='slick-next pull-right align-custom'><img src='assets/images/fa-replace/next.svg' aria-hidden='true' /></i></button>",
-            responsive: [{
-                breakpoint: 768,
-                settings: {
-                    arrows: true,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1
-                }
-            }, {
-                breakpoint: 480,
-                settings: {
-                    arrows: true,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1
-                }
-            }]
-        });
-        $('.team').slick({
-        dots: false,
-        infinite: false,
-        speed: 400,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        prevArrow:"<button type='button' class='slick-prev pull-left align-custom'><img src='assets/images/fa-replace/previous.svg' aria-hidden='true' /></button>",
-        nextArrow:"<button type='button' class='slick-next pull-right align-cuetom'><img src='assets/images/fa-replace/next.svg' aria-hidden='true' /></button>",
-        responsive: [
-            {
-            breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: false,
-                    dots: false
-                }
-            },
-            {
-            breakpoint: 640,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1
-                }
-            },
-            {
-            breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            } 
-        ]
-        });
-        
-        $("ul#agency-wp-list li").click(function() {
-            let allPrevSiblings = $(this).prevAll();
-            let allNextSiblings = $(this).nextAll();
-            if (allPrevSiblings.length) {
-                allPrevSiblings.each(function(i, t){
-                    $(t).find('div.bg-transparent').addClass('active');
-                })
-            }
-            allNextSiblings.each(function(i, t){
-                $(t).find('div.bg-transparent').removeClass('active');
-            })
-        });
-
-        // Example starter JavaScript for disabling form submissions if there are invalid fields
-        (function() {
-            'use strict'
-
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            var forms = document.querySelectorAll('.needs-validation')
-
-            // Loop over them and prevent submission
-            Array.prototype.slice.call(forms)
-                .forEach(function(form) {
-                    form.addEventListener('submit', function(event) {
-                        if (!form.checkValidity()) {
-                            event.preventDefault()
-                            event.stopPropagation()
-                        }
-
-                        form.classList.add('was-validated')
-                    }, false)
-                })
-        })()
-        // Get all sections that have an ID defined
-        const sections = document.querySelectorAll("section[id]");
-
-        // Add an event listener listening for scroll
-        window.addEventListener("scroll", navHighlighter);
-
-        function navHighlighter() {
-
-            // Get current scroll position
-            let scrollY = window.pageYOffset;
-
-            // Now we loop through sections to get height, top and ID values for each
-            sections.forEach(current => {
-                const sectionHeight = current.offsetHeight;
-                const sectionTop = current.offsetTop - 96;
-                sectionId = current.getAttribute("id");
-
-                if (
-                    scrollY > sectionTop &&
-                    scrollY <= sectionTop + sectionHeight
-                ) {
-                    document.querySelector(".navbar-nav a[href*=" + sectionId + "]").classList.add("current");
-                } else {
-                    document.querySelector(".navbar-nav a[href*=" + sectionId + "]").classList.remove("current");
-                }
-            });
-        }
-    </script>
-    <script>
-        $("span.read-more-link").on("click", function() {
-            $(this).parent().find('span.read-more-text').css("display", "block");
-            $(this).remove();
-        });
-        $(function(){
-            var $navClone = $('#nav-process-desktop').clone();
-            $('#nav-process').html($navClone);
-        });
-    </script>
 </body>
 </html>
+
+<script>
+    var $status = $('.pagingInfo');
+    var $slickElement = $('.slideshow');
+
+    $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
+    //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+    var i = (currentSlide ? currentSlide : 0) + 1;
+    $status.text(i + '/' + slick.slideCount);
+    });
+    $('.center').slick({
+        centerMode: true,
+        centerPadding: '60px',
+        slidesToShow: 1,
+        adaptiveHeight: true,
+        prevArrow:"<button type='button' class='slick-prev pull-left align-custom'><img src='assets/images/fa-replace/previous.svg' aria-hidden='true' /></button>",
+        nextArrow:"<button type='button' class='slick-next pull-right align-custom'><img src='assets/images/fa-replace/next.svg' aria-hidden='true' /></i></button>",
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                arrows: true,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 1
+            }
+        }, {
+            breakpoint: 480,
+            settings: {
+                arrows: true,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 1
+            }
+        }]
+    });
+    $('.team').slick({
+    dots: false,
+    infinite: false,
+    speed: 400,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    prevArrow:"<button type='button' class='slick-prev pull-left align-custom'><img src='assets/images/fa-replace/previous.svg' aria-hidden='true' /></button>",
+    nextArrow:"<button type='button' class='slick-next pull-right align-cuetom'><img src='assets/images/fa-replace/next.svg' aria-hidden='true' /></button>",
+    responsive: [
+        {
+        breakpoint: 1024,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: false,
+                dots: false
+            }
+        },
+        {
+        breakpoint: 640,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1
+            }
+        },
+        {
+        breakpoint: 480,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        } 
+    ]
+    });
+    
+    $("ul#agency-wp-list li").click(function() {
+        $(this).addClass('active');
+        let allPrevSiblings = $(this).prevAll();
+        let allNextSiblings = $(this).nextAll();
+        if (allPrevSiblings.length) {
+            allPrevSiblings.each(function(i, t){
+                $(t).addClass('active');
+            })
+        }
+        allNextSiblings.each(function(i, t){
+            $(t).removeClass('active');
+        });
+    });
+
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+            .forEach(function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    })()
+    // Get all sections that have an ID defined
+    const sections = document.querySelectorAll("section[id]");
+
+    // Add an event listener listening for scroll
+    window.addEventListener("scroll", navHighlighter);
+
+    function navHighlighter() {
+
+        // Get current scroll position
+        let scrollY = window.pageYOffset;
+
+        // Now we loop through sections to get height, top and ID values for each
+        sections.forEach(current => {
+            const sectionHeight = current.offsetHeight;
+            const sectionTop = current.offsetTop - 96;
+            sectionId = current.getAttribute("id");
+
+            if (
+                scrollY > sectionTop &&
+                scrollY <= sectionTop + sectionHeight
+            ) {
+                document.querySelector(".navbar-nav a[href*=" + sectionId + "]").classList.add("current");
+            } else {
+                document.querySelector(".navbar-nav a[href*=" + sectionId + "]").classList.remove("current");
+            }
+        });
+    }
+</script>
+<script>
+    $("span.read-more-link").on("click", function() {
+        $(this).parent().find('span.read-more-text').css("display", "block");
+        $(this).remove();
+    });
+    $(function(){
+        var $navClone = $('#nav-process-desktop').clone();
+        $('#nav-process').html($navClone);
+    });
+</script>
