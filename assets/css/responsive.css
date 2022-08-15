@@ -107,3 +107,12 @@
         left: 34%;
     }
 }
+@media (max-width: 575.98px) {
+    .top-section {
+        background-image: none !important;
+    }
+    section#home {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
