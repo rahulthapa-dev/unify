@@ -1665,7 +1665,7 @@
         slidesToShow: 3,
         slidesToScroll: 1,
         prevArrow:"<button type='button' class='slick-prev pull-left align-custom'><img src='assets/images/fa-replace/previous.svg' aria-hidden='true' /></button>",
-        nextArrow:"<button type='button' class='slick-next pull-right align-cuetom'><img src='assets/images/fa-replace/next.svg' aria-hidden='true' /></button>",
+        nextArrow:"<button type='button' class='slick-next pull-right align-custom'><img src='assets/images/fa-replace/next.svg' aria-hidden='true' /></button>",
         responsive: [
             {
             breakpoint: 1024,

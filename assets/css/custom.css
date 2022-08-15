@@ -130,15 +130,19 @@ body {
     font-family: 'jaapokkiRegular';
     color: #acafba;
 }
+.show-progress.active .process-on .number::after,
 .show-progress .active .process-on .number::after {
     width: 80%;
 }
+.show-progress.active .number::after,
 .show-progress .active .number::after {
     opacity: 1;
 }
+.show-progress.active .number,
 .show-progress .active .number {
     border-color: #acafba;
 }
+.show-progress.active .process,
 .show-progress .active .process {
     opacity: 1;
 }
@@ -671,15 +675,20 @@ li.active div .process .discuss-svg, li div.active .process .discuss-svg {
 }
 
 .process:hover .creative-svg, button.active .process .creative-svg, 
+li.active div .process .creative-svg,
 li div.active .process .creative-svg {
     fill: #a905b6;
     stroke: none;
 }
-.process:hover .production-svg, button.active .process .production-svg, li div.active .process .production-svg {
+.process:hover .production-svg, button.active .process .production-svg, 
+li.active div .process .production-svg,
+li div.active .process .production-svg {
     fill: none;
     stroke: #009988;
 }
-.process:hover .heart-svg, button.active .process .heart-svg, li div.active .process .heart-svg {
+.process:hover .heart-svg, button.active .process .heart-svg,
+li.active div .process .heart-svg,
+li div.active .process .heart-svg {
     fill: none;
     stroke: #cf0101;
 }
