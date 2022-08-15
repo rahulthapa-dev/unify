@@ -1694,16 +1694,17 @@
         });
         
         $("ul#agency-wp-list li").click(function() {
+            $(this).addClass('active');
             let allPrevSiblings = $(this).prevAll();
             let allNextSiblings = $(this).nextAll();
             if (allPrevSiblings.length) {
                 allPrevSiblings.each(function(i, t){
-                    $(t).find('div.bg-transparent').addClass('active');
+                    $(t).addClass('active');
                 })
             }
             allNextSiblings.each(function(i, t){
-                $(t).find('div.bg-transparent').removeClass('active');
-            })
+                $(t).removeClass('active');
+            });
         });
 
         // Example starter JavaScript for disabling form submissions if there are invalid fields
