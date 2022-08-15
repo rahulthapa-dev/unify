@@ -52,6 +52,9 @@
     .tab-box h2 {
         font-weight: 400;
     }
+    .tab-output {
+        min-height: 80vh;
+    }
 }
 @media screen and (max-width: 991px) {
     .top-section {
@@ -114,5 +117,9 @@
     section#home {
         padding-top: 0;
         padding-bottom: 0;
+    }
+    .custom-center {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
     }
 }

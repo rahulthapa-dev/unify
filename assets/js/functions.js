@@ -5,38 +5,6 @@
 * @version 1.1.0
 **/
 
-
-/* ===================
-Table Of Content
-======================
-01 PRELOADER
-02 MEGA MENU
-03 STICKY HEADER
-04 TINY SLIDER
-05 STICKY BAR
-06 TOOLTIP
-07 POPOVER
-08 BACK TO TOP
-10 GLIGHTBOX
-11 ISOTOPE
-12 CHOICES
-13 AOS ANIMATION
-14 DASHBOARD CHART
-15 EARNING CHART
-16 EARNING CHART 2
-17 TRAFFIC CHART
-18 ACTIVE STUDENT CHART
-19 ACTIVE STUDENT CHART 2
-20 REVIEW CHART
-21 QUILL EDITOR
-22 STEPPER
-23 VIDEO PLAYER
-24 DARK MODE
-25 PRICING
-26 STICKY ELEMENT
-27 OVERLAY SCROLLBARS
-====================== */
-
 "use strict";
 !function () {
 
@@ -88,12 +56,8 @@ var ThemeColor = function () {
 var e = {
     init: function () {
         e.preLoader(),
-        e.megaMenu(),
         e.stickyHeader(),
-        e.tinySlider(),
         e.stickyBar(),
-        e.toolTipFunc(),
-        e.popOverFunc(),
         e.backTotop(),
         e.enableIsotope(),
         e.choicesSelect(),
@@ -242,32 +206,7 @@ var e = {
     },
     // END: Preloader
 
-    // START: 02 Mega Menu
-    megaMenu: function () {
-        e.onAll('.dropdown-menu a.dropdown-item.dropdown-toggle', 'click', function (event) {
-            var element = this;
-            event.preventDefault();
-            event.stopImmediatePropagation();
-            if (e.isVariableDefined(element.nextElementSibling) && !element.nextElementSibling.classList.contains("show")) {
-                const parents = e.getParents(element, '.dropdown-menu');
-                e.removeClass(parents.querySelector('.show'), "show");
-                if(e.isVariableDefined(parents.querySelector('.dropdown-opened'))){
-                    e.removeClass(parents.querySelector('.dropdown-opened'), "dropdown-opened");
-                }
-
-            }
-            var $subMenu = e.getNextSiblings(element, ".dropdown-menu");
-            e.toggleClass($subMenu, "show");
-            $subMenu.previousElementSibling.toggleClass('dropdown-opened');
-            var parents = e.getParents(element, 'li.nav-item.dropdown.show');
-            if (e.isVariableDefined(parents) && parents.length > 0) {
-                e.on(parents, 'hidden.bs.dropdown', function (event) {
-                    e.removeAllClass('.dropdown-submenu .show');
-                });
-            }
-        });
-    },
-    // END: Mega Menu
+    
 
     // START: 03 Sticky Header
     stickyHeader: function () {
@@ -294,103 +233,7 @@ var e = {
     },
     // END: Sticky Header
 
-    // START: 04 Tiny Slider
-    tinySlider: function () {
-        var $carousel = e.select('.tiny-slider-inner');
-        if (e.isVariableDefined($carousel)) {
-          var tnsCarousel = e.selectAll('.tiny-slider-inner');
-          tnsCarousel.forEach(slider => {
-              var slider1 = slider;
-              var sliderMode = slider1.getAttribute('data-mode') ? slider1.getAttribute('data-mode') : 'carousel';
-              var sliderAxis = slider1.getAttribute('data-axis') ? slider1.getAttribute('data-axis') : 'horizontal';
-              var sliderSpace = slider1.getAttribute('data-gutter') ? slider1.getAttribute('data-gutter') : 30;
-              var sliderEdge = slider1.getAttribute('data-edge') ? slider1.getAttribute('data-edge') : 0;
-
-              var sliderItems = slider1.getAttribute('data-items') ? slider1.getAttribute('data-items') : 4; //option: number (items in all device)
-              var sliderItemsXl = slider1.getAttribute('data-items-xl') ? slider1.getAttribute('data-items-xl') : Number(4); //option: number (items in 1200 to end )
-              var sliderItemsLg = slider1.getAttribute('data-items-lg') ? slider1.getAttribute('data-items-lg') : Number(sliderItemsXl); //option: number (items in 992 to 1199 )
-              var sliderItemsMd = slider1.getAttribute('data-items-md') ? slider1.getAttribute('data-items-md') : Number(sliderItemsLg); //option: number (items in 768 to 991 )
-              var sliderItemsSm = slider1.getAttribute('data-items-sm') ? slider1.getAttribute('data-items-sm') : Number(sliderItemsMd); //option: number (items in 576 to 767 )
-              var sliderItemsXs = slider1.getAttribute('data-items-xs') ? slider1.getAttribute('data-items-xs') : Number(sliderItemsSm); //option: number (items in start to 575 )
-
-              var sliderSpeed = slider1.getAttribute('data-speed') ? slider1.getAttribute('data-speed') : 500;
-              var sliderautoWidth = slider1.getAttribute('data-autowidth') === 'true'; //option: true or false
-              var sliderArrow = slider1.getAttribute('data-arrow') !== 'false'; //option: true or false
-              var sliderDots = slider1.getAttribute('data-dots') !== 'false'; //option: true or false
-
-              var sliderAutoPlay = slider1.getAttribute('data-autoplay') !== 'false'; //option: true or false
-              var sliderAutoPlayTime = slider1.getAttribute('data-autoplaytime') ? slider1.getAttribute('data-autoplaytime') : 4000;
-              var sliderHoverPause = slider1.getAttribute('data-hoverpause') === 'true'; //option: true or false
-              if (e.isVariableDefined(e.select('.custom-thumb'))) {
-                var sliderNavContainer = e.select('.custom-thumb');
-              } 
-              var sliderLoop = slider1.getAttribute('data-loop') !== 'false'; //option: true or false
-              var sliderRewind = slider1.getAttribute('data-rewind') === 'true'; //option: true or false
-              var sliderAutoHeight = slider1.getAttribute('data-autoheight') === 'true'; //option: true or false
-              var sliderfixedWidth = slider1.getAttribute('data-fixedwidth') === 'true'; //option: true or false
-              var sliderTouch = slider1.getAttribute('data-touch') !== 'false'; //option: true or false
-              var sliderDrag = slider1.getAttribute('data-drag') !== 'false'; //option: true or false
-              // Check if document DIR is RTL
-              var ifRtl = document.getElementsByTagName("html")[0].getAttribute("dir");
-              var sliderDirection;
-              if (ifRtl === 'rtl') {
-                  sliderDirection = 'rtl';
-              }
-
-              var tnsSlider = tns({
-                  container: slider,
-                  mode: sliderMode,
-                  axis: sliderAxis,
-                  gutter: sliderSpace,
-                  edgePadding: sliderEdge,
-                  speed: sliderSpeed,
-                  autoWidth: sliderautoWidth,
-                  controls: sliderArrow,
-                  nav: sliderDots,
-                  autoplay: sliderAutoPlay,
-                  autoplayTimeout: sliderAutoPlayTime,
-                  autoplayHoverPause: sliderHoverPause,
-                  autoplayButton: false,
-                  autoplayButtonOutput: false,
-                  controlsPosition: top,
-                  navContainer: sliderNavContainer,
-                  navPosition: top,
-                  autoplayPosition: top,
-                  controlsText: [
-                      '<i class="fas fa-chevron-left"></i>',
-                      '<i class="fas fa-chevron-right"></i>'
-                  ],
-                  loop: sliderLoop,
-                  rewind: sliderRewind,
-                  autoHeight: sliderAutoHeight,
-                  fixedWidth: sliderfixedWidth,
-                  touch: sliderTouch,
-                  mouseDrag: sliderDrag,
-                  arrowKeys: true,
-                  items: sliderItems,
-                  textDirection: sliderDirection,
-                  responsive: {
-                      0: {
-                          items: Number(sliderItemsXs)
-                      },
-                      576: {
-                          items: Number(sliderItemsSm)
-                      },
-                      768: {
-                          items: Number(sliderItemsMd)
-                      },
-                      992: {
-                          items: Number(sliderItemsLg)
-                      },
-                      1200: {
-                          items: Number(sliderItemsXl)
-                      }
-                  }
-              });
-          }); 
-        }
-    },
-    // END: Tiny Slider
+    
 
     
     // START: 05 Sticky Bar
@@ -401,26 +244,6 @@ var e = {
         }
     },
     // END: Sticky Bar
-
-    // START: 06 Tooltip
-    // Enable tooltips everywhere via data-toggle attribute
-    toolTipFunc: function () {
-        var tooltipTriggerList = [].slice.call(e.selectAll('[data-bs-toggle="tooltip"]'))
-        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-          return new bootstrap.Tooltip(tooltipTriggerEl)
-        })
-    },
-    // END: Tooltip
-
-    // START: 07 Popover
-    // Enable popover everywhere via data-toggle attribute
-    popOverFunc: function () {
-        var popoverTriggerList = [].slice.call(e.selectAll('[data-bs-toggle="popover"]'))
-        var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
-          return new bootstrap.Popover(popoverTriggerEl)
-        })
-    },
-    // END: Popover
 
     // START: 08 Back to Top
     backTotop: function () {

@@ -1,7 +1,49 @@
 @font-face {
     font-family: 'JaapokkiRegular';
     src: url('../font/jaapokki-regular.woff');
-  }
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('../font/roboto/Roboto-Regular.woff2') format('woff2'),
+        url('../font/roboto/Roboto-Regular.woff') format('woff'),
+        url('../font/roboto/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../font/roboto/Roboto-Medium.woff2') format('woff2'),
+        url('../font/roboto/Roboto-Medium.woff') format('woff'),
+        url('../font/roboto/Roboto-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../font/roboto/Roboto-Light.woff2') format('woff2'),
+        url('../font/roboto/Roboto-Light.woff') format('woff'),
+        url('../font/roboto/Roboto-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../font/roboto/Roboto-Bold.woff2') format('woff2'),
+        url('../font/roboto/Roboto-Bold.woff') format('woff'),
+        url('../font/roboto/Roboto-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+body {
+    font-family: 'Roboto';
+}
   p {
       letter-spacing: 1px;
   }
@@ -25,7 +67,7 @@
     background-position: center !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;
-    height: 100vh;
+    min-height: 100vh;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -687,4 +729,18 @@ li div.active .process .creative-svg {
 }
 .fw-500 {
     font-weight: 500;
+}
+.align-custom {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.align-custom img {
+    width:22px;
+}
+.back-top:hover {
+    background-color: rgba(0,0,0,.5);
+}
+.translate-middle {
+    width: 24px;
 }
