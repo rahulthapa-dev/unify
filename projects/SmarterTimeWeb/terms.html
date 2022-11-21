@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Smarter:Time</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+  <!-- Plugin CSS -->
+  <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+  <link rel="stylesheet" href="vendor/device-mockups/device-mockups.css">
+
+  <!-- Theme CSS -->
+  <link href="css/custom-home-default.css?v=1.0.7" rel="stylesheet">
+  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+  <!-- Owl Carousel Assets -->
+  <link href="owl-carousel/owl.carousel.css" rel="stylesheet">
+  <link href="owl-carousel/owl.theme.css" rel="stylesheet">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <script src="https://use.typekit.net/zbj3iob.js"></script>
+  <script>
+    try {
+      Typekit.load({
+        async: true
+      });
+    } catch (e) {}
+  </script>
+  <!-- Google Analytics Code for www.smartertime.com -->
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-58088967-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+<!-- Google Code for Clics Play Store Conversion Page
+In your html page, add the snippet and call
+goog_report_conversion when someone clicks on the
+chosen link or button. -->
+<script type="text/javascript">
+  /* <![CDATA[ */
+  goog_snippet_vars = function() {
+    var w = window;
+    w.google_conversion_id = 951756794;
+    w.google_conversion_label = "t_SKCMjsvG4Q-s_qxQM";
+    w.google_remarketing_only = false;
+  }
+  // DO NOT CHANGE THE CODE BELOW.
+  goog_report_conversion = function(url) {
+    goog_snippet_vars();
+    window.google_conversion_format = "3";
+    var opt = new Object();
+    opt.onload_callback = function() {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  }
+  var conv_handler = window['google_trackConversion'];
+  if (typeof(conv_handler) == 'function') {
+    conv_handler(opt);
+  }
+}
+/* ]]> */
+</script>
+<script type="text/javascript"
+  src="//www.googleadservices.com/pagead/conversion_async.js">
+</script>
+  <!-- Hotjar Tracking Code for www.smartertime.com -->
+  <script>
+    (function(h, o, t, j, a, r) {
+      h.hj = h.hj || function() {
+        (h.hj.q = h.hj.q || []).push(arguments)
+      };
+      h._hjSettings = {
+        hjid: 372721,
+        hjsv: 5
+      };
+      a = o.getElementsByTagName('head')[0];
+      r = o.createElement('script');
+      r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=');
+  </script>
+  <script src="js/myreferrer.js?n=2"></script>
+</head>
+
+<body id="page-top" class="feature-body" onload="javascript:getReferrer()">
+  <div class="get-from-playstore">
+    <a target="_blank" onclick="goog_report_conversion ('javascript:goToPlaystore()')" href="javascript:goToPlaystore()"><img src="img/google-play.png" alt="">Get App</a>
+  </div>
+  <div class="get-the-beta">
+    <a href="#">iOS Beta</a>
+  </div>
+  <div class="contact-float">
+    <a href="https://twitter.com/smartertime"><i class="fa fa-twitter"></i></a>
+    <a href="https://www.facebook.com/smartertime/"><i class="fa fa-facebook"></i></a>
+    <a href="#" class="contact-div"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  </div>
+  <header class="home-header">
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top fixed">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img src="img/logo-home.png" class="img-responsive img-head" alt="">
+            <img src="img/logo-rest.png" class="img-responsive img-rest" alt="">
+          </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a>
+            </li>
+            <li><a href="features.html">Features</a>
+            </li>
+            <li><a href="downloads.html">Downloads</a>
+            </li>
+            <li><a href="https://medium.com/smarter-time" target="_blank">Blog</a>
+            </li>
+          </ul>
+          <!-- <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#" class="beta-tester">Become a Beta Tester</a></li>
+                    </ul> -->
+        </div>
+        <!--/.nav-collapse -->
+      </div>
+    </nav>
+  </header>
+  <section class="beta-welcome">
+    <div class="container">
+      <h2>General Terms and Conditions of Use</h2>
+      <p>Last updated version: 10 March 2015</p>
+      <h3>Article 1 - Purpose</h3>
+      <p>Smarter Time is a service aimed at optimising your time. It guesses your activities using your location, how you move, what you do on your phone and computer, and it learns from your history. It consists of a mobile application, a desktop application and web services. Smarter Time is developed by:</p>
+      <p>Smarter Time SAS
+        </br>18 Rue Taylor, 75010 Paris, France
+        </br>RCS Paris B 803 936 046
+        </br>Share capital: 30.000 euros
+        </br>contact@smartertime.com
+        </br>Tel. +33 (0)1 77 16 08 72
+      </p>
+      <p>Our applications and services are declared to the French privacy controller CNIL, declaration 1818487.</p>
+      <p>Smarter Time provides you with its services under the condition that you accept the General Terms and Conditions of Use below, the purpose of which is to set the technical, practical and legal terms of our relationship. When you install Smarter Time or sign up, you confirm that you have full and complete understanding of these General Terms and Conditions of Use, which you unconditionally accept and promise to respect.</p>
+      <p>As a private individual, you therefore promise not to use Smarter Time services for business, marketing, canvassing or advertising purposes. If Smarter Time was informed in any way that the information of one of its users was the object of fraudulent use, Smarter Time reserves the right to terminate as a matter of right, and without prior warning or compensation, the subscription of the affected account, and to refuse future access to all or a part of the services available on Smarter Time to the person who misappropriated or fraudulently used that information.</p>
+      <h3>Article 2 – Access Conditions</h3>
+      <p>Smarter Time is not intended for and is not designed for children under 13 years of age. If you are 13 or older but under the age of 18, then you agree to review the agreement with parent(s) or guardian(s) to ensure that both you parent(s) and guardian(s) understand and consent to the agreement and that the user and his or her parent(s) or guardian(s) reviewed and accepted the agreement on the user’s behalf through the Smarter Time registration process. If the reader of the agreement is a parent or guardian entering this agreement for the benefit of a child over 14, then he or she agrees to take full responsibility for his or her child’s use of Smarter Time, including all financial charges and legal liability that such child may incur.</p>
+      <p>Within the limits of the laws and regulations in effect, Smarter Time reserves the right to terminate, without prior warning or any financial compensation, any subscription to services subscribed by a minor or a legally-incapacitated person who would have fraudulently lied about his/her age or identity.</p>
+      <h3>Article 3 – Services Offered</h3>
+      <p>Smarter Time provides both free and paid services.</p>
+      <p>In both cases, Smarter Time lets you enter data pertaining to what you are doing every day and, thanks to a geolocation system, to where each action takes place. Depending on your preferences, geolocation can be made approximate or more precise, so that the app can automatically infer your activities in real time.</p>
+      <p>You always keep the possibility to enter the information about your day manually.</p>
+      <h3>Article 4 – Subscription to Services</h3>
+      <h4>4.1 –    Practical Methods of Subscription</h4>
+      <p>To access the free and paid services on Smarter Time, you can – or must for paid services – create an account by clicking on the link provided for that purpose and then filling in all the required fields (marked with an asterisk) in the subscription form available in our app under “Create Your Account”. If you inadvertently forget to fill in one of the fields, Smarter Time will send you an error message and require that you rectify the error.</p>
+      <p>You will then be asked to carefully read these General Terms and Conditions of Use. Check the box to indicate that you have read them and accept them.</p>
+      <p>Once these steps are completed and, if applicable, full payment is made for the relevant service, as a subscriber to Smarter Time you will have a username and password that are strictly personal and confidential and should not be disclosed to anyone. You are solely responsible for their use. As a result, Smarter Time shall in no way be held responsible for the loss of your username and/or your password.</p>
+      <p>Your password can be reset from your e-mail address, but cannot be communicated as it is not stored in clear on our servers.</p>
+      <h4>4.2 –    Basic and Premium services</h4>
+      <p>Smarter Time offers you a reduced subset of the application features for free. To allow us to cover the cost of services, you accept that advertisements from Smarter Time’s partners may appear while you are using the app.</p>
+      <p>When subscribing to the Premium offer, which is a paid package, you unlock access to all the features and do not see ads displayed anymore.</p>
+      <h3>Article 5 – Rates and Methods of Payment</h4>
+                <p>All rates for Premium services include tax and the payments are processed through the Google Play Store platform.</p>
+            <h3>Article 6 – Protection of Personal Data</h3>
+      <p>As part of the app management, if you register, Smarter Time will collect your e-mail address in order to manage your account. We do not collect your banking information, which is processed through a dedicated system on the Google Play Store Platform.</p>
+      <p>For the app to fulfil its purpose, Smarter Time also collects information regarding your daily activities and your location. That is necessary in order to analyse your timetable and help you analyse and optimise it. All such information may be accessed by the app’s service provider, but exclusively for technical purposes, such as: multi-device synchronisation, backup, restoration, algorithm improvements or web dashboard.</p>
+      <p>Your data is stored exclusively within the territory of the European Union.</p>
+      <p>Among the locations and activities that you input, some can reveal, directly or indirectly, sensitive information such as your racial or ethnic origins, your political, philosophical or religious convictions, your union membership, your health or your sexual life. To protect your privacy, Smarter Time strongly recommends that you register such data within the field of sensitive and/or secret activities – created and provided by Smarter Time’s app for that purpose – which under no circumstances are collected by Smarter Time and will remain on your phone only. We will not know what these activities are. In the event that you prefer not to classify such activities as sensitive and/or secret but decide to register them into your Smarter Time’s app without any restriction, you will be considered as having expressly agreed that Smarter Time processes your sensitive data.</p>
+      <p>In any case, Smarter Time invites you to take all necessary security measures, such as locking your phone with an access code, in order to avoid that any unauthorised third party accesses data registered on your Smarter Time app. Not doing so is at your own risk. Under no circumstances can Smarter Time be held liable for any loss or unauthorised access to data registered on your Smarter Time app.</p>
+      <p>Smarter Time uses geolocation to guess your place and room, and to infer your activity. To maximise the app’s benefits Smarter Time recommends that you enable geolocation on your device, but you can disable it whenever you want.</p>
+      <p>Smarter Time reserves the right to use the information you provide for statistical purposes. However it will do so on an aggregated basis only, foreclosing any nominative identification for commercial purposes by any third parties, notably our business partners.</p>
+      <p>In accordance with the European requirements on data protection, you may access, modify or rectify your personal data at any time. Please contact Smarter Time at 18 Rue Taylor, 75010 Paris or contact@smartertime.com for any request. We will get back to you as soon as possible.</p>
+      <h3>Article 7 – Usage statistics</h3>
+      <p>As you use the app, some anonymous information – such as your Internet protocol address, usage of the application, and access times – may be passively collected and stored by us or on our behalf. To that end, Smarter Time uses the service Google Analytics and that service only. The purpose of Google Analytics is to help companies understand how users interact with their apps in order to make improving apps possible without collecting any identifiable user data.</p>
+      <h3>Article 8 – Intellectual Property</h3>
+      <p>Any trademarks, logos, graphics, photos, animations, videos or texts appearing in the app, with the exception of those obtained through links to other websites, apps or advertising authorised by Smarter Time, are the intellectual property of Smarter Time and may not be reproduced, used or represented without specific authorisation from Smarter Time under threat of legal proceedings.</p>
+      <p>In accordance with these General Terms and Conditions of Use, you agree to use that intellectual property for personal use only, and therefore not to modify, copy, reproduce, download, publish, share or commercialise that information for any purpose whatsoever, and in particular, for sales and marketing purposes.</p>
+      <p>Smarter Time hereby grants you a non-exclusive, non-transferable, revocable license to use the app as follows to employ the app with one account.</p>
+      <h3>Article 9 – Modification</h3>
+      <p>Smarter Time reserves the right to modify, improve or develop at any time the pages on the app, the services offered, their applicable rates or these General Terms and Conditions of Use.</p>
+      <p>Such modifications will come into effect as soon as they are activated on Smarter Time and, starting from that date, will apply to any subscribed service.</p>
+      <p>For that reason, we encourage you to regularly consult our offers as well as the General Terms and Conditions of Use available on Smarter Time.</p>
+      <h3>Article 10 – Failure to retract – Termination – Force Majeure</h3>
+      <p>In accordance with these General Terms and Conditions of Use, you acknowledge that the paid services to which you subscribe are available immediately and may not, under any circumstances and in accordance with article L. 121-21-8 of the Consumer Code (‘Code de la consommation’), be subject to a right to retract, except during the two hours following the purchase of the app pursuant to the general conditions of Google Play Store Platform.</p>
+      <p>Smarter Time reserves the right to terminate your account, following a notice period of 7 days, in the event that you fail to comply with your obligations in accordance with these General Terms and Conditions of Use.</p>
+      <p>Your obligations as well as Smarter Time’s, in accordance with these General Terms and Conditions of Use, may be suspended in case of a force majeure event. If suchforce majeure event should last for more than thirty (30) days, your account will be automatically terminated without yourself or Smarter Time being able to claim any compensation.</p>
+      <h3>Article 11 – App Functionality and Service Continuity</h3>
+      <p>Access to Smarter Time is available 7 days a week, 24 hours a day, barring any possible breakdowns or technical problems, app maintenance, technical updates or improvements required to ensure the app’s functionality and service continuity.</p>
+      <p>Therefore, in accordance with these General Terms and Conditions of Use, you promise not to hold Smarter Time responsible for any disruption to the app functionality and service continuity. More precisely, Smarter Time has no responsibility or liability for the deletion or accuracy of any content, including your content.</p>
+      <p>To access Smarter Time, you must use a tablet or a phone with an Internet connection and with parameters such as to allow for adequate access to the app. Smarter Time does not guarantee that the app will be compatible with your mobile device or your tablet.</p>
+      <p>Smarter Time cannot be held responsible for any malfunction, access denial or wrong user condition caused by the device, the Internet provider, network congestion, or any other reason not associated with Smarter Time. Besides, you alone are responsible for paying all telephone and Internet access fees incurred through the use of your device, and Smarter Time cannot in any case be held responsible for the payment of those fees.</p>
+      <h3>Article 12 – Liability</h3>
+      <p>As editor of the app, Smarter Time is required to monitor the activity and information contained in ads appearing in the app or in any hypertext links available on Smarter Time, so as to ensure that they do not contain any detectably unlawful data.</p>
+      <p>This obligation applies only to information that is readily available to Smarter Time. In no case can Smarter Time be held responsible for a lack of veracity of the ad, or for the manner in which the services advertised are offered to the addressee of the ad or requested by the ad’s depositary. As a result, Smarter Time can in no way be held responsible for the non-performance or inferior performance of such services.</p>
+      <p>You agree to inform Smarter Time as soon as possible of any violation of current legislation of which you are made aware and which would specifically derive from the content or purpose of an ad displayed in our app. Based on the elements you have provided, Smarter Time reserves the right to delete as a matter of right, without prior warning or compensation, the relevant ad or hypertext link.</p>
+      <h3>Article 13 – Language</h3>
+      <p>These General Terms and Conditions of Use are available in English.</p>
+      <h3>Article 14 – Governing law and devolution of powers</h3>
+      <p>These General Terms and Conditions of Use are governed by, construed and applied in accordance with French law.</p>
+      <p>Any legal disputes arising from the construing, modification, implementation, or rescinding of these General Terms and Conditions of Use will, in the absence of an amicable settlement, be under the exclusive jurisdiction of courts of law located within the jurisdiction of the Paris Court of Appeal.</p>
+    </div>
+  </section>
+  <footer class="footer-home">
+    <div class="container-fluid">
+      <div class="row row-padding">
+        <div class="col-xs-6 col-sm-4 col-md-2 footer-division display-big">
+          <div class="footer-icon" style="text-align:left;">
+            <img src="img/footer-logo.png" alt="" class="img-responsive">
+          </div>
+          <div class="copy-right">
+            &#169; Smarter Time 2016
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-2 footer-division">
+          <h3>About Us</h3>
+          <ul>
+            <li><a href="https://medium.com/smarter-time">Blog</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-2 footer-division">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="downloads.html">Downloads</a>
+            </li>
+            <li><a href="terms.html">Terms and Conditions</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-2 footer-division">
+          <h3>Features</h3>
+          <ul>
+            <li><a href="features.html">Automated Learning</a>
+            </li>
+            <li><a href="features.html">Room level location</a>
+            </li>
+            <li><a href="features.html">Analytics</a>
+            </li>
+            <li><a href="features.html">Calender Integration</a>
+            </li>
+            <li><a href="features.html">Desktop client</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-3   footer-division">
+          <h3>Find us on</h3>
+          <ul>
+            <li><a href="press.html">Press</a>
+            </li>
+            <li class="social-icons"><a href="https://twitter.com/smartertime"><i class="fa fa-twitter"></i></a><a href="https://www.facebook.com/smartertime/"><i class="fa fa-facebook"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row display-small">
+        <div class="col-md-12 footer-icon">
+          <img src="img/footer-logo.png" alt="" class="img-responsive">
+        </div>
+        <div class="copy-right text-center">
+          &#169; Smarter Time 2016
+        </div>
+      </div>
+  </footer>
+  <!-- modal -->
+  <div class="col-sm-6 col-md-5 col-xs-12" id="contact">
+    <form method="post" action="sendm.php" id="contact-form">
+      <div class="">
+        <div class="">
+          <div class="modal-header">
+            <div class="head-arrw">
+              <img class="hide-div" src="img/arrow-left.png" alt="">
+              <h2>Get in touch</h2>
+            </div>
+          </div>
+          <div class="modal-body">
+
+            <div class="form-group">
+              <label for="">Your Name</label>
+              <input type="text" class="form-control required" name="name">
+            </div>
+            <div class="form-group">
+              <label for="">Your Email Address</label>
+              <input type="email" class="form-control required" name="email">
+            </div>
+            <div class="form-group">
+              <label for="">What do you wish to discuss?</label>
+              <textarea class="form-control required" name="message" id="" cols="30" rows="10"></textarea>
+            </div>
+            <input type="text" name="email-check" value="" style="position:absolute; left:-5000px">
+            <div id="mce-responses-1" class="clear">
+              <div class="response mce-success-response" style="display:none"></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="form-group text-center">
+          <button id="contact-form-button" class="send-form-button">Send Contact Form</button>
+        </div>
+      </div>
+
+    </form>
+
+  </div>
+  <div class="col-sm-6 col-md-5 col-xs-12" id="betester">
+    <script type="text/javascript">
+     window.Maitre = {
+       uuid: "MF1cf8552fe9",
+       test_mode: false
+     };
+   </script>
+   <script data-maitre src='https://maitreapp.co/widget.js' async></script>
+  </div>
+  <!-- jQuery -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+  <!-- Theme JavaScript -->
+  <script src="js/main.js"></script>
+  <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="owl-carousel/owl.carousel.js"></script>
+  <script>
+    $('.hide-div').click(function() {
+      $('#betester,#contact').animate({
+        right: "-700"
+      }, 500, function() {
+        $('#betester,#contact').hide();
+      });
+    });
+    $(document).ready(function() {
+      $(".get-the-beta,.beta-tester").click(function() {
+
+        // Set the effect type
+        var effect = 'slide';
+
+        // Set the options for the effect type chosen
+        var options = {
+          direction: 'Right'
+        };
+
+        // Set the duration (default: 400 milliseconds)
+        var duration = 500;
+
+        //$('#betester').toggle('slide','bottom');
+        $('#betester').css('right', '-700px');
+        $('#betester').show().animate({
+          right: "0"
+        }, 500);
+        return false;
+      });
+      $(".contact-div").click(function() {
+
+        // Set the effect type
+        var effect = 'slide';
+
+        // Set the options for the effect type chosen
+        var options = {
+          direction: 'Right'
+        };
+
+        // Set the duration (default: 400 milliseconds)
+        var duration = 500;
+
+        //$('#betester').toggle('slide','bottom');
+        $('#contact').css('right', '-700px');
+        $('#contact').show().animate({
+          right: "0"
+        }, 500);
+
+        return false;
+      });
+
+      $('#contact-form-button').on('click', function() {
+        err = 0;
+        $('#contact-form').find('.required').each(function() {
+          if ($(this).val() == '') {
+            $(this).css('border-color', 'red');
+            err = 1;
+            return false;
+          } else {
+            $(this).css('border-color', '#503b6b');
+          }
+        });
+        if (!err) {
+          console.log('no error');
+
+          var $form = $('#contact-form'),
+            name = $form.find("input[name='name']").val(),
+            email = $form.find("input[name='email']").val(),
+            message = $form.find("textarea[name='message']").val(),
+            email_check = $form.find("input[name='email-check']").val(),
+            url = 'sendm.php';
+
+          // Send the data using post
+          var posting = $.post(url, {
+            name: name,
+            email: email,
+            message: message,
+            emailCheck: email_check
+          });
+
+          // Put the results in a div
+          posting.done(function(data) {
+            console.log(data);
+            $('#mce-responses-1 .mce-success-response').text(data).show();
+          });
+        }
+        return false;
+      });
+
+    });
+    $(document).mouseup(function(e) {
+      var container = $("#betester,#contact");
+
+      if (!container.is(e.target) // if the target of the click isn't the container...
+        && container.has(e.target).length === 0) // ... nor a descendant of the container
+      {
+        container.hide();
+      }
+    });
+
+    $('#mainNav').removeClass('affix-top').addClass('affix');
+    $(window).scroll(function() {
+      $('#mainNav').removeClass('affix-top').addClass('affix');
+    })
+  </script>
+
+  <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+  <script type='text/javascript'>
+    (function($) {
+      window.fnames = new Array();
+      window.ftypes = new Array();
+      fnames[1] = 'FNAME';
+      ftypes[1] = 'text';
+      fnames[0] = 'EMAIL';
+      ftypes[0] = 'email';
+    }(jQuery));
+    var $mcj = jQuery.noConflict(true);
+  </script>
+  <!--End mc_embed_signup-->
+
+
+</body>
+
+</html>
