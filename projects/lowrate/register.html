@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Register</title>
+    <!--Import Material Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="sass/lowrate.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="sass/font.css"/>
+    <!--Let browser know website is optimized for mobile-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body class="lowrate white">
+      <div class="mainWrapper User_login_page login_page">
+      <div class="row row_login">
+        <div class="col l6 m6 s6 panel_left_login hide-on-med-and-large">
+          <div class="welcome_login">
+              <div class="leftLogincontrol">
+                  <span class="videoControl pointer"><i class="material-icons white-text">play_circle_filled</i></span>
+                  <h5 class="white-text">Welcome to Low Rate Insurance</h5>
+                  <h1 class="white-text">Telephone or Online Rest Assured, It's Low Rates Every Time!</h1>
+                </div>
+            </div>
+          </div>
+
+          <div class="col l6 m6 s12 user_login">
+              <div class="login_panel s12 offset-s0">
+                  <header class="login_logo">
+                    <div class="logo_login">
+                      <img src="images/login-logo.png" alt="lowrate logo">
+                    </div>
+                  </header>
+                  <div class="input-field roundedInput">
+                    <input placeholder="Enter name" id="name" class="validate" type="text">
+                  </div>
+                  <div class="input-field roundedInput">
+                    <input placeholder="Enter your email" id="email" class="validate" type="email">
+                  </div>
+                  <div class="input-field roundedInput wIcon">
+                    <input placeholder="Password" id="password" class="validate" type="password">
+                    <i class="material-icons">visibility_off</i>
+                  </div>
+				  <div class="input-field roundedInput wIcon">
+                    <input placeholder="Confirm Password" id="confirmpassword" class="validate" type="password">
+                    <i class="material-icons">visibility_off</i>
+                  </div>
+				  <div class="input-field roundedInput">
+                    <input placeholder="Enter refreral code (Optional)" id="refreralcode" class="validate" type="text">
+                  </div>
+                  <div class="payment_options clearfix">
+                    <div class="rememberMe">
+                      <p>Add Payment Method</p>
+                      <div class="addNow">
+                          <input class="with-gap" id="rdo_addnow" name="kit_radio" checked="checked" type="radio"><label for="rdo_addnow">Add Now</label>
+                      </div>
+                      <div class="addLater">
+                          <input class="with-gap" id="rdo_addlater" name="kit_radio" type="radio"><label for="rdo_addlater">Do it later</label>
+                      </div>                        
+                   </div>
+                 </div>
+                 <div class="login_button btn_wrapper">
+                   <a class="waves-effect raddius25 btn-flat btn-large blue white-text modal-trigger" href="#paymentMethod">Continue</a>
+                 </div>
+                 <div class="newUser">
+                     <p class="center-align">Already registered? <a class="blue-text" href="login.html">Login here</a></p>
+                 </div>                
+              </div>
+          </div>
+       
+        </div>
+      </div>
+      <!--****** Payment Method Modal *******-->
+      <div id="paymentMethod" class="modal paymentModal">
+        <div class="modalHeader blue">
+            <h5 class="white-text">Add Payment Method</h5>
+            <a href="javascript:void(0)" class="modal-action modal-close closeModal"><i class="material-icons">close</i></a>
+        </div>
+        <div class="modal-content white">
+            <div class="row methods">
+                <div class="col l6 m6 s6">
+                    <div id="visaDetail" class="visa white">
+                        <img src="images/visa.png" align="visa">
+                    </div>
+                </div>
+                <div class="col l6 m6 s6 no-padding-left">
+                    <div id="payPalDetail" class="payPal white">
+                        <img src="images/paypal.png" align="visa">
+                    </div>
+                </div>                
+            </div>
+            <div class="cardDetail">
+                <div class="detailWrapper">
+                    <div class="input-field top_zero no-border-input">
+                      <input placeholder="Card Number" id="first_name" type="text" class="validate">
+                    </div>
+                    <div class="cardExpiry">
+                        <div class="input-field expireDate">
+                          <select>
+                            <option value="2" selected>01</option>
+                            <option value="3">02</option>
+                            <option value="4">03</option>
+                            <option value="4">04</option>
+                            <option value="4">05</option>
+                            <option value="4">06</option>
+                            <option value="4">07</option>
+                            <option value="4">08</option>
+                          </select>
+                        </div>
+                        <div class="input-field expireyear no-border-input">
+                          <select>
+                            <option value="2" selected>2018</option>
+                            <option value="3">2019</option>
+                            <option value="4">2020</option>
+                          </select>
+                        </div>                                                
+                    </div>
+                    <div class="input-field no-border-input">
+                      <input placeholder="Card Holder’s Name" id="first_name" type="text" class="validate">
+                    </div>
+                    <div class="input-field no-border-input">
+                      <input placeholder="Card Label (Optional)" id="first_name" type="text" class="validate">
+                    </div>
+                    <div class="input-field btnControl">
+                        <a id="saveCard" class="waves-effect raddius25 btn-flat btn-large green accent-1 white-text" href="javascript:void(0)">Save</a>
+                    </div>
+                </div>
+            </div>
+            <div class="saveCardDetail">
+                <div class="detailWrapper">
+                    <div class="card_detail white">
+                        <div class="card_Owner">
+                            <div class="visa_icon">
+                                <img src="images/visa-sm.png" alt="visa">
+                            </div>
+                            <div class="cardNumber">
+                                <p class="ownerName">MANPREET SINGH</p>
+                                <p class="secretNumber"><span>****</span><span>****</span><span>****</span><span>1234</span></p>
+                            </div>
+                        </div>  
+                        <div class="displayDates">
+                            <span>Expiry Date</span>
+                            <p>01/2018</p>
+                        </div> 
+                        <a href="javascript:void(0)" class="remove_card red-text text-accent-1">Remove</a> 
+                    </div>
+                    <div class="btnControlls">
+                    <a class="waves-effect raddius25 btn-flat btn-large green modal-action modal-close accent-1 white-text" href="javascript:void(0)">Complete Signup</a>
+                    </div>
+                </div>
+            </div>
+            <div class="paypal_payment">
+                <div class="paypalDetail">
+                   <div class="input-field no-border-input">
+                    <input placeholder="Enter your paypal email ID" id="first_name" type="text" class="validate">
+                    
+                  </div>
+                  <div class="btnControlls">
+                      <a class="waves-effect raddius25 btn-flat btn-large green accent-1 white-text modal-close closeModal" href="javascript:void(0)">Save</a>                  
+                  </div>
+            </div>
+        </div>
+      </div>      
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/bin/materialize.min.js"></script>
+      <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>

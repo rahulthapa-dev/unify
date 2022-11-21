@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>Customer Detail</title>    
+		<!--Import Material Icon Font-->
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Import Catamaran Font-->
+		<link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="sass/hoops-crm.css"  media="screen,projection"/>
+		<link type="text/css" rel="stylesheet" href="sass/nouislider.css"  media="screen,projection"/>
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body id="qoute-list-body" class="hoops-UIkit grey body-light">
+
+    	<!-- add contacts -->
+		<div id="addNotes" class="modal globalModalStyle mdmodal">
+		    <div class="modal-content">
+		    	<div class="header-and">
+		    		<h3>Add note</h3>
+		    	</div>
+
+		    	<div class="form-wrapper">
+		    		<form class="add-decoration-frm">
+		    			<div class="inner-form">
+			    			<div class="field row">
+							  	<div class="input-field clearfix">
+							  		<div class="col l12 no-padding-left no-padding-right">
+						  				<textarea id="add-note" class="materialize-textarea custome-textarea" placeholder="Enter your note text here..."></textarea>
+							  		</div>
+							    </div>
+			    			</div>
+			    			<div class="field row">
+			    				<div class="col l6 no-padding-left">
+									<div class="input-field customSelectfield">
+										<i class="material-icons placeholderIcon blue-text">label</i>
+									    <select multiple>
+										    <option value="" disabled selected>Tag users</option>
+										    <option value="1">Option 1</option>
+										    <option value="2">Option 2</option>
+										    <option value="3">Option 3</option>
+									    </select>
+									    <div class="selectedUser">
+									    	<div class="clear15"></div>
+									    	<p class="black-text size14">Tagged users</p>
+									    	<ul>
+									    		<li><img class="img-responsive" src="images/img-user.png"><i class="material-icons">cancel</i></li>
+									    		<li><img class="img-responsive" src="images/img-user.png"><i class="material-icons">cancel</i></li>
+									    		<li><img class="img-responsive" src="images/img-user.png"><i class="material-icons">cancel</i></li>
+									    	</ul>
+									    </div>
+									</div>
+								</div>
+								<div class="col l6 no-padding-right right">
+									<div class="input-field customSelectfield">
+										<i class="material-icons placeholderIcon blue-text">link</i>
+									    <select multiple>
+										    <option value="" disabled selected>Associated with</option>
+										    <option value="1">Option 1</option>
+										    <option value="2">Option 2</option>
+										    <option value="3">Option 3</option>
+									    </select>
+									    <div class="linkedItems">
+									    	<div class="clear15"></div>
+									    	<p class="black-text size14">Associated with</p>
+									    	<ul>
+									    		<li>
+										    		<i class="material-icons light-blue-text size16">check_circle</i>
+										    		T-shirt with company logo
+										    		<a href="javascript:;"><i class="material-icons grey-text size16 right">close</i></a>
+									    		</li>
+									    		<li>
+										    		<i class="material-icons light-blue-text size16">check_circle</i>
+										    		Pen design with company logo
+										    		<a href="javascript:;"><i class="material-icons grey-text size16 right">close</i></a>
+									    		</li>
+									    	</ul>
+									    </div>
+									</div>
+								</div>
+			    			</div>
+
+			    		</div>	
+		    			<div class="form-buttons">
+	    					<a class="text-link grey-text text-lighten-7 modal-action modal-close" href="javascript:void(0)"><i class="material-icons icon-left">clear</i> Cancel</a><a class="waves-effect waves-light btn-flat btn-large light-blue white-text" href="javascript:void(0)">Save</a>
+		    			</div>
+		    		</form>
+		    	</div>
+		    	<span class="close-model modal-action modal-close"><i class="material-icons">close</i></span>
+		    </div>
+		</div>
+		<!-- //add contacts -->
+
+    	<div class="main-wrapper">
+    		<!-- SIDEBAR NAVIGATION -->
+            <div class="side-nav fixed white" id="main_navigation">
+
+            	<div class="logo">
+            		<a href="javascript:void(0)"><img src="images/logo.png" alt="hoops crm"/></a>
+            	</div>
+
+            	<div class="logo-small hide">
+            		<a href="javascript:void(0)"><img src="images/logo-small.png" alt="hoops crm"/></a>
+            	</div>
+            	<div class="current_user">
+            		<div class="name_user dropdown-button pointer" data-activates='user-dropdown' data-beloworigin="true">
+            			<span class="user_thumb">
+            				<img class="img-responsive" src="images/img-user.png">
+            			</span>
+            			<a class="user-log" href="javascript:void(0)">Kate Winslet <i class="material-icons">keyboard_arrow_down</i></a>
+	    			    <ul id='user-dropdown' class='dropdown-content'>
+						    <li><a href="javascript:void(0)"><i class="material-icons">account_circle</i>My Profile</a></li>
+						    <li class="divider"></li>
+						    <li><a href="javascript:void(0)"><i class="material-icons">https</i>Change Password</a></li>
+						    <li class="divider"></li>
+						    <li><a href="javascript:void(0)"><i class="material-icons">power_settings_new</i>Logout </a></li>
+					    </ul>
+            			
+            		</div>
+            	</div>
+
+	            <ul class="main-menu">
+					<li><a class="tooltipped" data-position="right" data-delay="50" data-tooltip="Dashboadrd" href="#/"><i class="material-icons">dashboard</i><span class="nav_link_text">Dashboard</span></a></li>
+					<li><a class="active tooltipped" href="customer.html" data-position="right" data-delay="50" data-tooltip="Customers"><i class="material-icons">person</i><span class="nav_link_text">Customers</span></a></li>
+					<li><a class="tooltipped" href="product-catalog.html" data-position="right" data-delay="50" data-tooltip="Catalogue"><i class="material-icons">view_list</i><span class="nav_link_text">Catalogue</span></a></li>
+					<li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Leads"><i class="material-icons">my_location</i><span class="nav_link_text">Leads</span></a></li>
+					<li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Quotes"><i class="material-icons">book</i><span class="nav_link_text">Quotes</span></a></li>
+					<li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Jobs"><i class="material-icons">assignment</i><span class="nav_link_text">Jobs</span></a></li>
+					<li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Calender"><i class="material-icons">today</i><span class="nav_link_text">Calender</span></a></li>
+					<li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Purchase Orders"><i class="material-icons">description</i><span class="nav_link_text">Purchase Orders</span></a></li>
+					<li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Purchase Orders"><i class="material-icons">view_carousel</i><span class="nav_link_text">Presentations</span></a></li>
+					<li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Reports"><i class="material-icons">poll</i><span class="nav_link_text">Reports</span></a></li>
+					
+	            </ul>
+			</div>
+			<!-- //SIDEBAR NAVIGATION -->
+
+			<!-- //header  -->
+	        <header id="header">
+	               <nav class="navbar_header light-blue lighten-5 row">
+	                  <div class="nav-wrapper col s12">
+	                  <a href="#" data-activates="main_navigation" class="button-collapse"><i class="material-icons">menu</i></a>
+	                  	<div class="toggles">
+		                    <a href="#" class="toggle-sidebar hide-on-med-and-down"><i class="material-icons white-text">chevron_left</i></a>
+		                    <a href="#" class="expand-sidebar hide"><i class="material-icons white-text">menu</i></a>
+		                 </div> 
+
+	                    <ul id="nav-mobile" class="right">
+                    		<li class="dropMenu" id="search_place">	                      
+                        		<a class='search_button-open' href='#'>
+                           			<i class="material-icons white-text">search</i>
+                        		</a> 
+
+	                            <div class="input-field search_header">
+						          <input id="header-search" class="white" placeholder="Enter your search here..." id="search_header" type="text" class="validate">
+						          <i id="close-header-search" class="material-icons white-text grey-text text-lighten-8">search</i>
+						        </div>
+
+                     		 </li>
+
+							<li class="dropMenu">
+								<a class='dropdown-button' href='#' data-beloworigin="true" data-constrainWidth="false" data-alignment="right" data-activates='addCustomer'>
+									<i class="material-icons white-text">add_circle</i>
+								</a>
+								<div id='addCustomer' class='dropdown-content dropdown-eq'>
+									<ul>
+										<li><a href="#!"><i class="material-icons">person_add</i>Add Customers</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">my_location</i>Add Leads</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">receipt</i>Create Quotes</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">work</i>Schedule Jobs</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">event_note</i>Add to Calendar</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">library_add</i>Add Catalogue</a></li>
+									</ul>
+								</div>
+							</li>
+	                        <li class="dropMenu">
+								<a class='dropdown-button' href='#' data-beloworigin="true" data-constrainWidth="false" data-alignment="right" data-activates='setting'>
+									<i class="material-icons white-text">settings</i>
+								</a>
+								<div id='setting' class='dropdown-content dropdown-eq'>
+									<ul>
+										<li><a href="#!"><i class="material-icons">wb_incandescent</i>Decorations</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">group</i>Vendors</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">info</i>General</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">extension</i>Integrations</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">drafts</i>Email Templates</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">check_box</i>Job Tasks</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">person</i>Users</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">attach_money</i>Billing</a></li>
+									</ul>
+								</div>
+	                        </li>
+
+	                        <li class="relative">
+	                      		<a href="#" class='dropdown-button' href='#' data-beloworigin="true" data-constrainWidth="false" data-alignment="right" data-activates='notification'>
+	                  				<i class="material-icons white-text">notifications</i> <span class="notification-number pulse ">3</span>
+	                  			</a>
+								<ul id='notification' class='dropdown-content'>
+									<li>
+										<div class="notification_wrapper">
+											<ul class="clearfix">
+												<li>
+													<div class="notification_icon">
+														<span class="icon-noti purple">
+															<i class="material-icons white-text">my_location</i>
+														</span>
+													</div>
+
+													<div class="notification-text">
+														<p>Alexandra Jones <span class="grey-text text-lighten-7">added a new lead</span></p>
+														<a href="javascript:void(0)" class="light-blue-text text-base">Team info design company</a>
+														<span class="time-duration grey-text text-lighten-7">10 min ago</span>
+													</div>
+												</li>
+
+												<li>
+													<div class="notification_icon">
+														<span class="icon-noti grey lighten-9">
+															<i class="material-icons white-text">person</i>
+														</span>
+													</div>
+
+													<div class="notification-text">
+														<p>Sierra Dickinson <span class="grey-text text-lighten-7">is now added as a customer</span></p>
+														<a href="javascript:void(0)" class="light-blue-text text-base">Robbing Hoods Car Detailing</a>
+														<span class="time-duration grey-text text-lighten-7">2 hours ago</span>
+													</div>
+												</li>
+
+												<li>
+													<div class="notification_icon">
+														<span class="icon-noti yellow lighten-4">
+															<i class="material-icons white-text">work</i>
+														</span>
+													</div>
+
+													<div class="notification-text">
+														<p>Olivia Kelly <span class="grey-text text-lighten-7">created a job</span></p>
+														<a href="javascript:void(0)" class="light-blue-text text-base">Fresh Prince of Bel-Air</a>
+														<span class="time-duration grey-text text-lighten-7">20 min ago</span>
+													</div>
+												</li>
+
+												<li>
+													<div class="notification_icon">
+														<span class="icon-noti blue-grey darken-4">
+															<i class="material-icons white-text">receipt</i>
+														</span>
+													</div>
+
+													<div class="notification-text">
+														<p>Allison Faber <span class="grey-text text-lighten-7">created a quote.</span></p>
+														<a href="javascript:void(0)" class="light-blue-text text-base">Think Promotional</a>
+														<span class="time-duration grey-text text-lighten-7">7 July, 2017</span>
+													</div>
+												</li>
+												<li>
+													<div class="notification_icon">
+														<span class="icon-noti purple">
+															<i class="material-icons white-text">my_location</i>
+														</span>
+													</div>
+
+													<div class="notification-text">
+														<p>Kate Winslet <span class="grey-text text-lighten-7">added a new lead</span></p>
+														<a href="javascript:void(0)" class="light-blue-text text-base">Pen printing and T-shirts design</a>
+														<span class="time-duration grey-text text-lighten-7">12 July 2017</span>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</li>		
+								</ul>
+                  		    </li>
+
+	                    </ul>
+	                  </div>
+	                </nav>
+	        </header>
+          	<!-- //header  -->
+
+	        <!--****  Mobile Search  ****-->
+	        <div class="responsive-search">
+	          		<div class="input-field custom-search bordered white">
+				        <div class="input">
+				        	<i class="material-icons">search</i>
+				        	<input placeholder="Search here..." id="first_name" class="validate" type="text">
+				        </div>
+			        </div>
+	        </div>
+			<!--****  /End Mobile Search  ****-->
+
+          	<!--******     Main Content Starts      ******-->
+
+		    <main id="content_wrapper" class="qoute-detail customer-detail grey body-dark">
+			    <div class="row row-padding filters-header">
+			    	<div class="header-right-quote">
+						<h3 class="headingSection">
+						<a href="customer.html" class="left"><i class="material-icons">keyboard_backspace</i></a>Think Promotional
+						<div class="actionBtn right">
+							<a class="btn-flat white darken-01-text text-darken-01 right dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table' href="javascript:void(0)">Action<i class="material-icons">arrow_drop_down</i></a>
+							<ul id='dropdown-table' class='dropdown-content'>
+							    <li><a href="#!"><i class="material-icons">email</i>Send email</a></li>
+							    <li><a href="#!"><i class="material-icons">local_printshop</i>Print Shipping Label</a></li>
+							    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+							    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+							    <li class="divider"></li>
+							</ul>
+						</div>
+						</h3>
+					</div>
+			    </div>
+		    	<div class="row row-padding-custom flex">
+		    		<!-- left section -->
+		    		<div class="col l4 m4 s12 left-qoute-detail flex">
+			    		<div class="col l12 m12 s12 grey body-light-1 block z-depth-1">
+			    			<h4 class="blockHead"><span class="info-icon light-blue"><i class="material-icons">person</i></span>Contact information</h4>
+			    			<div class="information white left-section">
+			    				<div class="detail col l6 pad0">
+			    					<span>Company</span>
+			    					<p>Ketchum's Ketchup</p>
+			    				</div>
+			    				<div class="detail col l6 pad0">
+			    					<span>Contact name</span>
+			    					<p>Ash Ketchum</p>
+			    				</div>
+			    				<div class="detail">
+			    					<span>Email</span>
+			    					<p>ash@ketchum.gov.uk<span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span>ash2581@ketchum.gov.uk</p>
+			    				</div>
+			    				<div class="detail">
+			    					<span>Contact Number</span>
+			    					<p>+1-123-456-7891<span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span>+1-524-854-6598</p>
+			    				</div>
+
+			    				<div class="detail">
+			    					<span>Billing address</span>
+			    					<p>Jane roe, 200 e main st, phoenix az, 85123, usa</p>
+			    				</div>
+			    				<div class="detail">
+			    					<span>Shipping address</span>
+			    					<p>Jane roe, 200 e main st, phoenix az, 85123, usa</p></p>
+			    				</div>
+			    				<div class="detail col l6 pad0">
+			    					<span>Minimum margin</span>
+			    					<p>20%</p>
+			    				</div>
+			    				<div class="detail col l6 pad0">
+			    					<span>Sales discount</span>
+			    					<p>10%</p>
+			    				</div>
+			    				<div class="detail col l6 pad0">
+			    					<span>Customer rep</span>
+			    					<p>Bruce Willis</p>
+			    				</div>
+			    				<div class="detail col l6 pad0">
+			    					<span>Found us how</span>
+			    					<p>Google search</p>
+			    				</div>
+			    				<div class="clear"></div>
+			    			</div>
+
+			    			<div class="information white left-section">
+			    				<h5>Tags</h5>
+		    					<div class="tags">
+						  			<a href="javascript:void(0)" class="tag-flat grey lighten-55">Fresh material</a>
+						  			<a href="javascript:void(0)" class="tag-flat grey lighten-55">Fresh material</a>
+						  			<a href="javascript:void(0)" class="tag-flat grey lighten-55">Fresh material</a>
+					  			</div>
+					  			<div class="clear15"></div>
+			    			</div>
+
+			    			<div class="information white left-section">
+			    				<h5>Profile</h5>
+			    				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			    				<div class="clear5"></div>
+			    			</div>
+
+			    			<div class="information white left-section">
+			    				<h5>Contacts (3)</h5>
+			    				<table class="table bordered responsive-table" id="contacts_list">
+							    	<thead>
+							    		<tr>
+							    			<th>Name</th>
+							    			<th>Email</th>
+							    			<th>Phone</th>
+							    		</tr>
+							    	</thead>
+							    	<tbody>
+							    		<tr>
+							    			<td class="bold">Keira Knightley</td>
+							    			<td>keira.knightley@gmail.com</td>
+							    			<td>125-532-9568</td>
+							    		</tr>
+							    		<tr>
+							    			<td class="bold">Keira Knightley</td>
+							    			<td>keira.knightley@gmail.com</td>
+							    			<td>125-532-9568</td>
+							    		</tr>
+							    		<tr>
+							    			<td class="bold">Keira Knightley</td>
+							    			<td>keira.knightley@gmail.com</td>
+							    			<td>125-532-9568</td>
+							    		</tr>
+							    		
+							    	</tbody>
+							    </table>
+			    			</div>
+			    		</div>
+		    		</div>
+		    		<!-- left section -->
+
+		    		<!--**   RIGHT QUOTE DETAIL    **-->
+		    		<div class="col l8 m8 s12 body-dark right-quote-wrapper">
+		    			<!-- stats section -->
+			    		<div class="right-quote-container z-depth-1 custStats">
+				    		<ul class="row">
+				    			<li class="col m4 l4 s12">
+				    				<div class="col l10"><strong class="size22 softColor">$2000</strong><span class="size14">Estimate yearly revenue</span></div>
+				    				<div class="col l2"><i class="material-icons softColor">donut_large</i></div>
+				    			</li>
+				    			<li class="col m4 l4 s12">
+				    				<div class="col l10"><strong class="size22 green-text">$1820</strong><span class="size14">Actual yearly revenue</span></div>
+				    				<div class="col l2"><i class="material-icons green-text">insert_chart</i></div>
+				    			</li>
+				    			<li class="col m4 l4 s12">
+				    				<div class="col l10"><strong class="size22 light-blue-text">80</strong><span class="size14">Average order value</span></div>
+				    				<div class="col l2"><i class="material-icons light-blue-text">shopping_basket</i></div>
+				    			</li>
+				    			<li class="col m4 l4 s12 bb0">
+				    				<div class="col l10"><strong class="size22 red-text">15</strong><span class="size14">Quotes</span></div>
+				    				<div class="col l2"><i class="material-icons red-text">book</i></div>
+				    			</li>
+				    			<li class="col m4 l4 s12 bb0">
+				    				<div class="col l10"><strong class="size22 yellow-text">10</strong><span class="size14">Jobs</span></div>
+				    				<div class="col l2"><i class="material-icons yellow-text">assignment</i></div>
+				    			</li>
+				    			<li class="col m4 l4 s12 bb0">
+				    				<div class="col l10"><strong class="size22 grey-text">76%</strong><span class="size14">Conversion rate</span></div>
+				    				<div class="col l2"><i class="material-icons grey-text">sync</i></div>
+				    			</li>
+				    		</ul>
+			    		</div>
+			    		<!-- //stats section -->
+			    		<div class="clear15"></div>
+			    		<!-- tab section -->
+		    			<div class="right-quote-container z-depth-1">
+		    				<div class="detail-tabs">
+							  <ul id="tabs-swipe-demo" class="tabs transparent">
+							    <li class="tab"><a href="#tab_1">Detail</a></li>
+							    <li class="tab"><a href="#tab_2">Activity</a></li>
+							    <li class="tab"><a href="#tab_3">Notes</a></li>
+							  </ul>
+
+
+								<!--  Detail  -->
+								<div id="tab_1" class="tab-activity white">
+									<!-- Quotes -->
+								    <div class="activity-container">
+							  			<h4 class="panelHeading">
+							  				<span class="red"><i class="material-icons white-text">book</i></span>Quotes (15)
+							  				<a class="btn-flat white grey-border-light grey-text text-lighten-5 right regular" href="javascript:void(0)"><i class="material-icons grey-text text-lighten-5 left">add</i>Button</a>
+							  			</h4>
+							  			<div class="clear20"></div>
+							  			<table class="bordered highlight responsive-table">
+											<thead>
+												<tr>
+													<th>#</th>
+													<th width="30%">Contact</th>
+													<th>Created on</th>
+													<th>$ Total</th>
+													<th class="center-align">Status</th>
+													<th>View status</th>
+													<th>&nbsp;</th>
+												</tr>												
+											</thead>
+											<tbody>
+												<tr>
+													<td><a href="javascript:;" class="light-blue-text">12</a></td>
+													<td class="bold">Tom Hanks</td>
+													<td>20 jun, 2017</td>
+													<td>1,521.00</td>
+													<td class="center-align"><span class="label light-blue white-text">Complete</span></td>
+													<td><div class="red-text">Not Viewed</div></td>
+													<td class="center-align icon-more">
+														<a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+														  <ul id='dropdown-table' class='dropdown-content'>
+														    <li><a href="#!"><i class="material-icons">email</i>Send email</a></li>
+														    <li><a href="#!"><i class="material-icons">remove_red_eye</i>View</a></li>
+														    <li><a href="#!"><i class="material-icons">local_printshop</i>Print Shipping Label</a></li>
+														    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+														    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+														    <li class="divider"></li>
+														  </ul>
+													</td>
+												</tr>
+												<tr>
+													<td><a href="javascript:;" class="light-blue-text">14</a></td>
+													<td class="bold">Bruce Willis</td>
+													<td>20 jun, 2017</td>
+													<td>1,521.00</td>
+													<td class="center-align"><span class="label yellow white-text">Follow up</span></td>
+													<td><div class="green-text">Not Viewed</div></td>
+													<td class="center-align icon-more">
+														<a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+														  <ul id='dropdown-table' class='dropdown-content'>
+														    <li><a href="#!"><i class="material-icons">email</i>Send email</a></li>
+														    <li><a href="#!"><i class="material-icons">remove_red_eye</i>View</a></li>
+														    <li><a href="#!"><i class="material-icons">local_printshop</i>Print Shipping Label</a></li>
+														    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+														    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+														    <li class="divider"></li>
+														  </ul>
+													</td>
+												</tr>
+												<tr>
+													<td><a href="javascript:;" class="light-blue-text">33</a></td>
+													<td class="bold">MarketWrite</td>
+													<td>20 jun, 2017</td>
+													<td>1,521.00</td>
+													<td class="center-align"><span class="label red white-text">Lost</span></td>
+													<td><div class="green-text">Not Viewed</div></td>
+													<td class="center-align icon-more">
+														<a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+														  <ul id='dropdown-table' class='dropdown-content'>
+														    <li><a href="#!"><i class="material-icons">email</i>Send email</a></li>
+														    <li><a href="#!"><i class="material-icons">remove_red_eye</i>View</a></li>
+														    <li><a href="#!"><i class="material-icons">local_printshop</i>Print Shipping Label</a></li>
+														    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+														    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+														    <li class="divider"></li>
+														  </ul>
+													</td>
+												</tr>
+												<tr>
+													<td><a href="javascript:;" class="light-blue-text">45</a></td>
+													<td class="bold">Nicolas Cage</td>
+													<td>20 jun, 2017</td>
+													<td>1,521.00</td>
+													<td class="center-align"><span class="label red white-text">Lost</span></td>
+													<td><div class="red-text">Not Viewed</div></td>
+													<td class="center-align icon-more">
+														<a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+														  <ul id='dropdown-table' class='dropdown-content'>
+														    <li><a href="#!"><i class="material-icons">email</i>Send email</a></li>
+														    <li><a href="#!"><i class="material-icons">remove_red_eye</i>View</a></li>
+														    <li><a href="#!"><i class="material-icons">local_printshop</i>Print Shipping Label</a></li>
+														    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+														    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+														    <li class="divider"></li>
+														  </ul>
+													</td>
+												</tr>
+												<tr>
+													<td colspan="7" class="moreView">
+														<a href="javascript:;" class="light-blue-text">
+															<span class="left">More</span>
+															<i class="material-icons size16 light-blue-text left">keyboard_arrow_down</i>
+														</a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+							  		</div>
+							  		<!-- //Quotes -->
+							  		<div class="clear"></div>
+							  		<!-- Jobs -->
+								    <div class="activity-container">
+							  			<h4 class="panelHeading">
+							  				<span class="yellow"><i class="material-icons white-text">assignment</i></span>Jobs  (10)
+							  				<a class="btn-flat white grey-border-light grey-text text-lighten-5 right regular" href="javascript:void(0)"><i class="material-icons grey-text text-lighten-5 left">add</i>Button</a>
+							  			</h4>
+							  			<div class="clear20"></div>
+							  			<table class="bordered highlight responsive-table">
+											<thead>
+												<tr>
+													<th>#</th>
+													<th width="30%">Title</th>
+													<th>Created on</th>
+													<th>QTY</th>
+													<th class="center-align">Status</th>
+													<th>Due date</th>
+													<th>&nbsp;</th>
+												</tr>												
+											</thead>
+											<tbody>
+												<tr>
+													<td><a href="javascript:;" class="light-blue-text">12</a></td>
+													<td class="bold">Excepteur sint occaecat cupidatat</td>
+													<td>20 jun, 2017</td>
+													<td>1000</td>
+													<td class="center-align"><span class="label yellow white-text">Proof Uploaded</span></td>
+													<td><div class="red-text">22 jun, 2017</div></td>
+													<td class="center-align icon-more">
+														<a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+														  <ul id='dropdown-table' class='dropdown-content'>
+														    <li><a href="#!"><i class="material-icons">email</i>Send email</a></li>
+														    <li><a href="#!"><i class="material-icons">remove_red_eye</i>View</a></li>
+														    <li><a href="#!"><i class="material-icons">local_printshop</i>Print Shipping Label</a></li>
+														    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+														    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+														    <li class="divider"></li>
+														  </ul>
+													</td>
+												</tr>
+												<tr>
+													<td><a href="javascript:;" class="light-blue-text">14</a></td>
+													<td class="bold">Non proident, sunt in culpa qui</td>
+													<td>20 jun, 2017</td>
+													<td>500</td>
+													<td class="center-align"><span class="label green white-text">Shipped</span></td>
+													<td><div class="red-text">22 jun, 2017</div></td>
+													<td class="center-align icon-more">
+														<a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+														  <ul id='dropdown-table' class='dropdown-content'>
+														    <li><a href="#!"><i class="material-icons">email</i>Send email</a></li>
+														    <li><a href="#!"><i class="material-icons">remove_red_eye</i>View</a></li>
+														    <li><a href="#!"><i class="material-icons">local_printshop</i>Print Shipping Label</a></li>
+														    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+														    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+														    <li class="divider"></li>
+														  </ul>
+													</td>
+												</tr>
+
+												<tr>
+													<td><a href="javascript:;" class="light-blue-text">33</a></td>
+													<td class="bold">Excepteur sint occaecat cupidatat</td>
+													<td>20 jun, 2017</td>
+													<td>1200</td>
+													<td class="center-align"><span class="label grey lighten-5 white-text">Job Created</span></td>
+													<td><div class="red-text">22 jun, 2017</div></td>
+													<td class="center-align icon-more">
+														<a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+														  <ul id='dropdown-table' class='dropdown-content'>
+														    <li><a href="#!"><i class="material-icons">email</i>Send email</a></li>
+														    <li><a href="#!"><i class="material-icons">remove_red_eye</i>View</a></li>
+														    <li><a href="#!"><i class="material-icons">local_printshop</i>Print Shipping Label</a></li>
+														    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+														    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+														    <li class="divider"></li>
+														  </ul>
+													</td>
+												</tr>
+
+												<tr>
+													<td><a href="javascript:;" class="light-blue-text">80</a></td>
+													<td class="bold">Excepteur sint occaecat cupidatat</td>
+													<td>20 jun, 2017</td>
+													<td>700</td>
+													<td class="center-align"><span class="label purple accent-5 white-text">In Production</span></td>
+													<td><div class="red-text">22 jun, 2017</div></td>
+													<td class="center-align icon-more">
+														<a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+														  <ul id='dropdown-table' class='dropdown-content'>
+														    <li><a href="#!"><i class="material-icons">email</i>Send email</a></li>
+														    <li><a href="#!"><i class="material-icons">remove_red_eye</i>View</a></li>
+														    <li><a href="#!"><i class="material-icons">local_printshop</i>Print Shipping Label</a></li>
+														    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+														    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+														    <li class="divider"></li>
+														  </ul>
+													</td>
+												</tr>
+												<tr>
+													<td colspan="7" class="moreView">
+														<a href="javascript:;" class="light-blue-text">
+															<span class="left">More</span>
+															<i class="material-icons size16 light-blue-text left">keyboard_arrow_down</i>
+														</a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+							  		</div>
+							  		<!-- //Jobs -->
+							  		<div class="clear"></div>
+							  		<!-- lead -->
+								    <div class="activity-container">
+							  			<h4 class="panelHeading">
+							  				<span class="green"><i class="material-icons white-text">my_location</i></span>Leads  (8)
+							  				<a class="btn-flat white grey-border-light grey-text text-lighten-5 right regular" href="javascript:void(0)"><i class="material-icons grey-text text-lighten-5 left">add</i>Button</a>
+							  			</h4>
+							  			<div class="clear20"></div>
+							  			<table class="bordered highlight responsive-table">
+											<thead>
+												<tr>
+													<th>#</th>
+													<th width="30%">Linked user</th>
+													<th>Contact</th>
+													<th>Created on</th>
+													<th>Postal</th>
+													<th class="center-align">Status</th>
+													<th>&nbsp;</th>
+												</tr>												
+											</thead>
+											<tbody>
+												<tr>
+													<td><a href="javascript:;" class="light-blue-text">12</a></td>
+													<td class="bold"><a href="javascript:;" class="light-blue-text"><span class="proImg"><img class="img-responsive" src="images/img-user.png"></span><span>Hugh Jackman</span></a></td>
+													<td>Tom Hanks</td>
+													<td>20 jun, 2017</td>
+													<td>4575</td>
+													<td class="center-align"><span class="label grey lighten-5 white-text ">Unprocessed</span></td>
+													<td class="center-align icon-more">
+														<a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+														  <ul id='dropdown-table' class='dropdown-content'>
+														    <li><a href="#!"><i class="material-icons">email</i>Send email</a></li>
+														    <li><a href="#!"><i class="material-icons">remove_red_eye</i>View</a></li>
+														    <li><a href="#!"><i class="material-icons">local_printshop</i>Print Shipping Label</a></li>
+														    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+														    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+														    <li class="divider"></li>
+														  </ul>
+													</td>
+												</tr>
+
+												<tr>
+													<td><a href="javascript:;" class="light-blue-text">12</a></td>
+													<td class="bold"><a href="javascript:;" class="light-blue-text"><span class="proImg"><img class="img-responsive" src="images/img-user.png"></span><span>Hugh Jackman</span></a></td>
+													<td>Tom Hanks</td>
+													<td>20 jun, 2017</td>
+													<td>4575</td>
+													<td class="center-align"><span class="label grey lighten-5 white-text ">Unprocessed</span></td>
+													<td class="center-align icon-more">
+														<a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+														  <ul id='dropdown-table' class='dropdown-content'>
+														    <li><a href="#!"><i class="material-icons">email</i>Send email</a></li>
+														    <li><a href="#!"><i class="material-icons">remove_red_eye</i>View</a></li>
+														    <li><a href="#!"><i class="material-icons">local_printshop</i>Print Shipping Label</a></li>
+														    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+														    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+														    <li class="divider"></li>
+														  </ul>
+													</td>
+												</tr>
+
+												<tr>
+													<td><a href="javascript:;" class="light-blue-text">12</a></td>
+													<td class="bold"><a href="javascript:;" class="light-blue-text"><span class="proImg"><img class="img-responsive" src="images/img-user.png"></span><span>Hugh Jackman</span></a></td>
+													<td>Tom Hanks</td>
+													<td>20 jun, 2017</td>
+													<td>4575</td>
+													<td class="center-align"><span class="label grey lighten-5 white-text ">Unprocessed</span></td>
+													<td class="center-align icon-more">
+														<a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+														  <ul id='dropdown-table' class='dropdown-content'>
+														    <li><a href="#!"><i class="material-icons">email</i>Send email</a></li>
+														    <li><a href="#!"><i class="material-icons">remove_red_eye</i>View</a></li>
+														    <li><a href="#!"><i class="material-icons">local_printshop</i>Print Shipping Label</a></li>
+														    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+														    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+														    <li class="divider"></li>
+														  </ul>
+													</td>
+												</tr>
+
+												<tr>
+													<td><a href="javascript:;" class="light-blue-text">12</a></td>
+													<td class="bold"><a href="javascript:;" class="light-blue-text"><span class="proImg"><img class="img-responsive" src="images/img-user.png"></span><span>Hugh Jackman</span></a></td>
+													<td>Tom Hanks</td>
+													<td>20 jun, 2017</td>
+													<td>4575</td>
+													<td class="center-align"><span class="label grey lighten-5 white-text ">Unprocessed</span></td>
+													<td class="center-align icon-more">
+														<a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+														  <ul id='dropdown-table' class='dropdown-content'>
+														    <li><a href="#!"><i class="material-icons">email</i>Send email</a></li>
+														    <li><a href="#!"><i class="material-icons">remove_red_eye</i>View</a></li>
+														    <li><a href="#!"><i class="material-icons">local_printshop</i>Print Shipping Label</a></li>
+														    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+														    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+														    <li class="divider"></li>
+														  </ul>
+													</td>
+												</tr>
+
+												<tr>
+													<td><a href="javascript:;" class="light-blue-text">12</a></td>
+													<td class="bold"><a href="javascript:;" class="light-blue-text"><span class="proImg"><img class="img-responsive" src="images/img-user.png"></span><span>Hugh Jackman</span></a></td>
+													<td>Tom Hanks</td>
+													<td>20 jun, 2017</td>
+													<td>4575</td>
+													<td class="center-align"><span class="label light-blue white-text ">Processed</span></td>
+													<td class="center-align icon-more">
+														<a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+														  <ul id='dropdown-table' class='dropdown-content'>
+														    <li><a href="#!"><i class="material-icons">email</i>Send email</a></li>
+														    <li><a href="#!"><i class="material-icons">remove_red_eye</i>View</a></li>
+														    <li><a href="#!"><i class="material-icons">local_printshop</i>Print Shipping Label</a></li>
+														    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+														    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+														    <li class="divider"></li>
+														  </ul>
+													</td>
+												</tr>
+
+												<tr>
+													<td><a href="javascript:;" class="light-blue-text">12</a></td>
+													<td class="bold"><a href="javascript:;" class="light-blue-text"><span class="proImg"><img class="img-responsive" src="images/img-user.png"></span><span>Hugh Jackman</span></a></td>
+													<td>Tom Hanks</td>
+													<td>20 jun, 2017</td>
+													<td>4575</td>
+													<td class="center-align"><span class="label grey lighten-5 white-text ">Unprocessed</span></td>
+													<td class="center-align icon-more">
+														<a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+														  <ul id='dropdown-table' class='dropdown-content'>
+														    <li><a href="#!"><i class="material-icons">email</i>Send email</a></li>
+														    <li><a href="#!"><i class="material-icons">remove_red_eye</i>View</a></li>
+														    <li><a href="#!"><i class="material-icons">local_printshop</i>Print Shipping Label</a></li>
+														    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+														    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+														    <li class="divider"></li>
+														  </ul>
+													</td>
+												</tr>
+
+												<tr>
+													<td><a href="javascript:;" class="light-blue-text">12</a></td>
+													<td class="bold"><a href="javascript:;" class="light-blue-text"><span class="proImg"><img class="img-responsive" src="images/img-user.png"></span><span>Hugh Jackman</span></a></td>
+													<td>Tom Hanks</td>
+													<td>20 jun, 2017</td>
+													<td>4575</td>
+													<td class="center-align"><span class="label light-blue white-text ">Processed</span></td>
+													<td class="center-align icon-more">
+														<a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+														  <ul id='dropdown-table' class='dropdown-content'>
+														    <li><a href="#!"><i class="material-icons">email</i>Send email</a></li>
+														    <li><a href="#!"><i class="material-icons">remove_red_eye</i>View</a></li>
+														    <li><a href="#!"><i class="material-icons">local_printshop</i>Print Shipping Label</a></li>
+														    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+														    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+														    <li class="divider"></li>
+														  </ul>
+													</td>
+												</tr>
+												<tr>
+													<td colspan="7" class="moreView">
+														<a href="javascript:;" class="light-blue-text">
+															<span class="left">More</span>
+															<i class="material-icons size16 light-blue-text left">keyboard_arrow_down</i>
+														</a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+							  		</div>
+							  		<!-- //lead -->
+								</div>
+								<!--  //Detail  -->
+
+
+								<!--  //activity  -->
+						   		<div id="tab_2" class="tab-activity white allActivityBlock">
+							  		<div class="activity-container">
+							  			<h4 class="panelHeading">
+							  				<span class="yellow"><i class="material-icons white-text">access_time</i></span> Recent activities
+							  				<ul class="activitySorting">
+							  					<li><a href="javascript:;" class="active">All</a></li>
+							  					<li><a href="javascript:;"><i class="material-icons blue-text">my_location</i>Lead</a></li>
+							  					<li><a href="javascript:;"><i class="material-icons blue-text">book</i>Quotes</a></li>
+							  					<li><a href="javascript:;"><i class="material-icons blue-text">assignment</i>Jobs</a></li>
+							  				</ul>
+							  			</h4>
+
+							  			<div class="activity-display">
+							  				<h5>Today</h5>
+							  				<ul>
+								  				<li class="act-purple"> 
+								  					<div class="activity-log clearfix">
+								  						<div class="left">
+							  								<h5>Call logged <a href="#" class="light-blue-text size12">(Outgoing call)</a> </h5>
+						  									<span class="time"><span class="grey-text text-lighten-7">Quote id:</span> <a href="javascript:;" class="light-blue-text">#50</a> <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> From: </span>+1-562-569-8542<span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> To: </span>+1-562-569-8542</span>
+								  						</div>
+
+								  						<div class="right">
+								  							<div class="user flex">
+									  							<div class="user-icon">
+															        <span class="icon-img">
+															            <img class="img-responsive" src="images/img.png">
+															        </span>
+															    </div>
+								  								<a href="javascript:void(0)">Ash Ketchum</a>
+								  								<span class="time rightTime"><span class="grey-text text-lighten-7"><i class="material-icons blue-text size12">access_time</i></span> 11:00 am</span>
+															    
+															</div>
+								  						</div>
+								  					</div>
+								  				</li>
+
+								  				<li class="act-purple"> 
+								  					<div class="activity-log clearfix">
+								  						<div class="left">
+							  								<h5>Comments added &quot;Pen design need to be change&quot;</h5>
+						  									<span class="time"><span class="grey-text text-lighten-7">Quote id:</span> <a href="javascript:;" class="light-blue-text">#50</a> </span>
+								  						</div>
+
+								  						<div class="right">
+								  							<div class="user flex">
+									  							<div class="user-icon">
+															        <span class="icon-img">
+															            <img class="img-responsive" src="images/img.png">
+															        </span>
+															    </div>
+								  								<a href="javascript:void(0)">Ash Ketchum</a>
+								  								<span class="time rightTime"><span class="grey-text text-lighten-7"><i class="material-icons blue-text size12">access_time</i></span> 11:00 am</span>
+															    
+															</div>
+								  						</div>
+								  					</div>
+								  				</li>
+
+								  				<li class="act-yellow"> 
+								  					<div class="activity-log clearfix">
+								  						<div class="left">
+							  								<h5>Lead created</h5>
+						  									<span class="time"><span class="grey-text text-lighten-7">Lead id:</span> <a href="javascript:;" class="light-blue-text">#50</a> <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Linked user: </span>Matt Damon<span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Postal: </span>4584</span>
+								  						</div>
+
+								  						<div class="right">
+								  							<div class="user flex">
+									  							<div class="user-icon">
+															        <span class="icon-img">
+															            <img class="img-responsive" src="images/img.png">
+															        </span>
+															    </div>
+								  								<a href="javascript:void(0)">Jonathan Sparrow</a>
+								  								<span class="time rightTime"><span class="grey-text text-lighten-7"><i class="material-icons blue-text size12">access_time</i></span> 11:00 am</span>
+															    
+															</div>
+								  						</div>
+								  					</div>
+								  				</li>
+
+								  				<li class="act-red"> 
+								  					<div class="activity-log clearfix">
+								  						<div class="left">
+							  								<h5>Job Marked as complete</h5>
+						  									<span class="time"><span class="grey-text text-lighten-7">Job id:</span> <a href="javascript:;" class="light-blue-text">#50</a></span>
+								  						</div>
+
+								  						<div class="right">
+								  							<div class="user flex">
+									  							<div class="user-icon">
+															        <span class="icon-img">
+															            <img class="img-responsive" src="images/img.png">
+															        </span>
+															    </div>
+								  								<a href="javascript:void(0)">Ash Ketchum</a>
+								  								<span class="time rightTime"><span class="grey-text text-lighten-7"><i class="material-icons blue-text size12">access_time</i></span> 11:00 am</span>
+															    
+															</div>
+								  						</div>
+								  					</div>
+								  				</li>
+
+								  				<li class="act-red"> 
+								  					<div class="activity-log clearfix">
+								  						<div class="left">
+							  								<h5>Task mark as completed <a href="#" class="light-blue-text size12">(ART - Artwork Vectorised)</a></h5>
+						  									<span class="time"><span class="grey-text text-lighten-7">Job id:</span> <a href="javascript:;" class="light-blue-text">#50</a> <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with company logo<span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Assign to: </span>Arnold Schwarzenegger</span>
+								  						</div>
+
+								  						<div class="right">
+								  							<div class="user flex">
+									  							<div class="user-icon">
+															        <span class="icon-img">
+															            <img class="img-responsive" src="images/img.png">
+															        </span>
+															    </div>
+								  								<a href="javascript:void(0)">Ash Ketchum</a>
+								  								<span class="time rightTime"><span class="grey-text text-lighten-7"><i class="material-icons blue-text size12">access_time</i></span> 11:00 am</span>
+															    
+															</div>
+								  						</div>
+								  					</div>
+								  				</li>
+							  				</ul>
+							  			</div>
+
+							  			<div class="activity-display">
+							  				<h5>Yesterday</h5>
+							  				<ul>
+								  				<li class="sea-blue"> 
+								  					<div class="activity-log clearfix">
+								  						<div class="left">
+							  								<h5>Comments added &quot;Pen design need to be change&quot;</h5>
+						  									<span class="time"><span class="grey-text text-lighten-7">Quote id:</span> <a href="javascript:;" class="light-blue-text">#50</a></span>
+								  						</div>
+
+								  						<div class="right">
+								  							<div class="user flex">
+									  							<div class="user-icon">
+															        <span class="icon-img">
+															            <img class="img-responsive" src="images/img.png">
+															        </span>
+															    </div>
+								  								<a href="javascript:void(0)">Ash Ketchum</a>
+								  								<span class="time rightTime"><span class="grey-text text-lighten-7"><i class="material-icons blue-text size12">access_time</i></span> 11:00 am</span>
+															    
+															</div>
+								  						</div>
+								  					</div>
+								  				</li>
+
+								  				<li class="act-brown"> 
+								  					<div class="activity-log clearfix">
+								  						<div class="left">
+							  								<h5>Proof sent</h5>
+						  									<span class="time"><span class="grey-text text-lighten-7">Job id:</span> <a href="javascript:;" class="light-blue-text">#50</a> <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with company logo, Pen design with company logo</span>
+								  						</div>
+
+								  						<div class="right">
+								  							<div class="user flex">
+									  							<div class="user-icon">
+															        <span class="icon-img">
+															            <img class="img-responsive" src="images/img.png">
+															        </span>
+															    </div>
+								  								<a href="javascript:void(0)">Ash Ketchum</a>
+								  								<span class="time rightTime"><span class="grey-text text-lighten-7"><i class="material-icons blue-text size12">access_time</i></span> 11:00 am</span>
+															</div>
+								  						</div>
+								  					</div>
+								  				</li>
+
+								  				<li class="act-purple"> 
+								  					<div class="activity-log clearfix">
+								  						<div class="left">
+							  								<h5>Note added <a href="#" class="light-blue-text size12">(Design and print points in the note)</a></h5>
+						  									<span class="time"><span class="grey-text text-lighten-7">Quote id:</span> <a href="javascript:;" class="light-blue-text">#50</a></span>
+								  						</div>
+
+								  						<div class="right">
+								  							<div class="user flex">
+									  							<div class="user-icon">
+															        <span class="icon-img">
+															            <img class="img-responsive" src="images/img.png">
+															        </span>
+															    </div>
+								  								<a href="javascript:void(0)">Ash Ketchum</a>
+								  								<span class="time rightTime"><span class="grey-text text-lighten-7"><i class="material-icons blue-text size12">access_time</i></span> 11:00 am</span>
+															    
+															</div>
+								  						</div>
+								  					</div>
+								  				</li>
+							  				</ul>
+							  			</div>
+
+							  			<div class="activity-display">
+							  				<h5>10 Sep, 2017</h5>
+							  				<ul>
+								  				<li class="sea-red"> 
+								  					<div class="activity-log clearfix">
+								  						<div class="left">
+							  								<h5>New item added <a href="#" class="light-blue-text size12">(Note pad design with company logo)</a></h5>
+						  									<span class="time"><span class="grey-text text-lighten-7">Job id:</span> <a href="javascript:;" class="light-blue-text">#50</a></span>
+								  						</div>
+
+								  						<div class="right">
+								  							<div class="user flex">
+									  							<div class="user-icon">
+															        <span class="icon-img">
+															            <img class="img-responsive" src="images/img.png">
+															        </span>
+															    </div>
+								  								<a href="javascript:void(0)">Jonathan Sparrow</a>
+								  								<span class="time rightTime"><span class="grey-text text-lighten-7"><i class="material-icons blue-text size12">access_time</i></span> 11:00 am</span>
+															</div>
+								  						</div>
+								  					</div>
+								  				</li>
+
+								  				<li class="act-purple"> 
+								  					<div class="activity-log clearfix">
+								  						<div class="left">
+							  								<h5>Artwork uploaded (<span class="grey-text text-lighten-7 font-normal">T-shirt-design-with-company-logo-example.png and <a href="#" class="light-blue-text">5 more</a></span>)</h5>
+						  									<span class="time"><span class="grey-text text-lighten-7">Job id:</span> <a href="javascript:;" class="light-blue-text">#50</a> <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Assigned To: </span>Arnold Schwarzenegger</span>
+								  						</div>
+
+								  						<div class="right">
+								  							<div class="user flex">
+									  							<div class="user-icon">
+															        <span class="icon-img">
+															            <img class="img-responsive" src="images/img.png">
+															        </span>
+															    </div>
+								  								<a href="javascript:void(0)">Ash Ketchum</a>
+								  								<span class="time rightTime"><span class="grey-text text-lighten-7"><i class="material-icons blue-text size12">access_time</i></span> 11:00 am</span>
+															</div>
+								  						</div>
+								  					</div>
+								  				</li>
+
+								  				<li class="act-green"> 
+								  					<div class="activity-log clearfix">
+								  						<div class="left">
+							  								<h5>Customer created</h5>
+						  									<span class="time"><span class="grey-text text-lighten-7">Company name:</span> Immackulate Designer Homes</span>
+								  						</div>
+
+								  						<div class="right">
+								  							<div class="user flex">
+									  							<div class="user-icon">
+															        <span class="icon-img">
+															            <img class="img-responsive" src="images/img.png">
+															        </span>
+															    </div>
+								  								<a href="javascript:void(0)">Ash Ketchum</a>
+								  								<span class="time rightTime"><span class="grey-text text-lighten-7"><i class="material-icons blue-text size12">access_time</i></span> 11:00 am</span>
+															</div>
+								  						</div>
+								  					</div>
+								  				</li>
+							  				</ul>
+							  			</div>							  			
+							  		</div>
+							    </div> 
+								<!--  //Activity  -->
+
+
+								<!--  //Notes  -->
+							 	<div id="tab_3" class="tab-notes white noteTab">
+
+									<div class="activity-display">
+						  				<h5 class="bold-500">
+						  					<span class="left">Today</span>
+						  					<a href="#addNotes" class="waves-effect btn-flat green lighten-3 white-text right modal-trigger" data-target="modal"><i class="material-icons white-text">note_add</i> Add Notes</a>
+						  					<div class="clear"></div>
+						  				</h5>
+						  				<ul class="activity-list">
+
+							  				<li class="act-purple"> 
+							  					<div class="activity-log clearfix">
+							  						<div class="left">
+						  								<h5>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h5>
+					  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  						</div>
+
+							  						<div class="right">
+							  							<div class="user flex">
+							  								<a href="javascript:void(0)">Tagged user:</a>
+														    <div class="user-icon" data-name="Robert De Niro">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+
+														    <div class="user-icon" data-name="Russell Crowe">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+														    <div class="user-icon"  data-name="Kevin Spacey">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+														    <div class="user-icon" data-name="Add more">
+														        <span class="icon-img">
+														            <a href="javascript:;"><i class="material-icons dp48 size22">add_circle_outline</i></a>
+														        </span>
+														    </div>
+							  								
+														</div>
+							  						</div>
+							  					</div>
+							  				</li>
+
+							  				<li class="act-purple"> 
+							  					<div class="activity-log clearfix">
+							  						<div class="left">
+						  								<h5>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h5>
+					  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  						</div>
+
+							  						<div class="right">
+							  							<div class="user flex">
+							  								<a href="javascript:void(0)">Tagged user:</a>
+														    <div class="user-icon" data-name="Russell Crowe">
+														        <span class="icon-img" data-name="Russell Crowe">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+
+														    <div class="user-icon" data-name="Russell Crowe">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+														    <div class="user-icon" data-name="Russell Crowe">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+														    <div class="user-icon" data-name="Add more">
+														        <span class="icon-img">
+														            <a href="javascript:;"><i class="material-icons dp48 size22">add_circle_outline</i></a>
+														        </span>
+														    </div>
+							  								
+														</div>
+							  						</div>
+							  					</div>
+							  				</li>
+
+							  				<li class="act-purple"> 
+							  					<div class="activity-log clearfix">
+							  						<div class="left">
+						  								<h5>Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+					  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  						</div>
+
+							  						<div class="right">
+							  							<div class="user flex">
+							  								<a href="javascript:void(0)">Tagged user:</a>
+														    <div class="user-icon" data-name="Russell Crowe">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+														    <div class="user-icon" data-name="Add more">
+														        <span class="icon-img">
+														            <a href="javascript:;"><i class="material-icons dp48 size22">add_circle_outline</i></a>
+														        </span>
+														    </div>
+							  								
+														</div>
+							  						</div>
+							  					</div>
+							  				</li>
+
+							  				<li class="act-purple"> 
+							  					<div class="activity-log clearfix">
+							  						<div class="left">
+						  								<h5>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
+					  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  						</div>
+
+							  						<div class="right">
+							  							<div class="user flex">
+							  								<a href="javascript:void(0)">Tagged user:</a>
+														    <div class="user-icon" data-name="Russell Crowe">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+
+														    <div class="user-icon" data-name="Russell Crowe">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+														    <div class="user-icon" data-name="Add more">
+														        <span class="icon-img">
+														            <a href="javascript:;"><i class="material-icons dp48 size22">add_circle_outline</i></a>
+														        </span>
+														    </div>
+							  								
+														</div>
+							  						</div>
+							  					</div>
+							  				</li>
+
+							  				<li class="act-purple"> 
+							  					<div class="activity-log clearfix">
+							  						<div class="left">
+						  								<h5>Excepteur sint occaecat cupidatat non proident.</h5>
+					  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  						</div>
+
+							  						<div class="right">
+							  							<div class="user flex">
+							  								<a href="javascript:void(0)">Tagged user:</a>
+														    <div class="user-icon" data-name="Russell Crowe">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+
+														    <div class="user-icon" data-name="Russell Crowe">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+														    <div class="user-icon" data-name="Russell Crowe">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+														    <div class="user-icon" data-name="Add more">
+														        <span class="icon-img">
+														            <a href="javascript:;"><i class="material-icons dp48 size22">add_circle_outline</i></a>
+														        </span>
+														    </div>
+							  								
+														</div>
+							  						</div>
+							  					</div>
+							  				</li>
+						  				</ul>
+						  			</div>
+
+									<div class="activity-display act-yest">
+						  				<h5 class="bold-500 yesterday">Yesterday</h5>
+						  				<ul class="activity-list">
+
+							  				<li class="act-purple"> 
+							  					<div class="activity-log clearfix">
+							  						<div class="left">
+						  								<h5>Mollit anim id est laborum.</h5>
+					  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  						</div>
+
+							  						<div class="right">
+							  							<div class="user flex">
+							  								<a href="javascript:void(0)">Tagged user:</a>
+														    <div class="user-icon" data-name="Russell Crowe">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+														    <div class="user-icon" data-name="Add more">
+														        <span class="icon-img">
+														            <a href="javascript:;"><i class="material-icons dp48 size22">add_circle_outline</i></a>
+														        </span>
+														    </div>
+							  								
+														</div>
+							  						</div>
+							  					</div>
+							  				</li>
+
+							  				<li class="act-purple"> 
+							  					<div class="activity-log clearfix">
+							  						<div class="left">
+						  								<h5>Voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h5>
+					  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  						</div>
+
+							  						<div class="right">
+							  							<div class="user flex">
+							  								<a href="javascript:void(0)">Tagged user:</a>
+														    <div class="user-icon" data-name="Russell Crowe">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+
+														    <div class="user-icon" data-name="Russell Crowe">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+														    <div class="user-icon" data-name="Add more">
+														        <span class="icon-img">
+														            <a href="javascript:;"><i class="material-icons dp48 size22">add_circle_outline</i></a>
+														        </span>
+														    </div>
+							  								
+														</div>
+							  						</div>
+							  					</div>
+							  				</li>
+							  				<li class="act-purple"> 
+							  					<div class="activity-log clearfix">
+							  						<div class="left">
+						  								<h5>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
+					  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  						</div>
+
+							  						<div class="right">
+							  							<div class="user flex">
+							  								<a href="javascript:void(0)">Tagged user:</a>
+														    <div class="user-icon" data-name="Russell Crowe">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+
+														    <div class="user-icon" data-name="Russell Crowe">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+														    <div class="user-icon" data-name="Add more">
+														        <span class="icon-img">
+														            <a href="javascript:;"><i class="material-icons dp48 size22">add_circle_outline</i></a>
+														        </span>
+														    </div>
+							  								
+														</div>
+							  						</div>
+							  					</div>
+							  				</li>
+						  				</ul>
+						  			</div>
+
+									<div class="activity-display act-yest">
+						  				<h5 class="bold-500 yesterday">30 Jun, 2017</h5>
+						  				<ul class="activity-list">
+
+							  				<li class="act-purple"> 
+							  					<div class="activity-log clearfix">
+							  						<div class="left">
+						  								<h5>Duis aute irure dolor in reprehenderit in voluptate.</h5>
+					  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  						</div>
+
+							  						<div class="right">
+							  							<div class="user flex">
+							  								<a href="javascript:void(0)">Tagged user:</a>
+														    <div class="user-icon" data-name="Robert De Niro">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+
+														    <div class="user-icon" data-name="Russell Crowe">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+														    <div class="user-icon"  data-name="Kevin Spacey">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+														    <div class="user-icon" data-name="Add more">
+														        <span class="icon-img">
+														            <a href="javascript:;"><i class="material-icons dp48 size22">add_circle_outline</i></a>
+														        </span>
+														    </div>
+							  								
+														</div>
+							  						</div>
+							  				</li>
+
+							  				<li class="act-purple"> 
+							  					<div class="activity-log clearfix">
+							  						<div class="left">
+						  								<h5>Ut aliquip ex ea commodo consequat.</h5>
+					  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  						</div>
+
+							  						<div class="right">
+							  							<div class="user flex">
+							  								<a href="javascript:void(0)">Tagged user:</a>
+														    <div class="user-icon" data-name="Russell Crowe">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+														    <div class="user-icon" data-name="Add more">
+														        <span class="icon-img">
+														            <a href="javascript:;"><i class="material-icons dp48 size22">add_circle_outline</i></a>
+														        </span>
+														    </div>
+							  								
+														</div>
+							  						</div>
+							  					</div>
+							  				</li>
+
+						  				</ul>
+						  			</div>
+							 	</div>
+								<!--  //Notes  -->
+		    				</div>
+		    			</div>
+		    			<!-- //tab section -->
+		    		</div>	
+		    		<!--**  /END RIGHT QUOTE DETAIL    **-->
+		    	</div>
+	   		</main>
+
+          <!--******     /Main Content Ends      ******-->
+
+    	</div>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/bin/materialize.min.js"></script>
+      <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>

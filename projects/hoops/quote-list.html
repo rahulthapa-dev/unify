@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>Quote List</title>
+		<!--Import Material Icon Font-->
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Import Catamaran Font-->
+		<link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="sass/hoops-crm.css"  media="screen,projection"/>
+		<link type="text/css" rel="stylesheet" href="sass/nouislider.css"  media="screen,projection"/>
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body class="hoops-UIkit grey body-light">
+
+    	<div class="main-wrapper">
+    			<!--*****   SIDEBAR NAVIGATION   *****-->
+            <div class="side-nav fixed white" id="main_navigation">
+
+            	<div class="logo">
+            		<a href="javascript:void(0)"><img src="images/logo.png" alt="hoops crm"/></a>
+            	</div>
+
+            	<div class="logo-small hide">
+            		<a href="javascript:void(0)"><img src="images/logo-small.png" alt="hoops crm"/></a>
+            	</div>
+
+            	<div class="current_user">
+            		<div class="name_user dropdown-button pointer" data-activates='user-dropdown' data-beloworigin="true">
+            			<span class="user_thumb">
+            				<img class="img-responsive" src="images/img-user.png">
+            			</span>
+            			<a class="user-log" href="javascript:void(0)">Kate Winslet <i class="material-icons">keyboard_arrow_down</i></a>
+	    			    <ul id='user-dropdown' class='dropdown-content'>
+						    <li><a href="javascript:void(0)"><i class="material-icons">account_circle</i>My Profile</a></li>
+						    <li class="divider"></li>
+						    <li><a href="javascript:void(0)"><i class="material-icons">https</i>Change Password</a></li>
+						    <li class="divider"></li>
+						    <li><a href="javascript:void(0)"><i class="material-icons">power_settings_new</i>Logout </a></li>
+					    </ul>
+            			
+            		</div>
+            	</div>
+
+	            <ul class="main-menu">
+					<li><a class="tooltipped" data-position="right" data-delay="50" data-tooltip="Dashboadrd" href="#/"><i class="material-icons">dashboard</i><span class="nav_link_text">Dashboard</span></a></li>
+					<li><a class="active tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Customers"><i class="material-icons">person</i><span class="nav_link_text">Customers</span></a></li>
+					<li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Leads"><i class="material-icons">my_location</i><span class="nav_link_text">Leads</span></a></li>
+					<li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Quotes"><i class="material-icons">receipt</i><span class="nav_link_text">Quotes</span></a></li>
+					<li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Jobs"><i class="material-icons">work</i><span class="nav_link_text">Jobs</span></a></li>
+					<li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Calender"><i class="material-icons">today</i><span class="nav_link_text">Calender</span></a></li>
+					<li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Purchase Orders"><i class="material-icons">description</i><span class="nav_link_text">Purchase Orders</span></a></li>
+					<li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Reports"><i class="material-icons">poll</i><span class="nav_link_text">Reports</span></a></li>
+					<li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Catalogue"><i class="material-icons">storage</i><span class="nav_link_text">Catalogue</span></a></li>
+	            </ul>
+
+            </div>
+
+	        <header id="header">
+	               <nav class="navbar_header light-blue lighten-5 row">
+	                  <div class="nav-wrapper col s12">
+	                  <a href="#" data-activates="main_navigation" class="button-collapse"><i class="material-icons">menu</i></a>
+	                  	<div class="toggles">
+		                    <a href="#" class="toggle-sidebar hide-on-med-and-down"><i class="material-icons white-text">chevron_left</i></a>
+		                    <a href="#" class="expand-sidebar hide"><i class="material-icons white-text">menu</i></a>
+		                 </div> 
+
+	                    <ul id="nav-mobile" class="right">
+                    		<li class="dropMenu" id="search_place">	                      
+                        		<a class='search_button-open' href='#'>
+                           			<i class="material-icons white-text">search</i>
+                        		</a> 
+
+	                            <div class="input-field search_header">
+						          <input id="header-search" class="white" placeholder="Enter your search here..." id="search_header" type="text" class="validate">
+						          <i id="close-header-search" class="material-icons white-text grey-text text-lighten-8">search</i>
+						        </div>
+
+                     		 </li>
+
+							<li class="dropMenu">
+								<a class='dropdown-button' href='#' data-beloworigin="true" data-constrainWidth="false" data-alignment="right" data-activates='addCustomer'>
+									<i class="material-icons white-text">add_circle</i>
+								</a>
+								<div id='addCustomer' class='dropdown-content dropdown-eq'>
+									<ul>
+										<li><a href="#!"><i class="material-icons">person_add</i>Add Customers</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">my_location</i>Add Leads</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">receipt</i>Create Quotes</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">work</i>Schedule Jobs</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">event_note</i>Add to Calendar</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">library_add</i>Add Catalogue</a></li>
+									</ul>
+								</div>
+							</li>
+	                        <li class="dropMenu">
+								<a class='dropdown-button' href='#' data-beloworigin="true" data-constrainWidth="false" data-alignment="right" data-activates='setting'>
+									<i class="material-icons white-text">settings</i>
+								</a>
+								<div id='setting' class='dropdown-content dropdown-eq'>
+									<ul>
+										<li><a href="#!"><i class="material-icons">wb_incandescent</i>Decorations</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">group</i>Vendors</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">info</i>General</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">extension</i>Integrations</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">drafts</i>Email Templates</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">check_box</i>Job Tasks</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">person</i>Users</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">attach_money</i>Billing</a></li>
+									</ul>
+								</div>
+	                        </li>
+
+	                        <li class="relative">
+	                      		<a href="#" class='dropdown-button' href='#' data-beloworigin="true" data-constrainWidth="false" data-alignment="right" data-activates='notification'>
+	                  				<i class="material-icons white-text">notifications</i> <span class="notification-number pulse ">3</span>
+	                  			</a>
+								<ul id='notification' class='dropdown-content'>
+									<li>
+										<div class="notification_wrapper">
+											<ul class="clearfix">
+												<li>
+													<div class="notification_icon">
+														<span class="icon-noti purple">
+															<i class="material-icons white-text">my_location</i>
+														</span>
+													</div>
+
+													<div class="notification-text">
+														<p>Alexandra Jones <span class="grey-text text-lighten-7">added a new lead</span></p>
+														<a href="javascript:void(0)" class="light-blue-text text-base">Team info design company</a>
+														<span class="time-duration grey-text text-lighten-7">10 min ago</span>
+													</div>
+												</li>
+
+												<li>
+													<div class="notification_icon">
+														<span class="icon-noti grey lighten-9">
+															<i class="material-icons white-text">person</i>
+														</span>
+													</div>
+
+													<div class="notification-text">
+														<p>Sierra Dickinson <span class="grey-text text-lighten-7">is now added as a customer</span></p>
+														<a href="javascript:void(0)" class="light-blue-text text-base">Robbing Hoods Car Detailing</a>
+														<span class="time-duration grey-text text-lighten-7">2 hours ago</span>
+													</div>
+												</li>
+
+												<li>
+													<div class="notification_icon">
+														<span class="icon-noti yellow lighten-4">
+															<i class="material-icons white-text">work</i>
+														</span>
+													</div>
+
+													<div class="notification-text">
+														<p>Olivia Kelly <span class="grey-text text-lighten-7">created a job</span></p>
+														<a href="javascript:void(0)" class="light-blue-text text-base">Fresh Prince of Bel-Air</a>
+														<span class="time-duration grey-text text-lighten-7">20 min ago</span>
+													</div>
+												</li>
+
+												<li>
+													<div class="notification_icon">
+														<span class="icon-noti blue-grey darken-4">
+															<i class="material-icons white-text">receipt</i>
+														</span>
+													</div>
+
+													<div class="notification-text">
+														<p>Allison Faber <span class="grey-text text-lighten-7">created a quote.</span></p>
+														<a href="javascript:void(0)" class="light-blue-text text-base">Think Promotional</a>
+														<span class="time-duration grey-text text-lighten-7">7 July, 2017</span>
+													</div>
+												</li>
+												<li>
+													<div class="notification_icon">
+														<span class="icon-noti purple">
+															<i class="material-icons white-text">my_location</i>
+														</span>
+													</div>
+
+													<div class="notification-text">
+														<p>Kate Winslet <span class="grey-text text-lighten-7">added a new lead</span></p>
+														<a href="javascript:void(0)" class="light-blue-text text-base">Pen printing and T-shirts design</a>
+														<span class="time-duration grey-text text-lighten-7">12 July 2017</span>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</li>		
+								</ul>
+                  		    </li>
+
+	                    </ul>
+	                  </div>
+	                </nav>
+	        </header>
+          <!--   /End Side Navbar  -->
+
+          <!--****  Mobile Search  ****-->
+          	<div class="responsive-search">
+          		<div class="input-field custom-search bordered white">
+			        <div class="input">
+			        	<i class="material-icons">search</i>
+			        	<input placeholder="Search here..." id="first_name" class="validate" type="text">
+			        </div>
+		        </div>
+          	</div>
+		  <!--****  /End Mobile Search  ****-->
+
+          <!--******     Main Content Starts      ******-->
+
+		    <main id="content_wrapper" class="product-catalog-wapper qoute-list-wrapper">
+			    <div class="prod-cata-wrap">
+			    	<div class="row row-padding filters-header">
+			    		<div class="col l4 m4 s12 flex">
+							<h3>Quotes</h3>		
+			    		</div>
+
+			    		<div class="col l8 m8 s12 filter-right-catalog">
+			    			<div class="catalog-filters">
+			    				<div class="applied-filters">
+			    					<a href="javascript:void(0)" class="filter-chips grey lighten-55 grey-text text-lighten-56">Clear filter <i class="material-icons icon-left">clear</i></a>
+			    					<a href="javascript:void(0)" data-activates="filter-select" class="applied-filter button-collapse-right" onclick="hideoverlay()"><span class="show-applied-filter light-blue white-text">3</span><i class="material-icons">filter_list</i>Filter</a>
+
+			    					<!-- ** FILTERS TO SELECT ***  -->
+									<div id="filter-select" class="side-nav">	
+										<div class="filter-header">
+											<h2>Filter</h2>
+											<p>Select the following items to filter the quotes</p>
+									        <div class="apply-flter-btns">
+									        	<a class="waves-effect btn-flat waves-light btn-large light-blue white-text">Apply</a>
+									        	<a href="javascript:void(0)" class="filter-chips grey lighten-55 grey-text text-lighten-56 right">Clear filter <i class="material-icons icon-left">clear</i></a>
+									        </div>
+										</div>
+
+								        <div class="filter-body">
+									        <div class="input-field search-bordered">
+										        <div class="input">
+										        	<input placeholder="Search company, contact" id="first_name" type="text" class="validate">
+										        </div>
+									        </div>
+
+									        <div class="filter-drop">
+									        	<h4><a href="javascript:void(0)">Created by <i class="material-icons">keyboard_arrow_up</i></a></h4>
+											  	<div class="input-field custom-dropdown">
+											  		<i class="material-icons dop-icon">keyboard_arrow_down</i>
+												    <select multiple="multiple">
+												      <option value="" disabled selected>T-shirts</option>
+												      <option value="1">Option 1</option>
+												      <option value="2">Option 2</option>
+												      <option value="3">Option 3</option>
+												    </select>
+											    </div>
+									        </div>
+									        <div class="filter-drop">
+									        	<h4><a href="javascript:void(0)">Sales person <i class="material-icons">keyboard_arrow_up</i></a></h4>
+											  	<div class="input-field custom-dropdown">
+											  		<i class="material-icons dop-icon">keyboard_arrow_down</i>
+												    <select multiple="multiple">
+												      <option value="" disabled selected>T-shirts</option>
+												      <option value="1">Option 1</option>
+												      <option value="2">Option 2</option>
+												      <option value="3">Option 3</option>
+												    </select>
+											    </div>
+									        </div>
+
+									        <div class="filter-drop">
+									        	<h4><a href="javascript:void(0)">$Range<i class="material-icons">keyboard_arrow_up</i></a></h4>
+											  	<div class="range-slider">
+											  		 <div id="range-slider">
+													    <p class="range-field">
+													      <input type="range" id="test5" min="0" max="100" />
+													    </p>
+											  		 </div>
+											  		 <p><span>$15</span> - <span>$20,000</span></p>
+											    </div>
+									        </div>
+
+									        <div class="filter-drop pick-date">
+									        	<h4><a href="javascript:void(0)">Date range<i class="material-icons">keyboard_arrow_up</i></a></h4>
+											  	<div class="input-field clearfix">
+											  		<div class="col l6 no-padding-left custom-picker">
+											  		<span>From</span>
+											  			<input type="text" class="datepicker">
+											  		</div>
+
+											  		<div class="col l6 no-padding-right custom-picker">
+											  		<span>To</span>
+										  				<input type="text" class="datepicker">
+											  		</div>
+											    </div>
+									        </div>
+
+									        <div class="filter-drop pick-date">
+									        	<h4><a href="javascript:void(0)">View Status <i class="material-icons">keyboard_arrow_up</i></a></h4>
+											  	<div class="input-field custom-dropdown">
+											  		<i class="material-icons dop-icon">keyboard_arrow_down</i>
+												    <select>
+												      <option class="green" value="1">Viewed</option>
+												      <option class="red" value="2">Not Viewed</option>
+												    </select>
+											    </div>
+									        </div>
+									        <div class="filter-drop pick-date">
+									        	<h4><a href="javascript:void(0)">Won/Lost <i class="material-icons">keyboard_arrow_up</i></a></h4>
+											  	<div class="input-field custom-dropdown">
+											  		<i class="material-icons dop-icon">keyboard_arrow_down</i>
+												    <select>
+												      <option class="green" value="1">Won</option>
+												      <option class="red" value="2">Lost</option>
+												    </select>
+											    </div>
+									        </div>
+
+
+											<div class="apply-flter-btns">
+											    <a class="waves-effect btn-flat waves-light btn-large light-blue white-text">Apply</a>
+											    <a href="javascript:void(0)" class="filter-chips grey lighten-55 grey-text text-lighten-56 right">Clear filter <i class="material-icons icon-left">clear</i></a>
+											</div>
+								        </div>
+										<span class="close-filters" onclick="closenav()"><i class="material-icons">close</i></span>
+
+									</div>
+									<!--***  /ENDS SELECT FILTERS  ***-->
+							        <div class="input-field search-bordered w-icon">
+								        <div class="input">
+								      		<i class="material-icons">search</i>
+								        	<input placeholder="Enter your search here..." id="first_name" type="text" class="white validate">
+								        </div>
+						        	</div>
+						        	<div class="add-quote-btn">
+						        		<a class="waves-effect btn-flat waves-light btn-large green darken-1 white-text"><i class="material-icons left">add</i>Add new</a>
+						        	</div>
+			    				</div>
+			    			</div>
+			    		</div>
+			    	</div>
+
+			    	<!--****   Products Starts    ****-->
+			    	<div class="row row-padding">
+						<div class="custom-table white clearfix">
+							<table class="bordered highlight responsive-table">
+								<thead>
+									<tr>
+										<th class="center-align check-width">&nbsp;</th>
+										<th class="center-align">#</th>
+										<th>
+											<div class="flex">
+												<div class="user-icon invisible">
+													<span class="icon-img">
+														<img src="images/img.png"/>
+													</span>
+												</div>
+												<div class="sort-wrap">Company
+													<span class="sortin-icons">
+														  <i class="material-icons">keyboard_arrow_up</i>
+														  <i class="material-icons">keyboard_arrow_down</i>
+													</span>
+												</div>
+											</div>	
+										</th>
+										<th>
+											<div class="sort-wrap">Contact
+												<span class="sortin-icons">
+													  <i class="material-icons">keyboard_arrow_up</i>
+													  <i class="material-icons">keyboard_arrow_down</i>
+												</span>
+											</div>
+										</th>
+										<th>
+											<div class="sort-wrap">Created on
+												<span class="sortin-icons">
+													  <i class="material-icons">keyboard_arrow_up</i>
+													  <i class="material-icons">keyboard_arrow_down</i>
+												</span>
+											</div>
+										</th>
+
+										<th>
+											<div class="sort-wrap">Total
+												<span class="sortin-icons">
+													  <i class="material-icons">keyboard_arrow_up</i>
+													  <i class="material-icons">keyboard_arrow_down</i>
+												</span>
+											</div>
+										</th>
+										<th>
+											<div class="sort-wrap">Status
+												<span class="sortin-icons">
+													  <i class="material-icons">keyboard_arrow_up</i>
+													  <i class="material-icons">keyboard_arrow_down</i>
+												</span>
+											</div>
+										</th>
+
+										<th>
+											<div class="sort-wrap">View status 
+												<span class="sortin-icons">
+													  <i class="material-icons">keyboard_arrow_up</i>
+													  <i class="material-icons">keyboard_arrow_down</i>
+												</span>
+											</div>
+										</th>
+
+										<th class="center-align">Action</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td class="center-align">
+											<div class="check-table white">
+				                                <input class="filled-in" id="cked" type="checkbox">
+				                                <label for="cked"></label>
+											</div>
+										</td>
+										<td class="center-align"><div>1</div></td>
+										<td>
+											<div class="flex">
+												<div class="user-icon">
+													<span class="icon-img">
+														<img src="images/img.png"/>
+													</span>
+												</div>
+												<a href="quote-detail.html">Think Promotional</a>
+											</div>
+										</td>
+										<td><div>Darth Vader</div></td>
+										<td><div>14/10/2016</div></td>
+										<td><div>4,489.50</div></td>
+										<td class="center-align"><div><span class="label grey lighten-5 white-text">Created</span></div></td>
+										<td class="center-align"><div class="red-text">Not Viewed</div></td>
+										<td class="center-align icon-more">
+											<a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+											  <ul id='dropdown-table' class='dropdown-content'>
+											    <li><a href="#!"><i class="material-icons">check</i>Mark Follow Up</a></li>
+											    <li><a href="#!"><i class="material-icons">money_off</i>Mark as lost</a></li>
+											    <li><a href="#!"><i class="material-icons">event_available</i>add to calendar</a></li>
+											    <li><a href="#!"><i class="material-icons">send</i>Send</a></li>
+											    <li><a href="#!"><i class="material-icons">done_all</i>Accept</a></li>
+											    <li class="divider"></li>
+
+											    <li class="footer-list">
+											    	<ul id="dropdown-footer">
+											    		<li><a href="#!"><i class="material-icons">edit</i></a></li>
+											    		<li><a href="#!"><i class="material-icons">content_copy</i></a></li>
+											    		<li><a href="#!"><i class="material-icons">delete</i></a></li>
+											    	</ul>
+											    </li>
+											  </ul>
+										</td>
+									</tr>
+									<tr>
+										<td class="center-align">
+											<div class="check-table white">
+				                                <input class="filled-in" id="cked-a" type="checkbox">
+				                                <label for="cked-a"></label>
+											</div>
+										</td>
+										<td class="center-align"><div>2</div></td>
+										<td>
+											<div class="flex">
+												<div class="user-icon">
+													<span class="icon-img">
+														<img src="images/img-1.png"/>
+													</span>
+												</div>
+												<a href="quote-detail.html">Hoops CRM</a>
+											</div>
+										</td>
+										<td><div>Darth Vader</div></td>
+										<td><div>14/10/2016</div></td>
+										<td><div>4,489.50</div></td>
+										<td class="center-align"><div><span class="label green white-text">Accepted</span></div></td>
+										<td class="center-align"><div class="red-text">Not Viewed</div></td>
+										<td class="center-align icon-more">
+											<a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+											  <ul id='dropdown-table' class='dropdown-content'>
+											    <li><a href="#!"><i class="material-icons">check</i>Mark Follow Up</a></li>
+											    <li><a href="#!"><i class="material-icons">money_off</i>Mark as lost</a></li>
+											    <li><a href="#!"><i class="material-icons">event_available</i>add to calendar</a></li>
+											    <li><a href="#!"><i class="material-icons">send</i>Send</a></li>
+											    <li><a href="#!"><i class="material-icons">done_all</i>Accept</a></li>
+											    <li class="divider"></li>
+
+											    <li class="footer-list">
+											    	<ul id="dropdown-footer">
+											    		<li><a href="#!"><i class="material-icons">edit</i></a></li>
+											    		<li><a href="#!"><i class="material-icons">content_copy</i></a></li>
+											    		<li><a href="#!"><i class="material-icons">delete</i></a></li>
+											    	</ul>
+											    </li>
+											  </ul>
+										</td>
+									</tr>
+
+									<tr>
+										<td class="center-align">
+											<div class="check-table white">
+				                                <input class="filled-in" id="cked-b" type="checkbox">
+				                                <label for="cked-b"></label>
+											</div>
+										</td>
+										<td class="center-align"><div>3</div></td>
+										<td>
+											<div class="flex">
+												<div class="user-icon">
+													<span class="icon-img">
+														<img src="images/img-2.png"/>
+													</span>
+												</div>
+												<a href="quote-detail.html">Fresh Prince of Bel-Air</a>
+											</div>
+										</td>
+										<td><div>Darth Vader</div></td>
+										<td><div>14/10/2016</div></td>
+										<td><div>4,489.50</div></td>
+										<td class="center-align"><div><span class="label light-blue white-text">Complete</span></div></td>
+										<td class="center-align"><div class="red-text">Not Viewed</div></td>
+										<td class="center-align icon-more">
+											<a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+											  <ul id='dropdown-table' class='dropdown-content'>
+											    <li><a href="#!"><i class="material-icons">check</i>Mark Follow Up</a></li>
+											    <li><a href="#!"><i class="material-icons">money_off</i>Mark as lost</a></li>
+											    <li><a href="#!"><i class="material-icons">event_available</i>add to calendar</a></li>
+											    <li><a href="#!"><i class="material-icons">send</i>Send</a></li>
+											    <li><a href="#!"><i class="material-icons">done_all</i>Accept</a></li>
+											    <li class="divider"></li>
+
+											    <li class="footer-list">
+											    	<ul id="dropdown-footer">
+											    		<li><a href="#!"><i class="material-icons">edit</i></a></li>
+											    		<li><a href="#!"><i class="material-icons">content_copy</i></a></li>
+											    		<li><a href="#!"><i class="material-icons">delete</i></a></li>
+											    	</ul>
+											    </li>
+											  </ul>
+										</td>
+									</tr>
+									<tr>
+										<td class="center-align">
+											<div class="check-table white">
+				                                <input class="filled-in" id="cked-c" type="checkbox">
+				                                <label for="cked-c"></label>
+											</div>
+										</td>
+										<td class="center-align"><div>4</div></td>
+										<td>
+											<div class="flex">
+												<div class="user-icon">
+													<span class="icon-img">
+														<img src="images/img-1.png"/>
+													</span>
+												</div>
+												<a href="quote-detail.html">Telemericorp</a>
+											</div>
+										</td>
+										<td><div>Darth Vader</div></td>
+										<td><div>14/10/2016</div></td>
+										<td><div>4,489.50</div></td>
+										<td class="center-align"><div><span class="label yellow white-text">Follow up</span></div></td>
+										<td class="center-align"><div class="red-text">Not Viewed</div></td>
+										<td class="center-align icon-more">
+											<a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+											  <ul id='dropdown-table' class='dropdown-content'>
+											    <li><a href="#!"><i class="material-icons">check</i>Mark Follow Up</a></li>
+											    <li><a href="#!"><i class="material-icons">money_off</i>Mark as lost</a></li>
+											    <li><a href="#!"><i class="material-icons">event_available</i>add to calendar</a></li>
+											    <li><a href="#!"><i class="material-icons">send</i>Send</a></li>
+											    <li><a href="#!"><i class="material-icons">done_all</i>Accept</a></li>
+											    <li class="divider"></li>
+
+											    <li class="footer-list">
+											    	<ul id="dropdown-footer">
+											    		<li><a href="#!"><i class="material-icons">edit</i></a></li>
+											    		<li><a href="#!"><i class="material-icons">content_copy</i></a></li>
+											    		<li><a href="#!"><i class="material-icons">delete</i></a></li>
+											    	</ul>
+											    </li>
+											  </ul>
+										</td>
+									</tr>
+									<tr>
+										<td class="center-align">
+											<div class="check-table white">
+				                                <input class="filled-in" id="cked-d" type="checkbox">
+				                                <label for="cked-d"></label>
+											</div>
+										</td>
+										<td class="center-align"><div>5</div></td>
+										<td>
+											<div class="flex">
+												<div class="user-icon">
+													<span class="icon-img">
+														<img src="images/img-2.png"/>
+													</span>
+												</div>
+												<a href="quote-detail.html">The Gimpsons</a>
+											</div>
+										</td>
+										<td><div>Darth Vader</div></td>
+										<td><div>14/10/2016</div></td>
+										<td><div>4,489.50</div></td>
+										<td class="center-align"><div><span class="label red white-text">Lost</span></div></td>
+										<td class="center-align"><div class="red-text">Not Viewed</div></td>
+										<td class="center-align icon-more">
+											<a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+											  <ul id='dropdown-table' class='dropdown-content'>
+											    <li><a href="#!"><i class="material-icons">check</i>Mark Follow Up</a></li>
+											    <li><a href="#!"><i class="material-icons">money_off</i>Mark as lost</a></li>
+											    <li><a href="#!"><i class="material-icons">event_available</i>add to calendar</a></li>
+											    <li><a href="#!"><i class="material-icons">send</i>Send</a></li>
+											    <li><a href="#!"><i class="material-icons">done_all</i>Accept</a></li>
+											    <li class="divider"></li>
+
+											    <li class="footer-list">
+											    	<ul id="dropdown-footer">
+											    		<li><a href="#!"><i class="material-icons">edit</i></a></li>
+											    		<li><a href="#!"><i class="material-icons">content_copy</i></a></li>
+											    		<li><a href="#!"><i class="material-icons">delete</i></a></li>
+											    	</ul>
+											    </li>
+											  </ul>
+										</td>
+									</tr>
+									<tr>
+										<td class="center-align">
+											<div class="check-table white">
+				                                <input class="filled-in" id="cked-e" type="checkbox">
+				                                <label for="cked-e"></label>
+											</div>
+										</td>
+										<td class="center-align"><div>6</div></td>
+										<td>
+											<div class="flex">
+												<div class="user-icon">
+													<span class="icon-img">
+														<img src="images/img-3.png"/>
+													</span>
+												</div>
+												<a href="quote-detail.html">Think Promotional</a>
+											</div>
+										</td>
+										<td><div>Darth Vader</div></td>
+										<td><div>14/10/2016</div></td>
+										<td><div>4,489.50</div></td>
+										<td class="center-align"><div><span class="label grey lighten-5 white-text">Created</span></div></td>
+										<td class="center-align"><div class="red-text">Not Viewed</div></td>
+										<td class="center-align icon-more">
+											<a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+											  <ul id='dropdown-table' class='dropdown-content'>
+											    <li><a href="#!"><i class="material-icons">check</i>Mark Follow Up</a></li>
+											    <li><a href="#!"><i class="material-icons">money_off</i>Mark as lost</a></li>
+											    <li><a href="#!"><i class="material-icons">event_available</i>add to calendar</a></li>
+											    <li><a href="#!"><i class="material-icons">send</i>Send</a></li>
+											    <li><a href="#!"><i class="material-icons">done_all</i>Accept</a></li>
+											    <li class="divider"></li>
+
+											    <li class="footer-list">
+											    	<ul id="dropdown-footer">
+											    		<li><a href="#!"><i class="material-icons">edit</i></a></li>
+											    		<li><a href="#!"><i class="material-icons">content_copy</i></a></li>
+											    		<li><a href="#!"><i class="material-icons">delete</i></a></li>
+											    	</ul>
+											    </li>
+											  </ul>
+										</td>
+									</tr>
+									<tr>
+										<td class="center-align">
+											<div class="check-table white">
+				                                <input class="filled-in" id="cked-f" type="checkbox">
+				                                <label for="cked-f"></label>
+											</div>
+										</td>
+										<td class="center-align"><div>7</div></td>
+										<td>
+											<div class="flex">
+												<div class="user-icon">
+													<span class="icon-img">
+														<img src="images/img.png"/>
+													</span>
+												</div>
+												<a href="quote-detail.html">Think Promotional</a>
+											</div>
+										</td>
+										<td><div>Darth Vader</div></td>
+										<td><div>14/10/2016</div></td>
+										<td><div>4,489.50</div></td>
+										<td class="center-align"><div><span class="label red white-text">Lost</span></div></td>
+										<td class="center-align"><div class="red-text">Not Viewed</div></td>
+										<td class="center-align icon-more">
+											<a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+											  <ul id='dropdown-table' class='dropdown-content'>
+											    <li><a href="#!"><i class="material-icons">check</i>Mark Follow Up</a></li>
+											    <li><a href="#!"><i class="material-icons">money_off</i>Mark as lost</a></li>
+											    <li><a href="#!"><i class="material-icons">event_available</i>add to calendar</a></li>
+											    <li><a href="#!"><i class="material-icons">send</i>Send</a></li>
+											    <li><a href="#!"><i class="material-icons">done_all</i>Accept</a></li>
+											    <li class="divider"></li>
+
+											    <li class="footer-list">
+											    	<ul id="dropdown-footer">
+											    		<li><a href="#!"><i class="material-icons">edit</i></a></li>
+											    		<li><a href="#!"><i class="material-icons">content_copy</i></a></li>
+											    		<li><a href="#!"><i class="material-icons">delete</i></a></li>
+											    	</ul>
+											    </li>
+											  </ul>
+										</td>
+									</tr>
+									<tr>
+										<td class="center-align">
+											<div class="check-table white">
+				                                <input class="filled-in" id="cked-g" type="checkbox">
+				                                <label for="cked-g"></label>
+											</div>
+										</td>
+										<td class="center-align"><div>8</div></td>
+										<td>
+											<div class="flex">
+												<div class="user-icon">
+													<span class="icon-img">
+														<img src="images/img.png"/>
+													</span>
+												</div>
+												<a href="quote-detail.html">Think Promotional</a>
+											</div>
+										</td>
+										<td><div>Darth Vader</div></td>
+										<td><div>14/10/2016</div></td>
+										<td><div>4,489.50</div></td>
+										<td class="center-align"><div><span class="label light-blue white-text">Complete</span></div></td>
+										<td class="center-align"><div class="red-text">Not Viewed</div></td>
+										<td class="center-align icon-more">
+											<a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+											  <ul id='dropdown-table' class='dropdown-content'>
+											    <li><a href="#!"><i class="material-icons">check</i>Mark Follow Up</a></li>
+											    <li><a href="#!"><i class="material-icons">money_off</i>Mark as lost</a></li>
+											    <li><a href="#!"><i class="material-icons">event_available</i>add to calendar</a></li>
+											    <li><a href="#!"><i class="material-icons">send</i>Send</a></li>
+											    <li><a href="#!"><i class="material-icons">done_all</i>Accept</a></li>
+											    <li class="divider"></li>
+
+											    <li class="footer-list">
+											    	<ul id="dropdown-footer">
+											    		<li><a href="#!"><i class="material-icons">edit</i></a></li>
+											    		<li><a href="#!"><i class="material-icons">content_copy</i></a></li>
+											    		<li><a href="#!"><i class="material-icons">delete</i></a></li>
+											    	</ul>
+											    </li>
+											  </ul>
+										</td>
+									</tr>
+
+									<tr>
+										<td class="center-align">
+											<div class="check-table white">
+				                                <input class="filled-in" id="cked-h" type="checkbox">
+				                                <label for="cked-h"></label>
+											</div>
+										</td>
+										<td class="center-align"><div>9</div></td>
+										<td>
+											<div class="flex">
+												<div class="user-icon">
+													<span class="icon-img">
+														<img src="images/img.png"/>
+													</span>
+												</div>
+												<a href="quote-detail.html">Think Promotional</a>
+											</div>
+										</td>
+										<td><div>Darth Vader</div></td>
+										<td><div>14/10/2016</div></td>
+										<td><div>4,489.50</div></td>
+										<td class="center-align"><div><span class="label green white-text">Won</span></div></td>
+										<td class="center-align"><div class="red-text">Not Viewed</div></td>
+										<td class="center-align icon-more">
+											<a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+											  <ul id='dropdown-table' class='dropdown-content'>
+											    <li><a href="#!"><i class="material-icons">check</i>Mark Follow Up</a></li>
+											    <li><a href="#!"><i class="material-icons">money_off</i>Mark as lost</a></li>
+											    <li><a href="#!"><i class="material-icons">event_available</i>add to calendar</a></li>
+											    <li><a href="#!"><i class="material-icons">send</i>Send</a></li>
+											    <li><a href="#!"><i class="material-icons">done_all</i>Accept</a></li>
+											    <li class="divider"></li>
+
+											    <li class="footer-list">
+											    	<ul id="dropdown-footer">
+											    		<li><a href="#!"><i class="material-icons">edit</i></a></li>
+											    		<li><a href="#!"><i class="material-icons">content_copy</i></a></li>
+											    		<li><a href="#!"><i class="material-icons">delete</i></a></li>
+											    	</ul>
+											    </li>
+											  </ul>
+										</td>
+									</tr>	
+								</tbody>
+							</table>
+							<!--****  TABLE FOOTER  *****-->
+							<div class="row table-footer">
+								<div class="col l3 m4 s6">
+									<div class="show-table-row">
+										<span>Show</span>
+										  <div class="input-field">
+										  	<i class="material-icons caret-custom">keyboard_arrow_down</i>
+										    <select>
+										      <option value="" disabled selected>50</option>
+										      <option value="1">1</option>
+										      <option value="2">2</option>
+										      <option value="3">3</option>
+										    </select>
+										  </div>
+										<span>entries</span>
+									</div>
+								</div>
+
+								<div class="col l5 m4 s6">
+									<div class="center-align current-entries">
+										Showing 1 to 50 of 60 entries
+									</div>
+								</div>
+
+								<div class="col l4 m4 s6 pagination-wrapper">
+									  <ul class="pagination">
+									    <li class="waves-effect less-page"><a href="#!"><i class="material-icons">keyboard_backspace</i></a></li>
+									    <li class="active"><a href="#!">1</a></li>
+									    <li class="waves-effect"><a href="#!">2</a></li>
+									    <li class="waves-effect"><a href="#!">3</a></li>
+									    <li class="waves-effect"><a href="#!">...</a></li>
+									    <li class="waves-effect"><a href="#!">6</a></li>
+									    <li class="waves-effect more-page"><a href="#!"><i class="material-icons flip-hrz">keyboard_backspace</i></a></li>
+									  </ul>
+									  <span class="current-page">Page <span class="grey-text text-darken-01">1</span>/6</span>
+								</div>
+							</div>
+							<!--****  TABLE FOOTER END *****-->
+						</div>
+
+			    	</div>
+			    	<!--***   Products Ends    ***-->
+			    </div>
+	   		</main>
+
+          <!--******     /Main Content Ends      ******-->
+
+    	</div>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/bin/materialize.min.js"></script>
+      <script type="text/javascript" src="js/script.js"></script>
+      <script type="text/javascript" src="js/nouislider.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,2178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>Quote Detail</title>    
+		<!--Import Material Icon Font-->
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Import Catamaran Font-->
+		<link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="sass/hoops-crm.css"  media="screen,projection"/>
+		<link type="text/css" rel="stylesheet" href="sass/nouislider.css"  media="screen,projection"/>
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body id="qoute-list-body" class="hoops-UIkit grey body-light">
+
+    	<div class="main-wrapper">
+    			<!--*****   SIDEBAR NAVIGATION   *****-->
+            <div class="side-nav fixed white collapsed" id="main_navigation">
+
+            	<div class="logo hide">
+            		<a href="javascript:void(0)"><img src="images/logo.png" alt="hoops crm"/></a>
+            	</div>
+
+            	<div class="logo logo-small">
+            		<a href="javascript:void(0)"><img src="images/logo-small.png" alt="hoops crm"/></a>
+            	</div>
+
+            	<div class="current_user">
+            		<div class="name_user dropdown-button pointer" data-activates='user-dropdown' data-beloworigin="true">
+            			<span class="user_thumb">
+            				<img class="img-responsive" src="images/img-user.png">
+            			</span>
+            			<a class="user-log" href="javascript:void(0)">Kate Winslet <i class="material-icons">keyboard_arrow_down</i></a>
+	    			    <ul id='user-dropdown' class='dropdown-content'>
+						    <li><a href="javascript:void(0)"><i class="material-icons">account_circle</i>My Profile</a></li>
+						    <li class="divider"></li>
+						    <li><a href="javascript:void(0)"><i class="material-icons">https</i>Change Password</a></li>
+						    <li class="divider"></li>
+						    <li><a href="javascript:void(0)"><i class="material-icons">power_settings_new</i>Logout </a></li>
+					    </ul>
+            			
+            		</div>
+            	</div>
+
+	            <ul class="main-menu">
+					<li><a class="tooltipped" data-position="right" data-delay="50" data-tooltip="Dashboadrd" href="#/"><i class="material-icons">dashboard</i><span class="nav_link_text">Dashboard</span></a></li>
+					<li><a class="active tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Customers"><i class="material-icons">person</i><span class="nav_link_text">Customers</span></a></li>
+					<li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Leads"><i class="material-icons">my_location</i><span class="nav_link_text">Leads</span></a></li>
+					<li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Quotes"><i class="material-icons">receipt</i><span class="nav_link_text">Quotes</span></a></li>
+					<li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Jobs"><i class="material-icons">work</i><span class="nav_link_text">Jobs</span></a></li>
+					<li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Calender"><i class="material-icons">today</i><span class="nav_link_text">Calender</span></a></li>
+					<li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Purchase Orders"><i class="material-icons">description</i><span class="nav_link_text">Purchase Orders</span></a></li>
+					<li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Reports"><i class="material-icons">poll</i><span class="nav_link_text">Reports</span></a></li>
+					<li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Catalogue"><i class="material-icons">storage</i><span class="nav_link_text">Catalogue</span></a></li>
+	            </ul>
+
+            </div>
+
+	        <header id="header" class="expand">
+	               <nav class="navbar_header light-blue lighten-5 row">
+	                  <div class="nav-wrapper col s12">
+	                  <a href="#" data-activates="main_navigation" class="button-collapse"><i class="material-icons">menu</i></a>
+	                  	<div class="toggles">
+		                    <a href="#" class="toggle-sidebar hide hide-on-med-and-down"><i class="material-icons white-text">chevron_left</i></a>
+		                    <a href="#" class="expand-sidebar"><i class="material-icons white-text">menu</i></a>
+		                 </div> 
+
+	                    <ul id="nav-mobile" class="right">
+                    		<li class="dropMenu" id="search_place">	                      
+                        		<a class='search_button-open' href='#'>
+                           			<i class="material-icons white-text">search</i>
+                        		</a> 
+
+	                            <div class="input-field search_header">
+						          <input id="header-search" class="white" placeholder="Enter your search here..." id="search_header" type="text" class="validate">
+						          <i id="close-header-search" class="material-icons white-text grey-text text-lighten-8">search</i>
+						        </div>
+
+                     		 </li>
+
+							<li class="dropMenu">
+								<a class='dropdown-button' href='#' data-beloworigin="true" data-constrainWidth="false" data-alignment="right" data-activates='addCustomer'>
+									<i class="material-icons white-text">add_circle</i>
+								</a>
+								<div id='addCustomer' class='dropdown-content dropdown-eq'>
+									<ul>
+										<li><a href="#!"><i class="material-icons">person_add</i>Add Customers</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">my_location</i>Add Leads</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">receipt</i>Create Quotes</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">work</i>Schedule Jobs</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">event_note</i>Add to Calendar</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">library_add</i>Add Catalogue</a></li>
+									</ul>
+								</div>
+							</li>
+	                        <li class="dropMenu">
+								<a class='dropdown-button' href='#' data-beloworigin="true" data-constrainWidth="false" data-alignment="right" data-activates='setting'>
+									<i class="material-icons white-text">settings</i>
+								</a>
+								<div id='setting' class='dropdown-content dropdown-eq'>
+									<ul>
+										<li><a href="#!"><i class="material-icons">wb_incandescent</i>Decorations</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">group</i>Vendors</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">info</i>General</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">extension</i>Integrations</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">drafts</i>Email Templates</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">check_box</i>Job Tasks</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">person</i>Users</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">attach_money</i>Billing</a></li>
+									</ul>
+								</div>
+	                        </li>
+
+	                        <li class="relative">
+	                      		<a href="#" class='dropdown-button' href='#' data-beloworigin="true" data-constrainWidth="false" data-alignment="right" data-activates='notification'>
+	                  				<i class="material-icons white-text">notifications</i> <span class="notification-number pulse ">3</span>
+	                  			</a>
+								<ul id='notification' class='dropdown-content'>
+									<li>
+										<div class="notification_wrapper">
+											<ul class="clearfix">
+												<li>
+													<div class="notification_icon">
+														<span class="icon-noti purple">
+															<i class="material-icons white-text">my_location</i>
+														</span>
+													</div>
+
+													<div class="notification-text">
+														<p>Alexandra Jones <span class="grey-text text-lighten-7">added a new lead</span></p>
+														<a href="javascript:void(0)" class="light-blue-text text-base">Team info design company</a>
+														<span class="time-duration grey-text text-lighten-7">10 min ago</span>
+													</div>
+												</li>
+
+												<li>
+													<div class="notification_icon">
+														<span class="icon-noti grey lighten-9">
+															<i class="material-icons white-text">person</i>
+														</span>
+													</div>
+
+													<div class="notification-text">
+														<p>Sierra Dickinson <span class="grey-text text-lighten-7">is now added as a customer</span></p>
+														<a href="javascript:void(0)" class="light-blue-text text-base">Robbing Hoods Car Detailing</a>
+														<span class="time-duration grey-text text-lighten-7">2 hours ago</span>
+													</div>
+												</li>
+
+												<li>
+													<div class="notification_icon">
+														<span class="icon-noti yellow lighten-4">
+															<i class="material-icons white-text">work</i>
+														</span>
+													</div>
+
+													<div class="notification-text">
+														<p>Olivia Kelly <span class="grey-text text-lighten-7">created a job</span></p>
+														<a href="javascript:void(0)" class="light-blue-text text-base">Fresh Prince of Bel-Air</a>
+														<span class="time-duration grey-text text-lighten-7">20 min ago</span>
+													</div>
+												</li>
+
+												<li>
+													<div class="notification_icon">
+														<span class="icon-noti blue-grey darken-4">
+															<i class="material-icons white-text">receipt</i>
+														</span>
+													</div>
+
+													<div class="notification-text">
+														<p>Allison Faber <span class="grey-text text-lighten-7">created a quote.</span></p>
+														<a href="javascript:void(0)" class="light-blue-text text-base">Think Promotional</a>
+														<span class="time-duration grey-text text-lighten-7">7 July, 2017</span>
+													</div>
+												</li>
+												<li>
+													<div class="notification_icon">
+														<span class="icon-noti purple">
+															<i class="material-icons white-text">my_location</i>
+														</span>
+													</div>
+
+													<div class="notification-text">
+														<p>Kate Winslet <span class="grey-text text-lighten-7">added a new lead</span></p>
+														<a href="javascript:void(0)" class="light-blue-text text-base">Pen printing and T-shirts design</a>
+														<span class="time-duration grey-text text-lighten-7">12 July 2017</span>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</li>		
+								</ul>
+                  		    </li>
+
+	                    </ul>
+	                  </div>
+	                </nav>
+	        </header>
+          <!--   /End Side Navbar  -->
+
+          <!--****  Mobile Search  ****-->
+          	<div class="responsive-search">
+          		<div class="input-field custom-search bordered white">
+			        <div class="input">
+			        	<i class="material-icons">search</i>
+			        	<input placeholder="Search here..." id="first_name" class="validate" type="text">
+			        </div>
+		        </div>
+          	</div>
+		  <!--****  /End Mobile Search  ****-->
+
+          <!--******     Main Content Starts      ******-->
+
+		    <main id="content_wrapper" class="qoute-detail collapsed">
+		    	<div class="row">
+		    		<div class="col l4 m4 s12 left-qoute-detail no-padding">
+		    			<div class="bnr-left light-blue clearfix">
+	    					<div class="col l8 m8 s6">
+	    						<div class="names-quote no-padding-left">
+	    							<div class="container-img-quote">
+	    								<span class="quote-img"><img src="images/img-quote.png" alt="quote "></span>
+	    							</div>
+
+	    							<div class="quote-head">
+	    								<h4 class="white-text">Futuristic Mechanics</h4>
+	    								<p class="white-text created">Created on: 20 Jul, 2017</p>
+
+	    								<p class="white-text">$25,000.00</p>
+	    							</div>
+	    						</div>
+	    					</div>		
+
+	    					<div class="col l4 m4 s6">
+	    						<div class="quote-bnr-link right-align">
+	    							<div class="top-anchors">
+		    							<a href="javascript:void(0)"><i class="material-icons">send</i></a>
+		    							<a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_vert</i></a>
+										  <ul id='dropdown-table' class='dropdown-content'>
+										    <li><a href="#!"><i class="material-icons">check</i>Mark Follow Up</a></li>
+										    <li><a href="#!"><i class="material-icons">money_off</i>Mark as lost</a></li>
+										    <li><a href="#!"><i class="material-icons">event_available</i>add to calendar</a></li>
+										    <li><a href="#!"><i class="material-icons">send</i>Send</a></li>
+										    <li><a href="#!"><i class="material-icons">done_all</i>Accept</a></li>
+										    <li class="divider"></li>
+
+										    <li class="footer-list">
+										    	<ul id="dropdown-footer">
+										    		<li><a href="#!"><i class="material-icons">edit</i></a></li>
+										    		<li><a href="#!"><i class="material-icons">content_copy</i></a></li>
+										    		<li><a href="#!"><i class="material-icons">delete</i></a></li>
+										    	</ul>
+										    </li>
+										  </ul>
+		    						</div>	
+
+		    						<div class="status-lbls">
+		    							<span>Viewed</span>
+		    							<span class="label yellow white-text">Follow up</span>
+		    						</div>
+	    						</div>
+	    					</div>
+		    			</div>
+
+			    		<div class="col l12 m12 s12 grey body-light-1 block">
+			    			<div class="information white left-section">
+			    				<h4><span class="info-icon light-blue"><i class="material-icons">person</i></span>Contact information</h4>
+
+			    				<div class="detail">
+			    					<span>Company</span>
+			    					<p>Ketchum's Ketchup</p>
+			    				</div>
+			    				<div class="detail">
+			    					<span>Contact name</span>
+			    					<p>Ash Ketchum</p>
+			    				</div>
+			    				<div class="detail">
+			    					<span>Email</span>
+			    					<p>ash@ketchum.gov.uk<span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span>ash2581@ketchum.gov.uk</p>
+			    				</div>
+			    				<div class="detail">
+			    					<span>Contact Number</span>
+			    					<p>+1-123-456-7891<span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span>+1-524-854-6598</p>
+			    				</div>
+			    			</div>
+
+			    			<div class="information white left-section">
+			    				<h4><span class="info-icon green"><i class="material-icons">contact_mail</i></span>Address information</h4>
+
+			    				<div class="detail">
+			    					<span>Billing address</span>
+			    					<p>Jane roe, 200 e main st, phoenix az, 85123, usa</p>
+			    				</div>
+			    				<div class="detail">
+			    					<span>Shipping address</span>
+			    					<p>Jane roe, 200 e main st, phoenix az, 85123, usa</p>
+			    				</div>
+			    			</div>
+
+			    			<div class="information white left-section">
+			    				<h4><span class="info-icon grey lighten-5"><i class="material-icons icon-up">priority_high</i></span>Other information</h4>
+
+			    				<div class="detail">
+			    					<span>Minimum margin</span>
+			    					<p>20%</p>
+			    				</div>
+			    				<div class="detail">
+			    					<span>Default terms</span>
+			    					<p>Default terms text should be here</p>
+			    				</div>
+			    			</div>
+			    		</div>
+		    		</div>
+
+		    		<!--**   RIGHT QUOTE DETAIL    **-->
+		    		<div class="col l8 m8 s12 grey body-dark right-quote-wrapper">
+		    			<div class="right-quote-container">
+		    				<div class="header-right-quote">
+		    					<h3>Quote Detail</h3>
+		    					<a class="btn-flat transparent light-blue-border light-blue-text right" href="edit-quote.html"><i class="material-icons left">border_color</i>Edit</a>
+							</div>
+		    				<div class="detail-tabs">
+							  <ul id="tabs-swipe-demo" class="tabs transparent">
+							    <li class="tab"><a href="#tab_1">Detail</a></li>
+							    <li class="tab"><a href="#tab_2">Activity</a></li>
+							    <li class="tab"><a href="#tab_3">Notes</a></li>
+							    <li class="tab"><a href="#tab_4">Log Call</a></li>
+							    <li class="tab"><a href="#tab_5">Comments</a></li>
+							    <li class="tab"><a href="#tab_6">Files</a></li>
+							  </ul>
+
+
+							  <!--***  DETAIL TAB STARTS   ***-->
+								<div id="tab_1">
+								      <table class="responsive-table table-quote-detail-tab">
+								        <thead>
+								          <tr>
+								              <th class="prod-name">Product</th>
+								              <th class="prod-link">Link</th>
+								              <th class="prod-quantity">Quantity</th>
+								              <th class="prod-unit">Rate/unit</th>
+								              <th class="prod-tax right-align">Total (Ex Tax)</th>					              
+								          </tr>
+								        </thead>
+
+								        <tbody>
+								          <tr class="white top-tr-one border top-child-one">
+								            <td class="no-padding"><div class="t-logo">
+								            	<div class="t-logo-img">
+								            		<a href="javascript:void(0)"><img src="images/img-0.png"></a>
+
+								            		<div class="row detail-product white">
+								            			<div class="col l5 m4 s12 no-padding-left">
+								            				<div class="img-detailed">
+								            					<img class="img-responsive" src="images/detailed-img.png" alt="img"/>
+								            				</div>
+								            			</div>
+
+								            			<div class="col l7 m6 s12">
+								            				<div class="info-prod">
+								            					<h3 class="bold-500">T-shirt with company logo</h3>
+								            					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+								            					<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laboram</p>
+								            				</div>
+
+								            				<div class="detail-footer">
+								            					<div class="checkout-details">
+								            						<div class="qty">
+								            							<span>QTY: 500</span>
+								            						</div>
+								            						<div class="rate">
+								            							<span>Rate/Unit: $8.00</span>
+								            						</div>
+								            						<div class="total">
+								            							<span>Total&nbsp;&nbsp;&nbsp;$4000</span>
+								            						</div>
+								            					</div>
+								            				</div>
+								            			</div>
+								            		</div>
+
+							            		</div>
+								            	<span>T-shirt with company logo</span></div></td>
+								            <td><a href="javascript:void(0)"><i class="material-icons light-blue-text">insert_link</i></a></td>
+								            <td class="bold-600">500</td>
+								            <td class="bold-600">$8.00</td>
+								            <td class="right-align bold-600">$4,000.00</td>
+								          </tr>
+
+								          <tr>
+								          	<td class="seprator" colspan="5"></td>
+								          </tr>
+								          <tr class="white top-tr-one border tr-container">
+								          	<td class="no-padding" colspan="5">
+								          		<table>
+								          			<tbody>
+								          				<tr class="child-one">
+												            <td class="no-padding prod-name">
+											           			<div class="t-logo">
+													            	<div class="t-logo-img">
+													            		<img src="images/img-00.png">
+													            		<div class="row detail-product white">
+													            			<div class="col l5 detail-img-wrapper m4 s12 no-padding-left">
+													            				<div class="img-detailed">
+													            					<img class="img-responsive" src="images/img-00.png" alt="img"/>
+													            				</div>
+													            			</div>
+
+													            			<div class="col l7 m6 s12">
+													            				<div class="info-prod">
+													            					<h3 class="bold-500">Company Pen design</h3>
+													            					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+													            					<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laboram</p>
+													            				</div>
+
+													            				<div class="detail-footer">
+													            					<div class="checkout-details">
+													            						<div class="qty">
+													            							<span>QTY: 500</span>
+													            						</div>
+													            						<div class="rate">
+													            							<span>Rate/Unit: $8.00</span>
+													            						</div>
+													            						<div class="total">
+													            							<span>Total&nbsp;&nbsp;&nbsp;$4000.00</span>
+													            						</div>
+													            					</div>
+													            				</div>
+													            			</div>
+													            		</div>
+
+												            		</div>
+											            			<span>Company Pen design</span>
+											            		</div>
+										            		</td>
+												            <td class="prod-link"><a href="javascript:void(0)"><i class="material-icons light-blue-text">insert_link</i></a></td>
+												            <td class="prod-quantity">600</td>
+												            <td class="prod-unit">$8.00</td>
+												            <td class="right-align prod-tax relative toggle-sizechart">$4,000.00 <span onclick="togglechart()" class="iconToggleSize"><i class="material-icons light-blue-text">keyboard_arrow_down</i></span></td>
+								          				</tr>
+
+														<tr class="nested-table white hide">
+															<td class="lr-zero" colspan="5">
+																<table>
+																	<thead>
+																		<tr>
+																			<th class="prod-name">size</th>
+																			<th class="prod-description PL0">Color</th>
+																			<th>Quantity</th>
+																			<th>Rate</th>
+																			<th class="right-align">Total</th>
+																		</tr>	
+																	</thead>
+																	<tbody>
+																		<tr>
+																			<td><div>SM</div></td>
+																			<td class="PL0"><div>Red</div></td>
+																			<td><div>200</div></td>
+																			<td><div>$10.00</div></td>
+																			<td class="right-align"><div>$2000.00</div></td>
+																		</tr>
+																		<tr>
+																			<td><div>M</div></td>
+																			<td class="PL0"><div>Green</div></td>
+																			<td><div>100</div></td>
+																			<td><div>$7.00</div></td>
+																			<td class="right-align"><div>$700.00</div></td>
+																		</tr>
+																		<tr>
+																			<td><div>L</div></td>
+																			<td class="PL0"><div>Blue</div></td>
+																			<td><div>30</div></td>
+																			<td><div>$5.00</div></td>
+																			<td class="right-align"><div>$1500.00</div></td>
+																		</tr>
+																	</tbody>
+																</table>
+															</td>
+														</tr>	
+
+														<tr class="white">
+															<td class="no-padding" colspan="5">
+																<table class="tbl-decoration">
+																	<thead>
+																		<tr>
+																		<th colspan="6">
+																		Applied decorations (2)
+																		</th>
+																		</tr>	
+																	</thead>
+																	<tbody>
+																		<tr> 
+																			<td>
+																				<div class="decorations-data-tbl clearfix">
+																					<div class="left-align">
+																						<strong>Transfer Print</strong><small>&nbsp;(Setup cost: $10.00)</small>
+																					</div>
+																					<div class="tbl-location-right right-align">
+																						<a href="javascript:void(0)" class="tag-flat bordered">Your decoration</a>
+																						<span class="total-amount bold-600">Price: $410.00</span>
+																					</div>
+																				</div>
+																			</td>
+																		</tr>
+																		<tr> 
+																			<td>
+																				<div class="decorations-data-tbl clearfix">
+																					<div class="left-align">
+																						<strong>Digital transfer</strong><small>&nbsp;(Setup cost: $7.50.00)</small>
+																					</div>
+																					<div class="tbl-location-right right-align">
+																						<a href="javascript:void(0)" class="tag-flat bordered">Decorations linked to product</a>
+																						<span class="total-amount bold-600">Price: $200.00</span>
+																					</div>
+																				</div>
+																			</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</td>
+														</tr>
+														<tr>
+															<td class="seprator" colspan="5"></td>
+														</tr>
+												         <tr class="white attachment">
+												          	<td class="no-padding" colspan="5">
+												          		<table class="tbl-decoration">
+												          			<tbody>
+												          				<tr>
+													          				<th colspan="5">
+													          					<div class="flex attachment-head-tbl"><i class="material-icons">attachment</i>Attachments (5)</div>
+													          				</th>
+													          			</tr>	
+												          			</tbody>
+												          			<tbody>
+												          				<tr> 
+												          					<td>
+												          						<div class="attachment-listing">
+												          							<ul>
+												          								<li class="white"><a class="modal-trigger" href="#gallery"><img src="images/attach-1.png" alt="img"></a>
+																						</li>
+												          								<li class="white"><a class="modal-trigger" href="#gallery"><img src="images/attach-2.png" alt="img"></a></li>
+												          								<li class="white"><a class="modal-trigger" href="#gallery"><img src="images/attach-3.png" alt="img"></a></li>
+												          								<li class="white"><a class="modal-trigger" href="#gallery"><img src="images/attach-4.png" alt="img"></a></li>
+												          								<li class="white"><a class="modal-trigger" href="#gallery"><img src="images/attach-5.png" alt="img"></a></li>
+																					  	<div id="gallery" class="modal">
+																					    	<div class="modal-content">
+																							 <div class="carousel">
+																							    <a class="carousel-item" href="#one!"><img src="https://lorempixel.com/250/250/nature/1"></a>
+																							    <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/250/250/nature/2"></a>
+																							    <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/250/250/nature/3"></a>
+																							    <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/250/250/nature/4"></a>
+																							    <a class="carousel-item" href="#five!"><img src="https://lorempixel.com/250/250/nature/5"></a>
+																							  </div>
+																							  <div class="modal-bck"></div>
+																					   		</div>
+																					   		<a class="modal-action modal-close" href="javascript:void(0)"><i class="material-icons">close</i></a>
+																					  	</div>
+												          							</ul>
+												          						</div>
+											          						</td>
+												          				</tr>
+												          			</tbody>
+												          		</table>
+												          	</td>
+												         </tr>
+												    	</tbody>
+												    </table>    
+							          			</tr>
+
+												<tr class="subtotal">
+													<td class="no-padding" colspan="5">
+														<div class="grey table-border subtotal-section right-align bold-500">
+															Subtotal (Ex tax):  $13,000.00
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td class="seprator" colspan="5"></td>
+												</tr>
+												<tr class="white top-tr-one border">
+												    <td class="elects"><div class="t-logo"><div class="t-logo-img"><img src="images/notepad.png"></div><span>Notepad design</span></div></td>
+												    <td><a href="javascript:void(0)"><i class="material-icons light-blue-text">insert_link</i></a></td>
+												    <td>500</td>
+												    <td>$8.00</td>
+												    <td class="right-align PR30">$4,000.00</td>
+												</tr>
+										        <tr>
+										          	<td class="seprator" colspan="5"></td>
+										        </tr>
+											    <tr class="white top-tr-one border">
+												    <td class="elects"><div class="t-logo"><div class="t-logo-img"><img src="images/lp.png"></div><span>Mouse pad design with company logo</span></div></td>
+												    <td><a href="javascript:void(0)"><i class="material-icons light-blue-text">insert_link</i></a></td>
+												    <td>500</td>
+												    <td>$8.00</td>
+												    <td class="right-align PR30">$4,000.00</td>
+											    </tr>
+
+											    <tr class="subtotal">
+													<td class="no-padding" colspan="6">
+												    	<div class="grey table-border subtotal-section right-align bold-500">
+												       	 Subtotal (Ex tax):  $13,000.00
+												   		</div>
+													</td>
+											    </tr>	
+												<tr>
+													<td class="seprator" colspan="5"></td>
+												</tr>
+											    <tr class="white top-tr-one border">
+												    <td class="elects"><div class="t-logo"><div class="t-logo-img"><img src="images/attach-6.png"></div><span>Cricket dress design with company logo</span></div></td>
+												    <td><a href="javascript:void(0)"><i class="material-icons light-blue-text">insert_link</i></a></td>
+												    <td>500</td>
+												    <td>$8.00</td>
+												    <td class="right-align PR30">$4,000.00</td>
+											    </tr>
+												<tr>
+													<td class="seprator" colspan="5"></td>
+												</tr>
+											    <tr class="white top-tr-one border">
+												    <td class="elects"><div class="t-logo"><div class="t-logo-img"><img src="images/attach-7.png"></div><span>Cricket dress design with company logo</span></div></td>
+												    <td><a href="javascript:void(0)"><i class="material-icons light-blue-text">insert_link</i></a></td>
+												    <td>500</td>
+												    <td>$8.00</td>
+												    <td class="right-align PR30">$4,000.00</td>
+											    </tr>
+												<tr>
+													<td class="seprator" colspan="5"></td>
+												</tr>
+											    <tr class="white top-tr-one border">
+												    <td class="elects"><div class="t-logo"><div class="t-logo-img"><img src="images/attach-8.png"></div><span>Headphone design with company logo</span></div></td>
+												    <td><a href="javascript:void(0)"><i class="material-icons light-blue-text">insert_link</i></a></td>
+												    <td>500</td>
+												    <td>$8.00</td>
+												    <td class="right-align PR30">$4,000.00</td>
+											    </tr>
+												<tr>
+													<td class="seprator" colspan="6"></td>
+												</tr>
+
+												<tr class="grand-total"> 
+													<td class="no-padding" colspan="6">
+														<div class="white">
+															<div class="right-align">
+																<span class="subtotal-e">Subtotal</span>
+																<span class="ammount">$92,500.00</span>
+															</div>
+															<div class="right-align">
+																<span class="subtotal-e">GST(16%)</span>
+																<span class="ammount">$500</span>
+															</div>
+															<div class="right-align">
+																<span class="subtotal-e"><strong>Total</strong></span>
+																<span class="ammount"><strong>$93,000.00</strong></span>
+															</div>
+														</div>	
+													</td>
+												</tr>
+								       		</tbody>
+								      </table>
+								</div>
+							  <!--***  /ENDS DETAIL TAB  ***-->
+
+
+							  <!--****  ACTIVITY TAB STARTS  *****-->
+						   		<div id="tab_2" class="tab-activity white">
+							  		<div class="activity-container">
+							  			<h4><span class="yellow"><i class="material-icons white-text">access_time</i></span> Recent activities</h4>
+
+							  			<div class="activity-display">
+							  				<h5>Today</h5>
+							  				<ul>
+								  				<li> 
+								  					<div class="activity-log clearfix">
+								  						<div class="left">
+							  								<h5>Job Marked as complete </h5>
+						  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 am</span>
+								  						</div>
+
+								  						<div class="right">
+								  							<div class="user flex">
+								  							<a href="javascript:void(0)">By: Ash Ketchum</a>
+															    <div class="user-icon">
+															        <span class="icon-img">
+															            <img class="img-responsive" src="images/img.png">
+															        </span>
+															    </div>
+															</div>
+								  						</div>
+								  					</div>
+								  				</li>
+
+								  				<li class="act-red"> 
+								  					<div class="activity-log clearfix">
+								  						<div class="left">
+							  								<h5>Task mark as incomplete <a href="#" class="light-blue-text">EMB - Stitch Out Produced</a></h5>
+						  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 08:00 am <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Assigned To: </span>Arnold Schwarzenegger</span>
+								  						</div>
+
+								  						<div class="right">
+								  							<div class="user flex">
+								  							<a href="javascript:void(0)">By: Darth Vade</a>
+															    <div class="user-icon">
+															        <span class="icon-img">
+															            <img class="img-responsive" src="images/img.png">
+															        </span>
+															    </div>
+															</div>
+								  						</div>
+								  					</div>
+								  				</li>
+
+								  				<li> 
+								  					<div class="activity-log clearfix">
+								  						<div class="left">
+							  								<h5>Job Marked as complete <a href="#" class="light-blue-text">ART - Artwork VectorisedM</a></h5>
+						  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 08:00 am <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Assigned To: </span>Arnold Schwarzenegger</span>
+								  						</div>
+
+								  						<div class="right">
+								  							<div class="user flex">
+								  								<a href="javascript:void(0)">By: Basil Brush</a>
+															    <div class="user-icon">
+															        <span class="icon-img">
+															            <img class="img-responsive" src="images/img.png">
+															        </span>
+															    </div>
+															</div>
+								  						</div>
+								  					</div>
+								  				</li>
+								  				<li class="act-red"> 
+								  					<div class="activity-log clearfix">
+								  						<div class="left">
+							  								<h5>Proof rejected</h5>
+						  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with company logo, Pen design with company logo</span>
+								  						</div>
+
+								  						<div class="right">
+								  							<div class="user flex">
+								  								<a href="javascript:void(0)">By: Jack Sparrow</a>
+															    <div class="user-icon">
+															        <span class="icon-img">
+															            <img class="img-responsive" src="images/img.png">
+															        </span>
+															    </div>
+															</div>
+								  						</div>
+								  					</div>
+								  				</li>
+
+								  				<li class="act-yellow"> 
+								  					<div class="activity-log clearfix">
+								  						<div class="left">
+							  								<h5>Proof sent</h5>
+						  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 08:00 am <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Assigned To: </span>Arnold Schwarzenegger</span>
+								  						</div>
+
+								  						<div class="right">
+								  							<div class="user flex">
+								  								<a href="javascript:void(0)">By: Jonathan Sparrow</a>
+															    <div class="user-icon">
+															        <span class="icon-img">
+															            <img class="img-responsive" src="images/img.png">
+															        </span>
+															    </div>
+															</div>
+								  						</div>
+								  					</div>
+								  				</li>
+							  				</ul>
+							  			</div>
+
+							  			<div class="activity-display">
+							  				<h5>Yesterday</h5>
+							  				<ul>
+								  				<li class="sea-blue"> 
+								  					<div class="activity-log clearfix">
+								  						<div class="left">
+							  								<h5>New item added (<a href="#" class="light-blue-text">Note pad design with company logo</a>)</h5>
+						  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 am</span>
+								  						</div>
+
+								  						<div class="right">
+								  							<div class="user flex">
+							  									<a href="javascript:void(0)">By: Ash Ketchum</a>
+															    <div class="user-icon">
+															        <span class="icon-img">
+															            <img class="img-responsive" src="images/img.png">
+															        </span>
+															    </div>
+															</div>
+								  						</div>
+								  					</div>
+								  				</li>
+
+								  				<li class="act-brown"> 
+								  					<div class="activity-log clearfix">
+								  						<div class="left">
+							  								<h5>Item edited (<a href="#" class="light-blue-text">Note pad design with company logo</a>)</h5>
+						  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 08:00 am <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Assigned To: </span>Arnold Schwarzenegger</span>
+								  						</div>
+
+								  						<div class="right">
+								  							<div class="user flex">
+								  								<a href="javascript:void(0)">By: Darth Vade</a>
+															    <div class="user-icon">
+															        <span class="icon-img">
+															            <img class="img-responsive" src="images/img.png">
+															        </span>
+															    </div>
+															</div>
+								  						</div>
+								  					</div>
+								  				</li>
+
+								  				<li class="act-purple"> 
+								  					<div class="activity-log clearfix">
+								  						<div class="left">
+							  								<h5>Note added (<a href="#" class="light-blue-text">Design and print points in the note</a>)</h5>
+						  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 12:10 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Assigned To: </span>Arnold Schwarzenegger</span>
+								  						</div>
+
+								  						<div class="right">
+								  							<div class="user flex">
+								  								<a href="javascript:void(0)">By: Basil Brush</a>
+															    <div class="user-icon">
+															        <span class="icon-img">
+															            <img class="img-responsive" src="images/img.png">
+															        </span>
+															    </div>
+															</div>
+								  						</div>
+								  					</div>
+								  				</li>
+							  				</ul>
+							  			</div>
+
+							  			<div class="activity-display">
+							  				<h5>10 Sep, 2017</h5>
+							  				<ul>
+								  				<li class="sea-blue"> 
+								  					<div class="activity-log clearfix">
+								  						<div class="left">
+							  								<h5>New item added (<a href="#" class="light-blue-text">Note pad design with company logo</a>)</h5>
+						  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 am</span>
+								  						</div>
+
+								  						<div class="right">
+								  							<div class="user flex">
+								  								<a href="javascript:void(0)">By: Ash Ketchum</a>
+															    <div class="user-icon">
+															        <span class="icon-img">
+															            <img class="img-responsive" src="images/img.png">
+															        </span>
+															    </div>
+															</div>
+								  						</div>
+								  					</div>
+								  				</li>
+
+								  				<li class="act-purple"> 
+								  					<div class="activity-log clearfix">
+								  						<div class="left">
+							  								<h5>Artwork uploaded (<span class="grey-text text-lighten-7 font-normal">T-shirt-design-with-company-logo-example.png and <a href="#" class="light-blue-text">5 more</a></span>)</h5>
+						  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 08:00 am <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Assigned To: </span>Arnold Schwarzenegger</span>
+								  						</div>
+
+								  						<div class="right">
+								  							<div class="user flex">
+								  								<a href="javascript:void(0)">By: Ash Ketchum</a>
+															    <div class="user-icon">
+															        <span class="icon-img">
+															            <img class="img-responsive" src="images/img.png">
+															        </span>
+															    </div>
+															</div>
+								  						</div>
+								  					</div>
+								  				</li>
+
+								  				<li class="act-brown"> 
+								  					<div class="activity-log clearfix">
+								  						<div class="left">
+							  								<h5>Job Scheduled</h5>
+						  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 am</span>
+								  						</div>
+
+								  						<div class="right">
+								  							<div class="user flex">
+															    <a href="javascript:void(0)">By: Basil Brush</a>
+															    <div class="user-icon">
+															        <span class="icon-img">
+															            <img class="img-responsive" src="images/img.png">
+															        </span>
+															    </div>
+															</div>
+								  						</div>
+								  					</div>
+								  				</li>
+							  				</ul>
+							  			</div>							  			
+							  		</div>
+							    </div> 
+							  <!--*****  /ENDS ACIVITY TAB   *****-->
+
+
+							  <!--****  NOTES TAB STARTS   ****-->
+							 	<div id="tab_3" class="tab-notes white">
+							 		<div class="add-notes">
+							 			<div class="add-here">
+							 				<h6><span><i class="material-icons green-text">note_add</i></span> Add Notes</h6>
+							 				<div class="input-field">
+							 					<textarea id="add_note" class="materialize-textarea" placeholder="Click here to add a notes..."></textarea>
+							 				</div>
+							 			</div>
+							 		</div>
+
+									<div class="activity-display">
+						  				<h5 class="bold-500">Today</h5>
+						  				<ul class="activity-list">
+
+							  				<li class="act-purple"> 
+							  					<div class="activity-log clearfix">
+							  						<div class="left">
+						  								<h5>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h5>
+					  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  						</div>
+
+							  						<div class="right">
+							  							<div class="user flex">
+														    <div class="user-icon">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+							  								<a href="javascript:void(0)">Harry</a>
+															<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownact'><i class="material-icons">more_horiz</i></a>
+															  <ul id='dropdownact' class='dropdown-content drop-activity'>
+															    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+															    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+															  </ul>
+														</div>
+							  						</div>
+							  					</div>
+							  				</li>
+
+							  				<li class="act-purple"> 
+							  					<div class="activity-log clearfix">
+							  						<div class="left">
+						  								<h5>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h5>
+					  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  						</div>
+
+							  						<div class="right">
+							  							<div class="user flex">
+														    <div class="user-icon">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+							  								<a href="javascript:void(0)">Basil Brush</a>
+															<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownact-a'><i class="material-icons">more_horiz</i></a>
+															  <ul id='dropdownact-a' class='dropdown-content drop-activity'>
+															    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+															    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+															  </ul>
+														</div>
+							  						</div>
+							  					</div>
+							  				</li>
+
+							  				<li class="act-purple"> 
+							  					<div class="activity-log clearfix">
+							  						<div class="left">
+						  								<h5>Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+					  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  						</div>
+
+							  						<div class="right">
+							  							<div class="user flex">
+														    <div class="user-icon">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+							  								<a href="javascript:void(0)">Basil Brush</a>
+															<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownact-b'><i class="material-icons">more_horiz</i></a>
+															  <ul id='dropdownact-b' class='dropdown-content drop-activity'>
+															    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+															    <li><a href="#!"><i class="material-icons">delete</i>delete</a></li>
+															  </ul>
+														</div>
+							  						</div>
+							  					</div>
+							  				</li>
+
+							  				<li class="act-purple"> 
+							  					<div class="activity-log clearfix">
+							  						<div class="left">
+						  								<h5>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
+					  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  						</div>
+
+							  						<div class="right">
+							  							<div class="user flex">
+														    <div class="user-icon">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+							  								<a href="javascript:void(0)">Jack Sparrow</a>
+															<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownact-dh'><i class="material-icons">more_horiz</i></a>
+															  <ul id='dropdownact-dh' class='dropdown-content drop-activity'>
+															    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+															    <li><a href="#!"><i class="material-icons">delete</i>delete</a></li>
+															  </ul>
+														</div>
+							  						</div>
+							  					</div>
+							  				</li>
+
+							  				<li class="act-purple"> 
+							  					<div class="activity-log clearfix">
+							  						<div class="left">
+						  								<h5>Excepteur sint occaecat cupidatat non proident.</h5>
+					  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  						</div>
+
+							  						<div class="right">
+							  							<div class="user flex">
+														    <div class="user-icon">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+							  								<a href="javascript:void(0)">Jonathan Sparrow</a>
+															<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownact-d'><i class="material-icons">more_horiz</i></a>
+															  <ul id='dropdownact-d' class='dropdown-content drop-activity'>
+															    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+															    <li><a href="#!"><i class="material-icons">delete</i>delete</a></li>
+															  </ul>
+														</div>
+							  						</div>
+							  					</div>
+							  				</li>
+						  				</ul>
+						  			</div>
+
+									<div class="activity-display act-yest">
+						  				<h5 class="bold-500 yesterday">Yesterday</h5>
+						  				<ul class="activity-list">
+
+							  				<li class="act-purple"> 
+							  					<div class="activity-log clearfix">
+							  						<div class="left">
+						  								<h5>Mollit anim id est laborum.</h5>
+					  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  						</div>
+
+							  						<div class="right">
+							  							<div class="user flex">
+														    <div class="user-icon">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+							  								<a href="javascript:void(0)">Ash Ketchum</a>
+															<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownact-e'><i class="material-icons">more_horiz</i></a>
+															  <ul id='dropdownact-e' class='dropdown-content drop-activity'>
+															    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+															    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+															  </ul>
+														</div>
+							  						</div>
+							  					</div>
+							  				</li>
+
+							  				<li class="act-purple"> 
+							  					<div class="activity-log clearfix">
+							  						<div class="left">
+						  								<h5>Voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h5>
+					  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  						</div>
+
+							  						<div class="right">
+							  							<div class="user flex">
+														    <div class="user-icon">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+							  								<a href="javascript:void(0)">Ash Ketchum</a>
+															<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownact-f'><i class="material-icons">more_horiz</i></a>
+															  <ul id='dropdownact-f' class='dropdown-content drop-activity'>
+															    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+															    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+															  </ul>
+														</div>
+							  						</div>
+							  					</div>
+							  				</li>
+							  				<li class="act-purple"> 
+							  					<div class="activity-log clearfix">
+							  						<div class="left">
+						  								<h5>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
+					  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  						</div>
+
+							  						<div class="right">
+							  							<div class="user flex">
+														    <div class="user-icon">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+							  							   <a href="javascript:void(0)">Darth Vade</a>
+															<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownact-g'><i class="material-icons">more_horiz</i></a>
+															  <ul id='dropdownact-g' class='dropdown-content drop-activity'>
+															    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+															    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+															  </ul>
+														</div>
+							  						</div>
+							  					</div>
+							  				</li>
+						  				</ul>
+						  			</div>
+
+									<div class="activity-display act-yest">
+						  				<h5 class="bold-500 yesterday">30 Jun, 2017</h5>
+						  				<ul class="activity-list">
+
+							  				<li class="act-purple"> 
+							  					<div class="activity-log clearfix">
+							  						<div class="left">
+						  								<h5>Duis aute irure dolor in reprehenderit in voluptate.</h5>
+					  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  						</div>
+
+							  						<div class="right">
+							  							<div class="user flex">
+														    <div class="user-icon">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+							  								<a href="javascript:void(0)">Ash Ketchum</a>
+															<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownact-h'><i class="material-icons">more_horiz</i></a>
+															  <ul id='dropdownact-h' class='dropdown-content drop-activity'>
+															    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+															    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+															  </ul>
+														</div>
+							  						</div>
+							  					</div>
+							  				</li>
+
+							  				<li class="act-purple"> 
+							  					<div class="activity-log clearfix">
+							  						<div class="left">
+						  								<h5>Ut aliquip ex ea commodo consequat.</h5>
+					  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  						</div>
+
+							  						<div class="right">
+							  							<div class="user flex">
+														    <div class="user-icon">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+							  							    <a href="javascript:void(0)">By: Darth Vade</a>
+															<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownact-j'><i class="material-icons">more_horiz</i></a>
+															  <ul id='dropdownact-j' class='dropdown-content drop-activity'>
+															    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+															    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+															  </ul>
+														</div>
+							  						</div>
+							  					</div>
+							  				</li>
+
+						  				</ul>
+						  			</div>
+							 	</div>
+							  <!--***  /ENDS NOTES TAB  ***-->
+
+							  <!--****  LOG A CALL STARTS    ******-->
+								<div id="tab_4" class="log-a-call white">
+									<section id="Log_Call">
+										<div class="row call_log-Container">
+											<h6><span><i class="material-icons green-text">settings_phone</i></span> Add Notes</h6>
+
+											<div class="log-search clearfix">
+												<div class="input-field search-bordered w-icon">	
+												    <div class="input">
+												        <i class="material-icons">search</i>
+												        <input placeholder="Search or add customer" id="first_name" type="text" class="validate">
+												    </div>
+												</div>
+
+												<div class="check-call clearfix">
+													<div class="row">
+														<div class="col l2 no-padding-left">
+															<input class="with-gap" id="incomimg" name="kit_radio" type="radio">
+															<label for="incomimg">Incoming call</label>
+														</div>
+														<div class="col l2">
+															<input class="with-gap" id="outgoing" name="kit_radio" type="radio">
+															<label for="outgoing">Outgoing call</label>
+														</div>
+													</div>	
+
+													<div class="row caller-controls">
+
+														<div class="col l4 m4 s12 no-padding-left">
+														  	<div class="input-field custom-dropdown">
+														  		<span class="label">Select number</span>
+														  		<i class="material-icons dop-icon">keyboard_arrow_down</i>
+															    <select>
+															      <option value="" disabled selected>T-shirts</option>
+															      <option value="1">Option 1</option>
+															      <option value="2">Option 2</option>
+															      <option value="3">Option 3</option>
+															    </select>
+														    </div>
+														</div>
+
+														<div class="col l4 m4 s12">
+															<div class="wrapper-input-number clearfix">
+															  	<div class="input-field number">
+															  		<span class="flag"><img src="images/flag.png"/></span>
+															  		<span class="label">Call from</span>
+																    <select>
+																      <option value="" disabled selected>+91</option>
+																      <option value="1">+92</option>
+																      <option value="2">+93</option>
+																    </select>
+															    </div>
+
+														        <div class="input-field person_number">
+														          <input placeholder="Enter Number" id="number" type="text" class="validate">
+														        </div>
+															</div> 
+														</div>
+
+														<div class="col l4 m4 s12 no-padding-right">
+														  	<div class="input-field clearfix relative call-log-timers">
+														  		<span class="label">Date and time</span>
+														  		<div class="col l6 no-padding-left custom-picker">
+														  			<i class="material-icons">today</i>
+														  			<input type="text" class="datepicker">
+														  		</div>
+
+														  		<div class="col l6 no-padding-left custom-picker">
+														  			<i class="material-icons">access_time</i>
+													  				<input type="text" class="timepicker">
+														  		</div>
+														    </div>
+														</div>
+
+														<div class="col l12 m12 s12 no-padding-left log-text-comment relative">
+															<span class="label">Note</span>
+															<textarea id="textarea1" placeholder="Enter call note text here..." class="materialize-textarea"></textarea>
+														</div>
+
+														<div class="row call-btns flex clearfix">
+															<div class="col l6 m6 s12 no-padding-left">
+																<a class="text-link grey-text 	text-lighten-7" href="javascript:void(0)"><i class="material-icons icon-left">clear</i> Cancel</a>			
+															</div>
+															<div class="col l6 m6 s12">
+															<a class="waves-effect waves-light btn-flat btn-large light-blue white-text right" href="javascript:void(0)">Save</a>
+															</div>
+														</div>
+
+													</div>
+												</div>
+											</div>
+
+											<div class="activity-display activity-call-log">
+												<h5 class="bold-500">Today</h5>
+												<ul class="activity-list">
+												    <li class="act-brown"> 
+												        <div class="activity-log clearfix">
+												            <div class="left">
+												                <h5>Voluptate velit esse cillum dolore eu fugiat nulla pariatur. <a class="light-blue-text" href="#">(Outgoing call)</a></h5>
+												                <span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm</span>
+												            </div>
+
+												            <div class="right">
+												                <div class="user flex">
+												                    <div class="user-icon">
+												                        <span class="icon-img">
+												                            <img class="img-responsive" src="images/img.png">
+												                        </span>
+												                    </div>
+												                    <a href="javascript:void(0)">Ash Ketchum</a>
+																	<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownactCall'><i class="material-icons">more_horiz</i></a>
+																	<ul id='dropdownactCall' class='dropdown-content drop-activity'>
+																	    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+																	    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+																	</ul>
+												                </div>
+												            </div>
+												        </div>
+												    </li>
+
+												    <li class="act-brown"> 
+												        <div class="activity-log clearfix">
+												            <div class="left">
+												                <h5>Anim id est laborum. <a class="green-text" href="#">(Incoming call)</a></h5>
+												                <span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm</span>
+												            </div>
+
+												            <div class="right">
+												                <div class="user flex">
+												                    <div class="user-icon">
+												                        <span class="icon-img">
+												                            <img class="img-responsive" src="images/img.png">
+												                        </span>
+												                    </div>
+												                    <a href="javascript:void(0)">Darth Vade</a>
+																	<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownactCall-a'><i class="material-icons">more_horiz</i></a>
+																	<ul id='dropdownactCall-a' class='dropdown-content drop-activity'>
+																	    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+																	    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+																	</ul>
+												                </div>
+												            </div>
+												        </div>
+												    </li>
+
+												    <li class="act-brown"> 
+												        <div class="activity-log clearfix">
+												            <div class="left">
+												                <h5>Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <a class="green-text" href="#">(Incoming call)</a></h5>
+												                <span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm</span>
+												            </div>
+
+												            <div class="right">
+												                <div class="user flex">
+												                    <div class="user-icon">
+												                        <span class="icon-img">
+												                            <img class="img-responsive" src="images/img.png">
+												                        </span>
+												                    </div>
+												                    <a href="javascript:void(0)">Basil Brush</a>
+																	<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownactCall-b'><i class="material-icons">more_horiz</i></a>
+																	<ul id='dropdownactCall-b' class='dropdown-content drop-activity'>
+																	    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+																	    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+																	</ul>
+												                </div>
+												            </div>
+												        </div>
+												    </li>
+
+												    <li class="act-brown"> 
+												        <div class="activity-log clearfix">
+												            <div class="left">
+												                <h5>Dolore magna aliqua. <a class="green-text" href="#">(Incoming call)</a></h5>
+												                <span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm</span>
+												            </div>
+
+												            <div class="right">
+												                <div class="user flex">
+												                    <div class="user-icon">
+												                        <span class="icon-img">
+												                            <img class="img-responsive" src="images/img.png">
+												                        </span>
+												                    </div>
+												                    <a href="javascript:void(0)">Jack Sparrow</a>
+																	<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownactCall-c'><i class="material-icons">more_horiz</i></a>
+																	<ul id='dropdownactCall-c' class='dropdown-content drop-activity'>
+																	    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+																	    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+																	</ul>
+												                </div>
+												            </div>
+												        </div>
+												    </li>
+
+												    <li class="act-brown"> 
+												        <div class="activity-log clearfix">
+												            <div class="left">
+												                <h5>Excepteur sint occaecat cupidatat non proident. <a class="green-text" href="#">(Incoming call)</a></h5>
+												                <span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm</span>
+												            </div>
+
+												            <div class="right">
+												                <div class="user flex">
+												                    <div class="user-icon">
+												                        <span class="icon-img">
+												                            <img class="img-responsive" src="images/img.png">
+												                        </span>
+												                    </div>
+												                    <a href="javascript:void(0)">Jonathan Sparrow</a>
+																	<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownactCall-d'><i class="material-icons">more_horiz</i></a>
+																	<ul id='dropdownactCall-d' class='dropdown-content drop-activity'>
+																	    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+																	    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+																	</ul>
+												                </div>
+												            </div>
+												        </div>
+												    </li>
+												</ul>
+											</div>
+											<div class="activity-display activity-call-log">
+												<h5 class="bold-500">Yesterday</h5>
+												<ul class="activity-list">
+												    <li class="act-brown"> 
+												        <div class="activity-log clearfix">
+												            <div class="left">
+												                <h5>Mollit anim id est laborum. <a class="light-blue-text" href="#">(Outgoing call)</a></h5>
+												                <span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm</span>
+												            </div>
+
+												            <div class="right">
+												                <div class="user flex">
+												                    <div class="user-icon">
+												                        <span class="icon-img">
+												                            <img class="img-responsive" src="images/img.png">
+												                        </span>
+												                    </div>
+												                    <a href="javascript:void(0)">Ash Ketchum</a>
+																	<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownactCall-e'><i class="material-icons">more_horiz</i></a>
+																	<ul id='dropdownactCall-e' class='dropdown-content drop-activity'>
+																	    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+																	    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+																	</ul>
+												                </div>
+												            </div>
+												        </div>
+												    </li>
+
+												    <li class="act-brown"> 
+												        <div class="activity-log clearfix">
+												            <div class="left">
+												                <h5>Voluptate velit esse cillum dolore eu fugiat nulla pariatur. <a class="green-text" href="#">(Incoming call)</a></h5>
+												                <span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm</span>
+												            </div>
+
+												            <div class="right">
+												                <div class="user flex">
+												                    <div class="user-icon">
+												                        <span class="icon-img">
+												                            <img class="img-responsive" src="images/img.png">
+												                        </span>
+												                    </div>
+												                    <a href="javascript:void(0)">Darth Vade</a>
+																	<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownactCall-f'><i class="material-icons">more_horiz</i></a>
+																	<ul id='dropdownactCall-f' class='dropdown-content drop-activity'>
+																	    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+																	    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+																	</ul>
+												                </div>
+												            </div>
+												        </div>
+												    </li>
+
+												    <li class="act-brown"> 
+												        <div class="activity-log clearfix">
+												            <div class="left">
+												                <h5>Consectetur adipisicing elit. <a class="light-blue-text" href="#">(Outgoing call)</a></h5>
+												                <span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm</span>
+												            </div>
+
+												            <div class="right">
+												                <div class="user flex">
+												                    <div class="user-icon">
+												                        <span class="icon-img">
+												                            <img class="img-responsive" src="images/img.png">
+												                        </span>
+												                    </div>
+												                    <a href="javascript:void(0)">Basil Brush</a>
+																	<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownactCall-g'><i class="material-icons">more_horiz</i></a>
+																	<ul id='dropdownactCall-g' class='dropdown-content drop-activity'>
+																	    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+																	    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+																	</ul>
+												                </div>
+												            </div>
+												        </div>
+												    </li>
+												</ul>
+											</div>
+										</div>
+									</section>
+								</div>
+							  <!--****  /ENDS LOG A CALL    ******-->
+
+							  <!--****  COMMENTS STARTS    ******-->
+							 	<div id="tab_5" class="tab-notes white">
+							 		<div class="add-notes">
+							 			<div class="add-here">
+							 				<h6><span><i class="material-icons green-text">message</i></span> Add Comment</h6>
+							 				<div class="input-field">
+							 					<textarea id="add_note" class="materialize-textarea" placeholder="Click here to add a comment..."></textarea>
+							 				</div>
+							 			</div>
+							 		</div>
+
+									<div class="activity-display">
+						  				<h5 class="bold-500">Today</h5>
+						  				<ul class="activity-list">
+
+							  				<li class="act-blue-grey"> 
+							  					<div class="activity-log clearfix">
+							  						<div class="left">
+						  								<h5>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h5>
+					  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  						</div>
+
+							  						<div class="right">
+							  							<div class="user flex">
+														    <div class="user-icon">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+														    <a href="javascript:void(0)">Ash Ketchum</a>
+															<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownactcomment'><i class="material-icons">more_horiz</i></a>
+															<ul id='dropdownactcomment' class='dropdown-content drop-activity'>
+															    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+															    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+															</ul>
+														</div>
+							  						</div>
+							  					</div>
+							  				</li>
+
+							  				<li class="act-blue-grey"> 
+							  					<div class="activity-log clearfix">
+							  						<div class="left">
+						  								<h5>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h5>
+					  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  						</div>
+
+							  						<div class="right">
+							  							<div class="user flex">
+														    <div class="user-icon">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+							  							    <a href="javascript:void(0)">Darth Vade</a>
+															<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownactcomment-a'><i class="material-icons">more_horiz</i></a>
+															<ul id='dropdownactcomment-a' class='dropdown-content drop-activity'>
+															    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+															    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+															</ul>
+														</div>
+							  						</div>
+							  					</div>
+							  				</li>
+
+							  				<li class="act-blue-grey"> 
+							  					<div class="activity-log clearfix">
+							  						<div class="left">
+						  								<h5>Exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h5>
+					  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  						</div>
+
+							  						<div class="right">
+							  							<div class="user flex">
+														    <div class="user-icon">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+							  								<a href="javascript:void(0)">Basil Brush</a>	
+															<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownactcomment-b'><i class="material-icons">more_horiz</i></a>
+															<ul id='dropdownactcomment-b' class='dropdown-content drop-activity'>
+															    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+															    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+															</ul>
+														</div>
+							  						</div>
+							  					</div>
+							  				</li>
+
+							  				<li class="act-blue-grey"> 
+							  					<div class="activity-log clearfix">
+							  						<div class="left">
+						  								<h5>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
+					  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  						</div>
+
+							  						<div class="right">
+							  							<div class="user flex">
+														    <div class="user-icon">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+							  								<a href="javascript:void(0)">By: Jack Sparrow</a>
+															<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownactcommen-c'><i class="material-icons">more_horiz</i></a>
+															<ul id='dropdownactcommen-c' class='dropdown-content drop-activity'>
+															    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+															    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+															</ul>
+														</div>
+							  						</div>
+							  					</div>
+							  				</li>
+
+							  				<li class="act-blue-grey"> 
+							  					<div class="activity-log clearfix">
+							  						<div class="left">
+						  								<h5>Excepteur sint occaecat cupidatat non proident.</h5>
+					  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  						</div>
+
+							  						<div class="right">
+							  							<div class="user flex">
+														    <div class="user-icon">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+							  								<a href="javascript:void(0)">Jonathan Sparrow</a>												    
+															<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownactcomment-d'><i class="material-icons">more_horiz</i></a>
+															<ul id='dropdownactcomment-d' class='dropdown-content drop-activity'>
+															    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+															    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+															</ul>
+														</div>
+							  						</div>
+							  					</div>
+							  				</li>
+						  				</ul>
+						  			</div>
+
+									<div class="activity-display act-yest">
+						  				<h5 class="bold-500 yesterday">Yesterday</h5>
+						  				<ul class="activity-list">
+
+							  				<li class="act-blue-grey"> 
+							  					<div class="activity-log clearfix">
+							  						<div class="left">
+						  								<h5>Mollit anim id est laborum.</h5>
+					  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  						</div>
+
+							  						<div class="right">
+							  							<div class="user flex">
+														    <div class="user-icon">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+							  								<a href="javascript:void(0)">Ash Ketchum</a>														   
+															<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownactcomment-e'><i class="material-icons">more_horiz</i></a>
+															<ul id='dropdownactcomment-e' class='dropdown-content drop-activity'>
+															    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+															    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+															</ul>
+														</div>
+							  						</div>
+							  					</div>
+							  				</li>
+
+							  				<li class="act-blue-grey"> 
+							  					<div class="activity-log clearfix">
+							  						<div class="left">
+						  								<h5>Voluptate velit esse cillum dolore eu fugiat nulla pariatur.</h5>
+					  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  						</div>
+
+							  						<div class="right">
+							  							<div class="user flex">
+														    <div class="user-icon">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+							  								<a href="javascript:void(0)">Ash Ketchum</a>
+															<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownactcomment-f'><i class="material-icons">more_horiz</i></a>
+															<ul id='dropdownactcomment-f' class='dropdown-content drop-activity'>
+															    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+															    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+															</ul>
+														</div>
+							  						</div>
+							  					</div>
+							  				</li>
+							  				<li class="act-blue-grey"> 
+							  					<div class="activity-log clearfix">
+							  						<div class="left">
+						  								<h5>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</h5>
+					  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  						</div>
+
+							  						<div class="right">
+							  							<div class="user flex">
+														    <div class="user-icon">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+							  							   <a href="javascript:void(0)">Darth Vade</a>														    
+															<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownactcomment-g'><i class="material-icons">more_horiz</i></a>
+															<ul id='dropdownactcomment-g' class='dropdown-content drop-activity'>
+															    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+															    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+															</ul>
+														</div>
+							  						</div>
+							  					</div>
+							  				</li>
+						  				</ul>
+						  			</div>
+
+									<div class="activity-display act-yest">
+						  				<h5 class="bold-500 yesterday">30 Jun, 2017</h5>
+						  				<ul class="activity-list">
+
+							  				<li class="act-blue-grey"> 
+							  					<div class="activity-log clearfix">
+							  						<div class="left">
+						  								<h5>Duis aute irure dolor in reprehenderit in voluptate.</h5>
+					  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  						</div>
+
+							  						<div class="right">
+							  							<div class="user flex">
+														    <div class="user-icon">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+							  								<a href="javascript:void(0)">Ash Ketchum</a>													    
+															<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownactcomment-h'><i class="material-icons">more_horiz</i></a>
+															<ul id='dropdownactcomment-h' class='dropdown-content drop-activity'>
+															    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+															    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+															</ul>
+														</div>
+							  						</div>
+							  					</div>
+							  				</li>
+
+							  				<li class="act-blue-grey"> 
+							  					<div class="activity-log clearfix">
+							  						<div class="left">
+						  								<h5>Ut aliquip ex ea commodo consequat.</h5>
+					  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  						</div>
+
+							  						<div class="right">
+							  							<div class="user flex">
+														    <div class="user-icon">
+														        <span class="icon-img">
+														            <img class="img-responsive" src="images/img.png">
+														        </span>
+														    </div>
+							  							   <a href="javascript:void(0)">Darth Vade</a>														    
+															<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownactcomment-i'><i class="material-icons">more_horiz</i></a>									    
+															<ul id='dropdownactcomment-i' class='dropdown-content drop-activity'>
+															    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+															    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+															</ul>
+														</div>
+							  						</div>
+							  					</div>
+							  				</li>
+						  				</ul>
+						  			</div>
+							 	</div>
+
+							  <!--**** /ENDS COMMENTS    ******-->
+
+							  <!--****   FILES TAB STARTS   ****-->
+							 	<div id="tab_6" class="tab-files white">
+							 		<div class="add-notes">
+							 			<div class="add-here">
+							 				<h6><span><i class="material-icons green-text">message</i></span> Add Files</h6>
+											<div class="input-field drag-n-drop-wrapper filetab">
+												<div class="drag-n-drop">
+													<div class="drop-file center-align">
+														<div class="upload-icon grey upload"><i class="material-icons">cloud_upload</i></div>
+														<h4>Drag and drop</h4>
+														<p>your file here, or <a href="#">click to locate file</a></p>
+													</div>	
+												</div>
+											</div>
+
+
+											<div class="activity-display">
+								  				<h5 class="bold-500">Today</h5>
+								  				<ul class="activity-list">
+									  				<li class="act-yellow"> 
+									  					<div class="activity-log clearfix">
+									  						<div class="left">
+									  							<div class="media-img">
+									  								<img src="images/media.png" alt="media"/>
+									  							</div>
+									  							<div  class="media-title">
+									  								<h5>File-name-here.jpg</h5>
+								  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  									</div>
+									  						</div>
+
+									  						<div class="right">
+									  							<div class="user flex">
+																    <div class="user-icon">
+																        <span class="icon-img">
+																            <img class="img-responsive" src="images/img.png">
+																        </span>
+																    </div>
+																    <a href="javascript:void(0)">Ash Ketchum</a>
+																	<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownfile'><i class="material-icons">more_horiz</i></a>
+																	<ul id='dropdownfile' class='dropdown-content drop-activity'>
+																	    <li><a href="#!"><i class="material-icons">zoom_in</i>View</a></li>
+																	    <li><a href="#!"><i class="material-icons">delete</i>Download</a></li>
+																	    <li><a href="#!"><i class="material-icons">file_download</i>Copy File</a></li>	
+																	    <li class="divider"></li>
+																	    <li class="footer-list">
+																	    	<ul id="dropdown-footer">
+																	    		<li><a href="#!"><i class="material-icons">edit</i></a></li>
+																	    		<li><a href="#!"><i class="material-icons">delete</i></a></li>
+																	    	</ul>
+																	    </li>
+																	</ul>
+																</div>
+									  						</div>
+									  					</div>
+									  				</li>
+
+									  				<li class="act-yellow"> 
+									  					<div class="activity-log clearfix">
+									  						<div class="left">
+									  							<div class="media-img">
+									  								<img src="images/img-00.png" alt="media"/>
+									  							</div>
+									  							<div  class="media-title">
+									  								<h5>pen-design-examples.jpg</h5>
+								  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  									</div>
+									  						</div>
+
+									  						<div class="right">
+									  							<div class="user flex">
+																    <div class="user-icon">
+																        <span class="icon-img">
+																            <img class="img-responsive" src="images/img.png">
+																        </span>
+																    </div>
+																    <a href="javascript:void(0)">Ash Ketchum</a>
+																	<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownfile-a'><i class="material-icons">more_horiz</i></a>
+																	<ul id='dropdownfile-a' class='dropdown-content drop-activity'>
+																	    <li><a href="#!"><i class="material-icons">zoom_in</i>View</a></li>
+																	    <li><a href="#!"><i class="material-icons">delete</i>Download</a></li>
+																	    <li><a href="#!"><i class="material-icons">file_download</i>Copy File</a></li>	
+																	    <li class="divider"></li>
+																	    <li class="footer-list">
+																	    	<ul id="dropdown-footer">
+																	    		<li><a href="#!"><i class="material-icons">edit</i></a></li>
+																	    		<li><a href="#!"><i class="material-icons">delete</i></a></li>
+																	    	</ul>
+																	    </li>
+																	</ul>
+																</div>
+									  						</div>
+									  					</div>
+									  				</li>
+							  					</ul>
+						  					</div>
+
+											<div class="activity-display">
+								  				<h5 class="bold-500">Yesterday</h5>
+								  				<ul class="activity-list">
+									  				<li class="act-yellow"> 
+									  					<div class="activity-log clearfix">
+									  						<div class="left">
+									  							<div class="media-img">
+									  								<img src="images/media-1.png" alt="media"/>
+									  							</div>
+									  							<div  class="media-title">
+									  								<h5>notepad-design-examples.jpg</h5>
+								  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  									</div>
+									  						</div>
+
+									  						<div class="right">
+									  							<div class="user flex">
+																    <div class="user-icon">
+																        <span class="icon-img">
+																            <img class="img-responsive" src="images/img.png">
+																        </span>
+																    </div>
+									  								<a href="javascript:void(0)">Ash Ketchum</a>	
+																	<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownfile-b'><i class="material-icons">more_horiz</i></a>
+																	<ul id='dropdownfile-b' class='dropdown-content drop-activity'>
+																	    <li><a href="#!"><i class="material-icons">zoom_in</i>View</a></li>
+																	    <li><a href="#!"><i class="material-icons">delete</i>Download</a></li>
+																	    <li><a href="#!"><i class="material-icons">file_download</i>Copy File</a></li>	
+																	    <li class="divider"></li>
+																	    <li class="footer-list">
+																	    	<ul id="dropdown-footer">
+																	    		<li><a href="#!"><i class="material-icons">edit</i></a></li>
+																	    		<li><a href="#!"><i class="material-icons">delete</i></a></li>
+																	    	</ul>
+																	    </li>
+																	</ul>
+																</div>
+									  						</div>
+									  					</div>
+									  				</li>
+
+									  				<li class="act-yellow"> 
+									  					<div class="activity-log clearfix">
+									  						<div class="left">
+									  							<div class="media-img">
+									  								<img src="images/media-2.png" alt="media"/>
+									  							</div>
+									  							<div  class="media-title">
+									  								<h5>test-file-name-here.jpg</h5>
+								  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  									</div>
+									  						</div>
+
+									  						<div class="right">
+									  							<div class="user flex">
+																    <div class="user-icon">
+																        <span class="icon-img">
+																            <img class="img-responsive" src="images/img.png">
+																        </span>
+																    </div>
+									  								<a href="javascript:void(0)">Ash Ketchum</a>	
+																	<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownfile-c'><i class="material-icons">more_horiz</i></a>
+																	<ul id='dropdownfile-c' class='dropdown-content drop-activity'>
+																	    <li><a href="#!"><i class="material-icons">zoom_in</i>View</a></li>
+																	    <li><a href="#!"><i class="material-icons">delete</i>Download</a></li>
+																	    <li><a href="#!"><i class="material-icons">file_download</i>Copy File</a></li>	
+																	    <li class="divider"></li>
+																	    <li class="footer-list">
+																	    	<ul id="dropdown-footer">
+																	    		<li><a href="#!"><i class="material-icons">edit</i></a></li>
+																	    		<li><a href="#!"><i class="material-icons">delete</i></a></li>
+																	    	</ul>
+																	    </li>
+																	</ul>
+																</div>
+									  						</div>
+									  					</div>
+									  				</li>
+							  					</ul>
+						  					</div>
+
+											<div class="activity-display">
+								  				<h5 class="bold-500">30 Jun, 2017</h5>
+								  				<ul class="activity-list">
+									  				<li class="act-yellow"> 
+									  					<div class="activity-log clearfix">
+									  						<div class="left">
+									  							<div class="media-img">
+									  								<img src="images/media-3.png" alt="media"/>
+									  							</div>
+									  							<div  class="media-title">
+									  								<h5>hello-test-file-name.jpg</h5>
+								  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  									</div>
+									  						</div>
+
+									  						<div class="right">
+									  							<div class="user flex">
+																    <div class="user-icon">
+																        <span class="icon-img">
+																            <img class="img-responsive" src="images/img.png">
+																        </span>
+																    </div>
+									  								<a href="javascript:void(0)">Ash Ketchum</a>	
+																	<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownfile-d'><i class="material-icons">more_horiz</i></a>
+																	<ul id='dropdownfile-d' class='dropdown-content drop-activity'>
+																	    <li><a href="#!"><i class="material-icons">zoom_in</i>View</a></li>
+																	    <li><a href="#!"><i class="material-icons">delete</i>Download</a></li>
+																	    <li><a href="#!"><i class="material-icons">file_download</i>Copy File</a></li>	
+																	    <li class="divider"></li>
+																	    <li class="footer-list">
+																	    	<ul id="dropdown-footer">
+																	    		<li><a href="#!"><i class="material-icons">edit</i></a></li>
+																	    		<li><a href="#!"><i class="material-icons">delete</i></a></li>
+																	    	</ul>
+																	    </li>
+																	</ul>
+																</div>
+									  						</div>
+									  					</div>
+									  				</li>
+
+									  				<li class="act-yellow"> 
+									  					<div class="activity-log clearfix">
+									  						<div class="left">
+									  							<div class="media-img">
+									  								<img src="images/media-4.png" alt="media"/>
+									  							</div>
+									  							<div  class="media-title">
+									  								<h5>new-file-name-here.jpg</h5>
+								  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  									</div>
+									  						</div>
+
+									  						<div class="right">
+									  							<div class="user flex">
+																    <div class="user-icon">
+																        <span class="icon-img">
+																            <img class="img-responsive" src="images/img.png">
+																        </span>
+																    </div>
+									  								<a href="javascript:void(0)">Ash Ketchum</a>
+																	<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownfile-e'><i class="material-icons">more_horiz</i></a>
+																	<ul id='dropdownfile-e' class='dropdown-content drop-activity'>
+																	    <li><a href="#!"><i class="material-icons">zoom_in</i>View</a></li>
+																	    <li><a href="#!"><i class="material-icons">delete</i>Download</a></li>
+																	    <li><a href="#!"><i class="material-icons">file_download</i>Copy File</a></li>	
+																	    <li class="divider"></li>
+																	    <li class="footer-list">
+																	    	<ul id="dropdown-footer">
+																	    		<li><a href="#!"><i class="material-icons">edit</i></a></li>
+																	    		<li><a href="#!"><i class="material-icons">delete</i></a></li>
+																	    	</ul>
+																	    </li>
+																	</ul>
+																</div>
+									  						</div>
+									  					</div>
+									  				</li>
+									  				<li class="act-yellow"> 
+									  					<div class="activity-log clearfix">
+									  						<div class="left">
+									  							<div class="media-img">
+									  								<img src="images/media-5.png" alt="media"/>
+									  							</div>
+									  							<div  class="media-title">
+									  								<h5>one-more-file-name.jpg</h5>
+								  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  									</div>
+									  						</div>
+
+									  						<div class="right">
+									  							<div class="user flex">
+																    <div class="user-icon">
+																        <span class="icon-img">
+																            <img class="img-responsive" src="images/img.png">
+																        </span>
+																    </div>
+									  								<a href="javascript:void(0)">Ash Ketchum</a>
+																	<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownfile-f'><i class="material-icons">more_horiz</i></a>
+																	<ul id='dropdownfile-f' class='dropdown-content drop-activity'>
+																	    <li><a href="#!"><i class="material-icons">zoom_in</i>View</a></li>
+																	    <li><a href="#!"><i class="material-icons">delete</i>Download</a></li>
+																	    <li><a href="#!"><i class="material-icons">file_download</i>Copy File</a></li>	
+																	    <li class="divider"></li>
+																	    <li class="footer-list">
+																	    	<ul id="dropdown-footer">
+																	    		<li><a href="#!"><i class="material-icons">edit</i></a></li>
+																	    		<li><a href="#!"><i class="material-icons">delete</i></a></li>
+																	    	</ul>
+																	    </li>
+																	</ul>
+																</div>
+									  						</div>
+									  					</div>
+									  				</li>
+									  				<li class="act-yellow"> 
+									  					<div class="activity-log clearfix">
+									  						<div class="left">
+									  							<div class="media-img">
+									  								<img src="images/attach-8.png" alt="media"/>
+									  							</div>
+									  							<div  class="media-title">
+									  								<h5>File-name-here.jpg</h5>
+								  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  									</div>
+									  						</div>
+
+									  						<div class="right">
+									  							<div class="user flex">
+																    <div class="user-icon">
+																        <span class="icon-img">
+																            <img class="img-responsive" src="images/img.png">
+																        </span>
+																    </div>
+									  								<a href="javascript:void(0)">Ash Ketchum</a>	
+																	<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownfile-g'><i class="material-icons">more_horiz</i></a>
+																	<ul id='dropdownfile-g' class='dropdown-content drop-activity'>
+																	    <li><a href="#!"><i class="material-icons">zoom_in</i>View</a></li>
+																	    <li><a href="#!"><i class="material-icons">delete</i>Download</a></li>
+																	    <li><a href="#!"><i class="material-icons">file_download</i>Copy File</a></li>	
+																	    <li class="divider"></li>
+																	    <li class="footer-list">
+																	    	<ul id="dropdown-footer">
+																	    		<li><a href="#!"><i class="material-icons">edit</i></a></li>
+																	    		<li><a href="#!"><i class="material-icons">delete</i></a></li>
+																	    	</ul>
+																	    </li>
+																	</ul>
+																</div>
+									  						</div>
+									  					</div>
+									  				</li>
+									  				<li class="act-yellow"> 
+									  					<div class="activity-log clearfix">
+									  						<div class="left">
+									  							<div class="media-img">
+									  								<img src="images/media-6.png" alt="media"/>
+									  							</div>
+									  							<div  class="media-title">
+									  								<h5>File-name-here.jpg</h5>
+								  									<span class="time"><span class="grey-text text-lighten-7">Time:</span> 11:00 pm <span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span><span class="grey-text text-lighten-7"> Associated with: </span>T-shirt with compant logo</span>
+							  									</div>
+									  						</div>
+
+									  						<div class="right">
+									  							<div class="user flex">
+																    <div class="user-icon">
+																        <span class="icon-img">
+																            <img class="img-responsive" src="images/img.png">
+																        </span>
+																    </div>
+									  								<a href="javascript:void(0)">Ash Ketchum</a>
+																	<a class="more-activity dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdownfile-h'><i class="material-icons">more_horiz</i></a>
+																	<ul id='dropdownfile-h' class='dropdown-content drop-activity'>
+																	    <li><a href="#!"><i class="material-icons">zoom_in</i>View</a></li>
+																	    <li><a href="#!"><i class="material-icons">delete</i>Download</a></li>
+																	    <li><a href="#!"><i class="material-icons">file_download</i>Copy File</a></li>	
+																	    <li class="divider"></li>
+																	    <li class="footer-list">
+																	    	<ul id="dropdown-footer">
+																	    		<li><a href="#!"><i class="material-icons">edit</i></a></li>
+																	    		<li><a href="#!"><i class="material-icons">delete</i></a></li>
+																	    	</ul>
+																	    </li>
+																	</ul>
+																</div>
+									  						</div>
+									  					</div>
+									  				</li>
+							  					</ul>
+						  					</div>
+		 								</div>
+					 				</div>
+					 			</div>	
+							  <!--***    /ENDS FILE TAB   ***-->
+
+		    				</div>
+		    			</div>
+		    		</div>	
+		    		<!--**  /END RIGHT QUOTE DETAIL    **-->
+		    	</div>
+	   		</main>
+
+          <!--******     /Main Content Ends      ******-->
+
+    	</div>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/bin/materialize.min.js"></script>
+      <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>
