@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>Lowrate - Payment</title>
+		<!--Import Material Icon Font-->
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Import Catamaran Font-->
+		<link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="sass/lowrate.css"  media="screen,projection"/>
+		<link type="text/css" rel="stylesheet" href="sass/tokbox.css"  media="screen,projection"/>
+		<link type="text/css" rel="stylesheet" href="sass/font.css"/>
+		<!--Let browser know website is optimized for mobile-->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,700" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body class="lowrate grey darken-2">
+    	<div class="main-wrapper">
+			<!--*****   SIDEBAR NAVIGATION   *****-->
+            <div class="side-nav fixed white" id="main_navigation">
+				<div class="left_side">
+					<div class="current_user">
+						<div class="name_user">
+							<span class="user_thumb">
+								<img class="img-responsive" src="images/user.png">
+							</span>
+							<p class="userName">Frank</p>
+						</div>
+					</div>
+					<ul class="main-menu">
+						<li><a href="javascript:void(0)"><i class="material-icons">dashboard</i><span class="nav_link_text">Dashboard</span></a></li>
+						<li><a class="" href="javascript:void(0)"><i class="material-icons">people</i><span class="nav_link_text">Users</span></a></li>					
+						<li><a class="active" href="javascript:void(0)"><i class="material-icons">monetization_on</i><span class="nav_link_text">Payments</span></a></li>
+						<li><a class="" href="javascript:void(0)"><i class="material-icons">call</i><span class="nav_link_text">Calls</span></a></li>
+						<li><a href="javascript:void(0)"><i class="material-icons">message</i><span class="nav_link_text">Messages</span></a></li>
+					</ul>
+					<ul class="main-menu bottomControls">
+						<li><a href="javascript:void(0)"><i class="material-icons">settings</i></a></li>
+						<li><a href="javascript:void(0)"><i class="material-icons">power_settings_new</i></a></li>
+					</ul>
+				</div>
+            </div>
+
+	        <header id="header" class="navbar-fixed">
+				<nav class="navbar_header white row">
+				    <div class="nav-wrapper">
+				      <a href="#" class="brand-logo"><img src="images/logo.png" alt="lowrate"></a>
+				      <ul id="nav-mobile" class="right hide-on-med-and-down headerNav">
+<!-- 				        <li><a href="javascript:void(0)"><i class="material-icons">local_phone</i>Call Agent</a></li>
+				        <li><a href="javascript:void(0)"><i class="material-icons">attach_money</i>Pay</a></li>
+				        <li><a href="javascript:void(0)"><i class="material-icons rotateX180">file_download</i>Upload</a></li> -->
+				        <li class="notifications noBorder">
+				            <a class="message" href="javascript:void(0)"><i class="material-icons rotateY180">message</i></a>
+				            <a class="bellNoti" href="javascript:void(0)"><i class="material-icons">notifications_none</i></a>
+				        </li>
+				      </ul>
+				    </div>
+				</nav>
+	        </header>
+
+          <!--   /End Side Navbar  -->
+
+          <!--******     Main Content Starts      ******-->
+			<main id="content_wrapper">
+		    	<section class="row dashboard_user">
+		    		<div class="col l9 m9 s12 no-padding">
+			    	    <div class="row filterHead">
+			    	         <div class="col l8 m8 s12 no-padding-left">
+			    	         	<div class="userLeftHead">
+			    	             	<h2>Payments<span class="userCount">10 Total</span></h2>
+			    	             </div>
+			    	         </div>
+		    	             <div class="col l4 m4 s12">
+			    	             <div class="userRightHead">
+			    	                 <div class="search">
+										<div class="SearchwIcon no-border-input">
+											<input placeholder="Search" id="search" type="text" class="validate">
+											<span class="search_icon"><i class="material-icons">search</i></span>
+										</div>
+			    	                 </div>
+			    	             </div>
+		    	             </div>
+			    	    </div>
+			    	    <div class="row userListSection">
+							<div class="col l12 m12 s12 ml0 no-padding-left">
+			    				<div class="card-panel fullheight relative z-depth-0 transparent no-padding clearfix">
+									<div class="row noPadding clearfix">
+									    <div class="custom_table">
+											<table class="gridTable">
+												<thead>
+													<tr>
+														<th class="checkHead"></th>
+													    <th><div class="theader">TRANSACTION ID <i class="material-icons">sort</i></div></th>
+														<th><div class="theader">Date <i class="material-icons">sort</i></div></th>
+														<th><div class="theader">Amount <i class="material-icons">sort</i></div></th>
+														<th><div class="theader">User <i class="material-icons">sort</i></div></th>
+														<th><div class="theader"></div></th>
+													</tr>
+												</thead>
+
+												<tbody>
+													<tr>
+														<td>
+															<input class="filled-in" id="chk_all" type="checkbox">
+															<label for="chk_all"></label>														
+														</td>
+														<td><span class="blue-text">#LRI-2056</span></td>
+														<td>20 November, 2017</td>
+														<td><span class="green-text">$60</span></td>
+														<td>
+															<a class="userTbl" href="javascript:void(0)">
+																<div class="iconUser">
+																	<img alt="user" src="images/user.png">
+																</div>
+																<div class="userName">
+																	<p>Jacob</p>
+																	<span>Jacob@softobiz.com</span>
+																</div>
+															</a>
+														</td>
+
+														<td>
+															<div class="tbl_options">
+																<a class="modal-trigger"><span class="mail"><i class="material-icons">remove_red_eye</i></span></a>
+																<span class="mail"><i class="material-icons">file_download</i></span>
+																<span class="mail"><i class="material-icons">delete</i></span>
+															</div>
+														</td>
+
+													</tr>
+
+													<tr>
+														<td>
+															<input class="filled-in" id="chk_all2" type="checkbox">
+															<label for="chk_all2"></label>														
+														</td>
+														<td><span class="blue-text">#LRI-2052</span></td>
+														<td>21 November, 2017</td>
+														<td><span class="green-text">$80</span></td>
+														<td>
+															<a class="userTbl" href="javascript:void(0)">
+																<div class="iconUser cyan lighten-3 noImg">MJ</div>
+																<div class="userName">
+																	<p>Michael Jordan</p>
+																	<span>michael.jordan@softobiz.com</span>
+																</div>
+															</a>
+														</td>
+
+														<td>
+															<div class="tbl_options">
+																<a class="modal-trigger"><span class="mail"><i class="material-icons">remove_red_eye</i></span></a>
+																<span class="mail"><i class="material-icons">file_download</i></span>
+																<span class="mail"><i class="material-icons">delete</i></span>
+															</div>
+														</td>
+
+													</tr>
+
+
+
+													<tr>
+														<td>
+															<input class="filled-in" id="chk_all3" type="checkbox">
+															<label for="chk_all3"></label>														
+														</td>
+														<td><span class="blue-text">#LRI-2056</span></td>
+														<td>20 November, 2017</td>
+														<td><span class="green-text">$60</span></td>
+														<td>
+															<a class="userTbl" href="javascript:void(0)">
+																<div class="iconUser">
+																	<img alt="user" src="images/user.png">
+																</div>
+																<div class="userName">
+																	<p>Jacob</p>
+																	<span>Jacob@softobiz.com</span>
+																</div>
+															</a>
+														</td>
+
+														<td>
+															<div class="tbl_options">
+																<a class="modal-trigger"><span class="mail"><i class="material-icons">remove_red_eye</i></span></a>
+																<span class="mail"><i class="material-icons">file_download</i></span>
+																<span class="mail"><i class="material-icons">delete</i></span>
+															</div>
+														</td>
+
+													</tr>
+
+													<tr>
+														<td>
+															<input class="filled-in" id="chk_all4" type="checkbox">
+															<label for="chk_all4"></label>														
+														</td>
+														<td><span class="blue-text">#LRI-2052</span></td>
+														<td>21 November, 2017</td>
+														<td><span class="green-text">$80</span></td>
+														<td>
+															<a class="userTbl" href="javascript:void(0)">
+																<div class="iconUser cyan lighten-3 noImg">MJ</div>
+																<div class="userName">
+																	<p>Michael Jordan</p>
+																	<span>michael.jordan@softobiz.com</span>
+																</div>
+															</a>
+														</td>
+
+														<td>
+															<div class="tbl_options">
+																<a class="modal-trigger"><span class="mail"><i class="material-icons">remove_red_eye</i></span></a>
+																<span class="mail"><i class="material-icons">file_download</i></span>
+																<span class="mail"><i class="material-icons">delete</i></span>
+															</div>
+														</td>
+
+													</tr>
+
+													<tr>
+															<td>
+																<input class="filled-in" id="chk_all5" type="checkbox">
+																<label for="chk_all5"></label>														
+															</td>
+															<td><span class="blue-text">#LRI-2056</span></td>
+															<td>20 November, 2017</td>
+															<td><span class="green-text">$60</span></td>
+															<td>
+																<a class="userTbl" href="javascript:void(0)">
+																	<div class="iconUser">
+																		<img alt="user" src="images/user.png">
+																	</div>
+																	<div class="userName">
+																		<p>Jacob</p>
+																		<span>Jacob@softobiz.com</span>
+																	</div>
+																</a>
+															</td>
+	
+															<td>
+																<div class="tbl_options">
+																	<a class="modal-trigger"><span class="mail"><i class="material-icons">remove_red_eye</i></span></a>
+																	<span class="mail"><i class="material-icons">file_download</i></span>
+																	<span class="mail"><i class="material-icons">delete</i></span>
+																</div>
+															</td>
+	
+														</tr>
+	
+														<tr>
+															<td>
+																<input class="filled-in" id="chk_all6" type="checkbox">
+																<label for="chk_all6"></label>														
+															</td>
+															<td><span class="blue-text">#LRI-2052</span></td>
+															<td>21 November, 2017</td>
+															<td><span class="green-text">$80</span></td>
+															<td>
+																<a class="userTbl" href="javascript:void(0)">
+																	<div class="iconUser cyan lighten-3 noImg">MJ</div>
+																	<div class="userName">
+																		<p>Michael Jordan</p>
+																		<span>michael.jordan@softobiz.com</span>
+																	</div>
+																</a>
+															</td>
+	
+															<td>
+																<div class="tbl_options">
+																	<a class="modal-trigger"><span class="mail"><i class="material-icons">remove_red_eye</i></span></a>
+																	<span class="mail"><i class="material-icons">file_download</i></span>
+																	<span class="mail"><i class="material-icons">delete</i></span>
+																</div>
+															</td>
+	
+														</tr>
+
+														<tr>
+																<td>
+																	<input class="filled-in" id="chk_all7" type="checkbox">
+																	<label for="chk_all7"></label>														
+																</td>
+																<td><span class="blue-text">#LRI-2056</span></td>
+																<td>20 November, 2017</td>
+																<td><span class="green-text">$60</span></td>
+																<td>
+																	<a class="userTbl" href="javascript:void(0)">
+																		<div class="iconUser">
+																			<img alt="user" src="images/user.png">
+																		</div>
+																		<div class="userName">
+																			<p>Jacob</p>
+																			<span>Jacob@softobiz.com</span>
+																		</div>
+																	</a>
+																</td>
+		
+																<td>
+																	<div class="tbl_options">
+																		<a class="modal-trigger"><span class="mail"><i class="material-icons">remove_red_eye</i></span></a>
+																		<span class="mail"><i class="material-icons">file_download</i></span>
+																		<span class="mail"><i class="material-icons">delete</i></span>
+																	</div>
+																</td>
+		
+															</tr>
+		
+															<tr>
+																<td>
+																	<input class="filled-in" id="chk_all8" type="checkbox">
+																	<label for="chk_all8"></label>														
+																</td>
+																<td><span class="blue-text">#LRI-2052</span></td>
+																<td>21 November, 2017</td>
+																<td><span class="green-text">$80</span></td>
+																<td>
+																	<a class="userTbl" href="javascript:void(0)">
+																		<div class="iconUser cyan lighten-3 noImg">MJ</div>
+																		<div class="userName">
+																			<p>Michael Jordan</p>
+																			<span>michael.jordan@softobiz.com</span>
+																		</div>
+																	</a>
+																</td>
+		
+																<td>
+																	<div class="tbl_options">
+																		<a class="modal-trigger"><span class="mail"><i class="material-icons">remove_red_eye</i></span></a>
+																		<span class="mail"><i class="material-icons">file_download</i></span>
+																		<span class="mail"><i class="material-icons">delete</i></span>
+																	</div>
+																</td>
+		
+															</tr>
+ 													
+												</tbody>
+											</table>									    
+									    </div>   
+									</div>
+								</div>
+							</div>
+			    	    </div>
+					</div>
+					
+
+					<div class="ongoingCall active white col l3 m3 s12">
+							<div class="top_section">
+									<div class="onCall_header clearfix">
+										<div class="left_call">
+											<div class="userCall">
+												<span class="callerIcon">
+													<img src="images/user.png" alt="caller">
+												</span>		      			         
+											</div>
+											<div class="name_user">
+												<span class="name">John Doe</span>
+												<span class="callStatus">Ongoind Call...</span>
+											</div>
+										</div>
+										<div class="right_call">
+											<span class="action"><i class=" material-icons">stop</i></span>
+											<span class="timing">01.22</span>
+										</div>
+									</div>
+									<div class="video_Streaming">
+										<div class="talk_box hide">
+											<div class="video_main">
+												<img src="images/call_user.png">
+											</div>
+											<div class="video_thumb">
+												<img src="images/call_thumb.png">
+											</div>
+											<span class="fullScreen material-icons">fullscreen</span>
+											<p class="call_queue">Your Call is in Queue...</p>
+											<span class="duration_time">00.00.00</span>
+										</div>
+										<div class="dialing_box black">
+											<img src="images/call_user.png" />
+										</div>
+										<div class="disconnected">
+											<p class="blink">Disconnected</p>
+										</div>
+									</div>
+									<div class="call_controls blue lighten-01">
+										<div class="call_options">
+											<span class=""><i class="material-icons">phone_paused</i></span>
+											<span class=""><i class="material-icons">mic_off</i></span>
+											<span class=""><i class="material-icons">screen_share</i></span>
+											<span class=""><i class="material-icons call_chat">chat</i></span>
+											<span class="endcall"><i class="material-icons end_call">call_end</i></span>
+										</div>
+									</div>
+								</div>			
+								<!-- <div class="post_options blue lighten-01">
+									<div class="wrapper">
+										<div class="add_comment">
+											<a href="javascript:void(0)"><i class="material-icons">chat_bubble_outline</i>Add comment</a>
+										</div>
+										<div class="add_tag">
+											<a href="javascript:void(0)"><i class="material-icons">label_outline</i>Add comment</a>
+										</div>
+									</div>
+								</div> -->
+								<div class="chat">
+								<div class="tab tab_call">
+									<div class="chat_wrapper white">
+										<div class="chat_msgs">
+											<ul class="chat_container">
+												<li class="chatDay">
+													<span>Today</span>
+												</li>
+												<li class="clearfix">
+													<div class="received">										
+														<p>Hi, how are you <small class="time">1 min ago</small></p>
+													</div>
+												</li>
+												<li class="clearfix">
+													<div class="sent">
+														<p>Hi John, I am fine how are you doing? <small class="time">11:00 am</small></p>
+													</div>
+												</li>
+												<li class="clearfix">
+													<div class="received">										
+														<p>I want to know about motorcycle insurance</p>
+													</div>
+												</li>																				
+												<li class="received clearfix">
+													<div class="spinner">
+													<div class="bounce1"></div>
+													<div class="bounce2"></div>
+													<div class="bounce3"></div>
+													</div>														    	        
+												</li>						    	        						    	        
+											</ul>
+										</div>
+									</div>
+								</div>		      			
+								</div>
+							<div class="msg_text">
+								<div class="emoji">
+									<span class="material-icons">tag_faces</span>
+								</div>
+								<textarea id="chatArea" placeholder="Type a message here" class="materialize-textarea white"></textarea>
+								<div class="chat_options">
+									<span class="send_message grey darken-7"><i class="material-icons white-text">send</i></span>
+								</div>
+							</div>
+						</div>
+					
+					
+	    		</section>
+	   		</main>
+	   		
+    	</div>		    	
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/bin/materialize.min.js"></script>
+      <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>

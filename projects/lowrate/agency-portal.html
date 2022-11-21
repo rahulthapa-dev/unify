@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>Agency Portal</title>
+		<!--Import Material Icon Font-->
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Import Catamaran Font-->
+		<link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="sass/lowrate.css"  media="screen,projection"/>
+		<link type="text/css" rel="stylesheet" href="sass/font.css"/>
+		<!--Let browser know website is optimized for mobile-->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,700" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body class="lowrate grey darken-2">
+    	<header id="header" class="navbar-fixed">
+				<nav class="navbar_header admin_panel white row">
+				    <div class="nav-wrapper">
+				      <a href="javascript:void(0)" class="brand-logo"><img src="images/agency_logo.png" width="110" alt="lowrate"></a>				      
+				      <ul id="nav-mobile" class="right hide-on-med-and-down headerNav">
+				      	<li>
+							<select>
+								<option value="" selected>Location</option>
+								<option value="4">California</option>
+								<option value="1">Virginia</option>
+								<option value="2">Texas</option>
+								<option value="3">Las Vegas</option>								
+								<option value="4">Indiana</option>
+							</select>
+				      	</li>
+				        <li class="notifications">
+				            <a class="bellNoti" href="javascript:void(0)"><i class="material-icons">notifications_none</i></a>
+						</li>
+						<li class="a_drop">
+							<a class="dropdown-button dropdown-trigger" data-constrainWidth="false" data-activates="my_account" data-beloworigin="true" href="javascript:void(0)"><div class="small_img"><img src="images/user.png" alt=""></div> John Doe<i class="material-icons right">arrow_drop_down</i></a>
+							<ul id='my_account' class='dropdown-content select_language'>
+							    <li><a href="javascript:void(0)">My Subscriptions</a></li>
+							    <li><a href="javascript:void(0)">My Profile</a></li>
+							    <li><a href="javascript:void(0)">Logout</a></li>
+							</ul>
+						</li>
+					  </ul>
+					<!-- <ul id="dropdown1" class="dropdown-content">
+						<li><a href="#!">one</a></li>
+						<li><a href="#!">two</a></li>
+						<li class="divider"></li>
+						<li><a href="#!">three</a></li>
+					</ul> -->
+				    </div>
+				</nav>
+	        </header>
+
+    	<div class="main-wrapper">
+			<!--*****   SIDEBAR NAVIGATION   *****-->
+            <div class="side-nav fixed white admin_sidebar" id="admin_navigation" style="transform: translateX(0%);">
+				<ul class="main-menu">
+					<li><a class="active" href="agency-portal.html"><i class="material-icons">dashboard</i><span class="nav_link_text">Dashboard</span></a></li>
+					<li><a href="javascript:void(0)"><i class="material-icons">supervisor_account</i><span class="nav_link_text">Users</span></a></li>
+					<li><a href="javascript:void(0)"><i class="material-icons">contacts</i><span class="nav_link_text">Agents</span></a></li>
+					<li><a href="javascript:void(0)"><i class="material-icons">monetization_on</i><span class="nav_link_text">Payments</span></a></li>
+					<li><a href="javascript:void(0)"><i class="material-icons">local_phone</i><span class="nav_link_text">Calls</span></a></li>
+					<li><a href="javascript:void(0)"><i class="material-icons">message</i><span class="nav_link_text">Messages</span></a></li>
+					<li><a href="javascript:void(0)"><i class="material-icons">location_on</i><span class="nav_link_text">My Locations</span></a></li>
+					<li><a href="javascript:void(0)"><i class="material-icons">credit_card</i><span class="nav_link_text">Payment Methods</span></a></li>
+				</ul>
+			</div>
+
+	        
+
+          <!--   /End Side Navbar  -->
+
+          <!--******     Main Content Starts      ******-->
+			<main id="content_wrapper" class="admin_wrapper">
+
+		    	<section class="panel_agent_Detail bottom-zero agency_stats">
+
+					<div class="row">
+
+						<div class="col l3 m12 s12">	
+							<div class="white singleUserDetail">			    		
+								<ul class="d-flex filter_single_stat">
+									<li class="active"><a href="javascript:void(0)">This Week</a></li>
+									<li><a href="javascript:void(0)">This Month</a></li>
+									<li><a href="javascript:void(0)">All</a></li>
+								</ul>
+								<div class="agent_assets">									
+									<div class="agent_docs">
+										<div class="iconAgent">
+											<span>
+												<i class="material-icons pink-text text-lighten-2">attach_money</i>
+											</span>
+										</div>
+										<div class="detailDoc">
+											<p>Overall Payments</p>
+											<h2>$730</h2>											
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col l3 m12 s12">	
+							<div class="white singleUserDetail">
+								<ul class="d-flex filter_single_stat">
+									<li class="active"><a href="javascript:void(0)">This Week</a></li>
+									<li><a href="javascript:void(0)">This Month</a></li>
+									<li><a href="javascript:void(0)">All</a></li>
+								</ul>
+								<div class="agent_assets">
+									<div class="agent_docs">
+										<div class="iconAgent">
+											<span>
+												<i class="material-icons blue-text">receipt</i>
+											</span>
+										</div>
+										<div class="detailDoc">
+											<p>Policies Sold</p>
+											<h2>10</h2>		
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col l3 m12 s12">	
+							<div class="white singleUserDetail">
+								<ul class="d-flex filter_single_stat">
+									<li class="active"><a href="javascript:void(0)">This Week</a></li>
+									<li><a href="javascript:void(0)">This Month</a></li>
+									<li><a href="javascript:void(0)">All</a></li>
+								</ul>		    		
+								<div class="agent_assets">
+									<div class="agent_docs">
+										<div class="iconAgent">
+											<span>
+												<i class="material-icons red-text text-lighten-2">contacts</i>
+											</span>
+										</div>
+										<div class="detailDoc">
+											<p>Total Agents</p>
+											<h2>16</h2>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col l3 m12 s12">	
+							<div class="white singleUserDetail">
+								<ul class="d-flex filter_single_stat">
+									<li class="active"><a href="javascript:void(0)">This Week</a></li>
+									<li><a href="javascript:void(0)">This Month</a></li>
+									<li><a href="javascript:void(0)">All</a></li>
+								</ul>			    		
+								<div class="agent_assets">
+									<div class="agent_docs">
+										<div class="iconAgent">
+											<span>
+												<i class="material-icons green-text">supervisor_account</i>
+											</span>
+										</div>
+										<div class="detailDoc">
+											<p>Total Users</p>
+											<h2>31</h2>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					
+					<div class="clearfix"></div>
+					
+	    			<div class="row">
+
+	    			    <div class="col l12 m12 s12 pending_Referrals">
+	    			        <div class="referralContainer white">									
+								<div class="header_reffrals">
+									<h5>Recent User Sign Ups</h5>
+									<a href="javascript:void(0)" class="view_all blue-text">View all</a>
+								</div>
+								
+								<div class="custom_table">
+									<table class="gridTable striped noSpace responsive-table agency_portal_table">
+										<thead>
+											<tr>
+												<th width="23%"><div class="theader">User</div></th>
+												<th width="20%"><div class="theader">Phone</div></th>
+												<th width="23%"><div class="theader">Policy</div></th>
+												<th width="17%"><div class="theader">Documents</div></th>
+												<th width="17%"><div class="theader">Registered</div></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<a class="user_info">
+														<div class="userImg blue">m</div>
+													    <div class="userName">
+															<p>Manpreet Singh</p>
+															<span>manpreet.singh@gmail.com</span>
+													    </div>
+													</a>
+												</td>
+												<td>
+													<span>998-975-3236</span>
+												</td>
+												<td class="tags">
+													<label for="">Auto Insurance</label>
+													<label for="">Renter's Insurance</label>
+												</td>
+												<td><span>3</span></td>
+												<td>09/11/2017</td>
+											</tr>
+											<tr>
+												<td>
+													<a class="user_info">
+														<div class="userImg green">T</div>
+													    <div class="userName">
+															<p>Tejpal Verma</p>
+															<span>tejpal.verma@gmail.com</span>
+													    </div>
+													</a>
+												</td>
+												<td>
+													<span>998-975-3236</span>
+												</td>
+												<td class="tags">
+													<label for="">Auto Insurance</label>
+													<label for="">Renter's Insurance</label>
+												</td>
+												<td><span>3</span></td>
+												<td>09/11/2017</td>
+											</tr>
+											<tr>
+												<td>
+													<a class="user_info">
+														<div class="userImg pink">A</div>
+													    <div class="userName">
+															<p>Ankit Saini</p>
+															<span>ankit.saini@gmail.com</span>
+													    </div>
+													</a>
+												</td>
+												<td>
+													<span>998-975-3236</span>
+												</td>
+												<td class="tags">
+													<label for="">Auto Insurance</label>
+													<label for="">Renter's Insurance</label>
+												</td>
+												<td><span>3</span></td>
+												<td>09/11/2017</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>					
+					</div>
+					
+					<div class="clearfix"></div>
+
+					<div class="row">
+						<div class="col l12 m12 s12 pending_Referrals">
+							<div>
+								<h3>
+									Agency Statistics
+								</h3>
+							</div>
+							<div class="row">
+								<div class="col l4 m4 s6 no-padding-left">
+									<div class="card-panel fullheight  p0">
+										<div class="card_head portal_card">
+											<div class="inner_portal">
+												<div class="iconAgent">
+													<span>
+														<i class="material-icons purple-text text-lighten-2">phone</i>
+													</span>
+												</div>
+												<div>
+													<h4 class="purple-text">Calls</h4>
+													<h2>1200</h2>
+												</div>
+											</div>
+											<ul class="d-flex filter_single_stat">
+												<li class="active"><a href="javascript:void(0)">This Week</a></li>
+												<li><a href="javascript:void(0)">This Month</a></li>
+												<li><a href="javascript:void(0)">All</a></li>
+											</ul>
+										</div>
+										<div class="card_bottom">
+											<img src="images/graph_1.jpg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="col l4 m4 s6 no-padding-left">
+									<div class="card-panel fullheight  p0">
+										<div class="card_head portal_card">
+											<div class="inner_portal">
+												<div class="iconAgent">
+													<span>
+														<i class="material-icons red-text text-lighten-2">receipt</i>
+													</span>
+												</div>
+												<div>
+													<h4 class="red-text">Policies Sold</h4>
+													<h2>22</h2>
+												</div>
+											</div>
+											<ul class="d-flex filter_single_stat">
+												<li class="active"><a href="javascript:void(0)">This Week</a></li>
+												<li><a href="javascript:void(0)">This Month</a></li>
+												<li><a href="javascript:void(0)">All</a></li>
+											</ul>
+										</div>
+										<div class="card_bottom">
+											<img src="images/graph_1.jpg" alt="">
+										</div>
+									</div>
+								</div>
+								<div class="col l4 m4 s6 no-padding-left">
+									<div class="card-panel fullheight  p0">
+										<div class="card_head portal_card">
+											<div class="inner_portal">
+												<div class="iconAgent">
+													<span>
+														<i class="material-icons yellow-text text-darken-3">create</i>
+													</span>
+												</div>
+												<div>
+													<h4 class=" yellow-text text-darken-3">Signed Documents</h4>
+													<h2>340</h2>
+												</div>
+											</div>
+											<ul class="d-flex filter_single_stat">
+												<li class="active"><a href="javascript:void(0)">This Week</a></li>
+												<li><a href="javascript:void(0)">This Month</a></li>
+												<li><a href="javascript:void(0)">All</a></li>
+											</ul>
+										</div>
+										<div class="card_bottom">
+											<img src="images/graph_1.jpg" alt="">
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col l4 m4 s6 no-padding-left">
+									<div class="card-panel fullheight  p0">
+										<div class="card_head portal_card">
+											<div class="inner_portal">
+												<div class="iconAgent">
+													<span>
+														<i class="material-icons green-text">supervisor_account</i>
+													</span>
+												</div>
+												<div>
+													<h4 class="green-text">Active Users on Call</h4>													
+												</div>
+											</div>
+											<ul class="d-flex filter_single_stat">
+												<li class="active"><a href="javascript:void(0)">This Week</a></li>
+												<li><a href="javascript:void(0)">This Month</a></li>
+												<li><a href="javascript:void(0)">All</a></li>
+											</ul>
+										</div>
+										<div class="card_bottom live_users">
+											<!-- <img src="images/pie.jpg" alt=""> -->
+
+											<div class="center-align">
+											
+												<h3>Right Now</h3>
+												<h1 class="blue-text">14</h1>
+												<h5>Users on Call</h5>
+
+											</div>
+
+										</div>
+									</div>
+								</div>
+								<div class="col l8 m8 s12 no-padding-left">
+									<div class="card-panel fullheight  p0">
+										<div class="card_head portal_card">
+											<div class="inner_portal">
+												<div class="iconAgent">
+													<span>
+														<i class="material-icons cyan-text text-darken-2">attach_money</i>
+													</span>
+												</div>
+												<div>
+													<h4 class="cyan-text text-darken-2">Revenue Generated</h4>
+													<h2>$5,456</h2>
+												</div>
+											</div>
+											<ul class="d-flex filter_single_stat">
+												<li class="active"><a href="javascript:void(0)">This Week</a></li>
+												<li><a href="javascript:void(0)">This Month</a></li>
+												<li><a href="javascript:void(0)">All</a></li>
+											</ul>
+										</div>
+										<div class="card_bottom">
+											<img src="images/graph_big.jpg" alt="">
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+	    		</section>
+
+	   		</main>
+          <!--******     /Main Content Ends      ******-->
+    	</div>	
+        <span id="agents" class="button_agent_mobile">
+           <i class="material-icons">people</i>
+        </span>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/bin/materialize.min.js"></script>
+      <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>

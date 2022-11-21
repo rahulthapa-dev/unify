@@ -1,0 +1,115 @@
+@mixin fluid-type($min-font-size: 12px, $max-font-size: 21px, $lower-range: 320px, $upper-range: 1880px) {
+
+    font-size: calc(#{$min-font-size} + #{(($max-font-size / ($max-font-size * 0 + 1)) - ($min-font-size / ($min-font-size * 0 + 1)))} * ( (100vw - #{$lower-range}) / #{(($upper-range / ($upper-range * 0 + 1)) - ($lower-range / ($lower-range * 0 + 1)))}));
+    
+    @media screen and (max-width: $lower-range) {
+      font-size: $min-font-size;
+    }
+    @media screen and (min-width: $upper-range){
+      font-size: $max-font-size;
+    }
+}
+body {
+    .banner-details {
+        h1 {
+            @include fluid-type(30px, 70.98px);
+        }
+    }
+    .contact-banner {
+        h1 {
+            @include fluid-type(24px, 65px);
+        }
+    }
+    .section-heading {
+        @include fluid-type(25px, 40px);
+    }
+    .customer-cases {
+        .nav-link {
+            @include fluid-type(18px, 28px);
+        }
+    }
+    .why-need-service {
+        .description {
+            @include fluid-type(14px, 26px);
+        }
+    }
+    .sub-heading {
+        @include fluid-type(18px, 26px);
+    }
+    .what-we-do-ul {
+        li {
+            p {
+                @include fluid-type(14px, 24px);
+            }
+        }
+    }
+    .banner-description {
+        p {
+            @include fluid-type(14px, 20px);
+        }
+    }
+    p.description, div.description p {
+        @include fluid-type(14px, 18px);
+    }
+    .description-lg-font {
+        @include fluid-type(14px, 20px);
+    }
+    .serice-offer-content h5 {
+        @include fluid-type(17px, 20px);
+    } 
+    .customer-cases {
+        .card {
+            p {
+                @include fluid-type(15px, 26px);
+            }
+            .btn {
+                @include fluid-type(15px, 26px);
+            }
+        }
+    }
+    .one-time-pricing {
+        h3 {
+            @include fluid-type(22px, 28x);
+        }
+    }
+    .section-one-time-pricing.customer-cases {
+        .card {
+            p {
+                @include fluid-type(15px, 22px);
+                font-weight: 400;;
+            }
+        }
+    }
+    .faq-collapse-outer {
+        .card-header {
+            a {
+                @include fluid-type(20px, 34px);
+            }
+        }
+    }
+    .contact-form {
+        label {
+            @include fluid-type(18px, 26px);
+        }
+    }
+    .contact-form button {
+        @include fluid-type(18px, 26px);
+    }
+    p {
+        @include fluid-type(16px, 22px);
+    }
+    .footer-section h3 {
+        @include fluid-type(20px, 30px);
+    }
+    .footer-section li a {
+        @include fluid-type(14px, 17px);
+    }
+    .btn-custom {
+        @include fluid-type(14px, 22px);
+    }
+    
+}
+
+
+
+
