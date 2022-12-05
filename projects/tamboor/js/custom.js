@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(document).ready(function() {
     $('.slick-features').slick({
         slidesToShow: 4,
         infinite: false
@@ -25,8 +25,17 @@ $(document).ready(function(){
         slidesToShow: 4,
         // infinite: false
     });
+    // green.html
+    $('.happy-slick').slick({
+        slidesToShow: 1,
+        // infinite: false
+    });
+    $('.slick-magical').slick({
+        slidesToShow: 1,
+        // infinite: false
+    });
     //
-    $('.product-box-select').on('click', function () {
+    $('.product-box-select').on('click', function() {
         $('.product-box-select').removeClass('active');
         $(this).addClass('active');
 
