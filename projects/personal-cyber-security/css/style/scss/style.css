@@ -1,0 +1,353 @@
+body .banner-details h1 {
+  font-size: calc(30px + 40.98 * ( (100vw - 320px) / 1560));
+}
+
+@media screen and (max-width: 320px) {
+  body .banner-details h1 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 1880px) {
+  body .banner-details h1 {
+    font-size: 70.98px;
+  }
+}
+
+body .contact-banner h1 {
+  font-size: calc(24px + 41 * ( (100vw - 320px) / 1560));
+}
+
+@media screen and (max-width: 320px) {
+  body .contact-banner h1 {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1880px) {
+  body .contact-banner h1 {
+    font-size: 65px;
+  }
+}
+
+body .section-heading {
+  font-size: calc(25px + 15 * ( (100vw - 320px) / 1560));
+}
+
+@media screen and (max-width: 320px) {
+  body .section-heading {
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 1880px) {
+  body .section-heading {
+    font-size: 40px;
+  }
+}
+
+body .customer-cases .nav-link {
+  font-size: calc(18px + 10 * ( (100vw - 320px) / 1560));
+}
+
+@media screen and (max-width: 320px) {
+  body .customer-cases .nav-link {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1880px) {
+  body .customer-cases .nav-link {
+    font-size: 28px;
+  }
+}
+
+body .why-need-service .description {
+  font-size: calc(14px + 12 * ( (100vw - 320px) / 1560));
+}
+
+@media screen and (max-width: 320px) {
+  body .why-need-service .description {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1880px) {
+  body .why-need-service .description {
+    font-size: 26px;
+  }
+}
+
+body .sub-heading {
+  font-size: calc(18px + 8 * ( (100vw - 320px) / 1560));
+}
+
+@media screen and (max-width: 320px) {
+  body .sub-heading {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1880px) {
+  body .sub-heading {
+    font-size: 26px;
+  }
+}
+
+body .what-we-do-ul li p {
+  font-size: calc(14px + 10 * ( (100vw - 320px) / 1560));
+}
+
+@media screen and (max-width: 320px) {
+  body .what-we-do-ul li p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1880px) {
+  body .what-we-do-ul li p {
+    font-size: 24px;
+  }
+}
+
+body .banner-description p {
+  font-size: calc(14px + 6 * ( (100vw - 320px) / 1560));
+}
+
+@media screen and (max-width: 320px) {
+  body .banner-description p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1880px) {
+  body .banner-description p {
+    font-size: 20px;
+  }
+}
+
+body p.description, body div.description p {
+  font-size: calc(14px + 4 * ( (100vw - 320px) / 1560));
+}
+
+@media screen and (max-width: 320px) {
+  body p.description, body div.description p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1880px) {
+  body p.description, body div.description p {
+    font-size: 18px;
+  }
+}
+
+body .description-lg-font {
+  font-size: calc(14px + 6 * ( (100vw - 320px) / 1560));
+}
+
+@media screen and (max-width: 320px) {
+  body .description-lg-font {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1880px) {
+  body .description-lg-font {
+    font-size: 20px;
+  }
+}
+
+body .serice-offer-content h5 {
+  font-size: calc(17px + 3 * ( (100vw - 320px) / 1560));
+}
+
+@media screen and (max-width: 320px) {
+  body .serice-offer-content h5 {
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 1880px) {
+  body .serice-offer-content h5 {
+    font-size: 20px;
+  }
+}
+
+body .customer-cases .card p {
+  font-size: calc(15px + 11 * ( (100vw - 320px) / 1560));
+}
+
+@media screen and (max-width: 320px) {
+  body .customer-cases .card p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 1880px) {
+  body .customer-cases .card p {
+    font-size: 26px;
+  }
+}
+
+body .customer-cases .card .btn {
+  font-size: calc(15px + 11 * ( (100vw - 320px) / 1560));
+}
+
+@media screen and (max-width: 320px) {
+  body .customer-cases .card .btn {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 1880px) {
+  body .customer-cases .card .btn {
+    font-size: 26px;
+  }
+}
+
+body .one-time-pricing h3 {
+  font-size: calc(22px + 6 * ( (100vw - 320px) / 1560));
+}
+
+@media screen and (max-width: 320px) {
+  body .one-time-pricing h3 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 1880px) {
+  body .one-time-pricing h3 {
+    font-size: 28x;
+  }
+}
+
+body .section-one-time-pricing.customer-cases .card p {
+  font-size: calc(15px + 7 * ( (100vw - 320px) / 1560));
+  font-weight: 400;
+}
+
+@media screen and (max-width: 320px) {
+  body .section-one-time-pricing.customer-cases .card p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 1880px) {
+  body .section-one-time-pricing.customer-cases .card p {
+    font-size: 22px;
+  }
+}
+
+body .faq-collapse-outer .card-header a {
+  font-size: calc(20px + 14 * ( (100vw - 320px) / 1560));
+}
+
+@media screen and (max-width: 320px) {
+  body .faq-collapse-outer .card-header a {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1880px) {
+  body .faq-collapse-outer .card-header a {
+    font-size: 34px;
+  }
+}
+
+body .contact-form label {
+  font-size: calc(18px + 8 * ( (100vw - 320px) / 1560));
+}
+
+@media screen and (max-width: 320px) {
+  body .contact-form label {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1880px) {
+  body .contact-form label {
+    font-size: 26px;
+  }
+}
+
+body .contact-form button {
+  font-size: calc(18px + 8 * ( (100vw - 320px) / 1560));
+}
+
+@media screen and (max-width: 320px) {
+  body .contact-form button {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1880px) {
+  body .contact-form button {
+    font-size: 26px;
+  }
+}
+
+body p {
+  font-size: calc(16px + 6 * ( (100vw - 320px) / 1560));
+}
+
+@media screen and (max-width: 320px) {
+  body p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1880px) {
+  body p {
+    font-size: 22px;
+  }
+}
+
+body .footer-section h3 {
+  font-size: calc(20px + 10 * ( (100vw - 320px) / 1560));
+}
+
+@media screen and (max-width: 320px) {
+  body .footer-section h3 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1880px) {
+  body .footer-section h3 {
+    font-size: 30px;
+  }
+}
+
+body .footer-section li a {
+  font-size: calc(14px + 3 * ( (100vw - 320px) / 1560));
+}
+
+@media screen and (max-width: 320px) {
+  body .footer-section li a {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1880px) {
+  body .footer-section li a {
+    font-size: 17px;
+  }
+}
+
+body .btn-custom {
+  font-size: calc(14px + 8 * ( (100vw - 320px) / 1560));
+}
+
+@media screen and (max-width: 320px) {
+  body .btn-custom {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1880px) {
+  body .btn-custom {
+    font-size: 22px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
