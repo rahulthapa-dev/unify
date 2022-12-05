@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Smarter:Time</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+  <!-- Plugin CSS -->
+  <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+  <link rel="stylesheet" href="vendor/device-mockups/device-mockups.css">
+
+  <!-- Theme CSS -->
+  <link href="css/custom-home-default.css?v=1.0.7" rel="stylesheet">
+  <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+  <!-- Owl Carousel Assets -->
+  <link href="owl-carousel/owl.carousel.css" rel="stylesheet">
+  <link href="owl-carousel/owl.theme.css" rel="stylesheet">
+
+  <!-- tabs style -->
+  <link rel="stylesheet" type="text/css" href="css/tabs.css" />
+  <link rel="stylesheet" type="text/css" href="css/tabstyles.css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <script src="https://use.typekit.net/zbj3iob.js"></script>
+  <script>
+    try {
+      Typekit.load({
+        async: true
+      });
+    } catch (e) {}
+  </script>
+  <!-- Google Analytics Code for www.smartertime.com -->
+  <script>
+    (function(i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function() {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-58088967-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  <!-- Google Code for Clics Play Store Conversion Page
+In your html page, add the snippet and call
+goog_report_conversion when someone clicks on the
+chosen link or button. -->
+<script type="text/javascript">
+  /* <![CDATA[ */
+  goog_snippet_vars = function() {
+    var w = window;
+    w.google_conversion_id = 951756794;
+    w.google_conversion_label = "t_SKCMjsvG4Q-s_qxQM";
+    w.google_remarketing_only = false;
+  }
+  // DO NOT CHANGE THE CODE BELOW.
+  goog_report_conversion = function(url) {
+    goog_snippet_vars();
+    window.google_conversion_format = "3";
+    var opt = new Object();
+    opt.onload_callback = function() {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  }
+  var conv_handler = window['google_trackConversion'];
+  if (typeof(conv_handler) == 'function') {
+    conv_handler(opt);
+  }
+}
+/* ]]> */
+</script>
+<script type="text/javascript"
+  src="//www.googleadservices.com/pagead/conversion_async.js">
+</script>
+  <!-- Hotjar Tracking Code for www.smartertime.com -->
+  <script>
+    (function(h, o, t, j, a, r) {
+      h.hj = h.hj || function() {
+        (h.hj.q = h.hj.q || []).push(arguments)
+      };
+      h._hjSettings = {
+        hjid: 372721,
+        hjsv: 5
+      };
+      a = o.getElementsByTagName('head')[0];
+      r = o.createElement('script');
+      r.async = 1;
+      r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window, document, '//static.hotjar.com/c/hotjar-', '.js?sv=');
+  </script>
+  <script src="js/myreferrer.js?n=2"></script>
+</head>
+
+<body id="page-top" class="feature-body dwnld-body" onload="javascript:getReferrer()">
+  <!-- <svg class="hidden">
+        <defs>
+            <path id="tabshape" d="M80,60C34,53.5,64.417,0,0,0v60H80z"/>
+        </defs>
+    </svg> -->
+  <div class="get-from-playstore">
+    <a target="_blank" onclick="goog_report_conversion ('javascript:goToPlaystore()')" href="javascript:goToPlaystore()"><img src="img/google-play.png" alt="">Get App</a>
+  </div>
+  <div class="get-the-beta">
+    <a href="#">iOS Beta</a>
+  </div>
+  <div class="contact-float">
+    <a href="https://twitter.com/smartertime"><i class="fa fa-twitter"></i></a>
+    <a href="https://www.facebook.com/smartertime/"><i class="fa fa-facebook"></i></a>
+    <a href="#" class="contact-div"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+  </div>
+  <header class="home-header">
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top fixed">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img src="img/logo-home.png" class="img-responsive img-head" alt="">
+            <img src="img/logo-rest.png" class="img-responsive img-rest" alt="">
+          </a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a>
+            </li>
+            <li><a href="features.html">Features</a>
+            </li>
+            <li><a href="downloads.html">Downloads</a>
+            </li>
+            <li><a href="https://medium.com/smarter-time" target="_blank">Blog</a>
+            </li>
+          </ul>
+          <!-- <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#" class="beta-tester">Become a Beta Tester</a></li>
+                    </ul> -->
+        </div>
+        <!--/.nav-collapse -->
+      </div>
+    </nav>
+  </header>
+  <section class="beta-welcome beta-welcome-top beta-faq">
+    <div class="container">
+      <h1>Help Desk</h1>
+    </div>
+  </section>
+  <section class="beta-welcome queries-section beta-faq-rest beta-faq">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 queries-list">
+          <h4>Usage and tutorials</h4>
+          <ul>
+            <li>
+              <a href="#Tutorial1">Using Smarter Time for the first time</a>
+            </li>
+            <li>
+              <a href="#Tutorial2">Adding a Timeslot</a>
+            </li>
+            <li>
+              <a href="#Tutorial3">Editing a Timeslot</a>
+            </li>
+            <li>
+              <a href="#Tutorial4">Merging a Timeslot</a>
+            </li>
+            <li>
+              <a href="#Tutorial5">Adding Rooms to a Place</a>
+            </li>
+            <li>
+              <a href="#Tutorial6">Managing your Places</a>
+            </li>
+            <li>
+              <a href="#Tutorial7">Managing Activities / Categories</a>
+            </li>
+            <li>
+              <a href="#Tutorial8">Creating a Goal</a>
+            </li>
+            <li>
+              <a href="#Tutorial9">Adding computer tracking</a>
+            </li>
+            <li>
+              <a href="#Tutorial10">Creating an Account</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-6 queries-list">
+          <h4>General questions</h4>
+          <ul>
+            <li>
+              <a href="#Qgen1">What is Smarter Time?</a>
+            </li>
+            <li>
+              <a href="#Qgen2">How can it help you?</a>
+            </li>
+            <li>
+              <a href="#Qgen3">Is there an iOS version?</a>
+            </li>
+            <li>
+              <a href="#Qgen4">Will Smarter Time drain your battery?</a>
+            </li>
+            <li>
+              <a href="#Qgen5">How does it preserve your privacy?</a>
+            </li>
+            <li>
+              <a href="#Qgen6">Why does it need all these permissions?</a>
+            </li>
+            <li>
+              <a href="#Qgen7">Can the ST icon and notification be removed?</a>
+            </li>
+            <li>
+              <a href="#Qgen8">Does the app work on custom ROMs or other non Google phones? </a>
+            </li>
+            <li>
+              <a href="#Qgen9">Can the app be installed on an SD card?</a>
+            </li>
+          </ul>
+          <h4>Known Issues</h4>
+          <ul>
+            <li>
+              <a href="#Issue1">Smarter Time misses some of your phone moves or room changes</a>
+            </li>
+            <li>
+              <a href="#Issue2">Smarter Time has poor location accuracy</a>
+            </li>
+            <li>
+              <a href="#Issue3">The apps you're using are not displayed in the timeline</a>
+            </li>
+            <li>
+              <a href="#Issue4">Smarter Time keeps going off and leaves holes in your timeline</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <section class="beta-welcome beta-faq-rest beta-faq">
+    <div class="container">
+      <div class="row">
+        <div class="tabs tabs-style-shape">
+          <nav>
+            <ul>
+              <li>
+                <a href="#section-shape-1">
+                  <svg viewBox="0 0 80 60" preserveAspectRatio="none">
+                    <use xlink:href="#tabshape"></use>
+                  </svg>
+                  <span>Usage and tutorials</span>
+                </a>
+              </li>
+              <li>
+                <a href="#section-shape-2">
+                  <svg viewBox="0 0 80 60" preserveAspectRatio="none">
+                    <use xlink:href="#tabshape"></use>
+                  </svg>
+                  <svg viewBox="0 0 80 60" preserveAspectRatio="none">
+                    <use xlink:href="#tabshape"></use>
+                  </svg>
+                  <span>General Questions and Issues</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div class="content-wrap">
+            <section id="section-shape-1">
+              <a name="Tutorial1"></a>
+              <div style="text-align: center;">
+                  <iframe width="560" height="315" src="https://www.youtube.com/embed/wPOALqh4USI" frameborder="0" allowfullscreen></iframe>
+              </div>
+              <a name="Tutorial2"></a>
+              <div>
+                <h3>Adding a timeslot</h3> 
+                <div class="row">
+                  <div class="col-sm-12">
+                    <p>
+                      Just click on the “+” sign at the bottom of your timeline, fill in the Activity and Location fields, and hit the check button.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <a name="Tutorial3"></a>
+              <div>
+                <h3>Editing a timeslot</h3> 
+                <div class="row">
+                  <div class="col-sm-12">
+                    <p>
+                      When you click on a timeslot, it extends: you are now in “edition” mode. You can click on any available field to edit the information, then choose from a list of saved locations/activities, or create your own.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <a name="Tutorial4"></a>
+              <div>
+                <h3>Merging a timeslot</h3> 
+                <div class="row">
+                  <div class="col-sm-12">
+                    <p>
+                      When you are editing a timeslot, click on the button “Merge timeslot” at the top of your timeslot to merge it with the one above, and the one at the bottom if you want to merge it with the one below. Please note: the timeslot you are editing will be absorbed by the timeslot you are merging it with. 
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <a name="Tutorial5"></a>
+              <div>
+                <h3>Adding rooms to a place</h3>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <p>
+                      Smarter Time locates you very precisely. It knows what place you're in, but it can also guess which room you're in. Knowing the room you're in makes Smarter Time more precise, but it's not always necessary, for example if the whole space fulfills the same purpose, such as a gym for fitness. If you're in a place in which it's relevant to record different rooms (such as your office or your home) you can add rooms by hitting the space+ icon when in edit mode.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <a name="Tutorial6"></a>
+              <div>
+                <h3>Managing your places</h3>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <p>
+                      Open the left menu and go to "My Data". All the places you've been to are listed in the "My Places" tab. Click on a place to reset its location.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <a name="Tutorial7"></a>
+              <div>
+                <h3>Managing activities / categories</h3>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <p>
+                      Open the left menu and go to "My Data". In "My Activities", you can edit category names and colors, add new categories, or put activities in a different category by holding them and releasing on that category.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <a name="Tutorial8"></a>
+              <div>
+                <h3>Creating a goal</h3>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <p>
+                      Simply go to the Goals tab and hit the "+" button. You can create goals by categories or specific activities, and you can decide to aim for more or less than a certain amount of time per day, week or month. 
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <a name="Tutorial9"></a>
+              <div>
+                <h3>Adding computer tracking</h3>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <p>
+                     If you'd like to follow your activities on your computer precisely, you need to <a url="http://smartertime.com/downloads" target="_blank">download the Smarter Time companion desktop client</a>, install it on your PC or your Mac and log into it. Please note you'll need to have a Smarter Time account created in the mobile app before using the client.  
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <a name="Tutorial10"></a>
+              <div>
+                <h3>Creating an account</h3>
+                <div class="row">
+                  <div class="col-sm-12">
+                    <p>
+                      Go into the Smarter Time mobile app, open the left menu and hit the "Log in" button. Creating accounts through the desktop client is not supported for the time being.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section id="section-shape-2">
+              <a name="Qgen1"></a>
+              <div>
+                <h3>What is Smarter Time?</h3>
+                <p>
+                  Smarter Time is your personal time-tracking assistant. The app learns everything about your daily habits, whether you work on your computer, browse on your phone or relax in front of the TV. Then it is able to guess your activities very precisely and give you a detailed timeline of your day and analytics on your time use, while keeping your input to a minimum.
+                </p>
+              </div>
+              <a name="Qgen2"></a>
+              <div>
+                <h3>How can it help you?</h3>
+                <p>
+                  Do you ever feel like you're out of time to do the things that matter to you? Do you feel tired and overwhelmed, without being able to pinpoint the reason? Change starts with knowledge. Smarter Time provides you the detailed knowledge that you need to start making the right decisions for your life management.
+                </p>
+              </div>
+              <a name="Qgen3"></a>
+              <div>
+                <h3>Is there an iOS version?</h3>
+                <p>
+                  An iOS version is in the works and will be released as soon as we're fully happy with its performance! Want a preview peek? Then join our community of beta testers by hitting the “iOS Beta” button on the side of the screen.
+                </p>
+              </div>
+              <a name="Qgen4"></a>
+              <div>
+                <h3>Will Smarter Time drain your battery?</h3>
+                <p>
+                  No. On most of the phones we have managed to get our hands on (and that’s a lot!) it typically consumes 0.5% to 4% of battery a day! If it occasionally goes over that mark on your phone, you might be using a brand that we have known issues with (see google playstore description for an updated list.) We typically have very little control over such issues.
+                </p>
+              </div>
+              <a name="Qgen5"></a>
+              <div>
+                <h3>How does it preserve your privacy?</h3>
+                <p>
+                  Smarter Time has <a url="http://smartertime.com/terms" target="_blank">neither the will nor the right</a> to sell any of your data: it is yours to keep. You even have the option to keep all of your data on your phone and not send it to anywhere in the cloud, if you so wish.
+                </p>
+              </div>
+              <a name="Qgen6"></a>
+              <div>
+                <h3>But why does it need all these permissions?</h3>
+                <p>
+                  Because the brain we have developed needs them for its learning process: they allow it to progressively recognize your habits and avoid you as much manual input as possible.
+                </p>
+              </div>
+              <a name="Qgen7"></a>
+              <div>
+                <h3>Can the ST icon and notification be removed?</h3>
+                <p>
+                  Yes, just go the left menu to access your Settings. You'll find the notification settings there and you can tweak their behaviour.
+                </p>
+              </div>
+              <a name="Qgen8"></a>
+              <div>
+                <h3>Does the app work on custom ROMs or other non Google phones?</h3>
+                <p>
+                  We do not support any custom ROMs, however as long as the Google Play services are installed, there is a good chance the app will work.
+                </p>
+              </div>
+              <a name="Qgen9"></a>
+              <div>
+                <h3>Can the app be installed on an SD card?</h3>
+                <p>
+                  No, for two reasons. The first one is a privacy issue: if an app is installed on an SD card, it's a lot easier for other apps to access and read that data. The second one is that some phones clear data on the SD card automatically, hence potentially deleting your Smarter Time history.
+                </p>
+              </div>
+              <a name="Issue1"></a>
+              <div>
+                <h3>Smarter Time misses some of your phone moves or room changes</h3>
+                <p>
+                Some phones do not read sensors when their screen is off. Unfortunately, that choice is made by manufacturers and we have no way of bypassing it. You can find a list of the affected phones on <a href="http://www.saltwebsites.com/2012/android-accelerometers-screen-off">Salt Websites</a>.
+                </p>
+              </div>
+              <a name="Issue2"></a>
+              <div>
+                <h3>Smarter Time has poor location accuracy</h3>
+                <p>
+                We use a combination of geolocation and Wi-Fi signal analysis to locate you. Unfortunately, both those methods are fallible. Google Maps or any other mapping application will allow you to check your geolocation accurately.<br>
+Wi-Fi location is accurate when over 10 Wi-Fi networks are visible, acceptable between 5 and 10, and bad below 5. Room accuracy is dependent on the same factor, which makes it nearly impossible to achieve in sparsely populated areas.
+                </p>
+              </div>
+              <a name="Issue3"></a>
+              <div>
+                <h3>The apps you're using are not displayed in the timeline</h3>
+                <p>
+                Since Lollipop, Android uses a new and better system to give access to app usage analytics. Smarter Time should ask you for the rights the first time it needs them. If it did not, you can go to settings &gt; security &gt; app usage and authorise Smarter Time manually. LG did not implement that feature on Android 5.0, so you will not be able to access your app usage on an LG phone.
+                </p>
+              </div>
+              <a name="Issue4"></a>
+              <div>
+                <h3>Smarter Time keeps going off and leaves holes in your timeline</h3>
+                <p>
+                Some phones (among them Samsung and Honor) keep killing background apps. We have very little control over how their processes work, but check this page again in a few days and you should find some tips on how to limit the issue.
+                </p>
+              </div>
+            </section>
+          </div>
+          <!-- /content -->
+        </div>
+        <!-- /tabs -->
+      </div>
+    </div>
+  </section>
+  <footer class="footer-home">
+    <div class="container-fluid">
+      <div class="row row-padding">
+        <div class="col-xs-6 col-sm-4 col-md-2 footer-division display-big">
+          <div class="footer-icon" style="text-align:left;">
+            <img src="img/footer-logo.png" alt="" class="img-responsive">
+          </div>
+          <div class="copy-right">
+            &#169; Smarter Time 2016
+          </div>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-2 footer-division">
+          <h3>About Us</h3>
+          <ul>
+            <li><a href="https://medium.com/smarter-time">Blog</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-2 footer-division">
+          <h3>Support</h3>
+          <ul>
+            <li><a href="downloads.html">Downloads</a>
+            </li>
+            <li><a href="terms.html">Terms of services</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-2 footer-division">
+          <h3>Features</h3>
+          <ul>
+            <li><a href="features.html">Automated Learning</a>
+            </li>
+            <li><a href="features.html">Room level location</a>
+            </li>
+            <li><a href="features.html">Analytics</a>
+            </li>
+            <li><a href="features.html">Calender Integration</a>
+            </li>
+            <li><a href="features.html">Desktop client</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-xs-6 col-sm-4 col-md-3   footer-division">
+          <h3>Get in touch</h3>
+          <ul>
+            <li><a href="press.html">Press</a>
+            </li>
+            <li class="social-icons"><a href="https://twitter.com/smartertime"><i class="fa fa-twitter"></i></a><a href="https://www.facebook.com/smartertime/"><i class="fa fa-facebook"></i></a>
+            </li>
+        </div>
+      </div>
+
+      <div class="row display-small">
+        <div class="col-md-12 footer-icon">
+          <img src="img/footer-logo.png" alt="" class="img-responsive">
+        </div>
+        <div class="copy-right text-center">
+          &#169; Smarter Time 2016
+        </div>
+      </div>
+  </footer>
+  <!-- modal -->
+  <div class="col-sm-6 col-md-5 col-xs-12" id="contact">
+    <form method="post" action="sendm.php" id="contact-form">
+      <div class="">
+        <div class="">
+          <div class="modal-header">
+            <div class="head-arrw">
+              <img class="hide-div" src="img/arrow-left.png" alt="">
+              <h2>Get in touch</h2>
+            </div>
+          </div>
+          <div class="modal-body">
+
+            <div class="form-group">
+              <label for="">Your Name</label>
+              <input type="text" class="form-control required" name="name">
+            </div>
+            <div class="form-group">
+              <label for="">Your Email Address</label>
+              <input type="email" class="form-control required" name="email">
+            </div>
+            <div class="form-group">
+              <label for="">What do you wish to discuss?</label>
+              <textarea class="form-control required" name="message" id="" cols="30" rows="10"></textarea>
+            </div>
+            <input type="text" name="email-check" value="" style="position:absolute; left:-5000px">
+            <div id="mce-responses-1" class="clear">
+              <div class="response mce-success-response" style="display:none"></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="form-group text-center">
+          <button id="contact-form-button" class="send-form-button">Send Contact Form</button>
+        </div>
+      </div>
+
+    </form>
+
+  </div>
+  <div class="col-sm-6 col-md-5 col-xs-12" id="betester">
+    <script type="text/javascript">
+     window.Maitre = {
+       uuid: "MF1cf8552fe9",
+       test_mode: false
+     };
+   </script>
+   <script data-maitre src='https://maitreapp.co/widget.js' async></script>
+  </div>
+  <!-- jQuery -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <!-- Bootstrap Core JavaScript -->
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+  <!-- Theme JavaScript -->
+  <script src="js/main.js"></script>
+  <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="owl-carousel/owl.carousel.js"></script>
+  <!-- tabs -->
+  <script src="js/cbpFWTabs.js"></script>
+  <script>
+    $('.hide-div').click(function() {
+      $('#betester,#contact').animate({
+        right: "-700"
+      }, 500, function() {
+        $('#betester,#contact').hide();
+      });
+    });
+    $(document).ready(function() {
+      $(".get-the-beta,.beta-tester").click(function() {
+
+        // Set the effect type
+        var effect = 'slide';
+
+        // Set the options for the effect type chosen
+        var options = {
+          direction: 'Right'
+        };
+
+        // Set the duration (default: 400 milliseconds)
+        var duration = 500;
+
+        //$('#betester').toggle('slide','bottom');
+        $('#betester').css('right', '-700px');
+        $('#betester').show().animate({
+          right: "0"
+        }, 500);
+        return false;
+      });
+      $(".contact-div").click(function() {
+
+        // Set the effect type
+        var effect = 'slide';
+
+        // Set the options for the effect type chosen
+        var options = {
+          direction: 'Right'
+        };
+
+        // Set the duration (default: 400 milliseconds)
+        var duration = 500;
+
+        //$('#betester').toggle('slide','bottom');
+        $('#contact').css('right', '-700px');
+        $('#contact').show().animate({
+          right: "0"
+        }, 500);
+
+        return false;
+      });
+
+      $('#contact-form-button').on('click', function() {
+        err = 0;
+        $('#contact-form').find('.required').each(function() {
+          if ($(this).val() == '') {
+            $(this).css('border-color', 'red');
+            err = 1;
+            return false;
+          } else {
+            $(this).css('border-color', '#503b6b');
+          }
+        });
+        if (!err) {
+          console.log('no error');
+
+          var $form = $('#contact-form'),
+            name = $form.find("input[name='name']").val(),
+            email = $form.find("input[name='email']").val(),
+            message = $form.find("textarea[name='message']").val(),
+            email_check = $form.find("input[name='email-check']").val(),
+            url = 'sendm.php';
+
+          // Send the data using post
+          var posting = $.post(url, {
+            name: name,
+            email: email,
+            message: message,
+            emailCheck: email_check
+          });
+
+          // Put the results in a div
+          posting.done(function(data) {
+            console.log(data);
+            $('#mce-responses-1 .mce-success-response').text(data).show();
+          });
+        }
+        return false;
+      });
+
+    });
+    $(document).mouseup(function(e) {
+      var container = $("#betester,#contact");
+
+      if (!container.is(e.target) // if the target of the click isn't the container...
+        && container.has(e.target).length === 0) // ... nor a descendant of the container
+      {
+        container.hide();
+      }
+    });
+
+    $('#mainNav').removeClass('affix-top').addClass('affix');
+    $(window).scroll(function() {
+      $('#mainNav').removeClass('affix-top').addClass('affix');
+    })
+  </script>
+  <script>
+    (function() {
+
+      [].slice.call(document.querySelectorAll('.tabs')).forEach(function(el) {
+        new CBPFWTabs(el);
+      });
+
+    })();
+  </script>
+
+  <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+  <script type='text/javascript'>
+    (function($) {
+      window.fnames = new Array();
+      window.ftypes = new Array();
+      fnames[1] = 'FNAME';
+      ftypes[1] = 'text';
+      fnames[0] = 'EMAIL';
+      ftypes[0] = 'email';
+    }(jQuery));
+    var $mcj = jQuery.noConflict(true);
+  </script>
+  <!--End mc_embed_signup-->
+
+</body>
+
+</html>

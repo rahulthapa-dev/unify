@@ -1,0 +1,503 @@
+/*Brandon Grotesque Regular
+font-family: brandon-grotesque, sans-serif;
+font-weight: 400;
+font-style: normal;
+
+Brandon Grotesque Bold
+font-family: brandon-grotesque, sans-serif;
+font-weight: 700;
+font-style: normal;
+
+Brandon Grotesque Medium
+font-family: brandon-grotesque, sans-serif;
+font-weight: 500;
+font-style: normal;
+
+Brandon Grotesque Black
+font-family: brandon-grotesque, sans-serif;
+font-weight: 900;
+font-style: normal;*/
+
+
+@font-face {
+    font-family: 'Gotcha';
+    src:    url('fonts/GotchaRegular/GotchaRegular.eot?#iefix') format('embedded-opentype'),
+            url('fonts/GotchaRegular/GotchaRegular.otf')  format('opentype'),
+            url('fonts/GotchaRegular/GotchaRegular.woff') format('woff'),
+            url('fonts/GotchaRegular/GotchaRegular.ttf')  format('truetype'),
+            url('fonts/GotchaRegular/GotchaRegular.svg#GotchaRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sanchez';
+    src:    url('fonts/SanchezBold/SanchezBold.eot?#iefix') format('embedded-opentype'),
+            url('fonts/SanchezBold/SanchezBold.otf')  format('opentype'),
+            url('fonts/SanchezBold/SanchezBold.woff') format('woff'),
+            url('fonts/SanchezBold/SanchezBold.ttf')  format('truetype'),
+            url('fonts/SanchezBold/SanchezBold.svg#SanchezBold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Sanchez';
+    src:    url('fonts/SanchezRegular/Sanchez.eot?#iefix') format('embedded-opentype'),
+            url('fonts/SanchezRegular/Sanchez.otf')  format('opentype'),
+            url('fonts/SanchezRegular/Sanchez.woff') format('woff'),
+            url('fonts/SanchezRegular/Sanchez.ttf')  format('truetype'),
+            url('fonts/SanchezRegular/Sanchez.svg#Sanchez') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Sanchez';
+    src:    url('fonts/SanchezLight/SanchezLight.eot?#iefix') format('embedded-opentype'),
+            url('fonts/SanchezLight/SanchezLight.otf')  format('opentype'),
+            url('fonts/SanchezLight/SanchezLight.woff') format('woff'),
+            url('fonts/SanchezLight/SanchezLight.ttf')  format('truetype'),
+            url('fonts/SanchezLight/SanchezLight.svg#SanchezLight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+  }
+
+body{
+    font-family: brandon-grotesque, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #343842;
+}
+
+/* ==================================================
+  Header
+================================================== */
+header{
+    background: #fff;
+    padding: 10px 0;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+}
+
+/* ==================================================
+  Hero Styling
+================================================== */
+.hero {
+    position: relative;
+    background: url('img/tamboor-couv-desktop.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 150px 0;
+    color: #fff;
+    width: 100%;
+    height: 100vh;
+}
+
+.hero .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.hero h2{
+    font-family: 'Sanchez';
+    font-size: 35px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 4px rgba(51,51,51,0.5);
+}
+.hero h2.script{
+    font-family: 'Gotcha';
+    font-size: 100px;
+    text-transform: none;
+    transform-origin: 0 0;
+    transform: rotate(350deg);
+  /* Safari */
+  -webkit-transform: rotate(350deg);
+  /* Firefox */
+  -moz-transform: rotate(350deg);
+  /* IE */
+  -ms-transform: rotate(350deg);
+  /* Opera */
+  -o-transform: rotate(350deg);
+  padding-top: 30px;
+}
+.hero h2.veepee{
+    margin-top: -45px;
+}
+
+.hero .prix-code{
+    margin-top: 50px;
+}
+.hero .prix p{
+    font-size:22px;
+    font-weight: 700;
+    margin-bottom: 0;
+    text-shadow: 1px 1px 4px rgba(51,51,51,0.5);
+}
+.hero .prix-promo{
+    font-size: 80px;
+    font-weight: 900;
+    text-shadow: 3px 4px 0px #fbe1d4;
+}
+
+.hero .code p{
+    font-size: 24px;
+    text-shadow: 1px 1px 4px rgba(51,51,51,0.5);
+}
+.hero .code .promo{
+    margin-bottom: 35px;
+    margin-top: 25px;
+}
+.hero a.btn-tamboor-code{
+    text-transform: uppercase;
+    color:#343842;
+    background: #fff;
+    box-shadow: 10px 10px 0px #fbe1d4;
+    font-weight: 700;
+    font-size: 24px;
+    padding: 15px 55px;
+    letter-spacing: 0.1em;
+}
+
+#arrow{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border: 0;
+    outline: 0;
+    z-index: 100;
+    color: #fff;
+    background: transparent;
+    -moz-transition: all 0.2s cubic-bezier(0.7, 0.01, 0.3, 1);
+    -o-transition: all 0.2s cubic-bezier(0.7, 0.01, 0.3, 1);
+    -webkit-transition: all 0.2s cubic-bezier(0.7, 0.01, 0.3, 1);
+    transition: all 0.2s cubic-bezier(0.7, 0.01, 0.3, 1);
+    font: 14px Heiti, 'Lucida Grande', Arial;
+    font-weight: bold;
+}
+@keyframes bounce{
+     from {top: -10px;}
+     to   {top: 5px;}
+}
+#arrow span{
+    display: inline-block;
+    position: relative;
+    top: -10px;
+    padding: 15px;
+    -moz-transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
+    -o-transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
+    -webkit-transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
+    transition: all 0.7s cubic-bezier(0.7, 0.01, 0.3, 1);
+          -webkit-animation: bounce 0.9s ease infinite alternate;
+		-moz-animation: bounce 0.9s ease infinite alternate;
+		  -ms-animation: bounce 0.9s ease infinite alternate;
+		  	-o-animation: bounce 0.9s ease infinite alternate;
+		      animation: bounce 0.9s ease infinite alternate;
+}
+
+/* ==================================================
+  Profitez
+================================================== */
+.profitez{
+    background: #fbe1d4;
+    text-align: center;
+    padding: 20px 0;
+    position:sticky;
+    position: -webkit-sticky;
+    transform: translate3d(0px,0px,0px);
+}
+.profitez .line1{
+    font-size: 24px;
+    color: #343842;
+    margin-bottom: -10px;
+}
+.profitez .line2{
+    font-size: 18px;
+    color: #6d7376;
+    margin-bottom: 22px;
+}
+a.btn-tamboor-box{
+    font-size: 21px;
+    font-weight: 700;
+    color: white;
+    text-transform: uppercase;
+    background:#52bbad;
+    padding: 10px 25px;
+    }
+
+/* ==================================================
+  Section 1 - Couches saines
+================================================== */
+.couches-saines{
+    background: #6cbfb3;
+    color: #fff;
+    padding: 80px 0;
+}
+
+.couches-saines h2{
+    font-family: 'Sanchez';
+    font-weight: 400;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.couches-saines h2.script{
+    margin-top: 50px;
+    font-family: 'Gotcha';
+    font-size: 73px;
+    text-transform: none;
+    transform-origin: 0 0;
+    transform: rotate(350deg);
+  /* Safari */
+  -webkit-transform: rotate(350deg);
+  /* Firefox */
+  -moz-transform: rotate(350deg);
+  /* IE */
+  -ms-transform: rotate(350deg);
+  /* Opera */
+  -o-transform: rotate(350deg);
+}
+
+.couches-saines .row-arg{
+    margin-top: 55px;
+}
+.couches-saines .row-arg h4{
+    font-size:177px;
+    font-family: 'Sanchez';
+    font-weight: 300;
+    margin-top: -50px;
+}
+.couches-saines .row-arg h4 sup{
+    font-size: 50px;
+    vertical-align: super;
+}
+.couches-saines .row-arg p.zero{
+    font-size: 23px;
+    font-weight: 500;
+    margin-top: -30px;
+}
+.couches-saines .row-arg p.certif{
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 35px;
+}
+
+/* ==================================================
+  Section 2 - by orchestra
+================================================== */
+.by_orchestra{
+    padding: 47px 0;
+}
+.by_orchestra p{
+    color: #dc878f;
+    font-size: 24px;
+    margin-bottom: 0;
+    margin-top:30px;
+}
+
+/* ==================================================
+  Section 3 - Box
+================================================== */
+.box{
+    background: #fef8f4;
+    padding: 60px 0;
+}
+
+.box h2{
+    font-family: 'Sanchez';
+    font-weight: 700;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+.box h2.script{
+    margin-top: 50px;
+    font-family: 'Gotcha';
+    font-size: 80px;
+    font-weight: normal;
+    text-transform: none;
+    transform-origin: 0 0;
+    transform: rotate(350deg);
+  /* Safari */
+  -webkit-transform: rotate(350deg);
+  /* Firefox */
+  -moz-transform: rotate(350deg);
+  /* IE */
+  -ms-transform: rotate(350deg);
+  /* Opera */
+  -o-transform: rotate(350deg);
+}
+
+.box .tarifs h4{
+    font-size: 27px;
+    font-family: 'Sanchez';
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.box .tarifs p{
+    font-size: 53px;
+    font-family: 'Sanchez';
+    font-weight: 700;
+}
+.box .tarifs p span{
+    font-size:17px;
+    text-transform: uppercase;
+}
+.box .texte p{
+    font-size: 20px;
+    text-align: left;
+}
+.box .row-hr,
+.box .row-box{
+    padding-bottom: 60px;
+}
+
+.box .row-arg {
+    margin-bottom: 65px;
+}
+.box .row-arg h2{
+    color: #69c4b4;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-family: 'Sanchez';
+    font-weight: 700;
+}
+.box .row-arg p{
+    color: #6d7376;
+    font-size: 17px;
+}
+
+.box .row-slogan{
+    margin-bottom: 85px;
+}
+
+.box .row-slogan{
+    margin-bottom: 110px;
+}
+
+/* ==================================================
+  Footer
+================================================== */
+footer{
+    background: #cde7e1;
+    padding: 35px 0;
+}
+footer p{
+    padding-top: 10px;
+}
+
+
+/* ==================================================
+  Mediaqueries
+================================================== */
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Bootstrap Media Queries for  Large Devices, Wide Screens */
+
+@media only screen and (max-width : 1200px){
+
+}
+
+/* Bootstrap Media Queries for  Medium Devices, Desktops */
+
+@media only screen and (max-width : 992px){
+
+}
+
+/* Bootstrap Media Queries for Small Devices, Tablets */
+
+@media only screen and (max-width : 768px){
+
+}
+
+/* Bootstrap Media Queries for Extra Small Devices, Phones */
+
+@media only screen and (max-width : 480px){
+    .hero {
+        background: url('img/tamboor-couv-mobile.jpg') no-repeat center center;
+    }
+    .hero h2 {
+        font-size: 25px;
+    }
+    .hero h2.script {
+        font-size: 70px;
+        padding-top: 20px;    
+    }
+    .hero .prix-code {
+        margin-top: 20px;
+    }
+    .hero .prix-promo {
+        font-size: 60px;
+    }
+    .hero .container {
+        /*top: 55%;*/
+    }
+    .hero .prix p:first-of-type{
+        line-height: 20px;
+        margin-bottom: 5px;
+    }
+    #arrow {
+        bottom:20px;
+    }
+    .profitez .line1 {
+        font-size: 20px;
+    }
+    .couches-saines{
+        padding: 80px 0 40px 0;
+    }
+    .couches-saines .row-arg .col-md-4{
+        margin-bottom: 50px;
+    }
+    .couches-saines h2.script {
+        margin-top: 5px;
+        font-size: 65px;
+    }
+    .couches-saines h2 {
+        font-size: 35px;
+    }
+    .box h2 {
+        font-size: 30px;
+    }
+    .box h2.script {
+        margin-top: 30px;
+        font-size: 60px;
+    }
+    .box .tarifs h4 {
+        font-size: 22px;
+    }
+    .box .tarifs p {
+        font-size: 43px;
+    }
+    .box .texte p {
+        text-align: center;
+    }
+    .box .row-arg {
+        margin-bottom: 0;
+    }
+    .box .row-arg .col-md-4{
+        margin-bottom: 45px;
+    }
+    .box .row-slogan {
+        margin-bottom: 70px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .box .row-bebe{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+/* Bootstrap Media Queries for Custom, iPhone Retina */
+
+@media only screen and (max-width : 320px){
+
+}
+

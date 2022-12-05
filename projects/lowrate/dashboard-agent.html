@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>Dashboard Agent</title>
+		<!--Import Material Icon Font-->
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Import Catamaran Font-->
+		<link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="sass/lowrate.css"  media="screen,projection"/>
+		<link type="text/css" rel="stylesheet" href="sass/font.css"/>
+		<!--Let browser know website is optimized for mobile-->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,700" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body class="lowrate grey darken-2">
+    	<div class="main-wrapper">
+			<!--*****   SIDEBAR NAVIGATION   *****-->
+            <div class="side-nav fixed white" id="main_navigation" style="transform: translateX(0%);">
+				<div class="current_user">
+					<div class="name_user">
+						<span class="user_thumb">
+							<img class="img-responsive" src="images/user.png">
+						</span>
+						<p class="userName">Frank</p>
+					</div>
+				</div>
+				<ul class="main-menu">
+					<li><a href="dashboard-agent.html"><i class="material-icons">dashboard</i><span class="nav_link_text">Dashboard</span></a></li>
+					<li><a href="dashboard-user.html"><i class="material-icons">dns</i><span class="nav_link_text">Products</span></a></li>
+					<li><a href="agent-detail.html"><i class="material-icons">folder</i><span class="nav_link_text">My Documents</span></a></li>
+					<li><a href="agency-portal.html"><i class="material-icons">monetization_on</i><span class="nav_link_text">My Payments</span></a></li>
+					<li><a href="user-my-referrals.html"><i class="material-icons">share</i><span class="nav_link_text">My Referral</span></a></li>
+				</ul>
+				<ul class="main-menu bottomControls">
+					<li><a href="javascript:void(0)"><i class="material-icons">settings</i></a></li>
+					<li><a href="javascript:void(0)"><i class="material-icons">power_settings_new</i></a></li>
+				</ul>
+
+			</div>
+
+	        <header id="header" class="navbar-fixed">
+				<nav class="navbar_header white row">
+				    <div class="nav-wrapper">
+				    <a href="#" data-activates="main_navigation" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a>
+				      <a href="#" class="brand-logo"><img src="images/logo.png" alt="lowrate"></a>
+				      <ul id="nav-mobile" class="right headerNav">
+				        <li><a href="javascript:void(0)"><i class="material-icons">local_phone</i><span>Call Agent</span></a></li>
+				        <li><a href="javascript:void(0)"><i class="material-icons">attach_money</i><span>Pay<span></a></li>
+				        <li><a href="javascript:void(0)"><i class="material-icons rotateX180">file_download</i><span>Upload<span></a></li>
+				        <li class="notifications">
+				            <a class="message" href="javascript:void(0)"><i class="material-icons rotateY180">message</i></a>
+				            <a class="bellNoti" href="javascript:void(0)"><i class="material-icons">notifications_none</i></a>
+				        </li>
+				      </ul>
+				    </div>
+				</nav>
+	        </header>
+
+          <!--   /End Side Navbar  -->
+
+          <!--******     Main Content Starts      ******-->
+			<main id="content_wrapper">
+		    	<section class="row panel_agent_Detail bottom-zero">
+
+		    		<div class="col l9 m12 s12 left_content no-padding">
+						<div class="row">
+							<h1>Hi, Frank</h1>				
+							<div class="row row-20">
+
+								<div class="col l4 m12 s12">	
+									<div class="white singleUserDetail">			    		
+										<div class="agent_assets">
+											<div class="agent_docs">
+												<div class="iconAgent">
+													<span>
+														<i class="material-icons grey-text text-lighten-2">phone</i>
+													</span>
+												</div>
+												<div class="detailDoc">
+													<p>Number of Calls</p>
+													<h2>32 <span class="grey-text text-lighten-2">This month</span></h2>											
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="col l4 m12 s12">	
+									<div class="white singleUserDetail">			    		
+										<div class="agent_assets">
+											<div class="agent_docs">
+												<div class="iconAgent">
+													<span>
+														<i class="material-icons grey-text text-lighten-2">attach_money</i>
+													</span>
+												</div>
+												<div class="detailDoc">
+													<p>Payments</p>
+													<h2>$3, 420 <span class="grey-text text-lighten-2">This month</span></h2>		
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="col l4 m12 s12">	
+									<div class="white singleUserDetail">			    		
+										<div class="agent_assets">
+											<div class="agent_docs">
+												<div class="iconAgent">
+													<span>
+														<i class="material-icons grey-text text-lighten-2">security</i>
+													</span>
+												</div>
+												<div class="detailDoc">
+													<p>Policies sold</p>
+													<h2>15 <span class="grey-text text-lighten-2">This month</span></h2>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+						
+						<div class="clearfix"></div>
+						
+		    			<div class="row row-20">
+
+		    			    <div class="col l12 m12 s12 pending_Referrals">
+		    			        <div class="referralContainer white">									
+									<div class="header_reffrals">
+										<h5>Recent Calls</h5>
+										<a href="#" class="view_all blue-text">View all</a>
+									</div>
+									
+									<div class="custom_table">
+										<table class="gridTable striped noSpace responsive-table">
+											<thead>
+												<tr>
+													<th><div class="theader">ID</div></th>
+													<th><div class="theader">Call Time</div></th>
+													<th><div class="theader">User</div></th>
+													<th><div class="theader">Recorded</div></th>
+													<th><div class="theader">Details</div></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>#45284</td>
+													<td>09/11/2017 10:24:20 AM</td>
+													<td><a href="javascript:void(0)" class="userTbl">
+														    <div class="iconUser pink lighten-4 noImg">m</div>
+														    <div class="userName">
+														        <p>Martin C. Young</p>
+														    </div>
+														</a>
+													</td>
+													<td class="record"><a href="#"><i class="material-icons mic_off">mic_off</i></a></td>
+													<td><a class="view_detail" href="javascript:void(0)">View Details <i class="material-icons">keyboard_arrow_right</i></a></td>
+												</tr>
+
+												<tr>
+													<td>#43567</td>
+													<td>09/11/2017 10:24:20 AM</td>
+													<td><a href="javascript:void(0)" class="userTbl">
+															<div class="iconUser green lighten-4 noImg">S</div>
+															<div class="userName">
+																<p>Steve Young</p>
+															</div>
+														</a>
+													</td>
+													<td class="record"><a href="#"><i class="material-icons mic_off">mic_off</i></a></td>
+													<td><a class="view_detail" href="javascript:void(0)">View Details <i class="material-icons">keyboard_arrow_right</i></a></td>
+												</tr>
+
+												<tr>
+													<td>#45284</td>
+													<td>09/11/2017 10:24:20 AM</td>
+													<td><a href="javascript:void(0)" class="userTbl">
+															<div class="iconUser pink lighten-4 noImg">m</div>
+															<div class="userName">
+																<p>Martin C. Young</p>
+															</div>
+														</a>
+													</td>
+													<td class="record"><a href="javascript:void(0)"><div class="play_show_ic"><i class="green-text material-icons mic_on">play_arrow</i></div> <i class="material-icons mic_on">mic</i>  <span class="duration_call">00:45</span></a></td>
+													<td><a class="view_detail" href="javascript:void(0)">View Details <i class="material-icons">keyboard_arrow_right</i></a></td>
+												</tr>
+
+												<tr>
+													<td>#43567</td>
+													<td>09/11/2017 10:24:20 AM</td>
+													<td><a href="javascript:void(0)" class="userTbl">
+															<div class="iconUser green lighten-4 noImg">S</div>
+															<div class="userName">
+																<p>Steve Young</p>
+															</div>
+														</a>
+													</td>
+													<td class="record"><a href="#"><i class="material-icons mic_off">mic_off</i></a></td>
+													<td><a class="view_detail" href="javascript:void(0)">View Details <i class="material-icons">keyboard_arrow_right</i></a></td>
+												</tr>
+
+												<tr>
+													<td>#45284</td>
+													<td>09/11/2017 10:24:20 AM</td>
+													<td><a href="javascript:void(0)" class="userTbl">
+															<div class="iconUser pink lighten-4 noImg">m</div>
+															<div class="userName">
+																<p>Martin C. Young</p>
+															</div>
+														</a>
+													</td>
+													<td class="record"><a href="#"><i class="material-icons mic_off">mic_off</i></a></td>
+													<td><a class="view_detail" href="javascript:void(0)">View Details <i class="material-icons">keyboard_arrow_right</i></a></td>
+												</tr>
+
+												<tr>
+													<td>#43567</td>
+													<td>09/11/2017 10:24:20 AM</td>
+													<td><a href="javascript:void(0)" class="userTbl">
+															<div class="iconUser green lighten-4 noImg">S</div>
+															<div class="userName">
+																<p>Steve Young</p>
+															</div>
+														</a>
+													</td>
+													<td class="record"><a href="#"><i class="material-icons mic_off">mic_off</i></a></td>
+													<td><a class="view_detail" href="javascript:void(0)">View Details <i class="material-icons">keyboard_arrow_right</i></a></td>
+												</tr>
+
+												<tr>
+													<td>#45284</td>
+													<td>09/11/2017 10:24:20 AM</td>
+													<td><a href="javascript:void(0)" class="userTbl">
+															<div class="iconUser pink lighten-4 noImg">m</div>
+															<div class="userName">
+																<p>Martin C. Young</p>
+															</div>
+														</a>
+													</td>
+													<td class="record"><a href="javascript:void(0)"><div class="play_show_ic"><i class="green-text material-icons mic_on">play_arrow</i></div> <i class="material-icons mic_on">mic</i>  <span class="duration_call">00:45</span></a></td>
+													<td><a class="view_detail" href="javascript:void(0)">View Details <i class="material-icons">keyboard_arrow_right</i></a></td>
+												</tr>
+
+												<tr>
+													<td>#43567</td>
+													<td>09/11/2017 10:24:20 AM</td>
+													<td><a href="javascript:void(0)" class="userTbl">
+															<div class="iconUser green lighten-4 noImg">S</div>
+															<div class="userName">
+																<p>Steve Young</p>
+															</div>
+														</a>
+													</td>
+													<td class="record"><a href="#"><i class="material-icons mic_off">mic_off</i></a></td>
+													<td><a class="view_detail" href="javascript:void(0)">View Details <i class="material-icons">keyboard_arrow_right</i></a></td>
+												</tr>
+
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						
+		    			</div>
+					</div>
+						
+				    <div class="ongoingCall active white col l3 m3 s12">
+						<div class="top_section">
+								<div class="onCall_header clearfix">
+									<div class="left_call">
+										<div class="userCall">
+											<span class="callerIcon">
+												<img src="images/user.png" alt="caller">
+											</span>		      			         
+										</div>
+										<div class="name_user">
+											<span class="name">John Doe</span>
+											<span class="callStatus">Ongoind Call...</span>
+										</div>
+									</div>
+									<div class="right_call">
+										<span class="action"><i class=" material-icons">stop</i></span>
+										<span class="timing">01.22</span>
+									</div>
+								</div>
+								<div class="video_Streaming">
+									<div class="talk_box hide">
+										<div class="video_main">
+											<img src="images/call_user.png">
+										</div>
+										<div class="video_thumb">
+											<img src="images/call_thumb.png">
+										</div>
+										<span class="fullScreen material-icons">fullscreen</span>
+										<p class="call_queue">Your Call is in Queue...</p>
+										<span class="duration_time">00.00.00</span>
+									</div>
+									<div class="dialing_box black">
+										<div class="dialer_wrapper">
+											<div class="outGoing">
+													<img src="images/detail_img.png" alt="user">
+											</div>
+										<div class="callGoing">
+											<div></div>
+											<div></div>
+											<div></div>
+											<div></div>				
+										</div>
+										<div class="caller_icn">
+											<span class="icon pulse">
+												<i class="material-icons white-text">call</i>
+											</span>
+										</div>				      			           
+										</div>
+									</div>
+									<div class="disconnected">
+										<p class="blink">Disconnected</p>
+									</div>
+								</div>
+								<div class="call_controls blue lighten-01">
+									<div class="call_options">
+										<span class=""><i class="material-icons">phone_paused</i></span>
+										<span class=""><i class="material-icons">mic_off</i></span>
+										<span class=""><i class="material-icons">screen_share</i></span>
+										<span class=""><i class="material-icons call_chat">chat</i></span>
+										<span class="endcall"><i class="material-icons end_call">call_end</i></span>
+									</div>
+								</div>
+							</div>			
+							<!-- <div class="post_options blue lighten-01">
+								<div class="wrapper">
+									<div class="add_comment">
+										<a href="javascript:void(0)"><i class="material-icons">chat_bubble_outline</i>Add comment</a>
+									</div>
+									<div class="add_tag">
+										<a href="javascript:void(0)"><i class="material-icons">label_outline</i>Add comment</a>
+									</div>
+								</div>
+							</div> -->
+							<div class="chat">
+							<div class="tab tab_call">
+								<div class="chat_wrapper white">
+									<div class="chat_msgs">
+										<ul class="chat_container">
+											<li class="chatDay">
+												<span>Today</span>
+											</li>
+											<li class="clearfix">
+												<div class="received">										
+													<p>Hi, how are you <small class="time">1 min ago</small></p>
+												</div>
+											</li>
+											<li class="clearfix">
+												<div class="sent">
+													<p>Hi John, I am fine how are you doing? <small class="time">11:00 am</small></p>
+												</div>
+											</li>
+											<li class="clearfix">
+												<div class="received">										
+													<p>I want to know about motorcycle insurance</p>
+												</div>
+											</li>																				
+											<li class="received clearfix">
+												<div class="spinner">
+												<div class="bounce1"></div>
+												<div class="bounce2"></div>
+												<div class="bounce3"></div>
+												</div>														    	        
+											</li>						    	        						    	        
+										</ul>
+									</div>
+								</div>
+							</div>		      			
+							</div>
+						<div class="msg_text">
+							<div class="emoji">
+								<span class="material-icons">tag_faces</span>
+							</div>
+							<textarea id="chatArea" placeholder="Type a message here" class="materialize-textarea white"></textarea>
+							<div class="chat_options">
+								<span class="send_message grey darken-7"><i class="material-icons white-text">send</i></span>
+							</div>
+						</div>
+					</div>
+					
+
+				    </div>    
+	    		</section>
+	   		</main>
+          <!--******     /Main Content Ends      ******-->
+    	</div>	
+        <span id="agents" class="button_agent_mobile">
+           <i class="material-icons">people</i>
+        </span>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/bin/materialize.min.js"></script>
+      <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>

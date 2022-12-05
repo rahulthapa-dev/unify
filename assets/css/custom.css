@@ -753,3 +753,10 @@ li div.active .process .heart-svg {
 .translate-middle {
     width: 24px;
 }
+/*  */
+p.lead.fw-normal {
+    font-weight: 400!important;
+    font-size: 16px;
+    letter-spacing: normal;
+    color: #3b434e;
+}

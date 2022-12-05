@@ -1,0 +1,35 @@
+/* BRANDON TEXT*/
+@font-face {
+	font-family: "SofiaPro";
+	src: url('../../fonts/SofiaPro/SofiaPro-Regular.otf');
+}
+@font-face {
+font-family: 'SofiaPro';
+font-style: normal;
+font-weight: 100;
+src: local('SofiaPro'), url('../../fonts/SofiaPro/SofiaPro-Light.otf') format('truetype');
+}
+@font-face {
+font-family: 'SofiaPro';
+font-style: normal;
+font-weight: 300;
+src: local('SofiaPro'), url('../../fonts/SofiaPro/SofiaPro-Regular.otf') format('truetype');
+}
+@font-face {
+font-family: 'SofiaPro';
+font-style: normal;
+font-weight: 500;
+src: local('SofiaPro-Medium'), url('../../fonts/SofiaPro/SofiaPro-Medium.otf') format('truetype');
+}
+@font-face {
+font-family: 'SofiaPro';
+font-style: normal;
+font-weight: 700;
+src: local('SofiaPro-Bold'), url('../../fonts/SofiaPro/SofiaPro-Bold.otf') format('truetype');
+}
+@font-face {
+font-family: 'SofiaPro';
+font-style: normal;
+font-weight: 900;
+src: local('SofiaPro-Black'), url('../../fonts/SofiaPro/SofiaPro-Black.otf') format('truetype');
+}

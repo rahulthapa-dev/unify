@@ -1,0 +1,23 @@
+/* SANCHEZ */
+@font-face {
+	font-family: "Sanchez";
+	src: url('../fonts/Sanchez-Regular.otf');
+}
+@font-face {
+font-family: 'Sanchez';
+font-style: normal;
+font-weight: 300;
+src: local('Sanchez-Regular'), url('../../fonts/Sanchez-Regular.otf') format('truetype');
+}
+@font-face {
+font-family: 'Sanchez';
+font-style: normal;
+font-weight: 500;
+src: local('Sanchez-Semibold'), url('../../fonts/Sanchez-Semibold.otf') format('truetype');
+}
+@font-face {
+font-family: 'Sanchez';
+font-style: normal;
+font-weight: 700;
+src: local('Sanchez-Bold'), url('../../fonts/Sanchez-Bold.otf') format('truetype');
+}

@@ -1,0 +1,8 @@
+
+@font-face {
+  font-family: 'GotchaRegular';
+  src: url('GotchaRegular.eot?#iefix') format('embedded-opentype'),  url('GotchaRegular.otf')  format('opentype'),
+	     url('GotchaRegular.woff') format('woff'), url('GotchaRegular.ttf')  format('truetype'), url('GotchaRegular.svg#GotchaRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

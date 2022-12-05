@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>Agent Detail</title>
+		<!--Import Material Icon Font-->
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Import Catamaran Font-->
+		<link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="sass/lowrate.css"  media="screen,projection"/>
+		<link type="text/css" rel="stylesheet" href="sass/tokbox.css"  media="screen,projection"/>
+		<link type="text/css" rel="stylesheet" href="sass/font.css"/>
+		<!--Let browser know website is optimized for mobile-->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,700" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body class="lowrate grey darken-2">
+    	<div class="main-wrapper">
+			<!--*****   SIDEBAR NAVIGATION   *****-->
+            <div class="side-nav fixed white" id="main_navigation">
+            	<div class="current_user">
+            		<div class="name_user">
+            			<span class="user_thumb">
+            				<img class="img-responsive" src="images/user.png">
+            			</span>
+            			<p class="userName">Frank</p>
+            		</div>
+            	</div>
+	            <ul class="main-menu">
+					<li><a href="dashboard-agent.html"><i class="material-icons">dashboard</i><span class="nav_link_text">Dashboard</span></a></li>
+						<li><a href="dashboard-user.html"><i class="material-icons">dns</i><span class="nav_link_text">Products</span></a></li>
+						<li><a href="agent-detail.html"><i class="material-icons">folder</i><span class="nav_link_text">My Documents</span></a></li>
+						<li><a href="agency-portal.html"><i class="material-icons">monetization_on</i><span class="nav_link_text">My Payments</span></a></li>
+						<li><a href="user-my-referrals.html"><i class="material-icons">share</i><span class="nav_link_text">My Referral</span></a></li>
+	            </ul>
+	            <ul class="main-menu bottomControls">
+					<li><a href="javascript:void(0)"><i class="material-icons">settings</i></a></li>
+					<li><a href="javascript:void(0)"><i class="material-icons">power_settings_new</i></a></li>
+	            </ul>
+
+            </div>
+
+	        <header id="header" class="navbar-fixed">
+				<nav class="navbar_header white row">
+				    <div class="nav-wrapper">
+				    <a href="#" data-activates="main_navigation" class="button-collapse top-nav full hide-on-large-only"><i class="material-icons">menu</i></a>
+				      <a href="#" class="brand-logo"><img src="images/logo.png" alt="lowrate"></a>
+				      <ul id="nav-mobile" class="right headerNav">
+				        <li><a href="javascript:void(0)"><i class="material-icons">local_phone</i><span>Call Agent</span></a></li>
+				        <li><a href="javascript:void(0)"><i class="material-icons">attach_money</i><span>Pay<span></a></li>
+				        <li><a href="javascript:void(0)"><i class="material-icons rotateX180">file_download</i><span>Upload<span></a></li>
+				        <li class="notifications">
+				            <a class="message" href="javascript:void(0)"><i class="material-icons rotateY180">message</i></a>
+				            <a class="bellNoti" href="javascript:void(0)"><i class="material-icons">notifications_none</i></a>
+				        </li>
+				      </ul>
+				    </div>
+				</nav>
+	        </header>
+
+          <!--   /End Side Navbar  -->
+
+          <!--******     Main Content Starts      ******-->
+			<main id="content_wrapper">
+		    	<section class="row panel_agent_Detail bottom-zero">
+		    		<div class="col l9 m12 s12 left_content">
+			    		<div class="row singleUserDetail white clearfix">
+				    		<div class="col l6 m12 s12 agen_name">
+				    		    <h2>Hi, Frank!</h2>
+				    		    <p>Welcome to Low Rate Insurance</p>
+				    		</div>
+				    		<div class="col l6 m12 s12 agent_assets">
+						        <div class="agent_docs">
+						            <div class="iconAgent">
+						                <span>
+						                	<i class="material-icons red-text text-lighten-01">folder</i>
+						                </span>
+						            </div>
+						            <div class="detailDoc">
+						                <h2>3</h2>
+						                <p>My Documents</p>
+						            </div>
+						        </div>
+						        <div class="agent_docs">
+						            <div class="iconAgent">
+						                <span>
+						                	<i class="material-icons blue-text text-lighten-02">attach_money</i>
+						                </span>
+						            </div>
+						            <div class="detailDoc">
+						                <h2>6</h2>
+						                <p>My Payments</p>
+						            </div>
+						        </div>
+				    		</div>
+		    			</div>
+		    			<div class="row">
+		    			    <div class="col l12 no-padding refWarning">
+				                <div class="warning yellow lighten-01">
+				                    <p class="yellow-text text-darken01">Your payment of <span>$120</span> for Motorcycle Insurance is due.</p>
+				                    <a class="btn btn-flat grey darken-5 white-text">Pay Now</a>
+				                </div>
+		    			    </div>
+		    			</div>
+		    			<div class="row leftSideReferral bottom-zero">
+		    			    <div class="col l7 m12 s12 no-padding-left pending_Referrals">
+		    			        <div class="referralContainer white">
+			    			        <div class="header_reffrals">
+			    			            <h5>Pending Referrals</h5>
+			    			        </div>
+									<div class="custom_table">
+										<table class="gridTable striped noSpace responsive-table">
+											<thead>
+												<tr>
+													<th><div class="theader">USER</div></th>
+													<th><div class="theader">AMOUNT</div></th>
+													<th><div class="theader">DATE</div></th>
+													<th><div class="theader"></div></th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<a href="javascript:void(0)" class="userTbl">
+														    <div class="iconUser green lighten-5 noImg">N</div>
+														    <div class="userName">
+														        <p>Neal B. Johnson</p>
+														    </div>
+														</a>
+													</td>
+													<td>$25</td>
+													<td>18/11/2017</td>
+													<td><a class="blue-text claim" href="javascript:void(0)">Claim</a></td>
+												</tr>
+												<tr>
+													<td>
+														<a href="javascript:void(0)" class="userTbl">
+														    <div class="iconUser pink lighten-4 noImg">m</div>
+														    <div class="userName">
+														        <p>Martin C. Young</p>
+														    </div>
+														</a>
+													</td>
+													<td>$25</td>
+													<td>18/11/2017</td>
+													<td><a class="blue-text claim" href="javascript:void(0)">Claim</a></td>
+												</tr>
+												<tr>
+													<td>
+														<a href="javascript:void(0)" class="userTbl">
+														    <div class="iconUser blue noImg">d</div>
+														    <div class="userName">
+														        <p>Derek A. Schwartz</p>
+														    </div>
+														</a>
+													</td>
+													<td>$25</td>
+													<td>18/11/2017</td>
+													<td><a class="claim blue-text" href="javascript:void(0)">Claim</a></td>
+												</tr>
+												<tr>
+													<td>
+														<a href="javascript:void(0)" class="userTbl">
+														    <div class="iconUser purple accent-1 noImg">m</div>
+														    <div class="userName">
+														        <p>Mark E. Riddick</p> 
+														    </div>
+														</a>
+													</td>
+													<td>$25</td>
+													<td>18/11/2017</td>
+													<td><a class="claim blue-text" href="javascript:void(0)">Claim</a></td>
+												</tr>
+												<tr>
+													<td>
+														<a href="javascript:void(0)" class="userTbl">
+														    <div class="iconUser red lighten-02 noImg">b</div>
+														    <div class="userName">
+														        <p>Blair L. Casarez</p> 
+														    </div>
+														</a>
+													</td>
+													<td>$25</td>
+													<td>18/11/2017</td>
+													<td><a class="claim blue-text" href="javascript:void(0)">Claim</a></td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+		    			    </div>
+		    			    <div class="col l5 m12 s12 no-padding-right right_policies">
+		    			       <div class="policies white">
+		    			           <h5>My Policies</h5>
+		    			           <ul class="policyList">
+		    			               <li>
+											<a href="javascript:void(0)" class="policyContainer clearfix">
+												<div class="plcy_left">
+												    <div class="plcy_icon">
+												        <img src="images/ic_policy_1.png" alt="bike Insurance">
+												    </div>
+												    <div class="plcy_name">
+												        <p>Motorcycle Insurance</p>
+												        <span>16 Nov, 2017</span>
+												    </div>
+												</div>
+												<div class="policy_right">
+												    <p><span class="sub_validity">Valid Til</span> - 15 Nov, 2018</p>
+												    <span class="yellow-text text-darken-1">$120 Due</span>
+												</div>
+											</a>
+		    			               </li>
+		    			               <li>
+											<a href="javascript:void(0)" class="policyContainer clearfix">
+												<div class="plcy_left">
+												    <div class="plcy_icon">
+												        <img src="images/rent.png" alt="rent">
+												    </div>
+												    <div class="plcy_name">
+												        <p>Renter's Insurance</p>
+												        <span>12 Nov, 2017</span>
+												    </div>
+												</div>
+												<div class="policy_right">
+												    <p><span class="sub_validity">Valid Til - </span>15 Nov, 2018</p>
+												    <span class="green-text">$120 Paid</span>
+												</div>
+											</a>
+		    			               </li>
+		    			           </ul>
+		    			       </div>
+		    			       <div class="refferal white">
+		    			           <h5>Refer Friend &amp; Get Bonus</h5>
+		    			           <div class="ref_Code">
+										<div class="coupon_code">
+										    <p class="refCOde">Your referral code</p>
+										    <h4 class="blue-text">LRI8926530</h4>
+										</div>
+		    			           </div>
+		    			           <p class="ref_money">Share your referal code with your freinds and get bonus of <span>$25</span></p>
+		    			       </div>
+		    			    </div>
+		    			</div>
+				    </div>	
+				    <div class="col 13 m3 s12 availAgentS_Wrap no-padding-right">
+				        <div class="agents_avail">
+				            <div class="blue darken00 headerAgent">
+				                <h5><i class="material-icons">people</i>Agents</h5>	
+				            </div>
+				            <div class="agentsWrapper white">
+				                <div class="agent">
+				                    <ul class="agentList white">
+				                        <li class="single_agnt clearfix">
+				                        	 <div class="agentDetail">
+				                        	 	<div class="user_icon">
+					                        	 	<span class="icon">
+					                        	 		<img src="images/agent.png" alt="agent">		
+					                        	 	</span>
+					                        	 	<small class="status_user"></small>
+					                        	</div> 	
+				                        	 	<div class="ag_name">
+				                        	 	    <p>John Doe</p>
+				                        	 	    <span>Auto Insurance Expert</span>
+				                        	 	</div>
+				                        	 </div>
+				                        	 <div class="call_make">
+				                        	     <span class="on pointer"><i class="material-icons">videocam</i></span>
+				                        	 </div>
+				                        </li>
+				                        <li class="single_agnt clearfix">
+				                        	 <div class="agentDetail">
+				                        	 	<div class="user_icon">
+				                        	 	    <span class="icon no_img cyan lighten-3">M</span>
+				                        	 	    <small class="status_user"></small>
+			                        	 	    </div>
+				                        	 	<div class="ag_name">
+				                        	 	    <p>Manpreet Singh</p>
+				                        	 	    <span>Home Owner's Insurance Expert</span>
+				                        	 	</div>
+				                        	 </div>
+				                        	 <div class="call_make">
+				                        	     <span class="on pointer"><i class="material-icons">videocam</i></span>
+				                        	 </div>
+				                        </li>
+				                        <li class="single_agnt clearfix offline">
+				                        	 <div class="agentDetail">
+					                        	 <div class="user_icon">
+					                        	     <span class="icon no_img pink lighten-4">S</span>
+					                        	     <small class="status_user"></small>
+				                        	     </div>
+				                        	 	<div class="ag_name">
+				                        	 	    <p>Simon</p>
+				                        	 	    <span>Renter's Insurance Expert</span>
+				                        	 	</div>
+				                        	 </div>
+				                        	 <div class="call_make">
+				                        	     <span class="on pointer"><i class="material-icons">videocam</i></span>
+				                        	 </div>
+				                        </li>
+				                        <li class="single_agnt clearfix">
+				                        	 <div class="agentDetail">
+				                        	 	<div class="user_icon">
+				                        	 	    <span class="icon no_img yellow darken-3">G</span>
+				                        	 	    <small class="status_user"></small>
+			                        	 	    </div>
+				                        	 	<div class="ag_name">
+				                        	 	    <p>Gibson</p>
+				                        	 	    <span>Renter's Insurance Expert</span>
+				                        	 	</div>
+				                        	 </div>
+				                        	 <div class="call_make">
+				                        	     <span class="on pointer"><i class="material-icons">videocam</i></span>
+				                        	 </div>
+				                        </li>                
+				                    </ul>
+				                </div>
+				                <div class="no_agent hide">
+				                    <div class="oo_agent">
+				                        <img src="images/no-agent.png" alt="agent">
+				                    </div>
+				                    <p>Hey there! We really wanna talk to you but there’s nobody available right now.</p>
+				                    <div class="oo_agent_footer">
+				                        <p>Please try us back soon, call or visit us at the office!</p>
+				                        <h4 class="blue-text">000-000-0000</h4>
+				                    </div>
+				                </div>				                
+				            </div>
+				        </div>
+	    		    </div>
+				    </div>    
+	    		</section>
+	   		</main>
+          <!--******     /Main Content Ends      ******-->
+    	</div>	
+        <span id="agents" class="button_agent_mobile">
+           <i class="material-icons">people</i>
+        </span>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/bin/materialize.min.js"></script>
+      <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>

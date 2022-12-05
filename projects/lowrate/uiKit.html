@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>UIkit</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<!--Import Material Icon Font-->
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Import Catamaran Font-->
+		<link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="sass/lowrate.css"  media="screen,projection"/>
+		<link type="text/css" rel="stylesheet" href="sass/font.css"/>
+		<!--Let browser know website is optimized for mobile-->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,700" rel="stylesheet">
+		
+    </head>
+    <body class="lowrate-UIkit grey darken-2">
+
+    	<div class="main-wrapper">
+			<!--*****   SIDEBAR NAVIGATION   *****-->
+            <div class="side-nav fixed white" id="main_navigation">
+				<div class="left_side">
+					<div class="current_user">
+						<div class="name_user">
+							<span class="user_thumb">
+								<img class="img-responsive" src="images/user.png">
+							</span>
+							<p class="userName">Frank</p>
+						</div>
+					</div>
+					<ul class="main-menu">
+						<li><a href="dashboard-agent.html"><i class="material-icons">dashboard</i><span class="nav_link_text">Dashboard</span></a></li>
+						<li><a href="dashboard-user.html"><i class="material-icons">dns</i><span class="nav_link_text">Products</span></a></li>
+						<li><a href="agent-detail.html"><i class="material-icons">folder</i><span class="nav_link_text">My Documents</span></a></li>
+						<li><a href="agency-portal.html"><i class="material-icons">monetization_on</i><span class="nav_link_text">My Payments</span></a></li>
+						<li><a href="user-my-referrals.html"><i class="material-icons">share</i><span class="nav_link_text">My Referral</span></a></li>
+						<!-- <li><a href="javascript:void(0)"><i class="material-icons">share</i><span class="nav_link_text">My Referral</span></a></li> -->
+					</ul>
+				</div>
+			</div>
+			
+
+
+	        <header id="header" class="navbar-fixed">
+				<nav class="navbar_header white row">
+				    <div class="nav-wrapper">
+				      <a href="#" class="brand-logo"><img src="images/logo.png" alt="lowrate"></a>				      
+				      <ul id="nav-mobile" class="right hide-on-med-and-down headerNav">
+				      	<li class="slectLanguage">
+				      		<a class="dropdown-button" data-activates="language" data-beloworigin="true" href="javascript:void(0)">Language <span class="material-icons">arrow_drop_down</span><span class="icon"><img src="flags/US.png" align="US"></span></a>
+							<ul id='language' class='dropdown-content select_language'>
+							    <li><a href="#!">English</a></li>
+							    <li><a href="#!">French</a></li>
+							</ul>
+				      	</li>
+				        <li><a href="javascript:void(0)"><i class="material-icons">local_phone</i>Call Agent</a></li>
+				        <li><a href="javascript:void(0)"><i class="material-icons">attach_money</i>Pay</a></li>
+				        <li><a href="javascript:void(0)"><i class="material-icons rotateX180">file_download</i>Upload</a></li>
+				        <li class="notifications">
+				            <a class="message" href="javascript:void(0)"><i class="material-icons">message</i></a>
+				            <a class="bellNoti" href="javascript:void(0)"><i class="material-icons">notifications_none</i></a>
+				        </li>
+				      </ul>
+				    </div>
+				</nav>
+	        </header>
+
+          <!--   /End Side Navbar  -->
+
+          <!--******     Main Content Starts      ******-->
+		  <div class="main-wrapper">
+				<!--*****   SIDEBAR NAVIGATION   *****-->
+				
+				<ax-sidebar></ax-sidebar>
+			  
+				<ax-header></ax-header>
+			  
+				<!--   /End Side Navbar  -->
+			  
+				<!--******     Main Content Starts      ******-->
+				<main id="content_wrapper">
+			  
+				  <section class="colors">
+			  
+					<div class="row">
+					  <div class="col l12 m12 s12">
+						<h1>Colors</h1>
+					  </div>
+					  <div class="col l7">
+						<div class="card-panel color_plates clearfix">
+							  <p>Main Colors</p>
+							  <div class="colorBrick blue" title="#2753a8"><div class="lightColor blue lighten-5" title="#356fb5"></div></div>
+							  <div class="colorBrick grey lighten-5" title="#888888"><div class="lightColor grey lighten-4" title="#aaaaaa"></div></div>
+							  <div class="colorBrick grey lighten-5"><div class="lightColor grey lighten-3" title="#f6f6f6"></div></div>
+							  <div class="colorBrick green" title="#63b75f"></div>
+							  <div class="colorBrick blue lighten-4" title="#438ac1"><div class="lightColor blue lighten-3" title="#eaf2f4"></div></div>
+							  <div class="colorBrick cyan" title="#5dbed8"></div>
+							  <div class="colorBrick grey lighten-2" title="#7e868f"><div class="lightColor grey lighten-1" title="#c4c4c4"></div></div>
+							  <div class="colorBrick grey darken-1" title="#a0a0a0"><div class="lightColor grey darken-2" title="#f4f8f9"></div></div>
+							  <div class="colorBrick grey lighten-3" title="#f6f6f6"></div>
+							  <div class="colorBrick grey darken-3" title="#f1f3f3"></div>
+						</div>
+					  </div>
+					  <div class="col l5 no-padding-left">
+					  <div class="card-panel color_plates clearfix">
+							<p>Secondary Colors</p>
+							<div class="colorBrick grey" title="#333333"></div>
+							<div class="colorBrick green lighten-5" title="#14c78b"></div>
+							<div class="colorBrick pink" title="#e25c89"><div class="lightColor pink lighten-4" title="#f48fb1"></div></div>
+							<div class="colorBrick green lighten-4" title="#45b69e"></div>
+							<div class="colorBrick red" title="#ff2323"></div>
+						  </div>
+					  </div>
+					</div>
+			  
+					<div class="row  flextParent">
+					  <div class="col l4 m4 s12 ml0">
+						<h1> Typography</h1>
+						<div class="card-panel fullheight">
+						  <h1>Heading 1</h1>
+						  <h2>Heading 2</h2>
+						  <h3>Heading 3</h3>
+						  <h4>Heading 4</h4>
+						  <h5>Heading 5</h5>
+						  <p>Normal text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+						  <span class="grey-text text-lighten-4">Secondary text: Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+						</div>
+					  </div>
+					  <div class="col l3 ml0 no-padding-left">
+						<h1>Lables</h1>
+								  <div class="label_parent card-panel fullheight">
+								  <div class="row noPadding">
+									<div style="margin-bottom: 15px;" class="col s12 no-padding-left">
+									  <span class="tbl_lable grey darken-2">Auto Insurance</span>
+									</div>
+									<div class="col s12 no-padding-left">
+									  <span class="tbl_lable grey darken-5 white-text">Pay Now</span>
+									</div> 
+									</div>
+								</div>
+					  </div>
+					  <div class="col l5 ml0 no-padding-left">
+					  <h1> Toggles</h1>
+					  <div class="card-panel fullheight clearfix">
+									 <div class="checkboxes">
+										<p>Checkbox</p>
+										<div class="row noPadding">
+										<div class="col s4 no-padding-left">  
+											<input class="filled-in" id="chk_unchecked" type="checkbox">
+											<label for="chk_unchecked">Remember me</label>
+										</div>
+			  
+										<div class="col s4">  
+										  <input checked="checked" class="filled-in" id="chk_checked" type="checkbox">
+										  <label for="chk_checked">Checked</label>
+										</div>
+			  
+										<div class="col s4">
+										  <input class="filled-in" disabled="disabled" id="chk_disabled" type="checkbox">
+										  <label for="chk_disabled">Disabled</label>
+										</div>
+										</div>
+									</div>
+									<br>
+						<div class="checkboxes">
+						  <p>Radio</p>
+						  <div class="row noPadding">
+							<div class="col s4 no-padding-left">
+							  <input class="with-gap" id="rdo_unchecked" name="kit_radio" type="radio"><label for="rdo_unchecked">Unchecked</label>
+							</div>
+							<div class="col s4">  
+							  <input checked="checked" class="with-gap" id="rdo_checked" name="kit_radio" type="radio">
+							  <label for="rdo_checked">Checked</label>
+							</div>
+							<div class="col s4">
+							  <input class="with-gap" disabled="disabled" id="rdo_disabled" name="kit_radio" type="radio">
+							  <label for="rdo_disabled">Disabled</label>
+							</div>
+						  </div>
+						</div>
+						<br>
+									<div class="checkboxes">
+										<p>Switches</p>
+										<div class="row noPadding">
+										  <div class="col s4 no-padding-left">  
+											<div class="switch">
+											  <label><input type="checkbox"><span class="lever"></span></label>
+											</div>
+										  </div>
+										  <div class="col s4">  
+											<div class="switch">
+											 <label><input checked="checked" type="checkbox"><span class="lever"></span></label>
+											</div>
+										  </div>
+										  <div class="col s4">
+											<div class="switch">
+											 <label><input disabled="disabled" type="checkbox"><span class="lever"></span></label>
+											</div>
+										  </div>
+										</div>
+									</div>
+								  </div>
+					  </div>
+					</div>
+			  
+					<div class="row">
+					  <div class="flextParent">
+						<div class="col l4 m5 s12 ml0">
+						  <h1>Buttons</h1>
+						  <div class="card-panel fullheight relative clearfix">
+						  <div class="row noPadding clearfix">
+							<div class="col l4 no-padding-left">
+							  <p><a class="waves-effect raddius25 waves-light btn-large blue" href="javascript:void(0)">Button</a></p>
+							  <br>
+							  <p><a class="tab_btn btn-flat raddius25 btn-large" href="javascript:void(0)"><small class="dotCircle"><i class="material-icons">attach_money</i></small>Button</a></p>
+							  <br>
+							  <p><a class="tab_btn btn-flat raddius25 btn-large active" href="javascript:void(0)"><small class="dotCircle"><i class="material-icons">attach_money</i></small>Button</a></p>
+							</div>
+							<div class="col l8">
+							  <a class="waves-effect btn-large green lighten-5 btn-flat btn-icon white-text" href="javascript:void(0)"><i class="material-icons rotateX180 left">file_download</i> Upload Document</a>
+							</div>										
+						  </div>
+						  <div class="buttonFooter clearfix cyan">
+							<div class="filter-btns">
+							  <a class="btn-large btn-flat white grey-text raddius5 btn_filter" href="javascript:void(0)">Filter <i class="material-icons right">filter_list</i></a>
+							</div>
+						  </div>									
+						  </div>
+						</div>
+					  <div class="col l4 no-padding-left ml0">
+						<h1>Inputs</h1>
+						  <div class="card-panel fullheight clearfix">
+							<div class="col l12 no-padding">
+								<div class="input-field roundedInput">
+								  <input placeholder="Enter your email" id="email" type="email" class="validate">
+								</div>
+								<div class="input-field roundedInput wIcon">
+								  <input placeholder="Password" id="password" type="password" class="validate">
+								  <i class="material-icons">visibility_off</i>
+								</div>
+								<div class="input-field SearchwIcon no-border-input">
+								  <input placeholder="Search in chat" id="search" type="text" class="validate">
+								  <span class="search_icon"><i class="material-icons">search</i></span>
+								</div>
+								<br>
+								<div class="chat_user">
+									<div class="userIcon">
+									  <span class="userImg">
+										  <img src="images/icon-1.png" alt="user"/>
+									  </span>
+									</div>
+									<div class="userDetail">
+										<h5>John Doe</h5>
+										<p>Lorem ipsum dolor sit amet...</p>								                
+									</div>
+									<span class="time">11:35am</span>
+								</div>
+								<br>
+							<div class="input-field roundedInput country_code">
+							  <div class="flag_wrapper">
+								  <a href="javascript:void(0)" class="white flag dropdown-button" data-activates='countries' data-beloworigin="true">
+									<span class="flag_icon">
+										<img src="flags/AC.png" align="AC"/>
+									  </span>
+									  <span class="code">+44</span>
+									  <i class="material-icons drop_arrow">arrow_drop_down</i>
+								  </a>										    											    	
+							  </div>
+							  <ul id='countries' class='dropdown-content country_code_drop'>
+								  <li><a href="#!">United States</a></li>
+								  <li><a href="#!">Afghanistan (‫افغانستان‬‎)</a></li>
+								  <li><a href="#!">Albania (Shqipëri)</a></li>
+								  <li><a href="#!">United States</a></li>
+								  <li><a href="#!">Afghanistan (‫افغانستان‬‎)</a></li>
+								  <li><a href="#!">Albania (Shqipëri)</a></li>
+								  <li><a href="#!">United States</a></li>
+								  <li><a href="#!">Afghanistan (‫افغانستان‬‎)</a></li>
+								  <li><a href="#!">Albania (Shqipëri)</a></li>
+							  </ul>											
+								<input placeholder="Enter Number" id="number" type="text" class="validate">
+							</div>
+							
+							<div class="input-field fixed_label">   
+								<label for="input" class="active">Audio input source</label>           
+								<select>
+								  <option value="" selected>Choose your option</option>
+								  <option value="1">Option 1</option>
+								  <option value="2">Option 2</option>
+								  <option value="3">Option 3</option>
+								</select>                                           
+							</div>
+			  <!-- 								        <div class="chat_user active">
+									<div class="userIcon">
+									  <span class="userImg">
+										  <img src="images/icon-1.png" alt="user"/>
+									  </span>
+									</div>
+									<div class="userDetail">
+										<h5>John Doe</h5>
+										<p>Lorem ipsum dolor sit amet...</p>								                
+									</div>
+									<span class="time">11:35am</span>
+								</div> -->								        								        
+						  </div>
+						</div>
+					  </div>		
+					</div>	
+					</div>
+			  
+					<div class="row">
+					  <div class="flextParent">
+					  <div class="col l10 m10 s12 ml0">
+						  <h1>Grid</h1>
+						  <div class="card-panel fullheight relative z-depth-0 transparent no-padding clearfix">
+						  <div class="row noPadding clearfix">
+							  <div class="custom_table">
+							  <table class="gridTable">
+								<thead>
+								  <tr>
+									<th class="checkHead">
+									  <!-- <input class="filled-in" id="chk_all" type="checkbox">
+														<label for="chk_all"></label> -->
+													 </th>
+									<th><div class="theader">ID <i class="material-icons">sort</i></div></th>
+									<th><div class="theader">CALL TIME <i class="material-icons">sort</i></div></th>
+									<th><div class="theader">USER <i class="material-icons">sort</i></div></th>
+									<th><div class="theader">CALL DURATION <i class="material-icons">sort</i></div></th>
+									<th><div class="theader">RECORDED <i class="material-icons">sort</i></div></th>
+									<th><div class="theader">TAGS <i class="material-icons">sort</i></div></th>
+									<th class="opt_more"><div class="theader"></div></th>
+								  </tr>
+								</thead>
+			  
+								<tbody>
+								  <tr>
+									<td>
+									  <input class="filled-in" id="chk_all" type="checkbox">
+														<label for="chk_all"></label>														
+									</td>
+									<td><a class="blue-text" href="javascript:void(0)">#48284</a></td>
+									<td>09/11/2017 10:24:20 AM</td>
+									<td>
+									  <a href="javascript:void(0)" class="userTbl">
+										  <div class="iconUser">
+											  <img src="images/user.png" alt="user"/>
+										  </div>
+										  <div class="userName">
+											  <p>Manpreet Singh</p>
+											  <span>manpreet.singh@softobiz.com</span>
+										  </div>
+									  </a>
+									</td>
+									<td>00:10:20</td>
+									<td class="record"><a href="javascript:void(0)"><div class="play_show_ic"><i class="blue-text material-icons mic_on">videocam</i></div></a></td>
+									<td>Claim</td>
+									<td class="moreOption"><a href="javascript:void(0)"><i class="material-icons grey-text text-lighten-5">more_horiz</i></a></td>
+								  </tr>
+								  <tr>
+									<td>
+									  <input class="filled-in" id="chk_a" type="checkbox">
+														<label for="chk_a"></label>														
+									</td>
+									<td><a class="blue-text" href="javascript:void(0)">#48281</a></td>
+									<td>09/11/2017 10:24:20 AM</td>
+									<td>
+									  <a href="javascript:void(0)" class="userTbl">
+										  <div class="iconUser cyan lighten-3 noImg">g</div>
+										  <div class="userName">
+											  <p>Gurwinder Singh</p>
+											  <span>gurwinder.singh@softobiz.com</span>
+										  </div>
+									  </a>
+									</td>
+									<td>00:10:20</td>
+									<td class="record"><a href="javascript:void(0)"><i class="material-icons mic_off">mic_off</i></a></td>
+									<td>policies, pricing</td>
+									<td class="moreOption"><a href="javascript:void(0)"><i class="material-icons grey-text text-lighten-5">more_horiz</i></a></td>
+								  </tr>
+								  <tr>
+									<td>
+									  <input class="filled-in" id="chk_b" type="checkbox">
+														<label for="chk_b"></label>														
+									</td>
+									<td><a class="blue-text" href="javascript:void(0)">#45223</a></td>
+									<td>09/11/2017 10:24:20 AM</td>
+									<td>
+									  <a href="javascript:void(0)" class="userTbl">
+										  <div class="iconUser cyan lighten-5 noImg">t</div>
+										  <div class="userName">
+											  <p>Tejpal Verma</p>
+											  <span>tejpal.verma@softobiz.com</span>
+										  </div>
+									  </a>
+									</td>
+									<td>00:10:20</td>
+									<td class="record"><a href="javascript:void(0)"><i class="material-icons mic_off">mic_off</i></a></td>
+									<td>claim</td>
+									<td class="moreOption"><a href="javascript:void(0)"><i class="material-icons grey-text text-lighten-5">more_horiz</i></a></td>
+								  </tr>
+								  <tr>
+									<td>
+									  <input class="filled-in" id="chk_bb" type="checkbox">
+														<label for="chk_bb"></label>														
+									</td>
+									<td><a class="blue-text" href="javascript:void(0)">#45120</a></td>
+									<td>09/11/2017 10:24:20 AM</td>
+									<td>
+									  <a href="javascript:void(0)" class="userTbl">
+										  <div class="iconUser pink lighten-4 noImg">a</div>
+										  <div class="userName">
+											  <p>Ashok Kumar</p>
+											  <span>ashok.kumar@softobiz.com</span>
+										  </div>
+									  </a>
+									</td>
+									<td>00:10:20</td>
+									<td class="record"><a href="javascript:void(0)"><i class="material-icons mic_off">mic_off</i></a></td>
+									<td>home owner</td>
+									<td class="moreOption"><a href="javascript:void(0)"><i class="material-icons grey-text text-lighten-5">more_horiz</i></a></td>
+								  </tr>
+								  <tr>
+									<td>
+									  <input class="filled-in" id="chk_5" type="checkbox">
+														<label for="chk_5"></label>														
+									</td>
+									<td><a class="blue-text" href="javascript:void(0)">#48284</a></td>
+									<td>09/11/2017 10:24:20 AM</td>
+									<td>
+									  <a href="javascript:void(0)" class="userTbl">
+										  <div class="iconUser">
+											  <img src="images/user_sm.png" alt="user"/>
+										  </div>
+										  <div class="userName">
+											  <p>Manpreet Singh</p>
+											  <span>manpreet.singh@softobiz.com</span>
+										  </div>
+									  </a>
+									</td>
+									<td>00:10:20</td>
+									<td class="record"><a href="javascript:void(0)"><div class="play_show_ic"><i class="green-text material-icons mic_on">play_arrow</i></div> <i class="material-icons mic_on">mic</i>  <span class="duration_call">00:45</span></a></td>
+									<td>Claim</td>
+									<td class="moreOption"><a href="javascript:void(0)"><i class="material-icons grey-text text-lighten-5">more_horiz</i></a></td>
+								  </tr>
+								  <tr>
+									<td>
+									  <input class="filled-in" id="chk_6" type="checkbox">
+														<label for="chk_6"></label>														
+									</td>
+									<td><a class="blue-text" href="javascript:void(0)">#48281</a></td>
+									<td>09/11/2017 10:24:20 AM</td>
+									<td>
+									  <a href="javascript:void(0)" class="userTbl">
+										  <div class="iconUser cyan lighten-3 noImg">g</div>
+										  <div class="userName">
+											  <p>Gurwinder Singh</p>
+											  <span>gurwinder.singh@softobiz.com</span>
+										  </div>
+									  </a>
+									</td>
+									<td>00:10:20</td>
+									<td class="record"><a href="javascript:void(0)"><i class="material-icons mic_off">mic_off</i></a></td>
+									<td>policies, pricing</td>
+									<td class="moreOption"><a href="javascript:void(0)"><i class="material-icons grey-text text-lighten-5">more_horiz</i></a></td>
+								  </tr>
+								  <tr>
+									<td>
+									  <input class="filled-in" id="chk_7" type="checkbox">
+														<label for="chk_7"></label>														
+									</td>
+									<td><a class="blue-text" href="javascript:void(0)">#45223</a></td>
+									<td>09/11/2017 10:24:20 AM</td>
+									<td>
+									  <a href="javascript:void(0)" class="userTbl">
+										  <div class="iconUser cyan lighten-5 noImg">t</div>
+										  <div class="userName">
+											  <p>Tejpal Verma</p>
+											  <span>tejpal.verma@softobiz.com</span>
+										  </div>
+									  </a>
+									</td>
+									<td>00:10:20</td>
+									<td class="record"><a href="javascript:void(0)"><i class="material-icons mic_off">mic_off</i></a></td>
+									<td>claim</td>
+									<td class="moreOption"><a href="javascript:void(0)"><i class="material-icons grey-text text-lighten-5">more_horiz</i></a></td>
+								  </tr>
+								  <tr>
+									<td>
+									  <input class="filled-in" id="chk_8" type="checkbox">
+														<label for="chk_8"></label>														
+									</td>
+									<td><a class="blue-text" href="javascript:void(0)">#45120</a></td>
+									<td>09/11/2017 10:24:20 AM</td>
+									<td>
+									  <a href="javascript:void(0)" class="userTbl">
+										  <div class="iconUser pink lighten-4 noImg">a</div>
+										  <div class="userName">
+											  <p>Ashok Kumar</p>
+											  <span>ashok.kumar@softobiz.com</span>
+										  </div>
+									  </a>
+									</td>
+									<td>00:10:20</td>
+									<td class="record"><a href="javascript:void(0)"><div class="play_show_ic pause_ic"><i class="red-text material-icons mic_on">pause</i></div> <i class="material-icons mic_on">mic</i><span class="duration_call red-text">00:05</span></a></td>
+									<td>home owner</td>
+									<td class="moreOption"><a href="javascript:void(0)"><i class="material-icons grey-text text-lighten-5">more_horiz</i></a></td>
+								  </tr>
+								  <tr>
+									<td>
+									  <input class="filled-in" id="chk_9" type="checkbox">
+														<label for="chk_9"></label>														
+									</td>
+									<td><a class="blue-text" href="javascript:void(0)">#48284</a></td>
+									<td>09/11/2017 10:24:20 AM</td>
+									<td>
+									  <a href="javascript:void(0)" class="userTbl">
+										  <div class="iconUser">
+											  <img src="images/user.png" alt="user"/>
+										  </div>
+										  <div class="userName">
+											  <p>Manpreet Singh</p>
+											  <span>manpreet.singh@softobiz.com</span>
+										  </div>
+									  </a>
+									</td>
+									<td>00:10:20</td>
+									<td class="record"><a href="javascript:void(0)"><div class="play_show_ic"><i class="green-text material-icons mic_on">play_arrow</i></div> <i class="material-icons mic_on">mic</i><span class="duration_call">00:45</span></a></td>
+									<td>Claim</td>
+									<td class="moreOption"><a href="javascript:void(0)"><i class="material-icons grey-text text-lighten-5">more_horiz</i></a></td>
+								  </tr>
+								  <tr>
+									<td>
+									  <input class="filled-in" id="chk_10" type="checkbox">
+														<label for="chk_10"></label>														
+									</td>
+									<td><a class="blue-text" href="javascript:void(0)">#48281</a></td>
+									<td>09/11/2017 10:24:20 AM</td>
+									<td>
+									  <a href="javascript:void(0)" class="userTbl">
+										  <div class="iconUser cyan lighten-3 noImg">g</div>
+										  <div class="userName">
+											  <p>Gurwinder Singh</p>
+											  <span>gurwinder.singh@softobiz.com</span>
+										  </div>
+									  </a>
+									</td>
+									<td>00:10:20</td>
+									<td class="record"><a href="javascript:void(0)"><div class="play_show_ic"><i class="green-text material-icons mic_on">play_arrow</i></div> <i class="material-icons mic_on">mic</i><span class="duration_call">00:45</span></a></td>
+									<td>policies, pricing</td>
+									<td class="moreOption"><a href="javascript:void(0)"><i class="material-icons grey-text text-lighten-5">more_horiz</i></a></td>
+								  </tr>
+								  <tr>
+									<td>
+									  <input class="filled-in" id="chk_00" type="checkbox">
+														<label for="chk_00"></label>														
+									</td>
+									<td><a class="blue-text" href="javascript:void(0)">#45223</a></td>
+									<td>09/11/2017 10:24:20 AM</td>
+									<td>
+									  <a href="javascript:void(0)" class="userTbl">
+										  <div class="iconUser cyan lighten-5 noImg">t</div>
+										  <div class="userName">
+											  <p>Tejpal Verma</p>
+											  <span>tejpal.verma@softobiz.com</span>
+										  </div>
+									  </a>
+									</td>
+									<td>00:10:20</td>
+									<td class="record"><a href="javascript:void(0)"><i class="material-icons mic_off">mic_off</i></a></td>
+									<td>claim</td>
+									<td class="moreOption"><a href="javascript:void(0)"><i class="material-icons grey-text text-lighten-5">more_horiz</i></a></td>
+								  </tr>
+								  <tr>
+									<td>
+									  <input class="filled-in" id="chk_11" type="checkbox">
+														<label for="chk_11"></label>														
+									</td>
+									<td><a class="blue-text" href="javascript:void(0)">#45120</a></td>
+									<td>09/11/2017 10:24:20 AM</td>
+									<td>
+									  <a href="javascript:void(0)" class="userTbl">
+										  <div class="iconUser pink lighten-4 noImg">a</div>
+										  <div class="userName">
+											  <p>Ashok Kumar</p>
+											  <span>ashok.kumar@softobiz.com</span>
+										  </div>
+									  </a>
+									</td>
+									<td>00:10:20</td>
+									<td class="record"><a href="javascript:void(0)"><div class="play_show_ic"><i class="green-text material-icons mic_on">play_arrow</i></div> <i class="material-icons mic_on">mic</i><span class="duration_call">00:45</span></a></td>
+									<td>home owner</td>
+									<td class="moreOption"><a href="javascript:void(0)"><i class="material-icons grey-text text-lighten-5">more_horiz</i></a></td>
+								  </tr>
+								</tbody>
+							  </table>
+							  
+							  <div class="row">
+							  
+								<div class="col l12 m12 s12">
+								  <div class="not_found center">
+									<i class="material-icons blue-grey-text text-lighten-3 i_ic">assignment</i>
+									<label class="grey-text text-darken-1">No Result Found</label>
+									<p class="grey-text text-lighten-0">We searched far and wide and couldn't <br> find any files matching your search.</p>
+									<a class="waves-effect btn btn-flat blue dropdown-button white-text"><i class="material-icons">add</i> Add New</a>
+								  </div>
+								</div>
+							
+							  </div>
+			  
+							  </div>   
+						  </div>
+						</div>
+					  </div>
+					  <div class="col l2 m2 s12 ml0 no-padding-left extraBox">	
+						  <h1 class="invisible">Extra</h1>						  
+						  <div class="card-panel fullheight relative z-depth-0 no-padding-left clearfix">
+						  <div class="row noPadding clearfix">
+							<div class="col l12">
+								  <div class="coupon_code">
+									  <p class="refCOde">Your referral code</p>
+									  <h4 class="blue-text">LRI8926530</h4>
+								  </div>
+							  </div>    
+						  </div>
+						</div>
+					  </div> 					
+					  </div>
+					</div>
+			  
+			  
+					<div class="row">
+					  <div class="col l6 m6 s12">
+						<div class="card green msg_card" id="card-alert">
+								<div class="card-content white-text">
+								  <p>SUCCESS : The page has been added.</p>
+								</div>   
+								<div class="close_icon white-text">
+							   <i class="material-icons">close</i>
+							   </div>           
+							  </div>
+				  
+							  <div class="card red lighten-1 msg_card" id="card-alert">
+								<div class="card-content white-text">
+								  <p>DANGER : The daily report has failed</p>
+								</div>
+								 <div class="close_icon white-text">
+								   <i class="material-icons">close</i>
+								 </div>
+							  </div>
+				  
+							  <div class="card orange lighten-1 msg_card" id="card-alert">
+								<div class="card-content white-text">
+								  <p>WARNING : Bandwidth limit exceeded</p>
+								</div>
+								<div class="close_icon white-text">
+								   <i class="material-icons">close</i>
+								 </div>
+							  </div>
+				  
+							  <div class="card blue msg_card" id="card-alert">
+								<div class="card-content white-text">
+								  <p>NEWS : You have done 5 actions.</p>
+								</div>
+								<div class="close_icon white-text">
+								  <i class="material-icons">close</i>
+								</div>
+							  </div>
+				  
+					  </div>
+				  
+					  <div class="col l6 m6 s12">
+						<div class="card green lighten-3 msg_card" id="card-alert">
+								<div class="card-content grey-text">
+								  <p>SUCCESS : The page has been added.</p>
+								</div>
+								<div class="close_icon black-text">
+								   <i class="material-icons">close</i>
+								 </div>
+							</div>
+				  
+							<div class="card red lighten-4 msg_card" id="card-alert">
+								<div class="card-content grey-text">
+								  <p>DANGER : The daily report has failed</p>
+								</div>
+								<div class="close_icon black-text">
+								   <i class="material-icons">close</i>
+								 </div>
+							</div>
+				  
+							<div class="card orange lighten-4 msg_card" id="card-alert">
+								<div class="card-content grey-text">
+								  <p>WARNING : Bandwidth limit exceeded</p>
+								</div>
+								<div class="close_icon black-text">
+								   <i class="material-icons">close</i>
+								 </div>
+							</div>
+				  
+							<div class="card cyan lighten-4 msg_card" id="card-alert">
+								<div class="card-content grey-text">
+								  <p>INFO : You have 18 messages</p>
+								</div>
+								<div class="close_icon black-text">
+								   <i class="material-icons">close</i>
+								 </div>
+							</div>
+				  
+					  </div>
+					</div>
+			  
+					<div class="row">
+					  <div class="col l12 m12 s12">
+						<div class="chip">
+						  Tag
+						  <i class="close material-icons">close</i>
+						</div>
+				  
+						<div class="chip blue z-depth-4 white-text">
+								Candy
+								<i class="material-icons close">close</i>
+							  </div>
+				  
+					  </div>
+					</div>
+			  
+			  
+			  
+					<div class="row">
+					  <div class="col l3 m3 s3">
+						<div class="preloader-wrapper big active">
+							<div class="spinner-layer spinner-blue-only">
+							  <div class="circle-clipper left">
+								<div class="circle"></div>
+							  </div><div class="gap-patch">
+								<div class="circle"></div>
+							  </div><div class="circle-clipper right">
+								<div class="circle"></div>
+							  </div>
+							</div>
+						</div>
+					  </div>
+				  
+					  <div class="col l3 m3 s3">
+						<div class="preloader-wrapper active">
+							<div class="spinner-layer spinner-red-only">
+							  <div class="circle-clipper left">
+								<div class="circle"></div>
+							  </div><div class="gap-patch">
+								<div class="circle"></div>
+							  </div><div class="circle-clipper right">
+								<div class="circle"></div>
+							  </div>
+							</div>
+						</div>
+					  </div>
+				  
+					  <div class="col l3 m3 s3">
+						<div class="preloader-wrapper small active">
+							<div class="spinner-layer spinner-green-only">
+							  <div class="circle-clipper left">
+								<div class="circle"></div>
+							  </div><div class="gap-patch">
+								<div class="circle"></div>
+							  </div><div class="circle-clipper right">
+								<div class="circle"></div>
+							  </div>
+							</div>
+						</div>
+					  </div>
+				  
+					  <div class="col l3 m3 s3">
+						<div class="loader_3">
+						  <div class="ball-pulse">
+							<div></div>
+							<div></div>
+							<div></div>
+						  </div>
+						</div>
+					  </div>
+					</div>
+			  
+			  
+					<div class="circle_loader_box blue white-text">
+					  <div class="preloader-wrapper small active">
+									<img src="images/tail-spin.svg">
+								</div>
+					  <div class="loading">Loading...</div>
+					</div>
+			  
+				  <div class="row bottom_zero">
+					  <div class="col l4 m5 s12 ml0">
+						  <h1>Others</h1>
+					  </div>	
+					</div>
+			  
+					<div class="row">
+					  <div class="flextParent">
+						<div class="col l4 m5 s12 ml0">
+						<div class="card-panel fullheight fh relative white clearfix">
+						  <div class="row noPadding clearfix">
+							<a href="javascript:void(0)" class="policyContainer clearfix">
+								<div class="plcy_left">
+									<div class="plcy_icon">
+										<img src="images/ic_policy_1.png" alt="bike Insurance"/>
+									</div>
+									<div class="plcy_name">
+										<p>Motorcycle Insurance</p>
+										<span>16 Nov, 2017</span>
+									</div>
+								</div>
+								<div class="policy_right">
+									<p><span class="sub_validity">Valid Til</span> - 15 Nov, 2018</p>
+									<span class="yellow-text text-darken-1">$120 Due</span>
+								</div>
+							</a>
+							<br>
+							<div class="call pointer clearfix">
+								<div class="call_Icon calls">
+									<i class="material-icons">call</i>
+								</div>
+								<div class="detail_call">
+									<p>Number of Calls</p>
+									<h1>32 <span>This month</span></h1>
+								</div>
+							</div>
+						  </div>
+						</div>			    					
+						</div>
+						<div class="col l4 m5 s12 ml0 no-padding-left">
+						<div class="card-panel fullheight fh relative white clearfix">
+						  <div class="row clearfix">
+									<div class="login_button btn_wrapper">
+									   <a class="waves-effect raddius25 btn-flat btn-large blue white-text modal-trigger" href="#paymentMethod">Modal</a>
+									   <a class="waves-effect raddius25 btn-flat btn-large blue white-text modal-trigger" href="#system_requirement">Modal 2</a>
+									   <a class="waves-effect raddius25 btn-flat btn-large blue white-text modal-trigger" href="#imgpreview">Image Preview</a>
+									</div>
+									<br>					                
+									<br>
+									<div class="warning yellow lighten-01">
+										<p class="yellow-text text-darken01">Your payment of <span>$120</span> for Motorcycle Insurance is due.</p>
+										<a class="btn btn-flat grey darken-5 white-text">Pay Now</a>
+									</div>
+									<br>
+									<div class="custom_toast">
+										 <div class="icon">
+										   <span class="toast_icon">
+											   <i class="material-icons">check</i>
+										   </span>
+										 </div>
+										 <div class="toast_message">
+											 <p>Your claim request is received we will notify you once admin approved your request.</p>
+										 </div>
+									</div>
+						  </div>
+						</div>			    					
+						</div>			    						    				  				
+					  </div>
+					</div>
+			  
+				  </section>
+				 </main>
+			  
+			  
+			  
+				 
+				<div class="alert_area">
+						<div class="alert_inner">
+								<span class="cancel_ic"><i class="material-icons">cancel</i></span>
+								<p>Are you sure you want this action?</p>
+								<div class="alert_btn">
+									<!-- <a href="#" class="waves-effect waves-light btn-large grey lighten-4">Cancel</a> -->
+									<button class="waves-effect waves-light btn-large green">Add to Chrome</button>
+								</div>
+						</div>
+				</div>
+
+			  
+			  
+				 <div id="ongoingCall" class="ongoingCall white col l3 m3 s12" style="width: 22% !important; display:none;">
+					<div id="videos" style="width: 100%; height: 100%; position: absolute; top: 0em; right: 0em; background-color: black; display: inline;">
+						<div id="subscriber"></div>
+						<div id="publisher" style="width:40%;height:20%"></div>
+						<!-- <a class="btn-floating btn-large red end_call-btn" onclick="EndSession();"><i class="material-icons">call_end</i></a> -->
+						<!-- <a class="btn-floating btn-large yellow end_call-btn" onclick="VideoOnOff();"><i class="material-icons">call_end</i></a> -->
+					</div>
+					<div id="vStreaming" class="video_Streaming hide hide">
+						<div class="dialing_box black">
+							<div class="dialer_wrapper">
+								<div class="outGoing">
+									<img src="images/detail_img.png" alt="user">
+								</div>
+								<div class="callGoing">
+									<div></div>
+									<div></div>
+									<div></div>
+									<div></div>
+								</div>
+								<div class="caller_icn">
+									<span class="icon pulse">
+										<i class="material-icons red-text" onclick="EndDialing();">call_end</i>
+										<!-- <i class="material-icons white-text">call</i> -->
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="disconnected hide">
+							<p class="blink">Disconnected</p>
+						</div>
+						<!-- <div class="call_controls blue lighten-01">
+							<div class="call_options">
+								<span>
+									<i class="material-icons">videocam_off</i>
+								</span>
+								<span>
+									<i class="material-icons mic">mic_off</i>
+								</span>
+								<span>
+									<i class="material-icons">screen_share</i>
+								</span>
+								<span>
+									<i class="material-icons call_chat">chat</i>
+								</span>
+								<span class="endcall">
+									<i onclick="EndSession();" class="material-icons end_call">call_end</i>
+								</span>
+								<span>
+									<i class="material-icons">settings</i>
+								</span>
+							</div>
+						</div> -->
+					</div>
+					<!-- <div class="video_Streaming">
+						<div class="disconnected hide">
+							<p class="blink">Disconnected</p>
+						</div>
+					</div>         -->
+					<div class="chat">
+						<div class="tab tab_call">
+							<div class="chat_wrapper white">
+								<div class="chat_msgs">
+									<ul class="chat_container" id="ulchat_container">
+									  <li>
+										<div class="no_message">
+											<img src="images/chat.png" />
+											<h4 class="grey-text text-base">No Message, yet</h4>
+											<p class="grey-text text-lighten-2">Start chatting with your neighbours</p>
+										</div>
+									  </li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="msg_text">
+						<!-- <div class="emoji">
+								<span class="material-icons">tag_faces</span>
+							</div> -->
+						<textarea id="chatArea" placeholder="Type a message here" class="materialize-textarea white"></textarea>
+						<div class="chat_options">
+							<span class="send_message grey darken-7" onclick="SendMessage();">
+								<i class="material-icons white-text">send</i>
+							</span>
+						</div>
+					</div>
+					<div class="call_controls blue lighten-01">
+						<div class="call_options">
+							<span>
+								<i class="material-icons">videocam</i>
+							</span>
+							<span>
+								<i class="material-icons mic invisible">mic_off</i>
+							</span>
+							<span>
+								<i class="material-icons">screen_share</i>
+							</span>
+							<span>
+								<i class="material-icons call_chat">volume_up</i>
+							</span>
+							<span class="endcall">
+								<i class="material-icons end_call">call_end</i>
+							</span>
+							<span>
+								<i class="material-icons">settings</i>
+							</span>
+						</div>
+					</div>
+				</div>
+			  
+			  
+				 <div id="paymentMethod" class="modal modalGeneric">
+				  <div class="modalHeader blue">
+					<p class="headerID white-text">#48284</p>
+					<span class="headerHelptxt">Call Details</span>
+					  <!-- <h5 class="white-text">Add Payment Method</h5> -->
+					  <a href="javascript:void(0)" class="modal-action modal-close closeModal"><i class="material-icons">close</i></a>
+					  <span class="modal_shadow"></span>
+				  </div>
+				  <div class="modal-content white">
+					  <div class="callDetailSection clearfix">
+						  <div class="dates">
+							  <p>09, November 2017</p>
+							  <p>10:24:20 AM</p>
+						  </div>
+						  <div class="duration">
+							  <p>10 mins 20 sec</p>
+						  </div>
+					  </div>
+					  <div class="recording clearfix">
+						  <div class="record_icon">
+							<span class="icon_rec">
+								<i class="material-icons">mic</i>
+							</span>
+						  </div>
+						  <div class="record_play">
+							  <span class="play_icon"><i class="material-icons blue-text">play_arrow</i></span>
+							  <div class="streaming">
+							  <div class="streamLength">
+							  </div>
+						  </div>
+						  </div>
+					  </div>
+					  <div class="noteText">
+						<label class="lbl_note">Note</label>
+						  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					  </div>
+					  <div class="noteText">
+						<label class="lbl_note">Note</label>
+						  <p>policies, pricing</p>
+					  </div>
+				  </div>
+				</div>	
+
+
+
+
+				<div id="system_requirement" class="modal modalGeneric system_requirement">
+					<div class="modalHeader blue">					
+						<h4 class="white-text">System Requirement</h4>
+						<a href="javascript:void(0)" class="modal-action modal-close closeModal"><i class="material-icons">close</i></a>
+						<span class="modal_shadow"></span>
+					</div>
+					<div class="modal-content white">						  
+						<table class="table req_table">
+	                        <thead>
+	                            <tr>
+	                                <th width="30%"></th>
+	                                <th width="20%" class="text-center recommend">
+	                                    Recommended Google Chrome
+	                                </th>
+	                                <th width="20%" class="text-center">
+	                                    Mozilla Firefox
+	                                </th>
+	                                <th width="15%" class="text-center">
+	                                    Safari
+	                                </th>
+	                                <th width="15%" class="text-center">
+	                                    Internet Explorer
+	                                </th>
+	                            </tr>
+	                        </thead>
+	                        <tbody>
+	                            <tr>
+	                                <td><img src="images/ic_speaker.png" /> <span class="config_name">Speaker</span></td>
+	                                <td class="text-center recommend"><i class="material-icons green-text tick">check</i></td>
+	                                <td class="text-center"><i class="material-icons green-text tick">check</i></td>
+	                                <td colspan="2" rowspan="4" class="text-left">
+	                                    <h3>Coming Soon</h3>
+	                                    <p>Web RTC based Real time streaming is not yet supported by IE and Safari. Our Engineers are working hard to come up with a solution for the same. <a href="https://webrtc.org/" target="_blank" class="blue-text"><strong>Click here to get more details</strong></a></p>
+	                                </td>
+	                            </tr>
+	                            <tr>
+	                                <td><img src="images/ic_mic.png" /> <span class="config_name">Microphone</span></td>
+	                                <td class="text-center recommend"><i class="material-icons green-text tick">check</i></td>
+	                                <td class="text-center"><i class="material-icons green-text tick">check</i></td>
+	                                
+	                            </tr>
+	                            <tr>
+	                                <td><img src="images/ic_webcam.png" />  <span class="config_name">Webcam</span></td>
+	                                <td class="text-center recommend"><i class="material-icons green-text tick">check</i></td>
+	                                <td class="text-center"><i class="material-icons green-text tick">check</i></td>
+	                            </tr>
+	                            <tr>
+	                                <td><img src="images/ic_screen_share.png" /> <span class="config_name">Screen Share</span></td>
+	                                <td class="text-center recommend"><i class="material-icons green-text tick">check</i></td>
+	                                <td class="text-center"><i class="material-icons green-text tick">check</i></td>
+	                            </tr>
+	                        </tbody>
+	                    </table>
+						  
+					</div>
+				</div>	
+
+			  
+			  
+				<div id="imgpreview" class="modal img_preview">
+				  <div class="modal-content">
+					<!-- <img src="assets/images/dummy-2.png" alt="Preview"> -->
+					<span class="modal-action modal-close material-icons">clear</span>
+				  </div>
+				</div>  
+			  
+				<!--******     /Main Content Ends      ******-->
+			  </div>
+			  
+			  <div class="full-width-loader">
+				<div class="preloader-wrapper big active">
+				  <div class="spinner-layer spinner-blue-only">
+					<div class="circle-clipper left">
+					  <div class="circle"></div>
+					</div><div class="gap-patch">
+					  <div class="circle"></div>
+					</div><div class="circle-clipper right">
+					  <div class="circle"></div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			  
+			  
+			  
+			  <div id="divNoCall" style="z-index:999; display:none; " class="tok_box_wrapper ongoingCall _no_call white default_call active">
+				  <div class="no_call_wrapper">
+					  <div class="header blue base">
+						  <h2>
+							  <i class="material-icons">history</i>Calls</h2>
+					  </div>
+					  <div class="when_no_call">
+						  <img src="images/no_active_calls.png" />
+						  <h2 id="txtAlert" class="grey-text text-lighten-2">No Active calls</h2>
+					  </div>
+				  </div>
+				  <!-- <textarea id="txtAlert" rows="40" cols="50"></textarea> -->
+			  </div>
+      
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/bin/materialize.min.js"></script>
+      <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>

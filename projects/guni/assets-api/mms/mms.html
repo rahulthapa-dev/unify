@@ -1,0 +1,1949 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="-pFHVpSPlVGV3RCDDLIDsqsciUAhgtv4Cy-TfJnkh4k" />
+    <title> </title>
+    <meta name="description" content=" ">
+    <meta name="keywords" content=" ">
+
+    <meta name="robots" content="index, follow" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="Search Engine" content="http://www.google.com.au" />
+    <meta property="og:type" content="website" />
+
+    <meta property="og:title" content=" " />
+    <meta property="og:description" content=" " />
+    <meta property="og:url" content=" " />
+    <meta property="og:site_name" content="GuniSMS" />
+    <meta property="og:image" content=" " />
+    <meta property="og:image:width" content=" " />
+    <meta property="og:image:height" content=" " />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@GuniGrowth" />
+    <meta name="twitter:domain" content="https://www.gunisms.com.au/" />
+    <meta name="twitter:creator" content="@GuniGrowth" />
+
+    <meta name="geo.region" content="AU-NSW" />
+    <meta name="geo.placename" content="Sydney" />
+    <meta name="geo.position" content="-24.776109;134.755" />
+    <meta name="ICBM" content="-24.776109, 134.755" />
+
+    <meta name="msvalidate.01" content="6E4B1BB0D8BB9527C3495CAEACAE24A2" />
+
+    <meta name="facebook-domain-verification" content="w0x0rspjc4v29urjsqsh2gmloldel1" />
+
+
+
+
+    <link rel="canonical" href=" " />
+    <link rel='shortlink' href='https://www.gunisms.com.au/' />
+
+    <link rel="icon" href="images/cropped-favicon-32x32" sizes="32x32" />
+    <link rel="icon" href="images/cropped-favicon-192x192" sizes="192x192" />
+    <link rel="apple-touch-icon" href="images/cropped-favicon-180x180" />
+
+    <meta name="msapplication-TileImage" content="images/cropped-favicon-270x270" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.6/css/swiper.css">
+
+    <!-- pricing page -->
+
+    <!-- owl carousel - v2.3.4 -->
+    <link rel="stylesheet" href="pricing/css/vendors/owl.carousel.min.css">
+    <!-- bootstrap slider ( range slider ) - v11.0 -->
+    <link rel="stylesheet" href="pricing/css/vendors/bootstrap-slider.min.css">
+
+    <!-- Google material icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/vendors/aos.css# ">
+    <link rel="stylesheet" href="pricing/css/custom-style.css">
+
+
+    <!-- api page -->
+
+    <link charset="UTF-8" rel="stylesheet" id="api-custom" href="assets-api/custom.css" />
+    <link charset="UTF-8" rel="stylesheet" href="assets-api/slick/slick.css" />
+    <link charset="UTF-8" rel="stylesheet" href="assets-api/slick/slick-theme.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+
+    <!-- custom style -->
+
+
+    <link rel='stylesheet' href='css/style.css#' type='text/css' media='all' />
+
+
+    <link rel='stylesheet' href='css/test-page.css#' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/services-style.css#' type='text/css' media='all' />
+    <link rel='stylesheet' href='css/inner-page-style.css#' type='text/css' media='all' />
+    <link rel="stylesheet" type="text/css" href="css/toastr.min.css">
+
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <script type="text/javascript">
+        function site_url(page_name) {
+            var site_url = '<?= site_url() ?>';
+
+            var suffix = '';
+
+            return site_url + page_name + suffix;
+        }
+
+
+        function base_url(link) {
+            var base_url = '<?= base_url() ?>';
+
+            var absolute_link = base_url + link;
+
+            return absolute_link;
+        }
+
+        var current_url = '<?= current_url() ?>';
+        var ctrl = '';
+        var method = '';
+    </script>
+
+    <style>
+        .ajax_loader {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: url(images/ajax-loaders/ajax-loader.gif#) center no-repeat transparent;
+            background-size: 200px 200px;
+        }
+        
+        .page_loader {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: url(images/ajax-loaders/pageloader.gif#) center no-repeat transparent;
+            background-size: 100px 100px;
+        }
+    </style>
+
+
+
+
+    <script>
+        /* window.erxesSettings = {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            messenger: {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              brand_id: "hgQ2Xd",
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            },
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          };
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        (function() {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          var script = document.createElement('script');
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          script.src = "https://help.gunisms.com.au/widgets/build/messengerWidget.bundle.js";
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          script.async = true;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          var entry = document.getElementsByTagName('script')[0];
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          entry.parentNode.insertBefore(script, entry);
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        })();*/
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-KWZJV7S');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        ! function(f, b, e, v, n, t, s) {
+            if (f.fbq) return;
+            n = f.fbq = function() {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n;
+            n.push = n;
+            n.loaded = !0;
+            n.version = '2.0';
+            n.queue = [];
+            t = b.createElement(e);
+            t.async = !0;
+            t.src = v;
+            s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '194960048985885');
+        fbq('track', 'PageView');
+    </script>
+
+
+</head>
+
+<div id="loading" style="display:none;text-align: center;" class="ajax_loader"></div>
+
+<div id="page_loading" style="display:none;text-align: center;background-color: #fff" class="page_loader"></div>
+
+<!-- Start of LiveChat (www.livechatinc.com) code -->
+<script>
+    window._lc = window._lc || {};
+    window.__lc.license = 12632517;;
+    (function(n, t, c) {
+        function i(n) {
+            return e.h ? e._h.apply(null, n) : e._q.push(n)
+        }
+        var e = {
+            _q: [],
+            _h: null,
+            _v: "2.0",
+            on: function() {
+                i(["on", c.call(arguments)])
+            },
+            once: function() {
+                i(["once", c.call(arguments)])
+            },
+            off: function() {
+                i(["off", c.call(arguments)])
+            },
+            get: function() {
+                if (!e._h) throw new Error("[LiveChatWidget] You can't use getters before load.");
+                return i(["get", c.call(arguments)])
+            },
+            call: function() {
+                i(["call", c.call(arguments)])
+            },
+            init: function() {
+                var n = t.createElement("script");
+                n.async = !0, n.type = "text/javascript", n.src = "https://cdn.livechatinc.com/tracking.js", t.head.appendChild(n)
+            }
+        };
+        !n._lc.asyncInit && e.init(), n.LiveChatWidget = n.LiveChatWidget || e
+    }(window, document, [].slice))
+</script>
+<noscript><a href="https://www.livechatinc.com/chat-with/12632517/" rel="nofollow">Chat with us</a>, powered by <a href="https://www.livechatinc.com/?welcome" rel="noopener nofollow" target="_blank">LiveChat</a></noscript>
+<!-- End of LiveChat code -->
+
+
+<body id="top" class="home page-template page-template-template page-template-template-home page-template-templatetemplate-home-php page page-id-8 wp-custom-logo elementor-default elementor-kit-504">
+
+
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=194960048985885&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KWZJV7S"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="fr-dsk-dsgn">
+        <header>
+            <div class="top-header py-2">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-4">
+                        </div>
+
+                        <div class="col-lg-4 text-center">
+                            <a href="https://app.gunisms.com.au/signup#_ga=2.220507288.1202559802.1633916729-1582481517.1632564719" style="text-decoration: none;">
+                                <p class="mb-0 promotionoffer">Get 30 Messages for Free</p>
+                            </a>
+                        </div>
+
+                        <div class="col-lg-4 text-right">
+                            <nav class="top-nav-menu">
+                                <a href="<?= site_url('about-us">About</a>
+                                <a href="https://calendly.com/guni-engagement-growth">Enquires</a>
+                                <a href="https://app.gunisms.com.au/login" class="btn btn-login try-free-btn">Log in</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-header">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-2 text-left">
+                            <a href="#"> <img class="img-fluid logo-img" src="images/new-home/logo.png"> </a>
+                        </div>
+
+                        <div class="col-lg-10 text-center">
+
+                            <nav class="navbar navbar-expand-lg navbar-light p-0">
+                                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                                <div class="collapse navbar-collapse navbar-dsk" id="navbarText">
+                                    <ul class="navbar-nav mr-auto">
+
+                                        <li class="nav-item dropdown megadropdown">
+                                            <a class="nav-link dropbtn" href="">Products</a>
+                                            <div class="dropdown-content">
+                                                <div class="row">
+                                                    <div class="column col-lg-6">
+                                                        <img class="img-fluid drp-dwn-icon flt-htm" src="images/new-home/enga-icon">
+                                                        <ul class="flt-htm">
+                                                            <li>
+                                                                <h3>ENGAGEMENT</h3>
+                                                            </li>
+                                                            <li> <a href="">SMS</a> </li>
+                                                            <li> <a href="">MMS</a> </li>
+                                                            <li> <a href="">Landing Pages</a> </li>
+                                                            <li> <a href="">SMS to Email (Vice-Versa)</a> </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="column col-lg-6">
+                                                        <img class="img-fluid drp-dwn-icon flt-htm" src="images/new-home/enga-icon-2">
+                                                        <ul class="flt-htm">
+                                                            <li>
+                                                                <h3>PLATFORMS</h3>
+                                                            </li>
+                                                            <li> <a href="">API Integration</a> </li>
+                                                            <li> <a href="#sms-message-application">Mob Application</a> </li>
+                                                            <li> <a href="#sms-web-portal">Web Application</a> </li>
+                                                            <li> <a href="#messaging-platform-features">Messaging Platform Features</a> </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item dropdown megadropdown">
+                                            <a class="nav-link dropbtn" href="">Solution</a>
+                                            <div class="dropdown-content">
+                                                <div class="row">
+                                                    <div class="column col-lg-6">
+                                                        <img class="img-fluid drp-dwn-icon flt-htm" src="images/new-home/enga-icon-6">
+                                                        <ul class="flt-htm">
+                                                            <li>
+                                                                <h3 class="solution-hd">INDUSTRIES <i class="fa fa-chevron-right"></i></h3>
+                                                            </li>
+                                                            <div class="solution-sub-menu">
+                                                                <li> <a href="#sms-for-food-delivery">Restaurant</a> </li>
+                                                                <li> <a href="#sms-for-education">Education</a> </li>
+                                                                <li> <a href="#sms-for-real-estate">Real Estate </a> </li>
+                                                                <li> <a href="#sms-for-healthcare">Health Care</a> </li>
+                                                                <!--    <li><a href="" class="see-more mt-3">See more</a></li> -->
+                                                            </div>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="column col-lg-6">
+                                                        <img class="img-fluid drp-dwn-icon flt-htm" src="images/new-home/enga-icon-7">
+                                                        <ul class="flt-htm">
+                                                            <li>
+                                                                <h3 class="solution-hd-2">USE CASES <i class="fa fa-chevron-right"></i></h3>
+                                                            </li>
+                                                            <div class="solution-sub-menu-2">
+                                                                <li> <a href="">SMS for click and collect</a> </li>
+                                                                <li> <a href="">SMS for two-fact or authentication</a> </li>
+                                                                <li> <a href="">SMS for billing and payments</a> </li>
+                                                                <li> <a href="">SMS for feedback and surveys</a> </li>
+                                                                <!-- <li><a href="" class="see-more mt-3">See more</a></li> -->
+                                                            </div>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item dropdown megadropdown">
+                                            <a class="nav-link dropbtn" href="">Resources</a>
+                                            <div class="dropdown-content rsrc-drp-cnt">
+                                                <div class="row">
+                                                    <div class="column col-lg-4">
+                                                        <img class="img-fluid drp-dwn-icon flt-htm" src="images/new-home/enga-icon-3">
+                                                        <ul class="flt-htm">
+                                                            <li>
+                                                                <a href="<?= site_url('blog" class="see-more">
+                                                                    <h3>BLOGS</h3>
+                                                                </a>
+                                                            </li>
+                                                            <!--  <li><a href="" class="see-more">See more</a></li> -->
+                                                        </ul>
+                                                    </div>
+                                                    <div class="column col-lg-4">
+                                                        <img class="img-fluid drp-dwn-icon flt-htm" src="images/new-home/enga-icon-4">
+                                                        <ul class="flt-htm">
+                                                            <li>
+                                                                <a href="<?= site_url('case-studies">
+                                                                    <h3>SUCCESS STORIES </h3>
+                                                                </a>
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+                                                    <div class="column col-lg-4">
+                                                        <img class="img-fluid drp-dwn-icon flt-htm" src="images/new-home/enga-icon-5">
+                                                        <ul class="flt-htm">
+                                                            <li>
+                                                                <a href="http://help.gunisms.com.au/">
+                                                                    <h3>USER MANUAL</h3>
+                                                                </a>
+                                                            </li>
+
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item dropdown megadropdown">
+                                            <a class="nav-link dropbtn" href="#message-price">Pricing</a>
+                                        </li>
+                                    </ul>
+                                    <span class="navbar-text contact-nav">
+                   <a href="tel:1300 111 117" class="btn cnt-link"><i class="fas fa-phone-alt mr-1"></i> 1300 111 117 </a>
+                   <a href="https://calendly.com/guni-engagement-growth" target="_blank" class="btn try-free-btn hdr-btn-nav mx-3">Free Consultancy</a>
+                   <a href="https://calendly.com/guni-engagement-growth" target="_blank" class="btn try-free-btn hdr-btn-nav m-0 ml-2">Free Demo</a>
+               </span>
+                                </div>
+                            </nav>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        <div class="clearfix"></div>
+    </div>
+    <!-- fr-dsk-dsgn closed -->
+
+
+
+    <div class="fr-mbl-dsgn">
+
+        <div id="myHeader" class="top-header-mob px-2 py-2">
+            <div class="row">
+
+                <div class="col-12 text-center flex-top-hdr">
+                    <a class="phone-mb-tp" href="tel:1300 111 117"><i class="fas fa-phone-alt mr-1"></i> 1300 111 117 </a>
+
+
+                    <a class="mob-try-free-btn-tophdr" href="">Free Consultancy</a>
+
+
+                    <a class="mob-try-free-btn-tophdr" href="https://app.gunisms.com.au/signup" target="_blank">Free Demo</a>
+                </div>
+
+
+
+
+            </div>
+        </div>
+
+        <header class="mb-header px-2">
+
+            <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                <a class="navbar-brand" href="<?= site_url() ?>"><img alt="Guni sms" class="img-fluid mob-logo" src="https://www.gunisms.com.au/assets/images/new-home/mob-img/mob-logo.png"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown for-mobile-sub-menu">
+                            <a class="nav-link dropdown-toggle" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products <i class="fas fa-plus"></i> </a>
+
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <h6> <img class="img-fluid mob-icon-submenu" alt="Guni sms" src="https://www.gunisms.com.au/assets/images/new-home/mob-img/mob-eng.png"> ENGAGEMENT
+                                </h6>
+                                <a class="dropdown-item" href="#sms-broadcast">SMS</a>
+                                <a class="dropdown-item" href="">MMS</a>
+                                <a class="dropdown-item" href="">Landing Pages</a>
+                                <a class="dropdown-item" href="">SMS to Email (Vice-Versa)</a>
+                                <div class="dropdown-divider"></div>
+                                <h6> <img class="img-fluid mob-icon-submenu" alt="Guni sms" src="https://www.gunisms.com.au/assets/images/new-home/mob-img/mob-eng-2.png"> PLATFORMS
+                                </h6>
+                                <a class="dropdown-item" href="#sms-message-application">Mob Application</a>
+                                <a class="dropdown-item" href="#sms-api-integration">API Integration</a>
+                                <a class="dropdown-item" href="#sms-web-portal">Web Application</a>
+                                <a class="dropdown-item" href="#messaging-platform-features">Messaging Platform Features</a>
+                            </div>
+
+                        </li>
+
+                        <li class="nav-item dropdown for-mobile-sub-menu">
+                            <a class="nav-link dropdown-toggle" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Solution <i class="fas fa-plus"></i> </a>
+
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <h6> <img class="img-fluid mob-icon-submenu" alt="Guni sms" src="https://www.gunisms.com.au/assets/images/new-home/mob-img/mob-eng-3.png"> INDUSTRIES
+                                </h6>
+                                <a class="dropdown-item" href="#sms-for-food-delivery">Restaurant</a>
+                                <a class="dropdown-item" href="#sms-for-education">Education</a>
+                                <a class="dropdown-item" href="#sms-for-real-estate">Real Estate </a>
+                                <a class="dropdown-item" href="#sms-for-healthcare">Health Care</a>
+                                <div class="dropdown-divider"></div>
+                                <h6> <img class="img-fluid mob-icon-submenu" alt="Guni sms" src="https://www.gunisms.com.au/assets/images/new-home/mob-img/mob-eng-4.png"> USE CASES
+                                </h6>
+                                <a class="dropdown-item" href="">SMS for click and collect</a>
+                                <a class="dropdown-item" href="">SMS for two-factor authentication</a>
+                                <a class="dropdown-item" href="">SMS for billing and payments</a>
+                                <a class="dropdown-item" href="">SMS for feedback and surveys</a>
+                            </div>
+
+                        </li>
+
+                        <li class="nav-item dropdown for-mobile-sub-menu">
+                            <a class="nav-link dropdown-toggle" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Resources <i class="fas fa-plus"></i> </a>
+
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                                <a href="<?= site_url('blog">
+                                    <h6> <img class="img-fluid mob-icon-submenu" alt="Guni sms" src="https://www.gunisms.com.au/assets/images/new-home/mob-img/mob-eng-5.png"> BLOGS
+                                    </h6>
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+                                <a href="<?= site_url('case-studies">
+                                    <h6> <img class="img-fluid mob-icon-submenu" alt="Guni sms" src="https://www.gunisms.com.au/assets/images/new-home/mob-img/mob-eng-6.png"> SUCCESS STORIES
+                                    </h6>
+                                </a>
+
+                                <div class="dropdown-divider"></div>
+
+                                <a href="">
+                                    <h6> <img class="img-fluid mob-icon-submenu" alt="Guni sms" src="https://www.gunisms.com.au/assets/images/new-home/mob-img/mob-eng-7.png"> USER MANUAL
+                                    </h6>
+                                </a>
+
+
+
+
+                            </div>
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#message-price">Pricing</a>
+                        </li>
+                        <!--             <li class="nav-item">
+                <a class="nav-link cnt-btn" href="tel:1800 954 850"><i class="fas fa-phone-alt mr-1"></i> 1800 954 850 </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link mob-try-free-btn hdr-btn-mob" href="">Free Consultancy</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link mob-try-free-btn hdr-btn-mob" href="https://app.gunisms.com.au/signup" target="_blank">Free Demo</a>
+            </li> -->
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+    </div>
+    <!-- mbl header closed -->
+
+
+    <main>
+
+
+        <div class="wrapper-custom wrapper-sms">
+            <!-- WELCOME -->
+            <section class="pt-5 pt-lg-0 ">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-lg-6" data-aos="fade-up">
+                            <!-- Heading -->
+                            <h1 class="fw-bold display-5 text-center text-lg-start mb-lg-4 mb-2">
+                                MMS Messaging
+                            </h1>
+
+                            <!-- Text -->
+                            <p class="lead  fw-semi-bold text-center text-lg-start mb-4 mb-lg-8">
+                                Engage better with our MMS Gateway
+                            </p>
+                            <!-- Buttons -->
+                            <div class="text-center text-lg-start mb-4 mb-lg-0 d-none d-lg-block" data-aos="fade-up" data-aos-delay="50">
+                                <a href="#" class="btn text-white shadow lift btn-custom font-unset">
+                                    Start messaging for free
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-12 col-lg-6 order-lg-1 mb-3 mb-lg-0 text-center">
+
+                            <!-- Image -->
+                            <!-- <img src="assets-api/img/main-banner-image.svg" class="img-fluid mw-md-150 mw-lg-130 mb-6 mb-md-0" alt="..." data-aos="fade-up" data-aos-delay="100"> -->
+                            <picture data-aos="fade-up" data-aos-delay="100">
+                                <source media="(min-width:1280px)" srcset="assets-api/img/mms/main-desk.png">
+                                <img src="assets-api/img/mms/main-mob.png" class="img-fluid mb-6 mb-md-0 max-w-custom-sms img-first" alt="...">
+                            </picture>
+                            <div class="text-center text-lg-start mb-4 mb-lg-0 d-block d-lg-none mt-4" data-aos="fade-up" data-aos-delay="50">
+                                <a href="#" class="btn text-white shadow lift btn-custom font-unset">
+                                    Start messaging for free
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- / .row -->
+                </div>
+                <!-- / .container -->
+            </section>
+
+            <!-- What is an MMS? START-->
+            <section class="py-5 pt-md-11 section-sms-text-messaging">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3 class="h3 fw-bold mb-4 text-left">What is an MMS?</h4>
+                                <p class="fw-medium fs-16 text-left">MMS-Multimedia Messaging Service can help your business send Multimedia Messages or Rich Media Content directly to any mobile device out there around the world. You could send text, images, small videos and audio. You could include all these elements in your MMS Message and forward the same to your respective target audience. Like SMS Messaging, MMS Messaging is also sent via a mobile network connection.
+                                </p>
+                        </div>
+                    </div>
+                    <!-- / .row -->
+                </div>
+                <!-- / .container -->
+            </section>
+            <!-- What is an MMS? END-->
+
+            <div class="text-center py-3">
+                <div class="custom-divider mx-auto"></div>
+            </div>
+
+            <!-- Advantages of MMS Messaging START-->
+            <section class="pt-5 pb-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h3 class="h3 fw-bold mb-4 text-center">Advantages of MMS Messaging</h3>
+                        </div>
+                        <div class="carousel-sms-page carousel-mms-messaging ">
+                            <div>
+                                <div class="mb-3 outer-slide-div">
+                                    <div class="slide-image-outer">
+                                        <img src="assets-api/img/mms/slide-open-rate.png" alt="">
+                                    </div>
+                                    <div class="slide-text-outer">
+                                        <h5 class="fs-20 fw-semi-bold pt-2">98% open rate</h5>
+                                        <p class="fs-16 fw-medium mb-0">MMS Text Messaginghas an open-rate of 98%</p>
+                                    </div>
+                                </div>
+                                <div class="mb-3 outer-slide-div">
+                                    <div class="slide-image-outer">
+                                        <img src="assets-api/img/mms/slide-more-engaging.png" alt="">
+                                    </div>
+                                    <div class="slide-text-outer">
+                                        <h5 class="fs-20 fw-semi-bold pt-2">More Engaging</h5>
+                                        <p class="fs-16 fw-medium mb-0">MMS Messages are more
+                                            effective as text,, images,
+                                            small videos and audio
+                                            can be sent to your 
+                                            target audience. </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="mb-3 outer-slide-div">
+                                    <div class="slide-image-outer">
+                                        <img src="assets-api/img/mms/slide-global-reach.png" alt="">
+                                    </div>
+                                    <div class="slide-text-outer">
+                                        <h5 class="fs-20 fw-semi-bold pt-2">Global Reach</h5>
+                                        <p class="fs-16 fw-medium mb-0">5.27 billion people use 
+                                            mobile phones. More than
+                                             18 million MMS Messages
+                                            are sent every minute.
+                                            </p>
+                                    </div>
+                                </div>
+                                <div class="mb-3 outer-slide-div">
+                                    <div class="slide-image-outer">
+                                        <img src="assets-api/img/mms/slide-no-limit.png" alt="">
+                                    </div>
+                                    <div class="slide-text-outer">
+                                        <h5 class="fs-20 fw-semi-bold pt-2">No Character 
+                                            Limitation</h5>
+                                        <p class="fs-16 fw-medium mb-0">Unlike SMS Messaging,
+                                            MMS Messages can send
+                                           1000s of characters of text
+                                           within a single message. 
+                                             </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="mb-3 outer-slide-div">
+                                    <div class="slide-image-outer">
+                                        <img src="assets-api/img/mms/slide-tell-story.png" alt="">
+                                    </div>
+                                    <div class="slide-text-outer">
+                                        <h5 class="fs-20 fw-semi-bold pt-2">Tell your Story</h5>
+                                        <p class="fs-16 fw-medium mb-0">Through MMS Messaging,
+                                            you can convey your
+                                            message through a story
+                                            when you send a picture
+                                            or a video.
+                                             </p>
+                                    </div>
+                                </div>
+                                <div class="mb-3 outer-slide-div">
+                                    <div class="slide-image-outer">
+                                        <img src="assets-api/img/mms/slide-cost-effective.png" alt="">
+                                    </div>
+                                    <div class="slide-text-outer">
+                                        <h5 class="fs-20 fw-semi-bold pt-2">Cost-effective</h5>
+                                        <p class="fs-16 fw-medium mb-0">When you look at the
+                                            benefits, MMS Messaging
+                                            is cost-effective
+                                            compared to other 
+                                            communication mediums.
+                                            </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="mb-3 outer-slide-div">
+                                    <div class="slide-image-outer">
+                                        <img src="assets-api/img/mms/slide-preferred-medium.png" alt="">
+                                    </div>
+                                    <div class="slide-text-outer">
+                                        <h5 class="fs-20 fw-semi-bold pt-2">Preferred Medium</h5>
+                                        <p class="fs-16 fw-medium mb-0">It is the most preferred 
+                                            medium to communicate
+                                            Marketing offers and
+                                            discounts to your target
+                                            customers.
+                                            </p>
+                                    </div>
+                                </div>
+                                <div class="mb-3 outer-slide-div">
+                                    <div class="slide-image-outer">
+                                        <img src="assets-api/img/mms/slide-two-way.png" alt="">
+                                    </div>
+                                    <div class="slide-text-outer">
+                                        <h5 class="fs-20 fw-semi-bold pt-2">Two-way conversation</h5>
+                                        <p class="fs-16 fw-medium mb-0">Have personalised two-
+                                            way conversations with
+                                            your target audience with
+                                            MMS Messaging.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="mb-3 outer-slide-div">
+                                    <div class="slide-image-outer">
+                                        <img src="assets-api/img/mms/slide-click-through.png" alt="">
+                                    </div>
+                                    <div class="slide-text-outer">
+                                        <h5 class="fs-20 fw-semi-bold pt-2">Click-Through Rate</h5>
+                                        <p class="fs-16 fw-medium mb-0">MMS Messaging has the
+                                            best click-through rates
+                                             when compared to other
+                                            mediums of 
+                                            communication</p>
+                                    </div>
+                                </div>
+                                <div class="mb-3 outer-slide-div">
+                                    <div class="slide-image-outer">
+                                        <img src="assets-api/img/mms/slide-response-rate.png" alt="">
+                                    </div>
+                                    <div class="slide-text-outer">
+                                        <h5 class="fs-20 fw-semi-bold pt-2">Response Rate </h5>
+                                        <p class="fs-16 fw-medium mb-0">Multimedia messages
+                                            have better response
+                                            rates when compared to
+                                            other mediums of
+                                            communication.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- / .row -->
+                </div>
+                <!-- / .container -->
+            </section>
+            <!-- Advantages of MMS Messaging END-->
+
+            <!-- What is MMS Marketing? START -->
+            <section class="pt-3 pb-5 bg-sms-marketing">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <!-- Heading -->
+                            <div>
+                                <h3 class="h3 fw-bold mb-4">
+                                    What is MMS Marketing?
+                                </h3>
+                                <p class="fw-medium fs-20 mb-4">
+                                    Through MMS Marketing, your business could send rich media messages or content such as Text, Audio, Video and Pictures to the masses with just one click. Today 66.85% of the whole population in the world use mobile phones. Around 18 million MMS messages are sent every minute. Due to its global reach and effectiveness, MMS Marketing gaining popularity among marketers. The best medium or platform to do MMS Marketing is through an MMS Gateway. By Using Guni’s MMS Gateway, your business can send millions of MMS at once with a click to your target audience. You could also have personalised conversations with your target audience through our MMS Gateway. Through MMS Message Marketing, you could showcase your products and services to your prospective customers in a better and effective way as you would be able to send Rich Media Content. 
+                                </p>
+                                <a href="#" class="btn btn-primary shadow lift">Start MMS Marketing for free</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- What is MMS Marketing? END -->
+
+            <!-- Multimedia Messaging VS Other Mediums START-->
+            <section class="py-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h3 class="h3 fw-bold mb-5 text-center">Multimedia Messaging VS Other Mediums</h3>
+
+                            <div class="mb-0 pb-0">
+                                <div class="carousel-sms-page carousel-message-medium">
+                                    <div>
+                                        <picture>
+                                            <source media="(min-width:500px)" srcset="assets-api/img/mms/mms1.png">
+                                            <img src="assets-api/img/mms/mms1.png" alt="language" class="banner-img max-w-custom">
+                                        </picture>
+
+                                    </div>
+                                    <div>
+                                        <picture>
+                                            <source media="(min-width:500px)" srcset="assets-api/img/mms/mms2.png">
+                                            <img src="assets-api/img/mms/mms2.png" alt="language" class="banner-img max-w-custom">
+                                        </picture>
+                                        <div class="mt-3 mb-4">
+                                            <span><strong>CPS</strong> = Cost per send (MMS)</span> <span>&nbsp;</span>
+                                            <span><strong>CPC</strong> = Cost per Click</span><span>&nbsp;</span>
+                                            <span><strong>CTR</strong> = Click through rate</span>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <picture>
+                                            <source media="(min-width:500px)" srcset="assets-api/img/mms/mms3.png">
+                                            <img src="assets-api/img/mms/mms3.png" alt="language" class="banner-img max-w-custom">
+                                        </picture>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Buttons -->
+                            <div class="text-center mt-3">
+                                <a href="#" class="btn btn-custom  text-white shadow lift btn-lngth font-unset">
+                                    Capitalize on MMS for free 
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- / .row -->
+                </div>
+                <!-- / .container -->
+            </section>
+            <!-- Multimedia Messaging VS Other Mediums END-->
+
+            <!-- MMMS Text Messaging in Business START-->
+            <section class="py-5 bg-custom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <!-- Heading -->
+                            <h3 class="h3 fw-bold mb-3">
+                                MMS Text Messaging in Business
+                            </h3>
+
+                            <!-- Text -->
+                            <p class="fw-medium fs-16">
+                                Different businesses can use MMS Text Messaging to improve their sales, marketing, customer success and business communication. <br>Use cases/solutions based on engagement or communication can be used as per the custom requirements of businesses. 
+                            </p>
+                            <div class="text-center py-3 ">
+                                <div class="custom-divider mx-auto"></div>
+                            </div>
+                            <div class="d-md-flex align-items-center">
+                                <div class="the-sms-image-section d-lg-block d-none">
+                                    <img src="assets-api/img/mms/phn1.png" alt="">
+                                </div>
+                                <div class="text-left">
+                                    <h4 class="a_color fs-20 fw-semi-bold mb-3">MMS Text Messaging for Business communication</h4>
+                                    <div class="the-sms-image-section d-lg-none d-block">
+                                        <img src="assets-api/img/mms/phn1.png" alt="">
+                                    </div>
+                                    <p class="fs-14 fw-medium">Multimedia Messages can be utilised for business in many ways. It is more engaging than other communication mediums because you could include rich media content in your messages. Pictures, GIFs, Audio, Video and Text, can be used to make your messages more impactful. After all, a picture or a video tells a thousand words, than a plain simple text.
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="text-center pt-4 pb-3 margin-neg">
+                                <div class="custom-divider mx-auto"></div>
+                            </div>
+                            <div class="d-md-flex align-items-center margin-neg">
+                                <div class="the-sms-image-section order-md-2 d-lg-block d-none">
+                                    <img src="assets-api/img/mms/phn2.png" alt="">
+                                </div>
+                                <div class="text-left">
+                                    <h4 class="a_color fs-20 fw-semi-bold mb-3">MMS Text Messaging for Marketing & Sales</h4>
+                                    <div class="the-sms-image-section order-md-2 d-lg-none d-block">
+                                        <img src="assets-api/img/mms/phn2.png" alt="">
+                                    </div>
+                                    <p class="fs-14 fw-medium">With an open rate of 98%, Sending the right MMS message at the right time to the right target audience can do wonders for a business. When you compare the open rates, click-through rates and response rates for MMS Messages, it is no surprise that more and more companies are utilising MMS Messages for Marketing their products and services. The advantage of having personalised two-way conversations with your target audience is the cherry on top
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="text-center pt-4 pb-3 margin-neg">
+                                <div class="custom-divider mx-auto"></div>
+                            </div>
+                            <div class="d-md-flex align-items-center margin-neg">
+                                <div class="the-sms-image-section d-lg-block d-none">
+                                    <img src="assets-api/img/mms/phn3.png" alt="">
+                                </div>
+                                <div class="text-left">
+                                    <h4 class="a_color fs-20 fw-semi-bold mb-3">MMS Text Messaging for Customer Success</h4>
+                                    <div class="the-sms-image-section d-lg-none d-block">
+                                        <img src="assets-api/img/mms/phn3.png" alt="">
+                                    </div>
+                                    <p class="fs-14 fw-medium">Customer Success or customer service is an integral part of any organisation out there. You could follow up with your existing customers by regularly getting in touch with them and understanding their feedback and further needs. Our MMS Gateway would allow you to send automated Multimedia Messages to your existing customers at a regular interval. Through MMS Messaging for Customer Service, you would be able to cross-sell and up-sell with ease.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- / .row -->
+                    </div>
+                </div>
+                <!-- / .container -->
+            </section>
+            <!-- MMS Text Messaging in Business END-->
+
+            <!-- Capitalize START -->
+            <section class="bg-free-demo position-relative">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <!-- Heading -->
+                            <div class="demo-text-section position-relative mb-4">
+                                <p class="fs-24 fw-semi-bold mb-3">
+                                    Capitalize on our 98% MMS open rate
+                                </p>
+                                <div class="btn-demo-outer position-absolute">
+                                    <a href="#" class="btn shadow lift font-unset btn-custom-white ">Book a free demo</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Capitalize END -->
+
+            <!-- MMS Messaging for different industries START -->
+            <section class="pt-5 pb-0">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center px-0">
+                            <!-- Heading -->
+                            <div>
+                                <h3 class="h3 fw-bold mb-5">
+                                    MMS Messaging for different industries
+                                </h3>
+                            </div>
+                            <div class="carousel-sms-page carousel-diff-industries">
+                                <div>
+                                    <div class="row align-items-center">
+                                        <div class="col-12 mb-3">
+                                            <a href="#" class="lift a-border">
+                                                <div class="slide-indus">
+                                                    <div class="slide-circle-industries">
+                                                        <img src="assets-api/img/sms/resturant.png" alt="">
+                                                    </div>
+                                                    <div class="slide-industries-title">
+                                                        <p class="fs-14 fw-medium mb-0">Restaurant</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-12 mb-3">
+                                            <a href="#" class="lift a-border">
+                                                <div class="slide-indus">
+                                                    <div class="slide-circle-industries">
+                                                        <img src="assets-api/img/sms/wholesale.png" alt="">
+                                                    </div>
+                                                    <div class="slide-industries-title">
+                                                        <p class="fs-14 fw-medium mb-0">Wholesale</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="row align-items-center">
+                                        <div class="col-12 mb-3">
+                                            <a href="#" class="lift a-border">
+                                                <div class="slide-indus">
+                                                    <div class="slide-circle-industries">
+                                                        <img src="assets-api/img/sms/education.png" alt="">
+                                                    </div>
+                                                    <div class="slide-industries-title">
+                                                        <p class="fs-14 fw-medium mb-0">Education</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-12 mb-3">
+                                            <a href="#" class="lift a-border">
+                                                <div class="slide-indus">
+                                                    <div class="slide-circle-industries">
+                                                        <img src="assets-api/img/sms/retail.png" alt="">
+                                                    </div>
+                                                    <div class="slide-industries-title">
+                                                        <p class="fs-14 fw-medium mb-0">Retail</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="row align-items-center">
+                                        <div class="col-12 mb-3">
+                                            <a href="#" class="lift a-border">
+                                                <div class="slide-indus">
+                                                    <div class="slide-circle-industries">
+                                                        <img src="assets-api/img/sms/govt.png" alt="">
+                                                    </div>
+                                                    <div class="slide-industries-title">
+                                                        <p class="fs-14 fw-medium mb-0">Goverment</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-12 mb-3">
+                                            <a href="#" class="lift a-border">
+                                                <div class="slide-indus">
+                                                    <div class="slide-circle-industries">
+                                                        <img src="assets-api/img/sms/healthcare.png" alt="">
+                                                    </div>
+                                                    <div class="slide-industries-title">
+                                                        <p class="fs-14 fw-medium mb-0">Healthcare</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="row align-items-center">
+                                        <div class="col-12 mb-3">
+                                            <a href="#" class="lift a-border">
+                                                <div class="slide-indus">
+                                                    <div class="slide-circle-industries">
+                                                        <img src="assets-api/img/sms/tourism.png" alt="">
+                                                    </div>
+                                                    <div class="slide-industries-title">
+                                                        <p class="fs-14 fw-medium mb-0">Tourism</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-12 mb-3">
+                                            <a href="#" class="lift a-border">
+                                                <div class="slide-indus">
+                                                    <div class="slide-circle-industries">
+                                                        <img src="assets-api/img/sms/finance.png" alt="">
+                                                    </div>
+                                                    <div class="slide-industries-title">
+                                                        <p class="fs-14 fw-medium mb-0">Finance</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="row align-items-center">
+                                        <div class="col-12 mb-3">
+                                            <a href="#" class="lift a-border">
+                                                <div class="slide-indus">
+                                                    <div class="slide-circle-industries">
+                                                        <img src="assets-api/img/sms/manufacturing.png" alt="">
+                                                    </div>
+                                                    <div class="slide-industries-title">
+                                                        <p class="fs-14 fw-medium mb-0">Manufacturing</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-12 mb-3">
+                                            <a href="#" class="lift a-border">
+                                                <div class="slide-indus">
+                                                    <div class="slide-circle-industries">
+                                                        <img src="assets-api/img/sms/realesate.png" alt="">
+                                                    </div>
+                                                    <div class="slide-industries-title">
+                                                        <p class="fs-14 fw-medium mb-0">Real Estate</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="row align-items-center">
+                                        <div class="col-12 mb-3">
+                                            <a href="#" class="lift a-border">
+                                                <div class="slide-indus">
+                                                    <div class="slide-circle-industries">
+                                                        <img src="assets-api/img/sms/media-ent.png" alt="">
+                                                    </div>
+                                                    <div class="slide-industries-title">
+                                                        <p class="fs-14 fw-medium mb-0">Media/Entertainment</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-12 mb-3">
+                                            <a href="#" class="lift a-border">
+                                                <div class="slide-indus">
+                                                    <div class="slide-circle-industries">
+                                                        <img src="assets-api/img/sms/hospitality.png" alt="">
+                                                    </div>
+                                                    <div class="slide-industries-title">
+                                                        <p class="fs-14 fw-medium mb-0">Hospitality</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- MMS Messaging for different industries END -->
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <div class="text-center py-1">
+                            <div class="custom-divider mx-auto"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- MMS Messaging use cases/solutions START -->
+            <section class="pt-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <!-- Heading -->
+                            <div>
+                                <h3 class="h3 fw-bold mb-4">
+                                    MMS Messaging use cases/solutions
+                                </h3>
+                            </div>
+                            <div class="carousel-sms-page carousel-cases-solution">
+                                <div>
+                                    <div class="row align-items-center">
+                                        <div class="col-lg-3 col-6 order-lg-3">
+                                            <a href="#" class="lift a-border a-border-1">
+                                                <div class="outer-slide-div">
+                                                    <div class="slide-image-outer">
+                                                        <img src="assets-api/img/sms/cases-sol-6.png" alt="">
+                                                    </div>
+                                                    <p class="fs-14 fw-medium mb-0">MMS for shift scheduling</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-3 col-6">
+                                            <a href="#" class="lift a-border a-border-2">
+                                                <div class="outer-slide-div">
+                                                    <div class="slide-image-outer">
+                                                        <img src="assets-api/img/sms/cases-sol-1.png" alt="">
+                                                    </div>
+                                                    <p class="fs-14 fw-medium mb-0">MMS for Click and Collect</p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="col-lg-6 col-12">
+                                            <div class="row">
+                                                <div class="col-6">
+                                                    <a href="#" class="lift a-border a-border-3">
+                                                        <div class="outer-slide-div">
+                                                            <div class="slide-image-outer">
+                                                                <img src="assets-api/img/sms/cases-sol-2.png" alt="">
+                                                            </div>
+                                                            <p class="fs-14 fw-medium mb-0">MMS for two factor Authentication</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-6">
+                                                    <a href="#" class="lift a-border a-border-4">
+                                                        <div class="outer-slide-div">
+                                                            <div class="slide-image-outer">
+                                                                <img src="assets-api/img/sms/cases-sol-4.png" alt="">
+                                                            </div>
+                                                            <p class="fs-14 fw-medium mb-0">MMS for feedback and surveys</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-6">
+                                                    <a href="#" class="lift a-border a-border-5">
+                                                        <div class="outer-slide-div">
+                                                            <div class="slide-image-outer">
+                                                                <img src="assets-api/img/sms/cases-sol-3.png" alt="">
+                                                            </div>
+                                                            <p class="fs-14 fw-medium mb-0">MMS for two billing and payment</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="col-6">
+                                                    <a href="#" class="lift a-border a-border-6">
+                                                        <div class="outer-slide-div">
+                                                            <div class="slide-image-outer">
+                                                                <img src="assets-api/img/sms/cases-sol-5.png" alt="">
+                                                            </div>
+                                                            <p class="fs-14 fw-medium mb-0">MMS for marketing and campaign</p>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- MMS Messaging use cases/solutions END -->
+            
+            
+
+            
+
+            <!-- What is SMS Marketing? START -->
+            <section class="faq-section bg-md-sky">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-12 col-lg-6 text-center">
+                            <h2 class="main-heading">FAQ</h2>
+                        </div>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-md-12">
+                            <div class="accordion faq-custom-inner" id="faq-sms">
+                                <div class="row justify-content-center">
+                                    <div class="col-md-8">
+                                        <div class="card">
+                                            <div class="card-header" id="faqhead1">
+                                                <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq-sms1" aria-expanded="true" aria-controls="faq-sms1">How can I utilise MMS Messaging for my Business?
+                                                </a>
+                                            </div>
+                                            <div id="faq-sms1" class="collapse" aria-labelledby="faqhead1" data-parent="#faq-sms">
+                                                <div class="card-body">
+                                                    <p>You could capitalise on MMS Messaging for your Business in many ways. MMS Messaging for Business can be used in Sales, Marketing, Customer Service and Business Communication. Guni as an MMS Messaging Service provider, Provides you with many use-cases and solutions based on the same.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card">
+                                            <div class="card-header" id="faqhead2">
+                                                <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq-sms2" aria-expanded="true" aria-controls="faq-sms2">Which tool should I use to do MMS Messaging for my Business?</a>
+                                            </div>
+                                            <div id="faq-sms2" class="collapse" aria-labelledby="faqhead2" data-parent="#faq-sms">
+                                                <div class="card-body">
+                                                    <p>The target audience of any business would be big in numbers. You could send Bulk MMS Messages to the masses using Guni's MMS Gateway with just one click.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card">
+                                            <div class="card-header" id="faqhead3">
+                                                <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq-sms3" aria-expanded="true" aria-controls="faq-sms3">What are the different platforms from which I can use Guni’s MMS Gateway?
+                                                </a>
+                                            </div>
+                                            <div id="faq-sms3" class="collapse" aria-labelledby="faqhead3" data-parent="#faq-sms">
+                                                <div class="card-body">
+                                                    <p>We provide both a web portal as well as a mobile application for MMS Broadcast Messaging. You could integrate our MMS Messaging Gateway with your existing platforms or software for free. 
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card">
+                                            <div class="card-header" id="faqhead4">
+                                                <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq-sms4" aria-expanded="true" aria-controls="faq-sms4">Does Guni's Mobile Application support both IOS and Android?
+                                                </a>
+                                            </div>
+                                            <div id="faq-sms4" class="collapse" aria-labelledby="faqhead4" data-parent="#faq-sms">
+                                                <div class="card-body">
+                                                    <p>Guni's MMS Gateway Mobile Application can be used on both IOS and Android.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card">
+                                            <div class="card-header" id="faqhead5">
+                                                <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq-sms5" aria-expanded="true" aria-controls="faq-sms5">Can I Integrate Guni's MMS Messaging Gateway into my existing platforms and applications?
+                                                </a>
+                                            </div>
+                                            <div id="faq-sms5" class="collapse" aria-labelledby="faqhead5" data-parent="#faq-sms">
+                                                <div class="card-body">
+                                                    <p>Yes, you can integrate our MMS Messaging Gateway to your Existing platforms and applications.
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card">
+                                            <div class="card-header" id="faqhead6">
+                                                <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq-sms6" aria-expanded="true" aria-controls="faq-sms6">What is the character limit per MMS Message?
+                                                </a>
+                                            </div>
+                                            <div id="faq-sms6" class="collapse" aria-labelledby="faqhead6" data-parent="#faq-sms">
+                                                <div class="card-body">
+                                                    <p>For MMS Image:-3000kb. For MMS GIF Image:-1024 kb. For MMS Audio :- 10000 kb. MMS Video:-50000kb. MMS Text:- 5000 characters. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card">
+                                            <div class="card-header" id="faqhead7">
+                                                <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq-sms7" aria-expanded="true" aria-controls="faq-sms7">Can I get custom MMS communication solutions for my Business?
+                                                </a>
+                                            </div>
+                                            <div id="faq-sms7" class="collapse" aria-labelledby="faqhead7" data-parent="#faq-sms">
+                                                <div class="card-body">
+                                                    <p>Yes. We have world-class consultants who analyse your business processes and provide you with custom-made MMS communication use-cases/solutions for free.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card">
+                                            <div class="card-header" id="faqhead8">
+                                                <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq-sms8" aria-expanded="true" aria-controls="faq-sms8">Can I use my Business Name as the Sender ID?
+                                                </a>
+                                            </div>
+                                            <div id="faq-sms8" class="collapse" aria-labelledby="faqhead8" data-parent="#faq-sms">
+                                                <div class="card-body">
+                                                    <p>Yes, you can use your business name or brand name as your sender id. We provide dedicated numbers as well.
+
+
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card">
+                                            <div class="card-header" id="faqhead9">
+                                                <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq-sms9" aria-expanded="true" aria-controls="faq-sms9"> How would I know when someone from my target audience or my customer has replied?
+
+                                                </a>
+                                            </div>
+                                            <div id="faq-sms9" class="collapse" aria-labelledby="faqhead9" data-parent="#faq-sms">
+                                                <div class="card-body">
+                                                    <p>You would know the same via email notifications. You would also get notifications from our MMS Gateway Web portal and Mobile Application.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card">
+                                            <div class="card-header" id="faqhead10">
+                                                <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq-sms10" aria-expanded="true" aria-controls="faq-sms10"> Can I have 2-way conversations with my customers or target audience?
+
+                                                </a>
+                                            </div>
+                                            <div id="faq-sms10" class="collapse" aria-labelledby="faqhead10" data-parent="#faq-sms">
+                                                <div class="card-body">
+                                                    <p>Yes, you can use the inbox feature in our MMS Gateway to have personalised conversations.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card">
+                                            <div class="card-header" id="faqhead11">
+                                                <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq-sms11" aria-expanded="true" aria-controls="faq-sms11">Will I get a detailed analytical report of all my MMS Messaging Campaigns?</a>
+                                            </div>
+                                            <div id="faq-sms11" class="collapse" aria-labelledby="faqhead11" data-parent="#faq-sms">
+                                                <div class="card-body">
+                                                    <p>Yes, you would.  Guni's SMS Gateway would provide you with detailed reports about your ongoing and past MMS campaigns.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card">
+                                            <div class="card-header" id="faqhead12">
+                                                <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq-sms12" aria-expanded="true" aria-controls="faq-sms12"> Is it complicated to use Guni's MMS Gateway?
+                                                </a>
+                                            </div>
+                                            <div id="faq-sms12" class="collapse" aria-labelledby="faqhead12" data-parent="#faq-sms">
+                                                <div class="card-body">
+                                                    <p>Not at all. Our MMS Gateway is designed in such a way that anyone can utilise it.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card">
+                                            <div class="card-header" id="faqhead13">
+                                                <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq-sms13" aria-expanded="true" aria-controls="faq-sms13"> Does Guni provide campaign managers?
+
+                                                </a>
+                                            </div>
+                                            <div id="faq-sms13" class="collapse" aria-labelledby="faqhead13" data-parent="#faq-sms">
+                                                <div class="card-body">
+                                                    <p>Yes, we do provide campaign managers if the need be.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card">
+                                            <div class="card-header" id="faqhead14">
+                                                <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq-sms14" aria-expanded="true" aria-controls="faq-sms14"> How is the customer service of Guni?</a>
+                                            </div>
+                                            <div id="faq-sms14" class="collapse" aria-labelledby="faqhead14" data-parent="#faq-sms">
+                                                <div class="card-body">
+                                                    <p>We pride ourselves on giving quality customer service to our customers or the businesses we partner with. We provide a dedicated customer success manager.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card">
+                                            <div class="card-header" id="faqhead15">
+                                                <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq-sms15" aria-expanded="true" aria-controls="faq-sms15"> Does Guni's MMS Text Messaging Services comply with the laws of Australia?
+                                                </a>
+                                            </div>
+                                            <div id="faq-sms15" class="collapse" aria-labelledby="faqhead15" data-parent="#faq-sms">
+                                                <div class="card-body">
+                                                    <p>Yes, we do comply with the laws of the Australian Communications and Media Authority (ACMA). We provide an opt-out option in all our text messages that are sent.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- What is SMS Marketing? END -->
+
+        </div>
+
+
+
+    </main>
+
+
+    <div class="fr-dsk-dsgn">
+
+        <section id="home-section-9" class="home-section py-3">
+            <div class="container-fluid">
+                <div class="card shadow px-4 py-5">
+                    <div class="row">
+
+                        <div class="col-xl-6 col-lg-6 eng-grwth pl-5 text-left">
+                            <h2 class="mb-4 font-weight-bold">The world is awaiting for <br/> your message!</h2>
+                            <p class="mb-5">Engagement and growth is just 1 click away</p>
+                            <img class="img-fluid" alt="Guni sms" src="images/new-home/globe-1.png">
+                        </div>
+
+                        <div class="col-xl-6 col-lg-6 text-center">
+                            <div class="glob-msg-img">
+                                <a href="https://app.gunisms.com.au/signup" target="_blank" class="try-free-btn button-glb">                     
+Start connecting for free!
+                   <!--  <img class="img-fluid btn-glb" src="images/new-home/button-globe">
+                    <img class="img-fluid btn-glb-hvr" src="images/new-home/button-globe"> -->
+                </a>
+
+                                <img class="img-fluid" alt="sms gateway" src="images/new-home/globe-2.png">
+
+                                <!-- <div class="glob-msg-img-content">
+      <h3> LETS GO !</h3>
+      <p>Let <span>Guni's SMS GATEWAY</span> help <br/>
+you in creating meaningful <br/>
+engagement & connection. </p>
+<h6> The whole world is waiting. </h6>
+<a href="" class="btn try-free-btn ftr-btn-nav">
+Start connecting for free!</a>
+</div> -->
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- <h4 class="text-center mt-5 mb-0 py-3 bg-clr">Made in Australia - For the world!</h4> -->
+                </div>
+
+            </div>
+        </section>
+        <!-- home-section-9 closed -->
+
+
+        <footer class="py-5">
+            <div class="container">
+                <div class="row mb-4">
+                    <div class="col-md-12">
+                        <h5 class="font-weight-bold text-center shadow hdng-ftr mb-0">Message Broadcast Solutions that create Engagement and Growth for Businesses and Enterprises</h5>
+                    </div>
+                </div>
+
+                <div class="row py-4">
+                    <div class="col-md-1">
+                    </div>
+
+                    <div class="col-md-2">
+                        <p class="font-weight-bold mb-2">Messaging</p>
+                        <ul class="ftr-lnk">
+                            <li><a href="#sms-broadcast">SMS</a></li>
+                            <li><a href="">Landing pages</a></li>
+                            <li><a href="">MMS</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-2">
+                        <p class="font-weight-bold mb-2">Platforms</p>
+                        <ul class="ftr-lnk">
+                            <li><a href="#sms-web-portal">Web portal</a></li>
+                            <li><a href="#sms-message-application">Mobile Application</a></li>
+                            <li><a href="#sms-api-integration">API Integration</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-2">
+                        <p class="font-weight-bold mb-2">Solutions</p>
+                        <ul class="ftr-lnk">
+                            <li><a href="">Industries</a></li>
+                            <li><a href="<?= site_url('#">Use cases</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-2">
+                        <p class="font-weight-bold mb-2">Resources</p>
+                        <ul class="ftr-lnk">
+                            <li><a href="<?= site_url('blog">Blog</a></li>
+                            <li><a href="<?= site_url('case-studies">Success Stories</a></li>
+                            <li><a href="https://help.gunisms.com.au/" target="_blank">Documents</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-2">
+                        <p class="font-weight-bold mb-2">Company</p>
+                        <ul class="ftr-lnk">
+                            <li><a href="<?= site_url('about-us">About us</a></li>
+                            <li><a href="">Careers</a></li>
+                            <li><a href="https://calendly.com/guni-engagement-growth">Contact us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-1">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="text-center  mb-4">
+                            <a href="tel:1300 111 117" class="cnt-link try-free-btn"><i class="fas fa-phone-alt"></i> 1300 111 117 </a>
+                            <span class="mx-3"><large> | </large></span>
+                            <a href="mailto:info@guni.com" class="cnt-link try-free-btn"><i class="fas fa-envelope"></i> info@guni.com.au </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="row">
+
+                    <div class="col-md-12 trm-prvcy-lgl">
+                        <nav class="d-flex justify-content-center">
+                            <a href=""> Privacy policy </a> <span class="mx-2">|</span>
+                            <a href=""> Terms of service </a> <span class="mx-2">|</span>
+                            <a href=""> Legal © 2021 Guni . All rights reserved.</a>
+                        </nav>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <img class="img-fluid mt-5 mb-2" alt="Guni sms" src="images/new-home/ftr-logo.png" width="100">
+                    </div>
+
+                </div>
+
+            </div>
+        </footer>
+
+
+
+        <div class="bottom-ftr text-center pb-4">
+            <div class="ftr-social-icon">
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+                <a href=""><i class="fab fa-youtube"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href=""><i class="fab fa-linkedin-in"></i> </a>
+            </div>
+
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <!--fr-dsk-dsgn -->
+
+
+    <div class="fr-mbl-dsgn">
+
+
+        <section id="mob-sec-9" class="px-2 py-5 mob-section">
+
+            <div class="row">
+
+                <div class="col-xl-6 col-lg-6 eng-grwth pl-5 text-left">
+                    <h2 class="mb-4 font-weight-bold">The world is awaiting for <br/> your message!</h2>
+                    <p class="mb-5">Engagement and growth is just 1 click away</p>
+                    <img class="img-fluid" alt="Guni sms" src="images/new-home/globe-1.png">
+                </div>
+
+                <div class="col-xl-6 col-lg-6 text-center">
+                    <div class="glob-msg-img">
+                        <a href="https://app.gunisms.com.au/signup" target="_blank" class="try-free-btn button-glb">                     
+Start connecting for free!
+                   <!--  <img class="img-fluid btn-glb" src="images/new-home/button-globe">
+                    <img class="img-fluid btn-glb-hvr" src="images/new-home/button-globe"> -->
+                </a>
+
+                        <img class="img-fluid" alt="sms gateway" src="images/new-home/globe-2.png">
+
+                        <!-- <div class="glob-msg-img-content">
+      <h3> LETS GO !</h3>
+      <p>Let <span>Guni's SMS GATEWAY</span> help <br/>
+you in creating meaningful <br/>
+engagement & connection. </p>
+<h6> The whole world is waiting. </h6>
+<a href="" class="btn try-free-btn ftr-btn-nav">
+Start connecting for free!</a>
+</div> -->
+                    </div>
+                </div>
+
+            </div>
+
+            <!--            <div class="row">
+
+              <div class="col-12 text-center">
+                  <h2 class="mb-3 font-weight-bold">The world is awaiting for <br/> your message!</h2>
+                  <p class="mb-5 font-weight-bold">Engagement and growth is just 1 click away</p>
+              </div>
+
+              <div class="col-12 text-center">
+                <div class="glob-msg-img">
+                 <a href="https://app.gunisms.com.au/signup">   
+                    <img class="img-fluid btn-glb" alt="Guni sms" src="images/new-home/button-globe">
+                    <img class="img-fluid btn-glb-hvr" alt="Guni sms" src="images/new-home/button-globe">
+                </a>
+
+                <img class="img-fluid" alt="sms gateway" src="images/new-home/globe-2.png">
+
+
+</div>
+</div>
+</div> -->
+        </section>
+        <!-- home-section-9 closed -->
+
+
+        <footer class="py-5">
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <h5 class="text-center shadow hdng-ftr-mob mb-0">Message Broadcast Solutions that <br/> create Engagement and Growth for <br/> Businesses and Enterprises</h5>
+                </div>
+            </div>
+
+
+            <ul id="accordion-mob" class="accordion-mob">
+                <li>
+                    <div class="link-mob">Messaging <i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu-mob">
+                        <li><a href="#sms-broadcast">SMS</a></li>
+                        <li><a href="">Landing pages</a></li>
+                        <li><a href="">MMS</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <div class="link-mob">Platforms <i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu-mob">
+                        <li><a href="#sms-web-portal">Web portal Mobile</a></li>
+                        <li><a href="#sms-message-application">Mobile Application</a></li>
+                        <li><a href="#sms-api-integration">API Integration</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="link-mob">Solutions <i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu-mob">
+                        <li><a href="">Industries</a></li>
+                        <li><a href="">Use cases</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="link-mob">Resources <i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu-mob">
+                        <li><a href="<?= site_url('blog">Blog</a></li>
+                        <li><a href="<?= site_url('case-studies">Success Stories</a></li>
+                        <li><a href="https://help.gunisms.com.au/">Documents</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="link-mob">Company <i class="fa fa-chevron-down"></i></div>
+                    <ul class="submenu-mob">
+                        <li><a href="<?= site_url('about-us">About us</a></li>
+                        <li><a href="">Careers</a></li>
+                        <li><a href="https://calendly.com/guni-engagement-growth">Contact us</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="text-center  mb-4">
+                        <a href="tel:1300 111 117" class="cnt-link-mob btn"><i class="fas fa-phone-alt"></i> 1300 111 117 </a>
+                        <span class="mx-3"><large> | </large></span>
+                        <a href="mailto:info@guni.com" class="cnt-link-mob btn"><i class="fas fa-envelope"></i> info@guni.com.au </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="row">
+
+                <div class="col-md-12 trm-prvcy-lgl-mb">
+                    <nav class="d-flex justify-content-center">
+                        <a href=""> Privacy policy </a> <span class="mx-1">|</span>
+                        <a href=""> Terms of service </a> <span class="mx-1">|</span>
+                        <a href=""> Legal © 2021 Guni . All rights reserved.</a>
+                    </nav>
+
+                </div>
+
+            </div>
+
+            <!-- <div class="row">
+    <div class="col-lg-12 text-center">
+        <img class="img-fluid mt-5 mb-2" src="images/new-home/ftr-logo" width="100">
+    </div>
+
+</div> -->
+
+
+        </footer>
+
+
+
+        <div class="bottom-ftr text-center pb-4">
+            <div class="ftr-social-icon">
+                <a href=""><i class="fab fa-twitter"></i></a>
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+                <a href=""><i class="fab fa-youtube"></i></a>
+                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href=""><i class="fab fa-linkedin-in"></i> </a>
+            </div>
+
+        </div>
+
+
+    </div>
+    <!-- fr-mbl-dsgn closed -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="pricing/js/vendors/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.js"></script>
+
+
+    <script src="js/test-page.js"></script>
+
+
+
+
+
+
+    <!-- pricing page -->
+
+    <!-- owl carousel v2.3.4 -->
+    <script src="pricing/js/vendors/owl.carousel.min.js"></script>
+    <!-- bootstrap slider (range slider) v11.2 -->
+    <script src="pricing/js/vendors/bootstrap-slider.min.js"></script>
+    <!-- custom script -->
+    <script src="pricing/js/custom-script.js"></script>
+
+    <!-- api page-->
+
+
+    <!-- JAVASCRIPT -->
+    <!--     <script type="text/javascript" charset="UTF-8" src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script> -->
+
+    <script type="text/javascript" charset="UTF-8" src="assets-api/slick/slick.min.js"></script>
+    <script type="text/javascript" src="assets-api/custom.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+
+    <script>
+        window.onscroll = function() {
+            myFunction()
+        };
+
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+
+    <script>
+        $('a[href^="#learn"]').on('click', function(e) {
+            $(document).on("scroll", onScroll);
+            $(document).off("scroll");
+            $('a').each(function() {
+                $(this).removeClass('active');
+            })
+            $(this).addClass('active');
+            var target = this.hash,
+                $target = $(target);
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top - 0
+            }, 1000, 'swing', function() {
+                window.location.hash = target;
+                $(document).on("scroll", onScroll);
+            });
+        });
+
+        function onScroll(event) {
+            var scrollPosition = $(document).scrollTop();
+            $('header ul li a').each(function() {
+                var currentLink = $(this);
+                var refElement = $(currentLink.attr("href"));
+                if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
+                    $('header ul li a').removeClass("active");
+                    currentLink.addClass("active");
+                } else {
+                    currentLink.removeClass("active");
+                }
+            });
+        }
+    </script>
+
+    <script>
+        $('.partner-cont-mob').on('click', function(e) {
+            e.preventDefault();
+            $(this).css('border-color', '#11b6ca');
+        });
+    </script>
+
+
+    <script src="//code.tidio.co/nmknvmi9mwc2rsx7garoiomdikx1rovz.js" async></script>
+
+    <script>
+        window.onscroll = function() {
+            myFunction()
+        };
+
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+
+    <script type="text/javascript" src="js/toastr.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            toastr.options = {
+                "closeButton": true,
+                "debug": false,
+                "newestOnTop": true,
+                "progressBar": true,
+                "positionClass": "toast-bottom-right",
+                "preventDuplicates": true,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "5000",
+                "extendedTimeOut": "1000",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+            };
+
+            $('.selectpicker').selectpicker();
+        });
+    </script>
+
+    <script src="js/ajax.js"></script>
+
+
+
+</body>
+
+</html>
