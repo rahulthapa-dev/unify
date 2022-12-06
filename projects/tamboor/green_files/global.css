@@ -7574,7 +7574,7 @@ span.adyen-checkout__input.adyen-checkout__input--small.adyen-checkout__card__cv
 }
 
 #cotons_resistants {
-    background-image: url(http://recette.tamboor.com/themes/tamboor/css/../img/new/doux_desktop.jpg);
+    background-image: url(../img/new/doux_desktop.jpg);
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -7584,7 +7584,7 @@ span.adyen-checkout__input.adyen-checkout__input--small.adyen-checkout__card__cv
 @media (max-width: 768px) {
     #cotons_resistants {
         height: 1200px;
-        background-image: url(http://recette.tamboor.com/themes/tamboor/css/../img/new/doux_mobile.jpg);
+        background-image: url(../img/new/doux_mobile.jpg);
     }
 }
 
@@ -7596,7 +7596,7 @@ span.adyen-checkout__input.adyen-checkout__input--small.adyen-checkout__card__cv
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(http://recette.tamboor.com/themes/tamboor/css/../img/new/coton.jpg);
+    background-image: url(../img/new/coton.jpg);
     height: 600px;
 }
 
@@ -7604,12 +7604,12 @@ span.adyen-checkout__input.adyen-checkout__input--small.adyen-checkout__card__cv
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(http://recette.tamboor.com/themes/tamboor/css/../img/new/coton_famille.jpg);
+    background-image: url(../img/new/coton_famille.jpg);
     height: 600px;
 }
 
 #cotons_peau {
-    background-image: url(http://recette.tamboor.com/themes/tamboor/css/../img/new/peaux_delicates_desktop.jpg);
+    background-image: url(../img/new/peaux_delicates_desktop.jpg);
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -7619,7 +7619,7 @@ span.adyen-checkout__input.adyen-checkout__input--small.adyen-checkout__card__cv
 @media (max-width: 768px) {
     #cotons_peau {
         height: 1200px;
-        background-image: url(http://recette.tamboor.com/themes/tamboor/css/../img/new/peaux_delicates_mobile.jpg);
+        background-image: url(../img/new/peaux_delicates_mobile.jpg);
     }
 }
 
@@ -7659,7 +7659,7 @@ span.adyen-checkout__input.adyen-checkout__input--small.adyen-checkout__card__cv
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(http://recette.tamboor.com/themes/tamboor/css/../img/new/green_diapers.jpg);
+    background-image: url(../img/new/green_diapers.jpg);
     height: 600px;
 }
 
@@ -7671,12 +7671,12 @@ span.adyen-checkout__input.adyen-checkout__input--small.adyen-checkout__card__cv
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(http://recette.tamboor.com/themes/tamboor/css/../img/new/eco_diapers.jpg);
+    background-image: url(../img/new/eco_diapers.jpg);
     height: 600px;
 }
 
 #green-fibre {
-    background-image: url(http://recette.tamboor.com/themes/tamboor/css/../img/new/Cellulose_unbleached_desktop.jpg);
+    background-image: url(../img/new/Cellulose_unbleached_desktop.jpg);
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -7686,7 +7686,7 @@ span.adyen-checkout__input.adyen-checkout__input--small.adyen-checkout__card__cv
 @media (max-width: 768px) {
     #green-fibre {
         height: 1200px;
-        background-image: url(http://recette.tamboor.com/themes/tamboor/css/../img/new/Cellulose_unbleached_mobile.jpg);
+        background-image: url(../img/new/Cellulose_unbleached_mobile.jpg);
     }
 }
 
@@ -7695,7 +7695,7 @@ span.adyen-checkout__input.adyen-checkout__input--small.adyen-checkout__card__cv
 }
 
 #green-emballage {
-    background-image: url(http://recette.tamboor.com/themes/tamboor/css/../img/new/diapers_kraft.jpg);
+    background-image: url(../img/new/diapers_kraft.jpg);
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -7705,7 +7705,7 @@ span.adyen-checkout__input.adyen-checkout__input--small.adyen-checkout__card__cv
 @media (max-width: 768px) {
     #green-emballage {
         height: 1200px;
-        background-image: url(http://recette.tamboor.com/themes/tamboor/css/../img/new/diapers_kraft_mobile.jpg);
+        background-image: url(../img/new/diapers_kraft_mobile.jpg);
     }
 }
 
@@ -7717,7 +7717,7 @@ span.adyen-checkout__input.adyen-checkout__input--small.adyen-checkout__card__cv
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url(http://recette.tamboor.com/themes/tamboor/css/../img/new/eco_diapers.jpg);
+    background-image: url(../img/new/eco_diapers.jpg);
     height: 600px;
 }
 
@@ -8289,4 +8289,266 @@ span.adyen-checkout__input.adyen-checkout__input--small.adyen-checkout__card__cv
     font-family: 'gotham_roundedbook';
     color: var(--text-light);
     font-size: 16px;
+}
+#green-emballage.c-green-emballage {
+    position: relative;
+}
+#green-emballage.c-green-emballage .container {
+    position: relative;
+    z-index: 8;
+}
+section#green-emballage:after {
+    content: '';
+    background: rgba(0,0,0,.3);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+/* media */
+@media only screen and (max-width: 1199.98px) {
+    #green_product_detail .btn {
+        margin-right: 8px;
+        padding: 12px 22px;
+    }
+}
+@media only screen and (max-width: 992px) {
+    #c-header.header-green {
+        background-image: url(../img/new/Header_green_mobile.jpg);
+        height: 570px;
+    }
+    #c-header.acheterhead .mc-mainTitle h1 {
+        font-weight: normal !important;
+    }
+    #c-header.acheterhead .mc-mainTitle {
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: center;
+    }
+    #c-header.acheterhead .hh-price {
+        padding: 0 35px;
+        margin-top: 0;
+    }
+    .body_custom .hh-price h2 {
+        font-size: 18px;
+    }
+    
+    .body_custom .hh-btn,
+    .body_custom .acheterhead .mc-mainTitle a {
+        font-size: 16px;
+        padding: 6px 20px;
+    }
+    /*  */
+    section {
+        padding: 30px 0 30px 0;
+    }
+    #green_product_detail .MIG-visuel {
+        margin-bottom: 0;
+    }
+    #green_product_detail .MIG-visuel img {
+        max-width: 80%;
+    }
+    #green_product_detail .text-content {
+        margin-top: 15px;
+    }
+   .body_custom .title-section {
+        font-size: 24px;
+        font-weight: normal;
+    }
+    #green_product_detail .ul-size li {
+        font-size: 14px;
+        width: 38px;
+        height: 38px;
+    }
+    #green_product_detail .green-product-description ul li {
+        font-size: 14px;
+    }
+    
+    .body_custom .btn-default-green {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+    .body_custom .btn-outline-green {
+        font-size: 16px;
+    }
+    .btn-outer {
+        margin-bottom: 10px;
+    }
+    #green_product_detail .note-green {
+        font-size: 15px;
+        margin-top: 0;
+    }
+    /*  */
+   
+   
+    #green-info .content-green p {
+        font-size: 14px;
+    }
+    /*  */
+    .c-green-fibre p {
+        font-size: 14px;
+    }
+    
+    p {
+        font-size: 14px;
+    }
+    #green-happy.c-green-happy {
+      padding-top: 10px;
+    }
+    #green-happy.c-green-happy .slick-slider p {
+        font-size: 16px;
+    }
+    
+    #green-happy.c-green-happy .slick-slider {
+        padding: 3rem 4rem;
+    }
+    .body_custom .slick-prev, .body_custom .slick-next {
+        height: 34px;
+        width: 34px;
+    }
+    .body_custom .slick-prev:before, .body_custom .slick-next:before {
+        font-size: 19px;
+    }
+    #green-happy.c-green-happy .text-content {
+        text-align: center;
+        margin-top: 25px;
+        margin-bottom: 3rem;
+    }
+    #green-happy.c-green-happy .text-content .title-section {
+        text-align: center;
+    }
+    #green-happy.c-green-happy .text-content p {
+        margin-bottom: 1rem;
+    }
+    .c-composition-section .tb-prem_para {
+        font-size: 14px;
+    }
+    
+    .body_custom .c-green-tsunami #green-tsunami p {
+        font-size: 14px;
+    }
+    .c-green-tsunami .tsunami-desc {
+        margin-bottom: 20px;
+    }
+
+    .c-green-tsunami .button-outer {
+        padding: 1rem 0 2rem;
+    }
+    .c-green-tsunami #green-tsunami .slick-slider {
+        padding: 3rem 4rem;
+    }
+    #green-fibre.c-green-fibre {
+        min-height: 450px;
+    height: auto;
+    }
+}
+@media only screen and (max-width: 767.98px) {
+    #green_product_detail .price {
+        text-align: center;
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+    #green_product_detail .btn-outer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    #green_product_detail .btn {
+        margin: 0 auto 25px;
+    }
+    #green_product_detail .note-green {
+        padding: 0 2rem;
+        text-align: center;
+    }
+    /*  */
+    #green-carousal-wrap .title-wrap {
+        width: 100%;
+    }
+    #green-carousal-wrap .container-details {
+        flex-wrap: wrap;
+    }
+    #green-carousal-wrap .slick-green-outer {
+        width: 100%;
+        margin-top: 5px;
+    }
+    #green-carousal-wrap .slick-prev, #green-carousal-wrap .slick-next {
+        top: 32%;
+    }
+    #green-carousal-wrap .slick-prev {
+        left: 36%;
+    }
+    #green-carousal-wrap .slick-next {
+        left: 50%;
+    }
+    #green-carousal-wrap .slick-slider {
+        margin-bottom: 10px;
+    }
+    /*  */
+    .row-custom {
+        display: block;
+    }
+    #green-info.green-infos .backGreenInfo {
+        height: 400px;
+        background-position: center;
+    }
+    #green-info .content-green {
+        padding: 2rem 2rem;
+        text-align: center;
+    }
+    /*  */
+    #green-fibre.c-green-fibre {
+        height: auto;
+        min-height: 870px;
+        background-size: cover;
+        background-position: bottom;
+    }
+    #green-fibre.c-green-fibre .hh-content {
+        padding: 0 3.5rem;
+    }
+    #c-green-responsable .text-content .title-section {
+        line-height: normal;
+    }
+    #c-green-responsable.green-responsable .text-content {
+        padding-bottom: 3rem;
+    }
+    /* #green-fibre.c-green-fibre .hh-content {} */
+    #c-green-responsable.green-responsable .backGreenResponsable {
+        height: 380px;
+        margin-bottom: 5px;
+    }
+    #green-emballage.c-green-emballage {
+        height: auto;
+        min-height: 580px;
+        padding: 3rem 2.5rem;
+        position: relative;
+    }
+    
+    #green-emballage.c-green-emballage .hh-content {
+        text-align: center;
+    }
+    #green-emballage.c-green-emballage .hh-boutons {
+        text-align: center;
+    }
+    .order-c {
+        display: flex;
+    }
+    .order-1 {
+        order:1;
+    }
+    .order-2 {
+        order:2;
+        width: 100%;
+    }
+    .c-green-tsunami #green-tsunami {
+        padding: 40px 0;
+    }
+    .c-green-tsunami .slick-magical-outer {
+        padding-right: 15px;
+    }
+    #green-carousal-wrap .slick-slide {
+        padding-right: 6px;
+    }
 }
