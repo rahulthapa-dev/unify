@@ -8412,7 +8412,315 @@ section#product_section {
     height: 100%;
     width: 100%;
 }
+#product_box_section .price {
+    margin-bottom: 20px;
+}
+#product_box_section .price .price-light {
+    font-family: 'gotham_roundedbook';
+    font-size: 14px;
+    color: var(--text-dark);
+}
+#product_box_section .price .price-strong {
+    font-family: 'gotham_roundedbold';
+    font-size: 20px;
+    color: var(--text-dark);
+}
+#product_box_section .price .label-club {
+    font-family: 'gotham_roundedbold';
+    font-size: 16px;
+    background-color: #d92527;
+    padding: 1px 8px;
+    color: #fff;
+    display: inline-block;
+    text-transform: capitalize;
+    margin-left: 2px;
+}
+.product-box-select.active .product-img-b {
+    display: none !important;
+}
+.product-box-select.active .product-img-active {
+    display: inline-block !important;
+}
+.product-box-carousal .select-product {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product-box-carousal .select-product .select-btn {
+    height: 45px;
+    width: 45px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'gotham_roundedbold';
+    color: var(--text-white);
+    background-color: var(--color-primary);
+    font-size: 36px;
+    line-height: 43px;
+    font-weight: normal !important;
+    border: 0;
+    border-radius: 50px;
+}
+.product-box-carousal .select-option h3 {
+    font-weight: normal;
+    font-family: 'gotham_roundedmedium';
+    margin-bottom: 0;
+    color: var(--text-dark);
 
+}
+.product-box-carousal .select-option p {
+    font-family: 'gotham_roundedbook_italic';
+    color: var(--text-light);
+}
+.product-box-carousal .select-product .select-option {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.product-box-carousal h4,
+.product-box-carousal .title-3 {
+    margin-bottom: 20px;
+}
+/* confi */
+#c-config.config-brand {
+    background: #94c5c4;
+    text-align: center;
+    padding: 13px;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    -webkit-box-shadow: 0 5px 14px 0 rgba(38, 48, 60, 0.1), 0 0 0 0 rgba(29, 64, 105, 0.1);
+    box-shadow: 0 5px 14px 0 rgba(38, 48, 60, 0.1), 0 0 0 0 rgba(29, 64, 105, 0.1);
+}
+#c-config .header-price {
+    padding: 5px 10px;
+    float: right;
+    text-align: right;
+    border-radius: 10px;
+    color: #fff;
+}
+#c-config .header-price .price-light {
+    font-family: 'gotham_roundedbook';
+    font-size: 14px;
+    color: #fff;
+    position: relative;
+    top: -1px;
+}
+
+#c-config .header-price .price-strong {
+    font-family: 'gotham_roundedbold';
+    font-size: 24px;
+    color: #fff;
+}
+
+#c-config .header-price .label-club {
+    font-family: 'gotham_roundedbook';
+    font-size: 11px;
+    background-color: #d92527;
+    padding: 1px 8px;
+    color: #fff;
+    display: inline-block;
+    text-transform: capitalize;
+    margin-left: 5px;
+    position: relative;
+    top: -5px;
+}
+
+.spaceTop {
+    display: block;
+    height: 140px;
+}
+
+#c-select-product .couches-size-button {
+    display: inline-block;
+    width: 10%;
+    min-width: 32px;
+    height: auto;
+    background: #f3f3f3;
+    color: #5d534f;
+    cursor: pointer;
+    margin: 0 0 0.2rem;
+    line-height: 0;
+}
+.body_custom #c-select-product .title-section {
+    font-size :28px;
+    margin-bottom: 20px;
+}
+
+#c-select-product .couches-size-list {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+#c-select-product p {
+    font-family: 'gotham_roundedbook';
+}
+#c-select-product .subtitle-config {
+    font-family: 'gotham_roundedmedium';
+    padding: 10px 0;
+    display: inline-block;
+    font-weight: normal;
+}
+#c-select-product .badge5-culotte {
+    bottom: 4px;
+    right: -10px;
+    padding: 2px 6px;
+    background: #ea5e5e;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 300;
+    width: 46px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+#c-select-product .couches-size-list li {
+    margin-bottom: 12px;
+    display: inline-block;
+}
+#c-select-product .couches-size-list.couches-size-list-c li:nth-child(1) .couches-size-button.selected,
+#c-select-product .couches-size-list.couches-size-list-c li:nth-child(1) .couches-size-button:hover {
+    background: #E4AE93;
+}
+#c-select-product .couches-size-list.couches-size-list-c li:nth-child(2) .couches-size-button.selected,
+#c-select-product .couches-size-list.couches-size-list-c li:nth-child(2) .couches-size-button:hover {
+    background: #94C5C4;
+}
+#c-select-product .couches-size-list.couches-size-list-c li:nth-child(3) .couches-size-button.selected,
+#c-select-product .couches-size-list.couches-size-list-c li:nth-child(3) .couches-size-button:hover {
+    background: #FEDFA1;
+}
+#c-select-product .couches-size-list.couches-size-list-c li:nth-child(4) .couches-size-button.selected,
+#c-select-product .couches-size-list.couches-size-list-c li:nth-child(4) .couches-size-button:hover {
+    background: #EC7B77;
+}
+#c-select-product .couches-size-list.couches-size-list-c li:nth-child(5) .couches-size-button.selected,
+#c-select-product .couches-size-list.couches-size-list-c li:nth-child(5) .couches-size-button:hover {
+    background: #D8EEF6;
+}
+#c-select-product .couches-size-list.couches-size-list-c li:nth-child(6) .couches-size-button.selected,
+#c-select-product .couches-size-list.couches-size-list-c li:nth-child(6) .couches-size-button:hover {
+    background: #EDC1BE;
+}
+#c-select-product .couches-size-list li .couches-size-button {
+    margin-right: 10px;
+    width: 75px;
+    height: 75px;
+    list-style: none;
+}
+#c-select-product .couches-size-list li .couches-size-button.selected, #c-select-product .couches-size-list li .couches-size-button:hover {
+    background: #94c5c4;
+    color: #fff;
+    transition: all 300ms ease-out;
+}
+#c-select-product .button-text {
+    font-size: 1.7rem;
+    white-space: nowrap;
+    line-height: 2.2;
+}
+#c-select-product .couches-size-list li div {
+    display: inline-block;
+    font-size: 13px;
+}
+.config-detail  .slick-slide-detail {
+    background: var(--bg-light);
+    padding: 35px 15px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+.config-detail .diaper-discription  h4 {
+    font-family: 'gotham_roundedbold';
+    color: var(--text-dark);
+}
+.config-detail  .logo-diaper {
+    width: 140px;
+    margin: 0 auto;
+}
+.config-detail .slick-slide img {
+    display: block;
+}
+.config-detail .diaper-discription {
+    font-family: 'gotham_roundedbook';
+    color: var(--text-dark);
+}
+
+.config-detail.selected  .slick-slide-detail,
+.config-detail:hover  .slick-slide-detail {
+    background: rgba(148, 197, 196, 0.7);
+    padding: 35px 15px;
+    text-align: center;
+}
+.config-detail.selected .diaper-discription  h4,
+.config-detail:hover .diaper-discription  h4 {
+    font-family: 'gotham_roundedbold';
+    color: var(--text-white);
+}
+.config-detail.selected  .logo-diaper {
+    width: 140px;
+    margin: 0 auto;
+}
+.config-detail.selected .slick-slide img {
+    display: block;
+}
+.config-detail.selected .diaper-discription,
+.config-detail:hover .diaper-discription {
+    font-family: 'gotham_roundedbook';
+    color: var(--text-white);
+}
+#c-select-product .slick-dots li button:before {
+    font-size: 46px;
+}
+#c-select-product .slick-dots li button:before {
+    color: #000;
+    opacity: .4;
+}
+#c-select-product .slick-dots li.slick-active button:before {
+    
+    color: #E4AE93;
+    opacity: .9;
+}
+.config-slick {
+    padding-bottom: 45px; 
+}
+.config-slick .prev-arrow {
+    position: absolute;
+    top: 103%;
+    left: 40%;
+    color: var(--text-dark);
+    background-color: transparent;
+    border: transparent;
+    font-family: 'gotham_roundedbook';
+    cursor: pointer;
+}
+.config-slick .slick-dots {
+    bottom: 4px;
+}
+.config-slick .next-arrow {
+    position: absolute;
+    top: 100%;
+    cursor: pointer;
+    left: 52%;
+    font-family: 'gotham_roundedbook';
+    background-color: #94C5C4;
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 80px;
+    outline: none!important;
+    padding: 10px 30px;
+    transition-duration: .5s;
+    transition-property: background-color;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: center;
+    text-decoration: none;
+}
 /* #c-cotons-infos {} ,
 .c-cotons-infos {} */
 /* media quaries */
@@ -8500,6 +8808,11 @@ section#product_section {
         display: flex;
         justify-content: center;
         align-items: end;
+    }
+    /*  */
+    .config-brand img {
+        height: 50px;
+        transition: all .3s ease;
     }
     
 }
@@ -8631,6 +8944,16 @@ section#product_section {
     }
     #info-section .description-info p {
         font-size: 16px;
+    }
+    #product_section .product-image {
+        width: 160px;
+    }
+    .config-slick .prev-arrow {
+        top: 101%;
+        left: 20%;
+    }
+    .config-slick .slick-dots {
+        bottom: 15px;
     }
 }
 @media only screen and (max-width: 375px) {

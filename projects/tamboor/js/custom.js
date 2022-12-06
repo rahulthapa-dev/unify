@@ -118,6 +118,15 @@ $(document).ready(function() {
             },
         ]
     });
+    $('.config-slick').slick({
+        slidesToShow: 1,
+        dots: true,
+        arrows: true,
+        adaptiveHeight: true,
+        prevArrow: '<div class="slide-arrow prev-arrow">< Précedent</div>',
+        nextArrow: '<div class="slide-arrow next-arrow">Suivant</div>'
+        // infinite: false
+    });
     // green.html
     $('.happy-slick').slick({
         slidesToShow: 1,
@@ -129,10 +138,12 @@ $(document).ready(function() {
     });
     //
     $('.product-box-select').on('click', function() {
-        $('.product-box-select').removeClass('active');
-        $(this).addClass('active');
-
-        // var divSelect = $(this).attr('data-info-div')
+        $(this).addClass('active').siblings().removeClass('active');;
+        
+        $("div[id=" + $(this).attr("data-info-div") + "]").addClass("show").siblings().removeClass('show');;
         // $(divSelect).removeClass('d-none')
+
     })
+
+    
 });
