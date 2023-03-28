@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@400;600;700&display=swap');
+:root {
+    --text-color: #1a1b1f;
+    --text-link: #222;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+}
+
+h2,
+.ff-montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    color: var(--text-link);
+}
+
+a.navbar-brand {
+    position: relative;
+    font-size: 1.5rem;
+}
+
+.navbar-brand:after {
+    position: absolute;
+    content: '';
+    height: 8px;
+    width: 100%;
+    background: linear-gradient(45deg, #ffe2f0, #b4dbff);
+    left: 0;
+    bottom: 10px;
+    z-index: -1;
+}
+
+.nav-link i {
+    font-size: 24px;
+}
+
+.nav-link {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+div.navbar-collapse {
+    flex-grow: inherit;
+}
+
+.connect-icons i {
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+a,
+.connect-icons i {
+    animation: fadein 1s;
+    transition: .5s ease-in;
+}
+
+.connect-icons i:hover {
+    background: url(../img/content.jpg);
+    background-size: cover;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: .5s ease-out;
+}
+
+.project-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--text-color);
+    display: block;
+}
+
+.project-wrapper:after {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/content.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.btn-custom.btn-lg {
+    border-radius: 15px;
+    background-size: cover;
+    display: inline-block;
+    padding: 10px;
+}
+
+.project-wrapper:after {
+    animation: fadeout 1s;
+    opacity: 0;
+}
+
+.project-wrapper:hover .project-description {
+    color: #fff;
+}
+
+.project-wrapper:hover:after {
+    animation: fadein 1s;
+    opacity: 1;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.btn-hover {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align: center;
+    border: none;
+    background-size: 300% 100%;
+    text-decoration: none;
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:hover {
+    color: #fff;
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+    outline: none;
+}
+
+.btn-hover.btn-gradient {
+    background-image: linear-gradient(to right, #25aae1, #4481eb, #04befe, #3f86ed);
+    box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}
+
+
+/*  */
+
+.project-list ul {
+    margin-bottom: 4rem;
+}
+
+.project-list ul li {
+    margin-bottom: 2em;
+}
+
+button.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+nav.navbar-light .navbar-toggler {
+    border-color: transparent;
+}
+
+label.label-menu {
+    display: flex;
+    flex-direction: column;
+    width: 33px;
+    cursor: pointer;
+}
+
+label.label-menu span {
+    background: var(--text-color);
+    border-radius: 10px;
+    height: 5px;
+    margin: 3px 0;
+    transition: .4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.label-menu span:nth-of-type(1) {
+    width: 50%;
+}
+
+.label-menu span:nth-of-type(2) {
+    width: 100%;
+}
+
+.label-menu span:nth-of-type(3) {
+    width: 75%;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked~span:nth-of-type(1) {
+    transform-origin: bottom;
+    transform: rotatez(45deg) translate(4px, 0px)
+}
+
+input[type="checkbox"]:checked~span:nth-of-type(2) {
+    transform-origin: top;
+    transform: rotatez(-45deg)
+}
+
+input[type="checkbox"]:checked~span:nth-of-type(3) {
+    transform-origin: bottom;
+    width: 50%;
+    transform: translate(16px, -7px) rotatez(45deg);
+}
+.display-4 {
+    line-height: 1.6;
+}
