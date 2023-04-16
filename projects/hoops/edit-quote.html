@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>edit Detail</title>    
+		<!--Import Material Icon Font-->
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Import Catamaran Font-->
+		<link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="sass/hoops-crm.css"  media="screen,projection"/>
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body id="qoute-list-body" class="hoops-UIkit grey body-light">
+
+    	<div class="main-wrapper">
+    			<!--*****   SIDEBAR NAVIGATION   *****-->
+            <div class="side-nav fixed white collapsed" id="main_navigation">
+
+            	<div class="logo hide">
+            		<a href="javascript:void(0)"><img src="images/logo.png" alt="hoops crm"/></a>
+            	</div>
+
+            	<div class="logo logo-small">
+            		<a href="javascript:void(0)"><img src="images/logo-small.png" alt="hoops crm"/></a>
+            	</div>
+
+            	<div class="current_user">
+            		<div class="name_user dropdown-button pointer" data-activates='user-dropdown' data-beloworigin="true">
+            			<span class="user_thumb">
+            				<img class="img-responsive" src="images/img-user.png">
+            			</span>
+            			<a class="user-log" href="javascript:void(0)">Kate Winslet <i class="material-icons">keyboard_arrow_down</i></a>
+	    			    <ul id='user-dropdown' class='dropdown-content'>
+						    <li><a href="javascript:void(0)"><i class="material-icons">account_circle</i>My Profile</a></li>
+						    <li class="divider"></li>
+						    <li><a href="javascript:void(0)"><i class="material-icons">https</i>Change Password</a></li>
+						    <li class="divider"></li>
+						    <li><a href="javascript:void(0)"><i class="material-icons">power_settings_new</i>Logout </a></li>
+					    </ul>
+            			
+            		</div>
+            	</div>
+
+	            <ul class="main-menu">
+					<li><a class="tooltipped" data-position="right" data-delay="50" data-tooltip="Dashboadrd" href="#/"><i class="material-icons">dashboard</i><span class="nav_link_text">Dashboard</span></a></li>
+					<li><a class="active tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Customers"><i class="material-icons">person</i><span class="nav_link_text">Customers</span></a></li>
+					<li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Leads"><i class="material-icons">my_location</i><span class="nav_link_text">Leads</span></a></li>
+					<li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Quotes"><i class="material-icons">receipt</i><span class="nav_link_text">Quotes</span></a></li>
+					<li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Jobs"><i class="material-icons">work</i><span class="nav_link_text">Jobs</span></a></li>
+					<li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Calender"><i class="material-icons">today</i><span class="nav_link_text">Calender</span></a></li>
+					<li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Purchase Orders"><i class="material-icons">description</i><span class="nav_link_text">Purchase Orders</span></a></li>
+					<li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Reports"><i class="material-icons">poll</i><span class="nav_link_text">Reports</span></a></li>
+					<li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Catalogue"><i class="material-icons">storage</i><span class="nav_link_text">Catalogue</span></a></li>
+	            </ul>
+
+            </div>
+
+	        <header id="header" class="expand">
+	               <nav class="navbar_header light-blue lighten-5 row">
+	                  <div class="nav-wrapper col s12">
+	                  <a href="#" data-activates="main_navigation" class="button-collapse"><i class="material-icons">menu</i></a>
+	                  	<div class="toggles">
+		                    <a href="#" class="toggle-sidebar hide hide-on-med-and-down"><i class="material-icons white-text">chevron_left</i></a>
+		                    <a href="#" class="expand-sidebar"><i class="material-icons white-text">menu</i></a>
+		                 </div> 
+
+	                    <ul id="nav-mobile" class="right">
+                    		<li class="dropMenu" id="search_place">	                      
+                        		<a class='search_button-open' href='#'>
+                           			<i class="material-icons white-text">search</i>
+                        		</a> 
+
+	                            <div class="input-field search_header">
+						          <input id="header-search" class="white" placeholder="Enter your search here..." id="search_header" type="text" class="validate">
+						          <i id="close-header-search" class="material-icons white-text grey-text text-lighten-8">search</i>
+						        </div>
+
+                     		 </li>
+
+							<li class="dropMenu">
+								<a class='dropdown-button' href='#' data-beloworigin="true" data-constrainWidth="false" data-alignment="right" data-activates='addCustomer'>
+									<i class="material-icons white-text">add_circle</i>
+								</a>
+								<div id='addCustomer' class='dropdown-content dropdown-eq'>
+									<ul>
+										<li><a href="#!"><i class="material-icons">person_add</i>Add Customers</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">my_location</i>Add Leads</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">receipt</i>Create Quotes</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">work</i>Schedule Jobs</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">event_note</i>Add to Calendar</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">library_add</i>Add Catalogue</a></li>
+									</ul>
+								</div>
+							</li>
+	                        <li class="dropMenu">
+								<a class='dropdown-button' href='#' data-beloworigin="true" data-constrainWidth="false" data-alignment="right" data-activates='setting'>
+									<i class="material-icons white-text">settings</i>
+								</a>
+								<div id='setting' class='dropdown-content dropdown-eq'>
+									<ul>
+										<li><a href="#!"><i class="material-icons">wb_incandescent</i>Decorations</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">group</i>Vendors</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">info</i>General</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">extension</i>Integrations</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">drafts</i>Email Templates</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">check_box</i>Job Tasks</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">person</i>Users</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">attach_money</i>Billing</a></li>
+									</ul>
+								</div>
+	                        </li>
+
+	                        <li class="relative">
+	                      		<a href="#" class='dropdown-button' href='#' data-beloworigin="true" data-constrainWidth="false" data-alignment="right" data-activates='notification'>
+	                  				<i class="material-icons white-text">notifications</i> <span class="notification-number pulse ">3</span>
+	                  			</a>
+								<ul id='notification' class='dropdown-content'>
+									<li>
+										<div class="notification_wrapper">
+											<ul class="clearfix">
+												<li>
+													<div class="notification_icon">
+														<span class="icon-noti purple">
+															<i class="material-icons white-text">my_location</i>
+														</span>
+													</div>
+
+													<div class="notification-text">
+														<p>Alexandra Jones <span class="grey-text text-lighten-7">added a new lead</span></p>
+														<a href="javascript:void(0)" class="light-blue-text text-base">Team info design company</a>
+														<span class="time-duration grey-text text-lighten-7">10 min ago</span>
+													</div>
+												</li>
+
+												<li>
+													<div class="notification_icon">
+														<span class="icon-noti grey lighten-9">
+															<i class="material-icons white-text">person</i>
+														</span>
+													</div>
+
+													<div class="notification-text">
+														<p>Sierra Dickinson <span class="grey-text text-lighten-7">is now added as a customer</span></p>
+														<a href="javascript:void(0)" class="light-blue-text text-base">Robbing Hoods Car Detailing</a>
+														<span class="time-duration grey-text text-lighten-7">2 hours ago</span>
+													</div>
+												</li>
+
+												<li>
+													<div class="notification_icon">
+														<span class="icon-noti yellow lighten-4">
+															<i class="material-icons white-text">work</i>
+														</span>
+													</div>
+
+													<div class="notification-text">
+														<p>Olivia Kelly <span class="grey-text text-lighten-7">created a job</span></p>
+														<a href="javascript:void(0)" class="light-blue-text text-base">Fresh Prince of Bel-Air</a>
+														<span class="time-duration grey-text text-lighten-7">20 min ago</span>
+													</div>
+												</li>
+
+												<li>
+													<div class="notification_icon">
+														<span class="icon-noti blue-grey darken-4">
+															<i class="material-icons white-text">receipt</i>
+														</span>
+													</div>
+
+													<div class="notification-text">
+														<p>Allison Faber <span class="grey-text text-lighten-7">created a quote.</span></p>
+														<a href="javascript:void(0)" class="light-blue-text text-base">Think Promotional</a>
+														<span class="time-duration grey-text text-lighten-7">7 July, 2017</span>
+													</div>
+												</li>
+												<li>
+													<div class="notification_icon">
+														<span class="icon-noti purple">
+															<i class="material-icons white-text">my_location</i>
+														</span>
+													</div>
+
+													<div class="notification-text">
+														<p>Kate Winslet <span class="grey-text text-lighten-7">added a new lead</span></p>
+														<a href="javascript:void(0)" class="light-blue-text text-base">Pen printing and T-shirts design</a>
+														<span class="time-duration grey-text text-lighten-7">12 July 2017</span>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</li>		
+								</ul>
+                  		    </li>
+
+	                    </ul>
+	                  </div>
+	                </nav>
+	        </header>
+          <!--   /End Side Navbar  -->
+
+          <!--****  Mobile Search  ****-->
+          	<div class="responsive-search">
+          		<div class="input-field custom-search bordered white">
+			        <div class="input">
+			        	<i class="material-icons">search</i>
+			        	<input placeholder="Search here..." id="first_name" class="validate" type="text">
+			        </div>
+		        </div>
+          	</div>
+		  <!--****  /End Mobile Search  ****-->
+
+          <!--******     Main Content Starts      ******-->
+
+		    <main id="content_wrapper" class="qoute-detail collapsed">
+		    	<div class="row">
+		    		<!--**   RIGHT QUOTE DETAIL    **-->
+		    		<div class="col l12 m12 s12 grey body-dark right-quote-wrapper edit-quote-wrapper">
+		    			<div class="right-quote-container white clearfix">
+		    				<div class="header-right-quote">
+		    					<div class="quoteCustomerSearch">
+									<div class="input-field custom-search bordered">
+									    <div class="input">
+									        <i class="material-icons pointer">search</i>
+									        <input id="addCust_search" placeholder="Search or add customer" id="first_name" type="text" class="validate" >
+									        <!--****    CUSTOM DROPDOEN WITH SEARCH    *****-->
+				    							<div class="customDropdown white">
+													<div class="ancWrapper">
+				    									<span class="light-blue-text pointer flex"><i class="material-icons">person_add</i>Add New Customer</span>		
+				    								</div>
+				    								<div class="WrappercustomerList">
+				    									<ul class="customerList">
+				    										<li><a href="javascript:void(0)">Think Promotional</a></li>
+				    										<li><a href="javascript:void(0)">Hoops CRM</a></li>
+				    										<li><a href="javascript:void(0)">Fresh Prince of Bel-Air</a></li>
+				    										<li><a href="javascript:void(0)">Ash Ketchum - Ketchum's Ketchup</a></li>
+				    										<li><a href="javascript:void(0)">The Gimpsons</a></li>
+				    										<li><a href="javascript:void(0)">Futuristic Mechanics</a></li>
+				    										<li><a href="javascript:void(0)">Ketchum's Ketchup</a></li>
+				    									</ul>
+				    								</div>				    								
+				    							</div>	
+				    							<!--****  /END CUSTOM DROPDOEN WITH SEARCH    *****-->								        
+									    </div>
+									</div>
+
+		    						<h5 class="pointer bold-500 hide">
+			    						<span class="heading-icon light-blue"><i class="material-icons white-text">perm_contact_calendar</i></span>
+			    						<span class="nameDropdownWrapper relative" href="javascript:void(0)"><span onclick="customerDropdown()"><div>Ash Ketchum - Ketchum's Ketchup</div><i class="material-icons">keyboard_arrow_down</i></span>
+			    							<div class="customDropdown white">
+			    								<div class="search_container">
+			    									<div class="input-field searchCustomer relative">
+			    										<input type="text" placeholder="Search customer" name="search"/>
+			    										<span class="icon-search"><i class="material-icons">search</i></span>
+			    									</div>
+			    								</div>
+												<div class="ancWrapper">
+			    									<span class="light-blue-text pointer flex"><i class="material-icons">person_add</i>Add New Customer</span>		
+			    								</div>
+			    								<div class="WrappercustomerList">
+			    									<ul class="customerList">
+			    										<li><a href="javascript:void(0)">Think Promotional</a></li>
+			    										<li><a href="javascript:void(0)">Hoops CRM</a></li>
+			    										<li><a href="javascript:void(0)">Fresh Prince of Bel-Air</a></li>
+			    										<li><a href="javascript:void(0)">Ash Ketchum - Ketchum's Ketchup</a></li>
+			    										<li><a href="javascript:void(0)">The Gimpsons</a></li>
+			    										<li><a href="javascript:void(0)">Futuristic Mechanics</a></li>
+			    										<li><a href="javascript:void(0)">Ketchum's Ketchup</a></li>
+			    									</ul>
+			    								</div>				    								
+			    							</div>
+			    						</span>			    						
+		    						</h5>
+									<a class="btn-flat grey body-light btn-large light-blue-border light-blue-text right modal-trigger playVidio" onclick="watchVideo()" href="#watchVideo"><i class="material-icons left">play_circle_filled</i>Watch the video</a>
+								    <!-- Modal Structure -->
+								    <div id="watchVideo" class="modal modal-quote-video white">
+									    <div class="modal-content">
+									    	<div class="watch-video">
+									    		<img class="img-responsive" src="images/watch-video.png" alt="watch">
+									    	</div>	
+									    	<a href="javascript:void(0)" class="btn-play"><i class="material-icons white-text">play_circle_filled</i></a>
+									    	<div class="modal-bck"></div>
+										</div>
+										<a class="modal-action modal-close" href="javascript:void(0)"><i class="material-icons">close</i></a>
+								 	</div>									
+								</div>
+
+								<section class="details_cust hide">
+									<div class="row contact-details">
+										<div class="col l3 m3 s12 no-padding-left">
+											<div class="detail">
+												<span class="label-flat">Company</span>
+												<p>Ketchum's Ketchup</p>
+											</div>
+										</div>
+
+										<div class="col l3 m3 s12">
+											<div class="detail">
+												<span class="label-flat">Contact Name</span>
+												<p>Ash Ketchum</p>
+											</div>
+										</div>
+
+										<div class="col l3 m3 s12">
+											<div class="detail">
+												<span class="label-flat">Email</span>
+												<p>Ketchum's Ketchup</p>
+											</div>
+										</div>
+
+										<div class="col l3 m3 s12 no-padding-right">
+											<div class="detail">
+												<span class="label-flat">Contact Number</span>
+												<p>+1-123-456+-7891</p>
+											</div>
+										</div>
+									</div>
+
+									<div class="row contact-details">
+										<div class="col l3 m3 s12 no-padding-left">
+											<div class="detail">
+												<span class="label-flat">Billing address</span>
+												<p>Jane roe, 200 e main st, phoenix az, 85123, usa</p>
+											</div>
+										</div>
+
+										<div class="col l3 m3 s12">
+											<div class="detail">
+												<span class="label-flat">Shipping address</span>
+												<p>Jane roe, 200 e main st, phoenix az, 85123, usa</p>
+											</div>
+										</div>
+
+										<div class="col l3 m3 s12">
+											<div class="detail">
+												<span class="label-flat">Minimum margin</span>
+												<p>20%</p>
+											</div>
+										</div>
+
+										<div class="col l3 m3 s12 no-padding-right">
+											<div class="detail">
+												<span class="label-flat">Default terms</span>
+												<p>Default terms text should be here</p>
+											</div>
+										</div>
+									</div>
+								</section>
+							</div>
+
+							<div class="edit-quote-container">
+								<div class="grid-list">
+									<p>Items</p>
+									<table id="test" class="editQuoteTable bordered">
+								        <thead>
+								          <tr>
+								              <th class="t-grid center-align">&nbsp;</th>
+								              <th>Product</th>
+								              <th>Decorations</th>
+								              <th>Description</th>
+								              <th>QTY</th>
+								              <th>Rate</th>
+								              <th>Total cost</th>
+								              <th>Total profit</th>
+								              <th>Attach</th>
+								              <th class="t-delete center-align">&nbsp;</th>
+								          </tr>
+								        </thead>
+
+								        <tbody>
+								          <tr>
+								          	<td><span class="grid-icon"><i class="material-icons">apps</i></span></td>
+									          <td class="td-input input-disabled">							  	
+												<div class="input-field custom-dropdown bordered">
+													<i class="material-icons dop-icon">keyboard_arrow_down</i>
+													<select disabled>
+														<option value="" selected>select</option>
+														<option value="1">Option 1</option>
+														<option value="2">Option 2</option>
+														<option value="3">Option 3</option>
+													</select>
+												</div>
+									          </td>
+									          <td class="td-input input-disabled">
+												<div class="input-field custom-dropdown bordered">
+													<i class="material-icons dop-icon">keyboard_arrow_down</i>
+													<select disabled>
+														<option value="" selected>select</option>
+														<option value="1">Option 1</option>
+														<option value="2">Option 2</option>
+														<option value="3">Option 3</option>
+													</select>
+												</div>
+									          </td>
+									          <td class="td-input input-disabled">
+												<div class="input-field bordered-input">
+													<input disabled  placeholder="Item description should be here" id="first_name" type="text" class="validate">
+												</div>
+											  </td>
+									          <td class="qty td-input input-disabled">
+												<div class="input-field bordered-input">
+													<input disabled  placeholder="0" id="first_name" type="text" class="validate">
+												</div>
+											  </td>
+									          <td>$30.00</td>
+									          <td>$3,000.00</td>
+									          <td>$3000.00</td>
+									          <td><span class="attachment-icon flex"><i class="material-icons">attachment</i> 1</span></td>
+									          <td><div class="flex"><a href="javascript:void(0)" class="copy-icon hide"><i class="material-icons">content_copy</i></a><a href="javascript:void(0)" class="delete-icon"><i class="material-icons">delete</i></a></div></td>
+								          </tr>
+								          <tr>
+								          	<td><span class="grid-icon"><i class="material-icons">apps</i></span></td>
+									          <td class="td-input input-disabled">							  	
+												<div class="input-field custom-dropdown bordered">
+													<i class="material-icons dop-icon">keyboard_arrow_down</i>
+													<select disabled>
+														<option value="" selected>select</option>
+														<option value="1">Option 1</option>
+														<option value="2">Option 2</option>
+														<option value="3">Option 3</option>
+													</select>
+												</div>
+									          </td>
+									          <td class="td-input input-disabled">
+												<div class="input-field custom-dropdown bordered">
+													<i class="material-icons dop-icon">keyboard_arrow_down</i>
+													<select disabled>
+														<option value="" disabled selected>select</option>
+														<option value="1">Option 1</option>
+														<option value="2">Option 2</option>
+														<option value="3">Option 3</option>
+													</select>
+												</div>
+									          </td>
+									          <td class="td-input input-disabled">
+												<div class="input-field bordered-input">
+													<input disabled  placeholder="Item description should be here" id="first_name" type="text" class="validate">
+												</div>
+											  </td>
+									          <td class="qty td-input input-disabled">
+												<div class="input-field bordered-input">
+													<input disabled  placeholder="0" id="first_name" type="text" class="validate">
+												</div>
+											  </td>
+									          <td>$30.00</td>
+									          <td>$3,000.00</td>
+									          <td>$3000.00</td>
+									          <td><span class="attachment-icon flex"><i class="material-icons">attachment</i> 1</span></td>
+									          <td><div class="flex"><a href="javascript:void(0)" class="copy-icon hide"><i class="material-icons">content_copy</i></a><a href="javascript:void(0)" class="delete-icon"><i class="material-icons">delete</i></a></div></td>
+								          </tr>
+
+								          <tr class="active">
+									          <td><span class="grid-icon"><i class="material-icons">apps</i></span></td>
+									          <td colspan="6"></td>
+									          <td colspan="2"><p class="subtotal">Subtotal (Ex tax)<span> $16,000.00</span></p></td>
+									          <td><a href="javascript:void(0)" class="delete-icon"><i class="material-icons">delete</i></a></td>
+								          </tr>
+								          <tr>
+								          	<td><span class="grid-icon"><i class="material-icons">apps</i></span></td>
+									          <td class="td-input input-disabled">							  	
+												<div class="input-field custom-dropdown bordered">
+													<i class="material-icons dop-icon">keyboard_arrow_down</i>
+													<select disabled>
+														<option value="" selected>select</option>
+														<option value="1">Option 1</option>
+														<option value="2">Option 2</option>
+														<option value="3">Option 3</option>
+													</select>
+												</div>
+									          </td>
+									          <td class="td-input input-disabled">
+												<div class="input-field custom-dropdown bordered">
+													<i class="material-icons dop-icon">keyboard_arrow_down</i>
+													<select disabled>
+														<option value="" disabled selected>select</option>
+														<option value="1">Option 1</option>
+														<option value="2">Option 2</option>
+														<option value="3">Option 3</option>
+													</select>
+												</div>
+									          </td>
+									          <td class="td-input input-disabled">
+												<div class="input-field bordered-input">
+													<input disabled  placeholder="Item description should be here" id="first_name" type="text" class="validate">
+												</div>
+											  </td>
+									          <td class="qty td-input input-disabled">
+												<div class="input-field bordered-input">
+													<input disabled  placeholder="0" id="first_name" type="text" class="validate">
+												</div>
+											  </td>
+									          <td>$30.00</td>
+									          <td>$3,000.00</td>
+									          <td>$3000.00</td>
+									          <td><span class="attachment-icon flex"><i class="material-icons">attachment</i> 1</span></td>
+									          <td><div class="flex"><a href="javascript:void(0)" class="copy-icon hide"><i class="material-icons">content_copy</i></a><a href="javascript:void(0)" class="delete-icon"><i class="material-icons">delete</i></a></div></td>
+								          </tr>
+								          <tr class="active"">
+									          <td><span class="grid-icon"><i class="material-icons">apps</i></span></td>
+									          <td colspan="6"></td>
+									          <td colspan="2"><p class="subtotal">Subtotal (Ex tax)<span> $21,000.00</span></p></td>
+									          <td><a href="javascript:void(0)" class="delete-icon"><i class="material-icons">delete</i></a></td>
+								          </tr>
+								        </tbody>
+								    </table>
+
+								    <div class="row footer-controls white">
+								    	<div class="col l4 m4 s12 left-params">
+								    		<div class="f-one">
+								    			<div class="btns">
+								    				<a class="waves-effect waves-dark btn-flat white grey-border darken-01-text text-darken-01" href="javascript:void(0)">Add items</a>
+								    				<a class="waves-effect waves-dark btn-flat white grey-border darken-01-text text-darken-01" href="javascript:void(0)">Clear all lines</a>
+								    				<a class="waves-effect waves-dark btn-flat white light-blue-border light-blue-text" href="javascript:void(0)">Add sub total</a>
+								    			</div>
+												<div class="relative">
+												    <span class="label-flat">Note</span>
+												    <textarea id="textarea1" placeholder="Enter call note text here..." class="materialize-textarea"></textarea>
+												</div>
+								    		</div>
+								    	</div>
+
+								    	<div class="col l5 m5 s12 middle-params">
+								    		<div class="f-one">
+								    			<div class="send-quotation flex">
+								    				<div class="switch">
+														<label><input type="checkbox"><span class="lever"></span></label>
+													</div>
+								    				<p>Send product image in quotation to customer?</p>
+								    			</div>
+
+								    			<div class="toggle-total flex">
+								    				<div class="hide-total">
+								    					<div class="flex">
+										    				<div class="switch">
+																<label><input type="checkbox"><span class="lever"></span></label>
+															</div>
+										    				<p>Hide total <a href="#" class="help"><i class="material-icons">help</i></a></p>
+								    					</div>
+								    				</div>
+								    				<div class="hide-links">
+								    					<div class="flex">
+										    				<div class="switch">
+																<label><input type="checkbox"><span class="lever"></span></label>
+															</div>
+										    				<p>Hide Links<a href="#" class="help"><i class="material-icons">help</i></a></p>
+								    					</div>
+								    				</div>
+								    			</div>
+								    			<div class="input-field custom-dropdown toggle-quote-dropdown">
+											  		<span class="label">Lead Channel <a href="#" class="help"><i class="material-icons">help</i></a></span>
+											  		<i class="material-icons dop-icon">keyboard_arrow_down</i>
+												    <select>
+												      <option value="" disabled selected>Yellow Pages</option>
+												      <option value="1">Yellow Pages</option>
+												      <option value="2">Option 2</option>
+												      <option value="3">Option 3</option>
+												    </select>
+								    			</div>
+								    		</div>
+								    	</div>
+
+								    	<div class="col l3 m3 s12 right-params">
+								    		<div class="f-one">
+								    			<div class="row clearfix">
+								    				<div class="col l4 m4 s4"><p class="right-align">Subtotal</p></div>
+								    				<div class="col l8 m8 s8"><p class="right-align">$21,000.00</p></div>
+								    			</div>	
+								    			<div class="row clearfix">
+								    				<div class="col l4 m4 s4">
+							    						<div class="calcTax right-align">	
+							    							<input class="bordered-input" type="text" placeholder="Tax"/>
+							    							<div id="taxDropdown" class="dropdownTax white">
+							    								<a class="light-blue-text addNewTax" href="javascript:void(0)"><i class="material-icons dop-icon">add</i>Add new</a>
+							    								<ul class="taxList">
+							    									<li><a href="javascript:void(0)">GST (18%)</a></li>
+							    									<li><a href="javascript:void(0)">GST (28%)</a></li>				    									
+							    								</ul>						    								
+							    							</div>
+							    							<!--*****   Add New Tax    *****-->
+							    							<div id="introNewTax" class="white">
+					    										<div class="taxFields">
+					    											<div>
+						    											<input type="text" placeholder="Name"/>
+						    											<input type="text" placeholder="%"/>
+						    										</div>	
+						    										<div class="addtaxBtns clearfix">
+						    											<a class="text-link grey-text text-lighten-7 left" href="javascript:void(0)"><i class="material-icons icon-left">clear</i> Cancel</a>
+
+						    											<a class="btn-flat white light-blue-border light-blue-text right" href="javascript:void(0)">Add</a>
+						    										</div>						    										
+					    										</div>
+							    								<ul class="taxList">
+							    									<li><a href="javascript:void(0)">GST (18%)</a></li>
+							    									<li><a href="javascript:void(0)">GST (28%)</a></li>				    							
+							    								</ul>							    										
+							    							</div>
+							    							<!--*****   Add New Tax    *****-->								    							
+							    						</div>
+							    					</div>
+								    				<div class="col l8 m8 s8"><p class="right-align">$500.00</p></div>
+								    			</div>
+								    			<div class="row clearfix">
+								    				<div class="col l4 m4 s4"><p class="right-align"><strong>total</strong></p></div>
+								    				<div class="col l8 m8 s8"><p class="right-align"><strong>$21,000.00</strong></p></div>
+								    			</div>
+								    		</div>
+								    	</div>
+								    </div>
+								</div>
+							</div>
+		    			</div>
+		    		</div>	
+		    		<!--**  /END RIGHT QUOTE DETAIL    **-->
+		    	</div>
+	   		</main>
+
+          <!--******     /Main Content Ends      ******-->
+
+    	</div>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/bin/materialize.min.js"></script>
+      <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>

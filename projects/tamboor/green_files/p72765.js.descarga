@@ -1,0 +1,985 @@
+
+(function(d, w) {
+  'use strict';
+
+  var console = (w.console && w.console.log) ? w.console : { log : function(){} };
+
+  var __kwkpartnertag,
+      __kwkpartnertagcook;
+  var __kwkparams = {};
+
+  __kwkparams.ct                  = [];
+  __kwkparams.lang                = 0; // Checking language needed
+  __kwkparams.urls                = ["img.metaffiliation.com/u/31/p72765.js","img.netaffiliation.com/u/31/p72765.js","eud.tamboor.com/u/31/p72765.js"];
+  __kwkparams.tags                = {"accueil":[{"nom":"RTB_premium","object":"script","attr":{"text":"window.rdAsyncInit=function(){RD.init({merchant_id:'72765'});};var rd_1d43f5s_a=new Date();rd_1d43f5s_a.setMinutes(0);rd_1d43f5s_a.setSeconds(0);var rd_1d43f5s_seconds=parseInt(rd_1d43f5s_a.getTime()\/1000);(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}js=d.createElement(s);js.id=id;js.src=\"\/\/analytics.optimalpeople.fr\/js\/rd-o-sdk.js?t=\"+rd_1d43f5s_seconds;fjs.parentNode.insertBefore(js,fjs);}(document,'script','rd-jssdk'));"},"lang":"","cmp_ready":false,"axeptio_vendor_id":"rtbpremium","onetrust_category_id":null}],"produit":[{"nom":"RTB_premium","object":"script","attr":{"text":"window.rdAsyncInit=function(){RD.init({merchant_id:'72765'});};var rd_1d43f5s_a=new Date();rd_1d43f5s_a.setMinutes(0);rd_1d43f5s_a.setSeconds(0);var rd_1d43f5s_seconds=parseInt(rd_1d43f5s_a.getTime()\/1000);(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}js=d.createElement(s);js.id=id;js.src=\"\/\/analytics.optimalpeople.fr\/js\/rd-o-sdk.js?t=\"+rd_1d43f5s_seconds;fjs.parentNode.insertBefore(js,fjs);}(document,'script','rd-jssdk'));"},"lang":"","cmp_ready":false,"axeptio_vendor_id":"rtbpremium","onetrust_category_id":null}],"categorie":[{"nom":"RTB_premium","object":"script","attr":{"text":"window.rdAsyncInit=function(){RD.init({merchant_id:'72765'});};var rd_1d43f5s_a=new Date();rd_1d43f5s_a.setMinutes(0);rd_1d43f5s_a.setSeconds(0);var rd_1d43f5s_seconds=parseInt(rd_1d43f5s_a.getTime()\/1000);(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}js=d.createElement(s);js.id=id;js.src=\"\/\/analytics.optimalpeople.fr\/js\/rd-o-sdk.js?t=\"+rd_1d43f5s_seconds;fjs.parentNode.insertBefore(js,fjs);}(document,'script','rd-jssdk'));"},"lang":"","cmp_ready":false,"axeptio_vendor_id":"rtbpremium","onetrust_category_id":null}],"panier":[{"nom":"RTB_premium","object":"script","attr":{"text":"window.rdAsyncInit=function(){RD.init({merchant_id:'72765'});};var rd_1d43f5s_a=new Date();rd_1d43f5s_a.setMinutes(0);rd_1d43f5s_a.setSeconds(0);var rd_1d43f5s_seconds=parseInt(rd_1d43f5s_a.getTime()\/1000);(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}js=d.createElement(s);js.id=id;js.src=\"\/\/analytics.optimalpeople.fr\/js\/rd-o-sdk.js?t=\"+rd_1d43f5s_seconds;fjs.parentNode.insertBefore(js,fjs);}(document,'script','rd-jssdk'));"},"lang":"","cmp_ready":false,"axeptio_vendor_id":"rtbpremium","onetrust_category_id":null}],"fincommande":[{"nom":"RTB_premium","object":"script","attr":{"text":"window.rdAsyncInit=function(){RD.init({merchant_id:'72765'});};var rd_1d43f5s_a=new Date();rd_1d43f5s_a.setMinutes(0);rd_1d43f5s_a.setSeconds(0);var rd_1d43f5s_seconds=parseInt(rd_1d43f5s_a.getTime()\/1000);(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}js=d.createElement(s);js.id=id;js.src=\"\/\/analytics.optimalpeople.fr\/js\/rd-o-sdk.js?t=\"+rd_1d43f5s_seconds;fjs.parentNode.insertBefore(js,fjs);}(document,'script','rd-jssdk'));"},"lang":"","cmp_ready":false,"axeptio_vendor_id":"rtbpremium","onetrust_category_id":null}],"lead_inscription":[{"nom":"RTB_premium","object":"script","attr":{"text":"window.rdAsyncInit=function(){RD.init({merchant_id:'72765'});};var rd_1d43f5s_a=new Date();rd_1d43f5s_a.setMinutes(0);rd_1d43f5s_a.setSeconds(0);var rd_1d43f5s_seconds=parseInt(rd_1d43f5s_a.getTime()\/1000);(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}js=d.createElement(s);js.id=id;js.src=\"\/\/analytics.optimalpeople.fr\/js\/rd-o-sdk.js?t=\"+rd_1d43f5s_seconds;fjs.parentNode.insertBefore(js,fjs);}(document,'script','rd-jssdk'));"},"lang":"","cmp_ready":false,"axeptio_vendor_id":"rtbpremium","onetrust_category_id":null}],"lead_confirmation":[{"nom":"RTB_premium","object":"script","attr":{"text":"window.rdAsyncInit=function(){RD.init({merchant_id:'72765'});};var rd_1d43f5s_a=new Date();rd_1d43f5s_a.setMinutes(0);rd_1d43f5s_a.setSeconds(0);var rd_1d43f5s_seconds=parseInt(rd_1d43f5s_a.getTime()\/1000);(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(d.getElementById(id)){return;}js=d.createElement(s);js.id=id;js.src=\"\/\/analytics.optimalpeople.fr\/js\/rd-o-sdk.js?t=\"+rd_1d43f5s_seconds;fjs.parentNode.insertBefore(js,fjs);}(document,'script','rd-jssdk'));"},"lang":"","cmp_ready":false,"axeptio_vendor_id":"rtbpremium","onetrust_category_id":null}]};
+  __kwkparams.progid              = 72765;
+  __kwkparams.currency            = "EUR";
+  __kwkparams.url_cross_device    = "//eud.tamboor.com/aff.php?maff=S511C3D1010";
+  __kwkparams.callbackprogram     = function(){};
+  __kwkparams.iabCmpDetected      = false;
+  __kwkparams.iabvendors          = [];
+  __kwkparams.iabConsents         = {};
+  __kwkparams.axeptioCmpDetected  = false;
+  __kwkparams.axeptioConsents     = {};
+  __kwkparams.onetrustCmpDetected = false;
+  __kwkparams.onetrustConsents    = {};
+  __kwkparams.cmpWaitMs           = 1000;
+
+  __kwkpartnertag = function() {
+
+    // PartnerTag Part
+    // partnertag params
+    this.params = {
+      debug     : null,
+      kwktimer  : null,
+      tpluniq   : 'KwkWanTtWcCdth',
+      language  : '', // User language (from ptag_params || w.navigator)
+      objparams : {},
+      hiddendiv : {},
+      ptagparams: {}
+    };
+
+    // find script balise
+    this.findscript();
+
+    // create hidden div
+    this.addhiddendiv();
+
+    // add clic time
+    this.addclictime();
+
+    // add tags on page
+    this.loadptag();
+  };
+
+  __kwkpartnertag.prototype = {
+
+    // try to find the partnertag url
+    findscript: function(){
+      this.kwkconsole('findscript');
+      var all_script;
+
+      all_script = d.getElementsByTagName('script');
+
+      for(let a = 0; a < all_script.length; ++a){
+        if (this.params.hasOwnProperty('scriptnode')){
+          this.kwkconsole('script find : break!');
+          break;
+        }
+        if (!all_script[a].src){
+          continue;
+        }
+
+        for(let b = 0; b < __kwkparams.urls.length; ++b) {
+          if (new RegExp(__kwkparams.urls[b],'g').test(all_script[a].src) == true) {
+            this.params.scriptnode = all_script[a];
+          }
+        }
+      }
+    },
+
+    // create hidden div to put in publishers tags
+    addhiddendiv: function(){
+      this.kwkconsole('addhiddendiv');
+      var hiddendiv;
+
+      if(!this.params.hasOwnProperty('scriptnode')){
+        this.kwkconsole('no script kwk found!');
+        throw "no script kwk found!";
+      }
+
+      hiddendiv = d.createElement('div');
+      hiddendiv.id = 'kwk-'+this.kwkrandom(15);
+      hiddendiv.style.display = 'none';
+      this.params.scriptnode.parentNode.appendChild(hiddendiv);
+      this.params.hiddendiv = hiddendiv;
+    },
+
+    // add clictime code in hidden div
+    addclictime: function(){
+      if(__kwkparams.ct.length == 0 || !this.params.hiddendiv.length == 0){
+        return;
+      }
+      var clictimetag;
+
+      this.params.hiddendiv.innerHTML += "\n\n<!-- ClicTime -->\n";
+      clictimetag = d.createElement('script');
+      for(let a = 0; a < __kwkparams.ct.length; ++a) {
+        clictimetag.innerHTML += __kwkparams.ct[a];
+      }
+      this.params.hiddendiv.appendChild(clictimetag);
+    },
+
+    // load ptag
+    loadptag: function() {
+      this.kwkconsole('loadptag while document is in '+w.document.readyState+' state');
+
+      // add tags without wait page loading
+      // if readyState is complete BUT no ptag_params var setup, we give an additionnal chance with the extra timer fired below to catch them ! (cf http://mine.kwanko.com/issues/59768)
+      if((w.document.readyState == 'complete' && w.hasOwnProperty('ptag_params')) || (w.hasOwnProperty('ptag_params') && w.ptag_params.hasOwnProperty('noloading') && w.ptag_params.noloading == 1)){
+        this.kwkconsole('no loading page OR already loaded');
+        // consent before write tags
+        this.runptag();
+        return;
+      }
+
+      // Waiting load page before add tags
+      var eventName, eventType, eventFunction;
+
+      eventName = 'addEventListener';
+      eventType = 'load';
+       if(!this.isfunction(eventName)) { // Cas IE
+         eventName = 'attachEvent';
+         eventType = 'onload';
+       }
+
+      eventFunction = w[eventName];
+      if(!this.isobject(eventFunction) && !this.isfunction(eventName)) {
+        throw "no EventListener!";
+      }
+
+      // Set timeout to re execute runptag()
+      this.settimer();
+
+      // run ptag after loading page
+      eventFunction(eventType, function() {
+        this.runptag();
+      }.bind(this), false);
+    },
+
+    // get params, lang and add tags
+    runptag: function() {
+      this.kwkconsole('runptag');
+
+      // remove timer
+      this.removetimer();
+
+      // get params
+      this.getpageparams();
+
+      // get user language
+      this.getlang();
+
+      // Check multiple call on same page
+      if(w.hasOwnProperty(this.params.tpluniq+__kwkparams.progid+'_'+this.params.objparams.zone)){
+        this.kwkconsole('add tags to div already run! STOP.');
+        return;
+      }
+      w[this.params.tpluniq+__kwkparams.progid+'_'+this.params.objparams.zone] = true;
+
+      // build params list
+      this.buildparamslist();
+
+      // write tags on page
+      this.writetags();
+    },
+
+    // get params form web page (in ptag_params array or in js url)
+    getpageparams: function(){
+      this.kwkconsole('getpageparams');
+
+      // apply callback programme before get w.ptag_params
+      __kwkparams.callbackprogram();
+
+      // get page params from ptag_params array
+      if(w.hasOwnProperty('ptag_params')){
+        this.params.objparams = w.ptag_params;
+        this.kwkconsole('w.ptag_params exist!');
+        return;
+      }
+
+      this.kwkconsole('objparams');
+      this.kwkconsole(this.params.objparams);
+
+      // get page params from url
+      this.geturlparams();
+
+      // Check params mandatory
+      if(!this.params.objparams.hasOwnProperty('zone')){
+        throw "Param ZONE mandatory";
+      }
+    },
+
+    // get user language (from w.ptag_params || w.navigator)
+    getlang: function(){
+      // No checking language needed
+      if(__kwkparams.lang == 0){
+        this.kwkconsole('No checking language needed');
+        return;
+      }
+      // Get language from params
+      if(this.params.objparams.hasOwnProperty('language') && this.params.objparams.language != ''){
+        this.params.language = this.params.objparams.language.toLowerCase();
+        this.kwkconsole('Language from ptag_params = '+this.params.language);
+        return;
+      }
+
+      // Get language from browser
+      var browser_lang = w.navigator.userLanguage || w.navigator.language;
+      this.params.language = browser_lang.toLowerCase().replace('-', '_');
+      this.kwkconsole('Language from w.navigator.language = '+this.params.language);
+    },
+
+    // get params from url (partnertag v1)
+    geturlparams: function(){
+      this.kwkconsole('geturlparams');
+      var scriptnode_src, index, str_params, params, i_cpt_parse, t;
+
+      scriptnode_src = this.params.scriptnode.src;
+      this.kwkconsole(scriptnode_src);
+
+      index = scriptnode_src.indexOf('?',7);
+      if (index == -1){
+        return;
+      }
+
+      str_params = scriptnode_src.substring(index+1);
+      params = str_params.split('&');
+      this.kwkconsole(params);
+
+      for(i_cpt_parse = 0; i_cpt_parse < params.length; ++i_cpt_parse) {
+        t = params[i_cpt_parse].split('=');
+        this.kwkconsole(t);
+        if(t[0].substring(0, 4) == 'amp;'){ t[0] = t[0].substring(4, t[0].length); }
+        this.params.objparams[t[0]] = t[1];
+      }
+      return;
+    },
+
+    // build a list with all parameters to change template in publishers code
+    buildparamslist: function(){
+      this.kwkconsole('buildparamslist :');
+      var translate_keys, template_list, i, tpl_key;
+
+      translate_keys = {
+        'basket' : 'panier',
+        'product' : 'produit',
+        'listing' : 'categorie',
+        'homepage' : 'accueil',
+        'generique' : 'accueil',
+        'productid' : 'idproduit',
+        'categoryid' : 'idcategorie',
+        'transaction' : 'fincommande',
+        'transactionid' : 'idtransaction'
+      };
+
+      template_list = {};
+      template_list['SUMQTY'] = 0;
+      template_list['MONTANT'] = 0;
+      template_list['LISTEIDS'] = '';
+      template_list['LISTEQTY'] = '';
+      template_list['IDPROGNETAFF'] = __kwkparams.progid;
+      template_list['CURRENCY'] = __kwkparams.currency;
+      template_list['PAGE'] = encodeURIComponent(d.URL);
+
+      template_list['REFERRER'] = encodeURIComponent(d.referrer);
+      template_list['REFERER'] = encodeURIComponent(d.referrer);
+      template_list['TITLE'] = encodeURIComponent(d.title);
+      template_list['META'] = this.kwkgetmeta();
+      template_list['cachebuster'] = this.kwkrandom(15);
+      template_list['GDPR'] = 0;
+      template_list['GDPR_CONSENT'] = '';
+      // template ajouté dans le cadre du ticket https://mine.kwanko.com/issues/65268 suite à une demande de l'affilié Targeting 360
+      // dont le but est de NE PAS transmettre le contexte d'application GDPR en contexte de CMP non IAB, mais une chaîne vide à la place
+      template_list['GDPR_EMPTY_NON_IAB'] = '';
+
+      for(i in this.params.objparams){
+        tpl_key = i.toUpperCase();
+
+        // On frenchise les clés du tableau
+        if(translate_keys.hasOwnProperty(i.toLowerCase())){
+          tpl_key = translate_keys[i.toLowerCase()].toUpperCase();
+        }
+
+        template_list[tpl_key] = this.params.objparams[i];
+      }
+
+      // On frenchise le nom de la zone courante
+      if(translate_keys.hasOwnProperty(template_list['ZONE'].toLowerCase())){
+        template_list['ZONE'] = translate_keys[template_list['ZONE'].toLowerCase()];
+      }
+
+      // Add specific template
+      switch(template_list['ZONE']) {
+        case "panier":
+        case "fincommande":
+          if(typeof template_list['PRODUCTS'] == 'object'){
+            for (let ind = 0; ind < template_list['PRODUCTS'].length; ++ind) {
+              template_list['SUMQTY'] += parseInt(template_list['PRODUCTS'][ind]['quantity'], 10);
+              template_list['LISTEIDS'] += (template_list['LISTEIDS'] ? ',' : '')+template_list['PRODUCTS'][ind]['id'];
+              template_list['LISTEQTY'] += (template_list['LISTEQTY'] ? ',' : '')+template_list['PRODUCTS'][ind]['quantity'];
+              template_list['MONTANT'] += parseFloat(parseFloat(template_list['PRODUCTS'][ind]['price'])*parseInt(template_list['PRODUCTS'][ind]['quantity'], 10));
+            }
+          }
+        break;
+        case "categorie":
+          if(typeof template_list['PRODUCTS'] == 'object'){
+            template_list['LISTEIDS'] = '';
+            for (let ind = 0; ind < template_list['PRODUCTS'].length; ++ind) {
+              template_list['LISTEIDS'] += (template_list['LISTEIDS'] ? ',' : '')+template_list['PRODUCTS'][ind];
+            }
+          }
+        break;
+      }
+
+      if(typeof template_list['PRODUCTS'] !== 'object' && typeof template_list['LISTEIDS'] === 'string' && template_list['LISTEIDS'] !== '') {
+        let listIds = template_list['LISTEIDS'].split(',');
+        let listQty = (typeof template_list['LISTEQTY'] === 'string' && template_list['LISTEQTY'] !== '') ? template_list['LISTEQTY'].split(',') : [];
+        template_list['PRODUCTS'] = [];
+        let sumQty = 0;
+        for(let ind = 0; ind < listIds.length; ind++) {
+          let productQty = parseInt(listQty[ind] !== undefined ? listQty[ind] : 0, 10);
+          sumQty += productQty;
+          template_list['PRODUCTS'].push({id: listIds[ind], price: 0, quantity: productQty});
+        }
+        template_list['SUMQTY'] = Math.max(template_list['SUMQTY'],sumQty);
+      }
+
+      this.kwkconsole(template_list);
+      this.params.ptagparams = template_list;
+    },
+
+    // Check consent and write publishers tags in hidden div
+    writetags: function(){
+      this.kwkconsole('writetags');
+
+      // check global consent mandatory
+      if(!this.globalconsentmandatory()){
+        // No consent : add tags on page
+        this.checkCmpConsent(this.addtagstodiv);
+      }
+      else{
+        // wait the consent
+        this.kwkconsole('Global Consent mandatory');
+        this.globalconsenttimer();
+      }
+
+      // check if partial consent is needed
+      this.partialconsenttimer();
+    },
+
+    // add tags to div
+    addtagstodiv: function(){
+      this.kwkconsole('addtagstodiv');
+      var zone, zone_tags, tag_lang, tag_type, tag_name, tag_attr_list, tag_dom, put_in_header, attr_type, attr_value, fct_name, cmp_ready, onetrustcategoryid;
+
+      if(!this.params.ptagparams.hasOwnProperty('ZONE')){
+        this.kwkconsole('No ZONE param! STOP.');
+        return;
+      }
+
+      // add cross device
+      this.addimgcrossdevice();
+
+      // get tags zone
+      zone = this.params.ptagparams.ZONE;
+      this.kwkconsole('zone = '+zone); // TEMP
+      if(!__kwkparams.tags.hasOwnProperty(zone)){
+        this.kwkconsole('pas de tags pour la zone '+zone); // TEMP
+        return;
+      }
+
+      zone_tags = __kwkparams.tags[zone];
+      this.kwkconsole('liste des tags :'); // TEMP
+      this.kwkconsole(zone_tags); // TEMP
+
+      for(let i = 0; i < zone_tags.length; ++i){
+        if(!zone_tags[i].hasOwnProperty('object') || ['script','img','iframe'].indexOf(zone_tags[i].object) < 0){
+          this.kwkconsole('pas attribut OBJECT');
+          continue;
+        }
+
+        // check languages compatibility
+        if(__kwkparams.lang == 1){
+          tag_lang = zone_tags[i].lang;
+          if(!this.checklanguage(tag_lang)){
+            this.kwkconsole('Languages not compatible! CONTINUE.');
+            continue;
+          }
+        }
+
+        // cf http://mine.kwanko.com/issues/57475 : partners flagged as CMP ready & compatible
+        // are fired regardless of consent status !
+        cmp_ready = zone_tags[i].hasOwnProperty('cmp_ready') && zone_tags[i].cmp_ready;
+        if (cmp_ready) {
+          this.kwkconsole('part '+(zone_tags[i].nom)+' flagged as CMP ready');
+        }
+        // cf https://mine.kwanko.com/issues/63365 : kwanko explicit NO consent through gdpr_kwk param
+        else if (this.params.ptagparams.hasOwnProperty('GDPR_KWK') && this.params.ptagparams.GDPR_KWK == 0) {
+          this.kwkconsole('part '+(zone_tags[i].nom)+' explicit NO consent given through gdpr_kwk=0 param.');
+          continue;
+        }
+        // cf https://mine.kwanko.com/issues/63365 : kwanko explicit consent through gdpr_kwk param
+        else if (this.params.ptagparams.hasOwnProperty('GDPR_KWK') && this.params.ptagparams.GDPR_KWK == 1) {
+          this.kwkconsole('part '+(zone_tags[i].nom)+' explicit consent given through gdpr_kwk=1 param.');
+        }
+        else if (__kwkparams.iabCmpDetected) {
+          // IAB CMP partners filtering rules
+          if ((!zone_tags[i].hasOwnProperty('iab_vendor_id') || !__kwkparams.iabConsents.hasOwnProperty(zone_tags[i].iab_vendor_id) || parseInt(__kwkparams.iabConsents[zone_tags[i].iab_vendor_id]) !== 1)
+               && (!__kwkparams.hasOwnProperty('IABglobalPurposeConsent') || !__kwkparams.IABglobalPurposeConsent)) {
+            // cf http://mine.kwanko.com/issues/50382 : IAB + global consent check before firing Partner code
+            // if explicit consent could not be found OR no global/specific consent is given for the vendor, tag is NOT fired !
+            this.kwkconsole('IAB NO consent for part "'+zone_tags[i].nom+'"'+(zone_tags[i].iab_vendor_id ? ' (IAB vendor id '+zone_tags[i].iab_vendor_id+')' : '')+'. IGNORE.');
+            continue;
+          }
+          else {
+            this.kwkconsole('IAB consent ok for part "'+zone_tags[i].nom+'"'+(zone_tags[i].iab_vendor_id ? ' (IAB vendor id '+zone_tags[i].iab_vendor_id+')' : ''));
+          }
+        }
+        else if (__kwkparams.axeptioCmpDetected) {
+          // Axeptio CMP partners filtering rules
+          if (!zone_tags[i].hasOwnProperty('axeptio_vendor_id') || !__kwkparams.axeptioConsents.hasOwnProperty(zone_tags[i].axeptio_vendor_id) || !__kwkparams.axeptioConsents[zone_tags[i].axeptio_vendor_id]) {
+            this.kwkconsole('Axeptio NO consent for part "'+zone_tags[i].nom+'"'+(zone_tags[i].axeptio_vendor_id ? ' (Axeptio vendor id "'+zone_tags[i].axeptio_vendor_id+'")' : '')+'. IGNORE.');
+            continue;
+          }
+          else {
+            this.kwkconsole('Axeptio consent ok for part "'+zone_tags[i].nom+'"'+(zone_tags[i].axeptio_vendor_id ? ' (Axeptio vendor id "'+zone_tags[i].axeptio_vendor_id+'")' : ''));
+          }
+        }
+        else if (__kwkparams.onetrustCmpDetected) {
+          // Onetrust CMP partners filtering rules : looking for partner category id (default C0004 == "Targeting cookies", tested with and without "C000")
+          onetrustcategoryid = zone_tags[i].hasOwnProperty('onetrust_category_id') && typeof zone_tags[i].onetrust_category_id === 'string' && zone_tags[i].onetrust_category_id.length > 0 ? zone_tags[i].onetrust_category_id : 'C0004';
+          if (!__kwkparams.onetrustConsents.includes(onetrustcategoryid) && !__kwkparams.onetrustConsents.includes(onetrustcategoryid.replace('C000',''))) {
+            this.kwkconsole('OneTrust NO consent for part "'+zone_tags[i].nom+'"'+(zone_tags[i].onetrust_category_id ? ' (OneTrust category id "'+onetrustcategoryid+'")' : '')+'. IGNORE.');
+            continue;
+          }
+          else {
+            this.kwkconsole('OneTrust consent ok for part "'+zone_tags[i].nom+'"'+(zone_tags[i].onetrust_category_id ? ' (OneTrust category id "'+onetrustcategoryid+'")' : ''));
+          }
+        }
+        else {
+          this.kwkconsole('Missing CMP context for part "'+zone_tags[i].nom+'"'+(zone_tags[i].iab_vendor_id ? ' (IAB vendor id '+zone_tags[i].iab_vendor_id+')' : '')+(zone_tags[i].axeptio_vendor_id ? ' (Axeptio vendor id "'+zone_tags[i].axeptio_vendor_id+'")' : '')+'. IGNORE.');
+          continue;
+        }
+
+        // type of tag
+        tag_type = zone_tags[i].object;
+        // name of tag
+        tag_name = zone_tags[i].nom;
+        // attributs of tag
+        tag_attr_list = zone_tags[i].attr;
+
+        // DOM tag
+        tag_dom = d.createElement(tag_type);
+        this.kwkconsole('Create tag '+tag_type+' for client '+tag_name);
+
+        // put the JS tag in header
+        put_in_header = false;
+
+        // add all attributs in the tag
+        for(attr_type in tag_attr_list){
+          // put js tag in header
+          if(tag_type == 'script' && attr_type == 'src'){
+            put_in_header = true;
+          }
+
+          // attribut value
+          attr_value = tag_attr_list[attr_type];
+
+          // Si on est dans l'attribut 'src' ou 'text' ou attribut type HTML5 'data-XXX', on aura surement des templates à remplacer
+          if(attr_type == 'text' || attr_type == 'src' || attr_type.substr(0,5) == 'data-'){
+            // Si on a une fonction spécififique (ex pour changer les , de LISTEIDS par des ;)
+            fct_name = null;
+            if(this.isfunction('filtre_'+tag_name.toLowerCase()+'_'+zone)){
+              fct_name = 'filtre_'+tag_name.toLowerCase()+'_'+zone;
+              this.kwkconsole('Specific function '+fct_name);
+            }
+
+            // replace tpl
+            attr_value = this.replacetpl(attr_value, fct_name);
+          }
+
+          // add attribut to the tag
+          this.kwkconsole('add attribut '+attr_type+', value = '+attr_value);
+          if (attr_type == 'text') {
+            tag_dom[attr_type] = attr_value;
+          }
+          else {
+            tag_dom.setAttribute(attr_type,attr_value);
+          }
+        }
+
+        // add comment with tag name
+        this.params.hiddendiv.innerHTML += "\n\n<!-- Tag "+tag_name+" -->\n";
+
+        // put js tag in header
+        if(put_in_header){
+          d.getElementsByTagName('head')[0].appendChild(tag_dom);
+        }
+        // put img tag and js tag with source in hidden div
+        else{
+          this.params.hiddendiv.appendChild(tag_dom);
+        }
+      }
+    },
+
+    // check compatibility between user's language and publisher's tag language
+    checklanguage: function(pub_tag_lang){
+      var tag_lang = pub_tag_lang.toLowerCase();
+      this.kwkconsole('checklanguage with tag_lang = '+tag_lang+' and this.params.language = '+this.params.language);
+
+      // publisher tag is accepted for all languages
+      if(tag_lang == ''){
+        return true;
+      }
+
+      if(tag_lang == this.params.language){
+        return true;
+      }
+
+      // Browser language 2 characters
+      if(this.params.language.length == 2){
+        // Checking with short culture of the current tag
+        if(tag_lang.substr(0,2) == this.params.language){
+          return true;
+        }
+      }
+
+      // Browser language 5 characters
+      // And tag language 2 characters
+      if(tag_lang.length == 2){
+        // Checking with short culture of Browser language
+        if(tag_lang == this.params.language.substr(0,2)){
+          return true;
+        }
+      }
+      return false;
+    },
+
+    // replace specific template in publishers code
+    replacetpl: function(string_code, fct_name){
+      var pattern, pattern_value, regex;
+      for (pattern in this.params.ptagparams) {
+        pattern_value = this.params.ptagparams[pattern];
+
+        // apply specific function to update pattern_value
+        if(fct_name !== null){
+          pattern_value = w[fct_name](pattern_value, pattern);
+        }
+
+        regex = new RegExp('{'+pattern+'}', 'g');
+        string_code = string_code.replace(regex, pattern_value);
+      }
+      return string_code;
+    },
+
+    // add url cross device pixel
+    addimgcrossdevice: function() {
+      if(this.params.ptagparams.hasOwnProperty('M_MD5') && this.params.ptagparams.M_MD5 != ''){
+        var imgCD;
+        imgCD = document.createElement('img');
+        imgCD.setAttribute('src', __kwkparams.url_cross_device+'&r='+new Date().getTime()+'&altid='+this.params.ptagparams.M_MD5);
+        imgCD.setAttribute('width', '0');
+        imgCD.setAttribute('height', '0');
+        imgCD.setAttribute('id', "kwankoCD");
+        this.params.hiddendiv.appendChild(imgCD);
+      }
+    },
+
+    // gdpr consent functions
+    globalconsentmandatory: function(){
+      var gc;
+      gc = this.params.ptagparams.hasOwnProperty('GDPR') && this.params.ptagparams.GDPR == 1;
+      this.kwkconsole('globalconsentmandatory:'+gc);
+      return gc;
+    },
+
+    globalconsenttimer: function(){
+      this.kwkconsole('globalconsenttimer');
+      var inter;
+
+      inter = setInterval(function(){
+        this.kwkconsole('setInterval...');
+
+        if(this.checkkwgc()){
+          this.kwkconsole('Consent OK!');
+          this.checkCmpConsent(this.addtagstodiv);
+          this.kwkconsole('clearInterval!');
+          clearInterval(inter);
+        }
+      }.bind(this),1000);
+    },
+
+    partialconsenttimer: function(){
+      this.kwkconsole('partialconsenttimer');
+
+      if(!__kwkparams.tags.hasOwnProperty('consent')){
+        this.kwkconsole('No partial consent needed');
+        return;
+      }
+      var inter;
+
+      inter = setInterval(function(){
+        if(this.checkkwgc()){
+          this.kwkconsole('Consent OK!');
+          this.execconsent();
+          this.kwkconsole('clearInterval!');
+          clearInterval(inter);
+        }
+      }.bind(this),1000);
+    },
+
+    execconsent: function(){
+      this.kwkconsole('execconsent');
+      if(!__kwkparams.tags.hasOwnProperty('consent')){
+        this.kwkconsole('No tags with consent');
+        return;
+      }
+      var codeConsent, j, tag, tab_attr, type_attr, code;
+
+      codeConsent = __kwkparams.tags.consent;
+      for(j = 0; j < codeConsent.length; ++j) {
+        tag = d.createElement(codeConsent[j].object);
+        tab_attr = codeConsent[j].attr;
+        for (type_attr in tab_attr) {
+          code = tab_attr[type_attr];
+          if(type_attr == 'src' || type_attr == 'text'){
+            code = this.replacetpl(code, null);
+          }
+          if (type_attr == 'text') {
+            tag[type_attr] = code;
+          }
+          else {
+            tag.setAttribute(type_attr,code);
+          }
+        }
+        this.params.hiddendiv.innerHTML += "\n\n<!-- Consent "+codeConsent[j].nom+" -->\n";
+        this.params.hiddendiv.appendChild(tag);
+        tag = tab_attr = type_attr = code = null;
+      }
+    },
+
+    checkkwgc: function(){
+      this.kwkconsole('checkkwgc from cookie');
+      var kwkcook = new __kwkpartnertagcook();
+      var kwgc = kwkcook.readGC();
+      if(kwgc == 1){
+        this.kwkconsole('__kwgc from cookie OK');
+        return true;
+      }
+      this.kwkconsole('checkkwgc from __kwgc');
+      if(w.hasOwnProperty('__kwgc') && w.__kwgc == 1){
+        this.kwkconsole('__kwgc from website OK');
+        kwkcook.createGC();
+        return true;
+      }
+      return false;
+    },
+
+    waitForCmp: function (msWait) {
+      return new Promise(resolve => {
+        setTimeout(() => {
+          resolve(this.detectIABCmp() || this.detectAxeptioCmp() || this.detectOnetrustNonIABCmp());
+        }, typeof msWait == 'number' ? msWait : __kwkparams.cmpWaitMs);
+      });
+    },
+
+    detectIABCmp: function () {
+      return typeof w.__tcfapi === 'function' ? 'iab' : false;
+    },
+
+    detectAxeptioCmp: function () {
+      return typeof w.axeptioSDK === 'object' ? 'axeptio' : false;
+    },
+
+    detectOnetrustNonIABCmp: function () {
+      return typeof w.OneTrust == 'object' && typeof w.__tcfapi == 'undefined' ? 'onetrust' : false;
+    },
+
+    // checkCmpConsent: async function (ptagCallback){
+    checkCmpConsent: function (ptagCallback){
+
+      if(this.params.objparams.hasOwnProperty('cmpWaitMs') && typeof this.params.objparams.cmpWaitMs == 'number') {
+        this.kwkconsole('custom CMP waiting delay of '+this.params.objparams.cmpWaitMs+' catched.');
+        __kwkparams.cmpWaitMs = this.params.objparams.cmpWaitMs;
+      }
+
+      if (this.detectIABCmp()) {
+        this.kwkconsole('IAB CMP detected');
+        this.iabConsentCallback(ptagCallback);
+      }
+      else if (this.detectAxeptioCmp()) {
+        this.kwkconsole('Axeptio CMP detected');
+        this.axeptioConsentCallback(ptagCallback);
+      }
+      else if (this.detectOnetrustNonIABCmp()) {
+        this.kwkconsole('Onetrust non IAB CMP detected');
+        this.onetrustConsentCallback(ptagCallback);
+      }
+      else {
+        this.waitForCmp().then(cmpDetected => {
+          this.kwkconsole('CMP detection after waiting '+__kwkparams.cmpWaitMs+'ms : '+cmpDetected);
+          if (cmpDetected === 'iab') {
+            this.iabConsentCallback(ptagCallback);
+          }
+          else if (cmpDetected === 'axeptio') {
+            this.axeptioConsentCallback(ptagCallback);
+          }
+          else if (cmpDetected === 'onetrust') {
+            this.onetrustConsentCallback(ptagCallback);
+          }
+          else {
+            this.kwkconsole('NO cmp detected despite '+__kwkparams.cmpWaitMs+'ms waiting time.');
+            ptagCallback.call(this);
+          }
+        });
+      }
+    },
+
+    /**
+     * Callback for fetching TCData string
+     *
+     * @link https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/TCFv2/IAB%20Tech%20Lab%20-%20CMP%20API%20v2.md#gettcdata
+     *
+     * @param {Object}  tcData  object (cf https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/TCFv2/IAB%20Tech%20Lab%20-%20CMP%20API%20v2.md#tcdata)
+     * @param {boolean} success true if tcData object has been correctly loaded, otherwise false
+     * @return {void}
+     */
+    iabConsentCallback: function iabConsentCallback(ptagCallback) {
+      var k, gdprApplies, vendorConsents, currentVendorId, currentVendorConsent;
+
+      if (!this.detectIABCmp()) {
+        this.kwkconsole('no __tcfapi function found. IGNORE Tcf check.');
+        ptagCallback.call(this);
+        return;
+      }
+
+      w.__tcfapi("addEventListener", 2, (tcData, success) => {
+        if (!success) {
+          this.kwkconsole("__tcfapi callback FAILED to load tcData object");
+          // tcf call failed and it's not possible to fetch consents
+          // tags will only be fired if Partner handles successfully CMP check on his side
+          this.addtagstodiv();
+        }
+        else if (success && tcData.eventStatus) {
+
+          __kwkparams.iabCmpDetected = true;
+
+          // GDPR templates replacements
+          this.params.ptagparams['GDPR'] = 1;
+          this.params.ptagparams['GDPR_EMPTY_NON_IAB'] = 1;
+          this.params.ptagparams['GDPR_CONSENT'] = tcData.tcString ? tcData.tcString : '';
+
+          if (tcData.eventStatus === 'cmpuishown') {
+            // on cmpuishown status, we do nothing waiting for user interaction with the CMP to do something
+            this.kwkconsole("CMP displayed, waiting for user action completion");
+          }
+          else {
+            // eventStatus should be either "tcloaded" or "useractioncomplete"
+            // or any CMP custom action (ex "cmpuiclosed" for Sirdata https://cmp.sirdata.com/#/tcfv2/docs/api-reference/cmp-api/add-event-listener)
+            // in this case listener should be removed and consent handled as setup so far
+            this.kwkconsole("CMP callback triggered for eventStatus "+tcData.eventStatus);
+
+            // fetching vendor Consents
+            gdprApplies    = tcData.gdprApplies;
+            vendorConsents = tcData.vendor.consents;
+            for (k=0;k<__kwkparams.iabvendors.length;k++) {
+              currentVendorId      = __kwkparams.iabvendors[k];
+              currentVendorConsent = typeof vendorConsents[currentVendorId] === "undefined" ? '2' : (vendorConsents[currentVendorId] ? '1' : '0');
+              __kwkparams.iabConsents[currentVendorId] = currentVendorConsent;
+            }
+
+            // if none of the purpose is false, we can consider global consent was given
+            // ATTENTION : empty purpose list could/might mean global NO consent
+            // so we have to consider the list is NOT empty as well ! (cf https://mine.kwanko.com/issues/60917)
+            __kwkparams.IABglobalPurposeConsent = tcData.purpose.consents && typeof tcData.purpose.consents == 'object' && Object.keys(tcData.purpose.consents).length > 0 && Object.values(tcData.purpose.consents).filter(function (purpose) { return !purpose; }).length == 0;
+            this.kwkconsole('purpose global consent : '+__kwkparams.IABglobalPurposeConsent);
+
+            // remove current listener to not get called more than once until new page refresh
+            __tcfapi('removeEventListener', 2, (success) => {}, tcData.listenerId);
+
+            this.kwkconsole('Fetched IAB consents :');
+            this.kwkconsole(__kwkparams.iabConsents);
+
+            ptagCallback.call(this);
+          }
+        }
+      });
+    },
+
+    axeptioConsentCallback: function axeptioConsentCallback(ptagCallback) {
+
+      if (!this.detectAxeptioCmp()) {
+        this.kwkconsole('no axeptioSDK object found.');
+        ptagCallback.call(this);
+        return;
+      }
+
+      w._axcb = w._axcb || [];
+      w._axcb.push(function(sdk) {
+        sdk.on('cookies:complete', function (axeptioVendors) {
+
+          this.kwkconsole('Axeptio cmp callback successfully triggered.');
+
+          if (typeof axeptioVendors === "object") {
+            __kwkparams.axeptioCmpDetected         = true;
+            __kwkparams.axeptioConsents            = axeptioVendors;
+            this.params.ptagparams['GDPR']         = 1;
+            this.params.ptagparams['GDPR_CONSENT'] = '';
+
+            this.kwkconsole('Fetched Axeptio consents :');
+            this.kwkconsole(axeptioVendors);
+          }
+
+          ptagCallback.call(this);
+        }.bind(this), {replay:true, once:true});
+      }.bind(this));
+    },
+
+    onetrustConsentCallback: function onetrustConsentCallback(ptagCallback) {
+
+      if (!this.detectOnetrustNonIABCmp()) {
+        this.kwkconsole('no OneTrust object found.');
+        ptagCallback.call(this);
+        return;
+      }
+
+      __kwkparams.onetrustCmpDetected            = true;
+      __kwkparams.onetrustConsentChangeTriggered = false;
+      this.params.ptagparams['GDPR']             = 1;
+      this.params.ptagparams['GDPR_CONSENT']     = '';
+
+      let fetchOnetrustGroupConsent = function () {
+        if (__kwkparams.onetrustConsentChangeTriggered) {
+          return;
+        }
+        __kwkparams.onetrustConsentChangeTriggered = true;
+        __kwkparams.onetrustConsents = typeof w.OnetrustActiveGroups == 'string' ? w.OnetrustActiveGroups.split(',').map(consent => typeof consent == 'string' ? consent.trim() : consent).filter(item => item) : [];
+        this.kwkconsole('Onetrust cmp callback successfully triggered.');
+        this.kwkconsole('Fetched OneTrust group consents :');
+        this.kwkconsole(w.OnetrustActiveGroups);
+        ptagCallback.call(this);
+      }.bind(this);
+
+      // if alert box is open, waiting for consent action
+      if (typeof w.OneTrust.IsAlertBoxClosed === 'function' && !w.OneTrust.IsAlertBoxClosed()) {
+        this.kwkconsole('Onetrust cmp callback registered waiting for OnConsentChanged event.');
+        OneTrust.OnConsentChanged(fetchOnetrustGroupConsent);
+      }
+      // otherwise considering consent was expressed so far
+      else {
+        fetchOnetrustGroupConsent();
+      }
+    },
+
+    // timer functions
+    settimer: function(){
+      this.kwkconsole('settimer');
+      this.params.kwktimer = setInterval(
+        () => {
+          // On attend que la page soit completement charge
+          if(d.readyState == 'complete'){
+            this.runptag();
+          }
+        },
+        2000
+      );
+    },
+
+    removetimer: function(){
+      if (this.params.kwktimer !== null) {
+        this.kwkconsole('removetimer');
+        clearInterval(this.params.kwktimer);
+        this.params.kwktimer = null;
+      }
+    },
+
+    // global functions
+    kwkconsole: function(msg){
+      if(this.isenvdebug()){
+        if (typeof msg === 'object') {
+          console.debug(msg);
+        }
+        else {
+          console.log('KWK-PTAG-DEBUG - '+(new Date().toLocaleString())+' '+msg);
+        }
+      }
+    },
+    isenvdebug : function () {
+      if (this.params.debug === null) {
+        // Set no debug mode
+        this.params.debug = false;
+
+        // check ptag_params
+        if(w.hasOwnProperty('ptag_params') && w.ptag_params.hasOwnProperty('debug') && w.ptag_params.debug == 1){
+          console.log('Env debug is set from ptag params');
+          this.params.debug = true;
+          return this.params.debug;
+        }
+        // Check cookie
+        var kwkcook = new __kwkpartnertagcook();
+        var kwDebug = kwkcook.readDebug();
+        if(kwDebug == 1){
+          console.log('Env debug is set from cookie');
+          this.params.debug = true;
+        }
+      }
+      return this.params.debug;
+    },
+    kwkrandom: function(length) {
+      var chars, str, a;
+      chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'.split('');
+      if (!length) { length = Math.floor(Math.random() * chars.length);  }
+      str = '';
+      for (a = 0; a < length; a++) {
+        str += chars[Math.floor(Math.random() * chars.length)];
+      }
+      return str;
+    },
+    kwkgetmeta: function(){
+      var b="",c=d.getElementsByTagName("meta");
+      for(var a=0;a<c.length;a++){
+        if(c[a].getAttribute("name") != 'keywords') continue;
+        b+=""!=b?"&":"";
+        b+="meta"+c[a].getAttribute("name")+"="+c[a].getAttribute("content");
+      }
+      return encodeURIComponent(b);
+    },
+    isfunction: function(v) {
+      return typeof w[v] === "function";
+    },
+    isobject: function(v) {
+      return (v !== null && typeof v === 'object');
+    }
+  };
+
+  __kwkpartnertagcook = function() {
+    this.cookieNameGC = '__kwgc';
+    this.cookieNameDebug = '__kwdebug';
+  };
+  __kwkpartnertagcook.prototype = {
+    createGC: function() {
+      w.document.cookie = this.cookieNameGC+'=1; path=/';
+    },
+    read: function(cookieName) {
+      var i, ca, cn, c, pos;
+      ca = w.document.cookie.split(';');
+      cn = cookieName+'=';
+      for(i = 0; i < ca.length; i++) {
+        c = ca[i];
+        pos = c.indexOf(cn);
+        if(pos !== -1) {
+          return parseInt(c.substring(pos+cn.length));
+        }
+      }
+      return null;
+    },
+    readGC: function() {
+      return this.read(this.cookieNameGC);
+    },
+    readDebug: function() {
+      return this.read(this.cookieNameDebug);
+    }
+  };
+
+  w.__kwkpartnertag = __kwkpartnertag;
+  w.__kwkpartnertagcook = __kwkpartnertagcook;
+})(document, window);
+
+try {
+  new __kwkpartnertag();
+} catch(e) {
+  console.warn(e);
+}
+
+

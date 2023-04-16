@@ -1,0 +1,8 @@
+
+@font-face {
+  font-family: 'SanchezBold';
+  src: url('SanchezBold.eot?#iefix') format('embedded-opentype'),  url('SanchezBold.otf')  format('opentype'),
+	     url('SanchezBold.woff') format('woff'), url('SanchezBold.ttf')  format('truetype'), url('SanchezBold.svg#SanchezBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

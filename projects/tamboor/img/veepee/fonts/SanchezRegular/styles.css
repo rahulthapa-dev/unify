@@ -1,0 +1,8 @@
+
+@font-face {
+  font-family: 'Sanchez';
+  src: url('Sanchez.eot?#iefix') format('embedded-opentype'),  url('Sanchez.otf')  format('opentype'),
+	     url('Sanchez.woff') format('woff'), url('Sanchez.ttf')  format('truetype'), url('Sanchez.svg#Sanchez') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

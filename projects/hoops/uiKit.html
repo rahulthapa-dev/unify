@@ -1,0 +1,1430 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>UIkit</title>
+    <!--Import Material Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import Catamaran Font-->
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="sass/hoops-crm.css" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="hoops-UIkit grey body-light">
+
+    <div class="main-wrapper">
+        <!--*****   SIDEBAR NAVIGATION   *****-->
+
+        <!--  Side navbar   -->
+
+        <div class="side-nav fixed white" id="main_navigation">
+
+            <div class="logo">
+                <a href="javascript:void(0)"><img src="assets/images/logo.png" alt="hoops crm" /></a>
+            </div>
+
+            <div class="current_user">
+                <div class="name_user dropdown-button pointer" data-activates='user-dropdown' data-beloworigin="true">
+                    <span class="user_thumb">
+            				<img class="img-responsive" src="images/img-user.png">
+            			</span>
+                    <a class="user-log" href="javascript:void(0)">Kate Winslet <i class="material-icons">keyboard_arrow_down</i></a>
+                    <ul id='user-dropdown' class='dropdown-content'>
+                        <li><a href="javascript:void(0)"><i class="material-icons">account_circle</i>My Profile</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:void(0)"><i class="material-icons">https</i>Change Password</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:void(0)"><i class="material-icons">power_settings_new</i>Logout </a></li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <ul class="main-menu">
+                <li><a class="tooltipped" data-position="right" data-delay="50" data-tooltip="Dashboadrd" href="customer.html"><i class="material-icons">dashboard</i><span class="nav_link_text">Dashboard</span></a></li>
+                <li><a class="active" href="#"><i class="material-icons">person</i><span class="nav_link_text">Customers</span></a></li>
+                <li><a href="#"><i class="material-icons">my_location</i><span class="nav_link_text">Leads</span></a></li>
+                <li><a href="#"><i class="material-icons">receipt</i><span class="nav_link_text">Quotes</span></a></li>
+                <li><a href="#"><i class="material-icons">work</i><span class="nav_link_text">Jobs</span></a></li>
+                <li><a href="#"><i class="material-icons">today</i><span class="nav_link_text">Calender</span></a></li>
+                <li><a href="#"><i class="material-icons">description</i><span class="nav_link_text">Purchase Orders</span></a></li>
+                <li><a href="#"><i class="material-icons">poll</i><span class="nav_link_text">Reports</span></a></li>
+                <li><a href="#"><i class="material-icons">storage</i><span class="nav_link_text">Catalogue</span></a></li>
+            </ul>
+
+        </div>
+
+        <header id="header">
+            <nav class="navbar_header light-blue lighten-5 row">
+                <div class="nav-wrapper col s12">
+                    <div class="toggles">
+                        <a href="#" class="toggle-sidebar"><i class="material-icons white-text">chevron_left</i></a>
+                        <a href="#" class="expand-sidebar hide"><i class="material-icons white-text">menu</i></a>
+                    </div>
+
+                    <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <li class="dropMenu" id="search_place">
+                            <a class='search_button-open' href='#'>
+                                <i class="material-icons white-text">search</i>
+                            </a>
+
+                            <div class="input-field search_header">
+                                <input id="header-search" class="white" placeholder="Enter your search here..." id="search_header" type="text" class="validate">
+                                <i id="close-header-search" class="material-icons white-text grey-text text-lighten-8">search</i>
+                            </div>
+
+                        </li>
+
+                        <li class="dropMenu">
+                            <a class='dropdown-button' href='#' data-beloworigin="true" data-constrainWidth="false" data-alignment="right" data-activates='addCustomer'>
+                                <i class="material-icons white-text">add_circle</i>
+                            </a>
+                            <div id='addCustomer' class='dropdown-content dropdown-eq'>
+                                <ul>
+                                    <li><a href="#!"><i class="material-icons">person_add</i>Add Customers</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#!"><i class="material-icons">my_location</i>Add Leads</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#!"><i class="material-icons">receipt</i>Create Quotes</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#!"><i class="material-icons">work</i>Schedule Jobs</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#!"><i class="material-icons">event_note</i>Add to Calendar</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#!"><i class="material-icons">library_add</i>Add Catalogue</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="dropMenu">
+                            <a class='dropdown-button' href='#' data-beloworigin="true" data-constrainWidth="false" data-alignment="right" data-activates='setting'>
+                                <i class="material-icons white-text">settings</i>
+                            </a>
+                            <div id='setting' class='dropdown-content dropdown-eq'>
+                                <ul>
+                                    <li><a href="#!"><i class="material-icons">wb_incandescent</i>Decorations</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#!"><i class="material-icons">group</i>Vendors</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#!"><i class="material-icons">info</i>General</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#!"><i class="material-icons">extension</i>Integrations</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#!"><i class="material-icons">drafts</i>Email Templates</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#!"><i class="material-icons">check_box</i>Job Tasks</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#!"><i class="material-icons">person</i>Users</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#!"><i class="material-icons">attach_money</i>Billing</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="relative">
+                            <a href="#" class='dropdown-button' href='#' data-beloworigin="true" data-constrainWidth="false" data-alignment="right" data-activates='notification'>
+                                <i class="material-icons white-text">notifications</i> <span class="notification-number pulse">3</span>
+                            </a>
+                            <ul id='notification' class='dropdown-content'>
+                                <li>
+                                    <div class="notification_wrapper">
+                                        <ul class="clearfix">
+                                            <li>
+                                                <div class="notification_icon">
+                                                    <span class="icon-noti purple">
+															<i class="material-icons white-text">my_location</i>
+														</span>
+                                                </div>
+
+                                                <div class="notification-text">
+                                                    <p>Alexandra Jones <span class="grey-text text-lighten-7">added a new lead</span></p>
+                                                    <a href="javascript:void(0)" class="light-blue-text text-base">Team info design company</a>
+                                                    <span class="time-duration grey-text text-lighten-7">10 min ago</span>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="notification_icon">
+                                                    <span class="icon-noti grey lighten-9">
+															<i class="material-icons white-text">person</i>
+														</span>
+                                                </div>
+
+                                                <div class="notification-text">
+                                                    <p>Sierra Dickinson <span class="grey-text text-lighten-7">is now added as a customer</span></p>
+                                                    <a href="javascript:void(0)" class="light-blue-text text-base">Robbing Hoods Car Detailing</a>
+                                                    <span class="time-duration grey-text text-lighten-7">2 hours ago</span>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="notification_icon">
+                                                    <span class="icon-noti yellow lighten-4">
+															<i class="material-icons white-text">work</i>
+														</span>
+                                                </div>
+
+                                                <div class="notification-text">
+                                                    <p>Olivia Kelly <span class="grey-text text-lighten-7">created a job</span></p>
+                                                    <a href="javascript:void(0)" class="light-blue-text text-base">Fresh Prince of Bel-Air</a>
+                                                    <span class="time-duration grey-text text-lighten-7">20 min ago</span>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="notification_icon">
+                                                    <span class="icon-noti blue-grey darken-4">
+															<i class="material-icons white-text">receipt</i>
+														</span>
+                                                </div>
+
+                                                <div class="notification-text">
+                                                    <p>Allison Faber <span class="grey-text text-lighten-7">created a quote.</span></p>
+                                                    <a href="javascript:void(0)" class="light-blue-text text-base">Think Promotional</a>
+                                                    <span class="time-duration grey-text text-lighten-7">7 July, 2017</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="notification_icon">
+                                                    <span class="icon-noti purple">
+															<i class="material-icons white-text">my_location</i>
+														</span>
+                                                </div>
+
+                                                <div class="notification-text">
+                                                    <p>Kate Winslet <span class="grey-text text-lighten-7">added a new lead</span></p>
+                                                    <a href="javascript:void(0)" class="light-blue-text text-base">Pen printing and T-shirts design</a>
+                                                    <span class="time-duration grey-text text-lighten-7">12 July 2017</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <!--   /End Side Navbar  -->
+
+        <!--******     Main Content Starts      ******-->
+
+        <main id="content_wrapper">
+            <section class="colors">
+                <div class="row row-padding">
+                    <div class="col l12 m12 s12">
+                        <h1>Colors</h1>
+                    </div>
+
+                    <div class="col l8">
+                        <div class="card-panel color_plates clearfix">
+                            <p>Main Colors</p>
+                            <div class="colorBrick light-blue lighten-5"></div>
+                            <div class="colorBrick light-blue">
+                                <div class="lightColor light-blue lighten-4"></div>
+                            </div>
+                            <div class="colorBrick grey lighten-5"></div>
+                            <div class="colorBrick grey">
+                                <div class="lightColor grey lighten-4"></div>
+                            </div>
+                            <div class="colorBrick grey lighten-2"></div>
+                            <div class="colorBrick grey lighten-3"></div>
+                            <div class="colorBrick green"></div>
+                            <div class="colorBrick blue lighten-5"></div>
+                            <div class="colorBrick blue"></div>
+                            <div class="colorBrick red"></div>
+                            <div class="colorBrick purple"></div>
+                        </div>
+                    </div>
+
+                    <div class="col l4">
+                        <div class="card-panel color_plates clearfix">
+                            <p>Secondary Colors</p>
+                            <div class="colorBrick grey lighten-9"></div>
+                            <div class="colorBrick green green"></div>
+                            <div class="colorBrick red"></div>
+                            <div class="colorBrick yellow">
+                                <div class="lightColor yellow lighten-4"></div>
+                            </div>
+                            <div class="colorBrick blue lighten-4"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row row-padding">
+                    <div class="col l4 m4 s12">
+                        <h1> Typography</h1>
+                        <div class="card-panel height">
+                            <h1>Heading 1</h1>
+                            <h2>Heading 2</h2>
+                            <h3>Heading 3</h3>
+                            <h4>Heading 4</h4>
+                            <h5>Heading 5</h5>
+                            <h1 class="heading_icon"><i class="material-icons light-blue-text">assignment</i>Heading With Icons</h1>
+                            <p>Normal text: Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p>
+                            <span class="grey-text text-lighten-4">Secondary text: Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span>
+                        </div>
+                    </div>
+
+                    <div class="col l4">
+                        <h1> Lables</h1>
+                        <div class="label_parent card-panel height">
+
+                            <div class="row noPadding">
+                                <div class="col s3 no-padding-left">
+                                    <span class="label light-blue white-text">Primary </span>
+                                </div>
+
+                                <div class="col s3">
+                                    <span class="light-blue-text text-lighten-4">Sent </span>
+                                </div>
+
+
+                                <div class="col s6">
+                                    <div class="bracker-check clearfix">
+                                        <div class="checkbox-check grey lighten-10">
+                                            <input type="checkbox" class="filled-in custom" id="filled-in-box" />
+                                            <label for="filled-in-box"></label>
+                                        </div>
+                                        <div class="text-check">
+                                            <span class="grey-text text-txt-light">Override bracket </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row noPadding">
+                                <div class="col s3 no-padding-left">
+                                    <span class="label green white-text">Primary </span>
+                                </div>
+
+                                <div class="col s3">
+                                    <span class="green-text">Approved </span>
+                                </div>
+                            </div>
+
+                            <div class="row noPadding">
+                                <div class="col s3 no-padding-left">
+                                    <span class="label yellow white-text">Primary </span>
+                                </div>
+
+                                <div class="col s3">
+                                    <span class="yellow-text">Pending </span>
+                                </div>
+                            </div>
+
+                            <div class="row noPadding">
+                                <div class="col s3 no-padding-left">
+                                    <span class="label red white-text">Rejected </span>
+                                </div>
+
+                                <div class="col s3">
+                                    <span class="red-text">Sent </span>
+                                </div>
+
+                            </div>
+
+                            <div class="row noPadding">
+                                <div class="col s3 no-padding-left">
+                                    <span class="label grey lighten-5 white-text">Default </span>
+                                </div>
+
+                                <div class="col s3">
+                                    <span class="grey-text text-lighten-5">Default </span>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col l4">
+                        <h1> Toggles</h1>
+                        <div class="card-panel height clearfix">
+                            <div class="checkboxes">
+                                <p>Checkbox</p>
+                                <div class="row noPadding">
+                                    <div class="col s4 no-padding-left">
+                                        <input class="filled-in" id="chk_unchecked" type="checkbox">
+                                        <label for="chk_unchecked">Unchecked</label>
+                                    </div>
+
+                                    <div class="col s4">
+                                        <input checked="checked" class="filled-in" id="chk_checked" type="checkbox">
+                                        <label for="chk_checked">Checked</label>
+                                    </div>
+
+                                    <div class="col s4">
+                                        <input class="filled-in" disabled="disabled" id="chk_disabled" type="checkbox">
+                                        <label for="chk_disabled">Disabled</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkboxes">
+                                <p>Radio</p>
+                                <div class="row noPadding">
+                                    <div class="col s4 no-padding-left">
+                                        <input class="with-gap" id="rdo_unchecked" name="kit_radio" type="radio"><label for="rdo_unchecked">Unchecked</label>
+                                    </div>
+                                    <div class="col s4">
+                                        <input checked="checked" class="with-gap" id="rdo_checked" name="kit_radio" type="radio">
+                                        <label for="rdo_checked">Checked</label>
+                                    </div>
+                                    <div class="col s4">
+                                        <input class="with-gap" disabled="disabled" id="rdo_disabled" name="kit_radio" type="radio">
+                                        <label for="rdo_disabled">Disabled</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkboxes">
+                                <p>Switches</p>
+                                <div class="row noPadding">
+                                    <div class="col s4 no-padding-left">
+                                        <div class="switch">
+                                            <label><input type="checkbox"><span class="lever"></span></label>
+                                        </div>
+                                    </div>
+                                    <div class="col s4">
+                                        <div class="switch">
+                                            <label><input checked="checked" type="checkbox"><span class="lever"></span></label>
+                                        </div>
+                                    </div>
+                                    <div class="col s4">
+                                        <div class="switch">
+                                            <label><input disabled="disabled" type="checkbox"><span class="lever"></span></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row noPadding">
+                                    <div class="col s4 no-padding-left">
+                                        <div class="switch custom">
+                                            <label><input type="checkbox"><span class="lever"><small class="yes">YES</small> <small class="no">NO</small></span></label>
+                                        </div>
+                                    </div>
+                                    <div class="col s4">
+                                        <div class="col s4 no-padding-left">
+                                            <div class="switch custom">
+                                                <label><input type="checkbox" checked="checked"><span class="lever"><small class="yes">YES</small> <small class="no">NO</small></span></label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col s4">
+                                        <div class="switch custom">
+                                            <label><input type="checkbox" checked="checked" disabled="disabled"><span class="lever"><small class="yes">YES</small> <small class="no">NO</small></span></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row row-padding">
+                    <div class="col l12">
+                        <h1>Inputs</h1>
+                    </div>
+                    <div class="col l4 m4 s12">
+                        <div class="card-panel height-450 light-blue lighten-3">
+                            <div class="input-field input-white">
+                                <i class="material-icons">person</i>
+                                <input id="user_name" type="text" class="validate">
+                                <label for="user_name">User name</label>
+                            </div>
+
+                            <div class="input-field input-white">
+                                <i class="material-icons">https</i>
+                                <input id="password" type="password" class="validate">
+                                <label for="password">Password</label>
+                            </div>
+
+                            <div class="input-field input-white">
+                                <i class="material-icons">local_phone</i>
+                                <input id="phon_number" type="text" class="validate">
+                                <label for="phone number">Phone number</label>
+                            </div>
+
+                            <div class="input-field search-w-dropdown">
+                                <div class="drop-search white">
+                                    <div class="left-dropdown">
+                                        <a class="drop-menu dropdown-button" data-beloworigin="true" data-activates="dropdown-1" href="javascript:void(0)">All <i class="material-icons right">keyboard_arrow_down</i></a>
+                                        <ul id='dropdown-1' class='dropdown-content'>
+                                            <li><a href="#!">Decoration</a></li>
+                                            <li><a href="#!">category</a></li>
+                                            <li><a href="#!">Brand</a></li>
+                                            <li><a href="#!">Price</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="right-search">
+                                        <div class="bottom_zero right-search-drop">
+                                            <input placeholder="Enter your search here..." id="search" type="text" class="bottom_zero">
+                                            <i class="material-icons">search</i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col l8">
+                        <div class="card-panel height-450 clearfix">
+                            <div class="col l5 no-padding-left ">
+                                <div class="input-field field-w-icon-left">
+                                    <i class="material-icons">person</i>
+                                    <input id="user_name" type="text" class="validate">
+                                    <label for="user_name">User name</label>
+                                </div>
+
+                                <div class="input-field custom-dropdown">
+                                    <span class="label">Category</span>
+                                    <i class="material-icons dop-icon">keyboard_arrow_down</i>
+                                    <select>
+								      <option value="" disabled selected>T-shirts</option>
+								      <option value="1">Option 1</option>
+								      <option value="2">Option 2</option>
+								      <option value="3">Option 3</option>
+								    </select>
+                                </div>
+
+                                <div class="input-field custom-dropdown bordered">
+                                    <i class="material-icons dop-icon">keyboard_arrow_down</i>
+                                    <i class="material-icons waring-red">info</i>
+                                    <select>
+								      <option value="" disabled selected>Name</option>
+								      <option value="1">Option 1</option>
+								      <option value="2">Option 2</option>
+								      <option value="3">Option 3</option>
+								    </select>
+                                </div>
+
+                                <div class="input-field clearfix">
+                                    <div class="col l6 no-padding-left custom-picker">
+                                        <i class="material-icons">today</i>
+                                        <input type="text" class="datepicker">
+                                    </div>
+
+                                    <div class="col l6 no-padding-left custom-picker">
+                                        <i class="material-icons">access_time</i>
+                                        <input type="text" class="timepicker">
+                                    </div>
+                                </div>
+
+                                <div class="file-field input-field">
+                                    <span class="label"> Change image </span>
+                                    <div class="btn btn-flat white-text light-blue lighten-1">
+                                        <span>File</span>
+                                        <input type="file" multiple>
+                                    </div>
+                                    <div class="file-path-wrapper">
+                                        <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col l7">
+                                <div class="wrapper-input-number clearfix">
+                                    <div class="input-field number">
+                                        <span class="flag"><img src="images/flag.png"/></span>
+                                        <span class="label">Call from</span>
+                                        <select>
+									      <option value="" disabled selected>+91</option>
+									      <option value="1">+92</option>
+									      <option value="2">+93</option>
+									    </select>
+                                    </div>
+
+                                    <div class="input-field person_number">
+                                        <input placeholder="Enter Number" id="number" type="text" class="validate">
+                                    </div>
+                                </div>
+
+                                <div class="input-field col s12 text-area">
+                                    <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                    <label for="textarea1">Note</label>
+                                </div>
+
+                                <div class="input-field col l12 custom-search bordered">
+                                    <div class="input">
+                                        <i class="material-icons">search</i>
+                                        <input placeholder="Search or add customer" id="first_name" type="text" class="validate">
+                                    </div>
+                                </div>
+
+                                <div class="input-field col l12 search-bordered">
+                                    <div class="input">
+                                        <input placeholder="Search or add customer" id="first_name" type="text" class="validate">
+                                    </div>
+                                </div>
+
+                                <div class="input-field col l12 search-bordered w-icon">
+                                    <div class="input">
+                                        <i class="material-icons">search</i>
+                                        <input placeholder="Search or add customer" id="first_name" type="text" class="validate">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-padding">
+                    <div class="col l3 m3 s12">
+                        <h1>Product</h1>
+                        <div class="height-550">
+                            <div class="product-wrapper">
+                                <div class="product-img grey lighten-border">
+                                    <a href="javascript:void(0)"><img src="images/img-product.png" alt="bag" /></a>
+                                    <div class="options-product">
+                                        <ul>
+                                            <li><a class="tooltipped" data-position="top" data-delay="50" data-tooltip="Add To Presentation" href="javascript:void(0)"><i class="material-icons">view_carousel</i></a></li>
+                                            <li><a href="javascript:void(0)"><i class="material-icons">receipt</i></a></li>
+                                            <li><a href="javascript:void(0)"><i class="material-icons">work</i></a></li>
+                                            <li><a href="javascript:void(0)"><i class="material-icons">remove_red_eye</i></a></li>
+                                            <li class="edit-option"><a href="javascript:void(0)"><i class="material-icons">edit</i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="row product-detail white">
+                                    <div class="clearfix">
+                                        <div class="col l8 no-padding-left">
+                                            <div class="name_prod">
+                                                <a href="#">Carrie Bag</a>
+                                                <span id="product-id">Id: PRDT1234 </span>
+                                                <p>Brand: AS Colour</p>
+                                            </div>
+                                        </div>
+
+                                        <div class="col l4 no-padding-right">
+                                            <div class="pricing">
+                                                <span id="prod-price">$30</span>
+                                                <span>BUY PRICE</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-footer clearfix">
+                                        <div class="name-prod-category">
+                                            <div>Category: <strong>Handbags</strong><span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span>Vendor : <strong>AS Colour New Zealand</strong></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col l6">
+                        <h1>Buttons</h1>
+                        <div class="card-panel height-550">
+                            <div class="row noPadding clearfix">
+
+                                <div class="col s3 no-padding-left buttons">
+                                    <p><a class="waves-effect waves-light btn-flat btn-large light-blue white-text" href="javascript:void(0)">Button</a></p>
+                                    <p><a class="waves-effect btn-flat btn-large green lighten-3 white-text" href="javascript:void(0)">Button</a></p>
+                                    <p><a class="waves-effect btn-flat btn-large red white-text" href="javascript:void(0)">Button</a></p>
+                                    <p><a class="btn-flat btn-border btn-large white blue-border blue-text text-lighten-07" href="javascript:void(0)">Button</a></p>
+                                </div>
+
+                                <div class="col s3 buttons">
+                                    <p><a class="waves-effect btn-flat blue darken-3 white-text" href="javascript:void(0)">Button</a></p>
+                                    <p><a class="waves-effect btn-flat green lighten-3 white-text" href="javascript:void(0)">Button</a></p>
+                                    <p><a class="waves-effect btn-flat red white-text" href="javascript:void(0)">Button</a></p>
+                                    <p><a class="btn-flat white blue-border blue-text text-lighten-07" href="javascript:void(0)">Button</a></p>
+                                    <p><a class="btn-flat white light-blue-border light-blue-text" href="javascript:void(0)">Button</a></p>
+                                    <p><a class="btn-flat white grey-border darken-01-text text-darken-01" href="javascript:void(0)">Button</a></p>
+                                    <p><a class="btn-flat white grey-border-light darken-01-text text-darken-01" href="javascript:void(0)">Button</a></p>
+                                </div>
+
+                                <div class="col s2 buttons">
+                                    <p><a class="text-link blue-text text-darken-3" href="javascript:void(0)"><i class="material-icons icon-left">send</i> Send</a></p>
+                                    <p><a class="text-link green-text text-lighten-3" href="javascript:void(0)"><i class="material-icons icon-left">check_circle</i> Button</a></p>
+                                    <p><a class="text-link grey-text text-lighten-7" href="javascript:void(0)"><i class="material-icons icon-left">clear</i> Cancel</a></p>
+                                    <p><a class="text-link" href="javascript:void(0)"><i class="material-icons icon-left">edit</i> Button</a></p>
+                                    <p><a href="javascript:void(0)" class="filter-chips grey lighten-55 grey-text text-lighten-56">Clear filter <i class="material-icons icon-left">clear</i></a></p>
+                                    <p> <a href="javascript:void(0)" class="applied-filter"><span class="show-applied-filter light-blue white-text">3</span><i class="material-icons">filter_list</i>Filter</a></p>
+                                    <p><a class="text-link light-blue-text" href="javascript:void(0)"><i class="material-icons icon-left">person_add</i> Button</a></p>
+                                </div>
+
+                                <div class="col s4 buttons no-padding-right">
+                                    <p><a class="waves-effect btn-flat waves-light btn-large light-blue white-text"><i class="material-icons left">add</i>Button</a></p>
+                                    <p>
+                                        <div class="product-display">
+                                            <ul class="clearfix">
+                                                <li><a href="javascript:void(0)" class="icon-display grid-view grey lighten-55 active"><i class="material-icons">view_module</i></a></li>
+                                                <li>
+                                                    <a href="javascript:void(0)" class="icon-display list-view grey lighten-55"><i class="material-icons">view_list</i>
+														</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)" class="icon-display download grey lighten-55 dropdown-button" data-activates="download-file" data-beloworigin="true"><i class="material-icons">file_download</i>
+														</a>
+                                                    <ul id='download-file' class='dropdown-content product-opt-list'>
+                                                        <li><a href="javascript:void(0)"><i class="material-icons flip-hrz-X">library_books</i>CSV</a></li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="javascript:void(0)"><i class="material-icons">library_books</i>Excel</a></li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="javascript:void(0)"><i class="material-icons">picture_as_pdf</i>PDF</a></li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="javascript:void(0)"><i class="material-icons">print</i>Print</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)" class="icon-display more grey lighten-55 dropdown-button" data-activates="menu-setting" data-beloworigin="true"><i class="material-icons">more_horiz</i></a>
+                                                    <ul id='menu-setting' class='dropdown-content'>
+                                                        <li><a href="javascript:void(0)"><i class="material-icons flip-hrz-X">open_in_browser</i>Import</a></li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="javascript:void(0)"><i class="material-icons">open_in_browser</i>Export</a></li>
+                                                        <li class="divider"></li>
+                                                        <li><a href="javascript:void(0)"><i class="material-icons">center_focus_strong</i>Markup Brackets</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </p>
+                                    <p>
+                                        <a class="btn-flat white btn-large light-blue-border light-blue-text" href="javascript:void(0)"><i class="material-icons left">play_circle_filled</i>Watch the video</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col l3">
+                        <h1>labels</h1>
+                        <div class="card-panel height-550">
+                            <div class="noPadding clearfix">
+                                <div class="row">
+                                    <a href="javascript:void(0)" class="id-product light-blue-text">Id: PRDT1234</a>
+                                </div>
+
+                                <div class="row">
+                                    <a href="javascript:void(0)" class="tag-flat grey lighten-55">Fresh material</a>
+                                </div>
+
+                                <div class="row">
+                                    <div class="label-alert yellow lighten-3">
+                                        <p>Dummy Text</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row row-padding">
+                    <div class="col l12">
+                        <h1>Table</h1>
+                    </div>
+                    <div class="col l12 m12 s12">
+                        <div class="custom-table white clearfix">
+                            <table class="bordered highlight responsive-table">
+                                <thead>
+                                    <tr>
+                                        <th class="center-align check-width">&nbsp;</th>
+                                        <th class="center-align">#</th>
+                                        <th>
+                                            <div class="flex">
+                                                <div class="user-icon invisible">
+                                                    <span class="icon-img">
+																<img src="images/img.png"/>
+															</span>
+                                                </div>
+                                                <div class="sort-wrap">Company
+                                                    <span class="sortin-icons">
+																  <i class="material-icons">keyboard_arrow_up</i>
+																  <i class="material-icons">keyboard_arrow_down</i>
+															</span>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="sort-wrap">Contact
+                                                <span class="sortin-icons">
+															  <i class="material-icons">keyboard_arrow_up</i>
+															  <i class="material-icons">keyboard_arrow_down</i>
+														</span>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="sort-wrap">Created on
+                                                <span class="sortin-icons">
+															  <i class="material-icons">keyboard_arrow_up</i>
+															  <i class="material-icons">keyboard_arrow_down</i>
+														</span>
+                                            </div>
+                                        </th>
+
+                                        <th>
+                                            <div class="sort-wrap">Total
+                                                <span class="sortin-icons">
+															  <i class="material-icons">keyboard_arrow_up</i>
+															  <i class="material-icons">keyboard_arrow_down</i>
+														</span>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="sort-wrap">Status
+                                                <span class="sortin-icons">
+															  <i class="material-icons">keyboard_arrow_up</i>
+															  <i class="material-icons">keyboard_arrow_down</i>
+														</span>
+                                            </div>
+                                        </th>
+
+                                        <th>
+                                            <div class="sort-wrap">View status
+                                                <span class="sortin-icons">
+															  <i class="material-icons">keyboard_arrow_up</i>
+															  <i class="material-icons">keyboard_arrow_down</i>
+														</span>
+                                            </div>
+                                        </th>
+
+                                        <th class="center-align">Action</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr>
+                                        <td class="center-align">
+                                            <div class="check-table white">
+                                                <input class="filled-in" id="cked" type="checkbox">
+                                                <label for="cked"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center-align">
+                                            <div>1</div>
+                                        </td>
+                                        <td>
+                                            <div class="flex">
+                                                <div class="user-icon">
+                                                    <span class="icon-img">
+																<img src="images/img.png"/>
+															</span>
+                                                </div>
+                                                <span>Think Promotional</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>Darth Vader</div>
+                                        </td>
+                                        <td>
+                                            <div>14/10/2016</div>
+                                        </td>
+                                        <td>
+                                            <div>4,489.50</div>
+                                        </td>
+                                        <td class="center-align">
+                                            <div><span class="label grey lighten-5 white-text">Created</span></div>
+                                        </td>
+                                        <td class="center-align">
+                                            <div class="red-text">Not Viewed</div>
+                                        </td>
+                                        <td class="center-align icon-more">
+                                            <a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+                                            <ul id='dropdown-table' class='dropdown-content'>
+                                                <li><a href="#!"><i class="material-icons">check</i>Mark Follow Up</a></li>
+                                                <li><a href="#!"><i class="material-icons">money_off</i>Mark as lost</a></li>
+                                                <li><a href="#!"><i class="material-icons">event_available</i>add to calendar</a></li>
+                                                <li><a href="#!"><i class="material-icons">send</i>Send</a></li>
+                                                <li><a href="#!"><i class="material-icons">done_all</i>Accept</a></li>
+                                                <li class="divider"></li>
+
+                                                <li class="footer-list">
+                                                    <ul id="dropdown-footer">
+                                                        <li><a href="#!"><i class="material-icons">edit</i></a></li>
+                                                        <li><a href="#!"><i class="material-icons">content_copy</i></a></li>
+                                                        <li><a href="#!"><i class="material-icons">delete</i></a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center-align">
+                                            <div class="check-table white">
+                                                <input class="filled-in" id="cked-a" type="checkbox">
+                                                <label for="cked-a"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center-align">
+                                            <div>2</div>
+                                        </td>
+                                        <td>
+                                            <div class="flex">
+                                                <div class="user-icon">
+                                                    <span class="icon-img">
+																<img src="images/img-1.png"/>
+															</span>
+                                                </div>
+                                                <span>Think Promotional</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>Darth Vader</div>
+                                        </td>
+                                        <td>
+                                            <div>14/10/2016</div>
+                                        </td>
+                                        <td>
+                                            <div>4,489.50</div>
+                                        </td>
+                                        <td class="center-align">
+                                            <div><span class="label green white-text">Accepted</span></div>
+                                        </td>
+                                        <td class="center-align">
+                                            <div class="red-text">Not Viewed</div>
+                                        </td>
+                                        <td class="center-align icon-more">
+                                            <a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+                                            <ul id='dropdown-table' class='dropdown-content'>
+                                                <li><a href="#!"><i class="material-icons">check</i>Mark Follow Up</a></li>
+                                                <li><a href="#!"><i class="material-icons">money_off</i>Mark as lost</a></li>
+                                                <li><a href="#!"><i class="material-icons">event_available</i>add to calendar</a></li>
+                                                <li><a href="#!"><i class="material-icons">send</i>Send</a></li>
+                                                <li><a href="#!"><i class="material-icons">done_all</i>Accept</a></li>
+                                                <li class="divider"></li>
+
+                                                <li class="footer-list">
+                                                    <ul id="dropdown-footer">
+                                                        <li><a href="#!"><i class="material-icons">edit</i></a></li>
+                                                        <li><a href="#!"><i class="material-icons">content_copy</i></a></li>
+                                                        <li><a href="#!"><i class="material-icons">delete</i></a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="center-align">
+                                            <div class="check-table white">
+                                                <input class="filled-in" id="cked-b" type="checkbox">
+                                                <label for="cked-b"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center-align">
+                                            <div>3</div>
+                                        </td>
+                                        <td>
+                                            <div class="flex">
+                                                <div class="user-icon">
+                                                    <span class="icon-img">
+																<img src="images/img-2.png"/>
+															</span>
+                                                </div>
+                                                <span>Think Promotional</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>Darth Vader</div>
+                                        </td>
+                                        <td>
+                                            <div>14/10/2016</div>
+                                        </td>
+                                        <td>
+                                            <div>4,489.50</div>
+                                        </td>
+                                        <td class="center-align">
+                                            <div><span class="label light-blue white-text">Complete</span></div>
+                                        </td>
+                                        <td class="center-align">
+                                            <div class="red-text">Not Viewed</div>
+                                        </td>
+                                        <td class="center-align icon-more">
+                                            <a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+                                            <ul id='dropdown-table' class='dropdown-content'>
+                                                <li><a href="#!"><i class="material-icons">check</i>Mark Follow Up</a></li>
+                                                <li><a href="#!"><i class="material-icons">money_off</i>Mark as lost</a></li>
+                                                <li><a href="#!"><i class="material-icons">event_available</i>add to calendar</a></li>
+                                                <li><a href="#!"><i class="material-icons">send</i>Send</a></li>
+                                                <li><a href="#!"><i class="material-icons">done_all</i>Accept</a></li>
+                                                <li class="divider"></li>
+
+                                                <li class="footer-list">
+                                                    <ul id="dropdown-footer">
+                                                        <li><a href="#!"><i class="material-icons">edit</i></a></li>
+                                                        <li><a href="#!"><i class="material-icons">content_copy</i></a></li>
+                                                        <li><a href="#!"><i class="material-icons">delete</i></a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center-align">
+                                            <div class="check-table white">
+                                                <input class="filled-in" id="cked-c" type="checkbox">
+                                                <label for="cked-c"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center-align">
+                                            <div>4</div>
+                                        </td>
+                                        <td>
+                                            <div class="flex">
+                                                <div class="user-icon">
+                                                    <span class="icon-img">
+																<img src="images/img-1.png"/>
+															</span>
+                                                </div>
+                                                <span>Think Promotional</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>Darth Vader</div>
+                                        </td>
+                                        <td>
+                                            <div>14/10/2016</div>
+                                        </td>
+                                        <td>
+                                            <div>4,489.50</div>
+                                        </td>
+                                        <td class="center-align">
+                                            <div><span class="label yellow white-text">Follow up</span></div>
+                                        </td>
+                                        <td class="center-align">
+                                            <div class="red-text">Not Viewed</div>
+                                        </td>
+                                        <td class="center-align icon-more">
+                                            <a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+                                            <ul id='dropdown-table' class='dropdown-content'>
+                                                <li><a href="#!"><i class="material-icons">check</i>Mark Follow Up</a></li>
+                                                <li><a href="#!"><i class="material-icons">money_off</i>Mark as lost</a></li>
+                                                <li><a href="#!"><i class="material-icons">event_available</i>add to calendar</a></li>
+                                                <li><a href="#!"><i class="material-icons">send</i>Send</a></li>
+                                                <li><a href="#!"><i class="material-icons">done_all</i>Accept</a></li>
+                                                <li class="divider"></li>
+
+                                                <li class="footer-list">
+                                                    <ul id="dropdown-footer">
+                                                        <li><a href="#!"><i class="material-icons">edit</i></a></li>
+                                                        <li><a href="#!"><i class="material-icons">content_copy</i></a></li>
+                                                        <li><a href="#!"><i class="material-icons">delete</i></a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center-align">
+                                            <div class="check-table white">
+                                                <input class="filled-in" id="cked-d" type="checkbox">
+                                                <label for="cked-d"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center-align">
+                                            <div>5</div>
+                                        </td>
+                                        <td>
+                                            <div class="flex">
+                                                <div class="user-icon">
+                                                    <span class="icon-img">
+																<img src="images/img-2.png"/>
+															</span>
+                                                </div>
+                                                <span>Think Promotional</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>Darth Vader</div>
+                                        </td>
+                                        <td>
+                                            <div>14/10/2016</div>
+                                        </td>
+                                        <td>
+                                            <div>4,489.50</div>
+                                        </td>
+                                        <td class="center-align">
+                                            <div><span class="label red white-text">Lost</span></div>
+                                        </td>
+                                        <td class="center-align">
+                                            <div class="red-text">Not Viewed</div>
+                                        </td>
+                                        <td class="center-align icon-more">
+                                            <a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+                                            <ul id='dropdown-table' class='dropdown-content'>
+                                                <li><a href="#!"><i class="material-icons">check</i>Mark Follow Up</a></li>
+                                                <li><a href="#!"><i class="material-icons">money_off</i>Mark as lost</a></li>
+                                                <li><a href="#!"><i class="material-icons">event_available</i>add to calendar</a></li>
+                                                <li><a href="#!"><i class="material-icons">send</i>Send</a></li>
+                                                <li><a href="#!"><i class="material-icons">done_all</i>Accept</a></li>
+                                                <li class="divider"></li>
+
+                                                <li class="footer-list">
+                                                    <ul id="dropdown-footer">
+                                                        <li><a href="#!"><i class="material-icons">edit</i></a></li>
+                                                        <li><a href="#!"><i class="material-icons">content_copy</i></a></li>
+                                                        <li><a href="#!"><i class="material-icons">delete</i></a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center-align">
+                                            <div class="check-table white">
+                                                <input class="filled-in" id="cked-e" type="checkbox">
+                                                <label for="cked-e"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center-align">
+                                            <div>6</div>
+                                        </td>
+                                        <td>
+                                            <div class="flex">
+                                                <div class="user-icon">
+                                                    <span class="icon-img">
+																<img src="images/img-3.png"/>
+															</span>
+                                                </div>
+                                                <span>Think Promotional</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>Darth Vader</div>
+                                        </td>
+                                        <td>
+                                            <div>14/10/2016</div>
+                                        </td>
+                                        <td>
+                                            <div>4,489.50</div>
+                                        </td>
+                                        <td class="center-align">
+                                            <div><span class="label grey lighten-5 white-text">Created</span></div>
+                                        </td>
+                                        <td class="center-align">
+                                            <div class="red-text">Not Viewed</div>
+                                        </td>
+                                        <td class="center-align icon-more">
+                                            <a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+                                            <ul id='dropdown-table' class='dropdown-content'>
+                                                <li><a href="#!"><i class="material-icons">check</i>Mark Follow Up</a></li>
+                                                <li><a href="#!"><i class="material-icons">money_off</i>Mark as lost</a></li>
+                                                <li><a href="#!"><i class="material-icons">event_available</i>add to calendar</a></li>
+                                                <li><a href="#!"><i class="material-icons">send</i>Send</a></li>
+                                                <li><a href="#!"><i class="material-icons">done_all</i>Accept</a></li>
+                                                <li class="divider"></li>
+
+                                                <li class="footer-list">
+                                                    <ul id="dropdown-footer">
+                                                        <li><a href="#!"><i class="material-icons">edit</i></a></li>
+                                                        <li><a href="#!"><i class="material-icons">content_copy</i></a></li>
+                                                        <li><a href="#!"><i class="material-icons">delete</i></a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center-align">
+                                            <div class="check-table white">
+                                                <input class="filled-in" id="cked-f" type="checkbox">
+                                                <label for="cked-f"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center-align">
+                                            <div>7</div>
+                                        </td>
+                                        <td>
+                                            <div class="flex">
+                                                <div class="user-icon">
+                                                    <span class="icon-img">
+																<img src="images/img.png"/>
+															</span>
+                                                </div>
+                                                <span>Think Promotional</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>Darth Vader</div>
+                                        </td>
+                                        <td>
+                                            <div>14/10/2016</div>
+                                        </td>
+                                        <td>
+                                            <div>4,489.50</div>
+                                        </td>
+                                        <td class="center-align">
+                                            <div><span class="label red white-text">Lost</span></div>
+                                        </td>
+                                        <td class="center-align">
+                                            <div class="red-text">Not Viewed</div>
+                                        </td>
+                                        <td class="center-align icon-more">
+                                            <a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+                                            <ul id='dropdown-table' class='dropdown-content'>
+                                                <li><a href="#!"><i class="material-icons">check</i>Mark Follow Up</a></li>
+                                                <li><a href="#!"><i class="material-icons">money_off</i>Mark as lost</a></li>
+                                                <li><a href="#!"><i class="material-icons">event_available</i>add to calendar</a></li>
+                                                <li><a href="#!"><i class="material-icons">send</i>Send</a></li>
+                                                <li><a href="#!"><i class="material-icons">done_all</i>Accept</a></li>
+                                                <li class="divider"></li>
+
+                                                <li class="footer-list">
+                                                    <ul id="dropdown-footer">
+                                                        <li><a href="#!"><i class="material-icons">edit</i></a></li>
+                                                        <li><a href="#!"><i class="material-icons">content_copy</i></a></li>
+                                                        <li><a href="#!"><i class="material-icons">delete</i></a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center-align">
+                                            <div class="check-table white">
+                                                <input class="filled-in" id="cked-g" type="checkbox">
+                                                <label for="cked-g"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center-align">
+                                            <div>8</div>
+                                        </td>
+                                        <td>
+                                            <div class="flex">
+                                                <div class="user-icon">
+                                                    <span class="icon-img">
+																<img src="images/img.png"/>
+															</span>
+                                                </div>
+                                                <span>Think Promotional</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>Darth Vader</div>
+                                        </td>
+                                        <td>
+                                            <div>14/10/2016</div>
+                                        </td>
+                                        <td>
+                                            <div>4,489.50</div>
+                                        </td>
+                                        <td class="center-align">
+                                            <div><span class="label light-blue white-text">Complete</span></div>
+                                        </td>
+                                        <td class="center-align">
+                                            <div class="red-text">Not Viewed</div>
+                                        </td>
+                                        <td class="center-align icon-more">
+                                            <a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+                                            <ul id='dropdown-table' class='dropdown-content'>
+                                                <li><a href="#!"><i class="material-icons">check</i>Mark Follow Up</a></li>
+                                                <li><a href="#!"><i class="material-icons">money_off</i>Mark as lost</a></li>
+                                                <li><a href="#!"><i class="material-icons">event_available</i>add to calendar</a></li>
+                                                <li><a href="#!"><i class="material-icons">send</i>Send</a></li>
+                                                <li><a href="#!"><i class="material-icons">done_all</i>Accept</a></li>
+                                                <li class="divider"></li>
+
+                                                <li class="footer-list">
+                                                    <ul id="dropdown-footer">
+                                                        <li><a href="#!"><i class="material-icons">edit</i></a></li>
+                                                        <li><a href="#!"><i class="material-icons">content_copy</i></a></li>
+                                                        <li><a href="#!"><i class="material-icons">delete</i></a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="center-align">
+                                            <div class="check-table white">
+                                                <input class="filled-in" id="cked-h" type="checkbox">
+                                                <label for="cked-h"></label>
+                                            </div>
+                                        </td>
+                                        <td class="center-align">
+                                            <div>9</div>
+                                        </td>
+                                        <td>
+                                            <div class="flex">
+                                                <div class="user-icon">
+                                                    <span class="icon-img">
+																<img src="images/img.png"/>
+															</span>
+                                                </div>
+                                                <span>Think Promotional</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>Darth Vader</div>
+                                        </td>
+                                        <td>
+                                            <div>14/10/2016</div>
+                                        </td>
+                                        <td>
+                                            <div>4,489.50</div>
+                                        </td>
+                                        <td class="center-align">
+                                            <div><span class="label green white-text">Won</span></div>
+                                        </td>
+                                        <td class="center-align">
+                                            <div class="red-text">Not Viewed</div>
+                                        </td>
+                                        <td class="center-align icon-more">
+                                            <a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+                                            <ul id='dropdown-table' class='dropdown-content'>
+                                                <li><a href="#!"><i class="material-icons">check</i>Mark Follow Up</a></li>
+                                                <li><a href="#!"><i class="material-icons">money_off</i>Mark as lost</a></li>
+                                                <li><a href="#!"><i class="material-icons">event_available</i>add to calendar</a></li>
+                                                <li><a href="#!"><i class="material-icons">send</i>Send</a></li>
+                                                <li><a href="#!"><i class="material-icons">done_all</i>Accept</a></li>
+                                                <li class="divider"></li>
+
+                                                <li class="footer-list">
+                                                    <ul id="dropdown-footer">
+                                                        <li><a href="#!"><i class="material-icons">edit</i></a></li>
+                                                        <li><a href="#!"><i class="material-icons">content_copy</i></a></li>
+                                                        <li><a href="#!"><i class="material-icons">delete</i></a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!--****  TABLE FOOTER  *****-->
+                            <div class="row table-footer">
+                                <div class="col l3 m4 s6">
+                                    <div class="show-table-row">
+                                        <span>Show</span>
+                                        <div class="input-field">
+                                            <i class="material-icons caret-custom">keyboard_arrow_down</i>
+                                            <select>
+												      <option value="" disabled selected>50</option>
+												      <option value="1">1</option>
+												      <option value="2">2</option>
+												      <option value="3">3</option>
+												    </select>
+                                        </div>
+                                        <span>entries</span>
+                                    </div>
+                                </div>
+
+                                <div class="col l5 m4 s6">
+                                    <div class="center-align current-entries">
+                                        Showing 1 to 50 of 60 entries
+                                    </div>
+                                </div>
+
+                                <div class="col l4 m4 s6 pagination-wrapper">
+                                    <ul class="pagination">
+                                        <li class="waves-effect less-page"><a href="#!"><i class="material-icons">keyboard_backspace</i></a></li>
+                                        <li class="active"><a href="#!">1</a></li>
+                                        <li class="waves-effect"><a href="#!">2</a></li>
+                                        <li class="waves-effect"><a href="#!">3</a></li>
+                                        <li class="waves-effect"><a href="#!">...</a></li>
+                                        <li class="waves-effect"><a href="#!">6</a></li>
+                                        <li class="waves-effect more-page"><a href="#!"><i class="material-icons flip-hrz">keyboard_backspace</i></a></li>
+                                    </ul>
+                                    <span class="current-page">Page <span class="grey-text text-darken-01">1</span>/6</span>
+                                </div>
+                            </div>
+                            <!--****  TABLE FOOTER END *****-->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row row-padding">
+                    <div class="col l12">
+                        <h1>Others</h1>
+                    </div>
+                    <div class="col l5">
+                        <div class="card-panel height-450 clearfix">
+                            <div class="drag-n-drop-wrapper">
+                                <p class="drag-heading">Upload file<i class="material-icons">help</i></p>
+                                <div class="drag-n-drop">
+                                    <div class="drop-file center-align">
+                                        <div class="upload-icon grey upload"><i class="material-icons">cloud_upload</i></div>
+                                        <h4>Drag and drop</h4>
+                                        <p>your file here, or <a href="#">click to locate file</a></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="media-options-wrapper grey black">
+                                <div class="media-options">
+                                    <ul>
+                                        <li><a href="javascript:void(0)"><i class="material-icons">cloud_upload</i>Upload File</a></li>
+                                        <li class="breadcrumb-icon"><i class="material-icons">keyboard_arrow_right</i></li>
+                                        <li><a href="javascript:void(0)"><i class="material-icons">remove_red_eye</i>Map and preview</a></li>
+                                        <li class="breadcrumb-icon"><i class="material-icons">keyboard_arrow_right</i></li>
+                                        <li><a href="javascript:void(0)"><i class="material-icons">open_in_browser</i>Import</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col l7">
+                        <div class="card-panel height-450 clearfix grey body-light">
+                            <div class="product-quote-wrapper white">
+                                <div class="product-quote">
+                                    <div class="quote-img">
+                                        <a href="#"><img class="img-responsive" src="images/img-product.png" alt="product-name"></a>
+                                    </div>
+
+                                    <div class="detail-quote">
+                                        <div class="name-product">
+                                            <a class="name-prod" href="#">Carrie Bag</a><span id="product-id">Id: PRDT1234 </span>
+                                        </div>
+                                        <div class="name-prod-category">
+                                            <div>Brand: <strong>As Color</strong><span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span>Category: <strong>Handbags</strong><span class="grey-text text-light-ccc">&nbsp;&nbsp;|&nbsp;&nbsp;</span>Vendor:<strong>AS Colour New Zealand</strong></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="prod-catelog-price">
+                                        <span class="prc">$30</span> <span class="prc-label">BUY PRICE</span>
+                                    </div>
+                                    <div class="more-option">
+                                        <a href="javascript:void(0)"><i class="material-icons">more_horiz</i></a>
+                                    </div>
+
+                                    <div class="more-opt-exapnd white">
+                                        <ul>
+                                            <li><a href="javascript:void(0)"><i class="material-icons">view_carousel</i></a></li>
+                                            <li><a href="javascript:void(0)"><i class="material-icons">receipt</i></a></li>
+                                            <li><a href="javascript:void(0)"><i class="material-icons">work</i></a></li>
+                                            <li><a href="javascript:void(0)"><i class="material-icons">remove_red_eye</i></a></li>
+                                            <li><a href="javascript:void(0)"><i class="material-icons">edit</i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row row-padding">
+                    <div class="col l12">
+                        <h1>Loader</h1>
+                        <div class="loader grey black">
+                            <img src="images/oval.svg">
+                            <strong class="white-text">Loading...</strong>
+                        </div>
+                    </div>
+
+
+                </div>
+    </div>
+    </div>
+    </section>
+    </main>
+
+    <!--******     /Main Content Ends      ******-->
+
+    </div>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/bin/materialize.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>

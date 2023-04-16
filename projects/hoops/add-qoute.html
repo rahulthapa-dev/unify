@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add Quote</title>
+    <!--Import Material Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import Catamaran Font-->
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="sass/hoops-crm.css" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body class="hoops-UIkit grey body-light">
+
+    <div class="main-wrapper">
+        <!--*****   SIDEBAR NAVIGATION   *****-->
+        <div class="side-nav fixed white" id="main_navigation">
+
+            <div class="logo">
+                <a href="javascript:void(0)"><img src="images/logo.png" alt="hoops crm" /></a>
+            </div>
+
+            <div class="logo-small hide">
+                <a href="javascript:void(0)"><img src="images/logo-small.png" alt="hoops crm" /></a>
+            </div>
+
+            <div class="current_user">
+                <div class="name_user dropdown-button pointer" data-activates='user-dropdown' data-beloworigin="true">
+                    <span class="user_thumb">
+            				<img class="img-responsive" src="images/img-user.png">
+            			</span>
+                    <a class="user-log" href="javascript:void(0)">Kate Winslet <i class="material-icons">keyboard_arrow_down</i></a>
+                    <ul id='user-dropdown' class='dropdown-content'>
+                        <li><a href="javascript:void(0)"><i class="material-icons">account_circle</i>My Profile</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:void(0)"><i class="material-icons">https</i>Change Password</a></li>
+                        <li class="divider"></li>
+                        <li><a href="javascript:void(0)"><i class="material-icons">power_settings_new</i>Logout </a></li>
+                    </ul>
+
+                </div>
+            </div>
+
+            <ul class="main-menu">
+                <li><a class="tooltipped" data-position="right" data-delay="50" data-tooltip="Dashboadrd" href="dashboard-user.html"><i class="material-icons">dashboard</i><span class="nav_link_text">Dashboard</span></a></li>
+                <li><a class="active tooltipped" href="customer.html" data-position="right" data-delay="50" data-tooltip="Customers"><i class="material-icons">person</i><span class="nav_link_text">Customers</span></a></li>
+                <li><a class="tooltipped" href="" data-position="right" data-delay="50" data-tooltip="Leads"><i class="material-icons">my_location</i><span class="nav_link_text">Leads</span></a></li>
+                <li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Quotes"><i class="material-icons">receipt</i><span class="nav_link_text">Quotes</span></a></li>
+                <li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Jobs"><i class="material-icons">work</i><span class="nav_link_text">Jobs</span></a></li>
+                <li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Calender"><i class="material-icons">today</i><span class="nav_link_text">Calender</span></a></li>
+                <li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Purchase Orders"><i class="material-icons">description</i><span class="nav_link_text">Purchase Orders</span></a></li>
+                <li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Reports"><i class="material-icons">poll</i><span class="nav_link_text">Reports</span></a></li>
+                <li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Catalogue"><i class="material-icons">storage</i><span class="nav_link_text">Catalogue</span></a></li>
+            </ul>
+
+        </div>
+
+        <header id="header">
+            <nav class="navbar_header light-blue lighten-5 row">
+                <div class="nav-wrapper col s12">
+                    <a href="#" data-activates="main_navigation" class="button-collapse"><i class="material-icons">menu</i></a>
+                    <div class="toggles">
+                        <a href="#" class="toggle-sidebar hide-on-med-and-down"><i class="material-icons white-text">chevron_left</i></a>
+                        <a href="#" class="expand-sidebar hide"><i class="material-icons white-text">menu</i></a>
+                    </div>
+
+                    <ul id="nav-mobile" class="right">
+                        <li class="dropMenu" id="search_place">
+                            <a class='search_button-open' href='#'>
+                                <i class="material-icons white-text">search</i>
+                            </a>
+
+                            <div class="input-field search_header">
+                                <input id="header-search" class="white" placeholder="Enter your search here..." id="search_header" type="text" class="validate">
+                                <i id="close-header-search" class="material-icons white-text grey-text text-lighten-8">search</i>
+                            </div>
+
+                        </li>
+
+                        <li class="dropMenu">
+                            <a class='dropdown-button' href='#' data-beloworigin="true" data-constrainWidth="false" data-alignment="right" data-activates='addCustomer'>
+                                <i class="material-icons white-text">add_circle</i>
+                            </a>
+                            <div id='addCustomer' class='dropdown-content dropdown-eq'>
+                                <ul>
+                                    <li><a href="#!"><i class="material-icons">person_add</i>Add Customers</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#!"><i class="material-icons">my_location</i>Add Leads</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#!"><i class="material-icons">receipt</i>Create Quotes</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#!"><i class="material-icons">work</i>Schedule Jobs</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#!"><i class="material-icons">event_note</i>Add to Calendar</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#!"><i class="material-icons">library_add</i>Add Catalogue</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="dropMenu">
+                            <a class='dropdown-button' href='#' data-beloworigin="true" data-constrainWidth="false" data-alignment="right" data-activates='setting'>
+                                <i class="material-icons white-text">settings</i>
+                            </a>
+                            <div id='setting' class='dropdown-content dropdown-eq'>
+                                <ul>
+                                    <li><a href="#!"><i class="material-icons">wb_incandescent</i>Decorations</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#!"><i class="material-icons">group</i>Vendors</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#!"><i class="material-icons">info</i>General</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#!"><i class="material-icons">extension</i>Integrations</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#!"><i class="material-icons">drafts</i>Email Templates</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#!"><i class="material-icons">check_box</i>Job Tasks</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#!"><i class="material-icons">person</i>Users</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#!"><i class="material-icons">attach_money</i>Billing</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="relative">
+                            <a href="#" class='dropdown-button' href='#' data-beloworigin="true" data-constrainWidth="false" data-alignment="right" data-activates='notification'>
+                                <i class="material-icons white-text">notifications</i> <span class="notification-number pulse ">3</span>
+                            </a>
+                            <ul id='notification' class='dropdown-content'>
+                                <li>
+                                    <div class="notification_wrapper">
+                                        <ul class="clearfix">
+                                            <li>
+                                                <div class="notification_icon">
+                                                    <span class="icon-noti purple">
+															<i class="material-icons white-text">my_location</i>
+														</span>
+                                                </div>
+
+                                                <div class="notification-text">
+                                                    <p>Alexandra Jones <span class="grey-text text-lighten-7">added a new lead</span></p>
+                                                    <a href="javascript:void(0)" class="light-blue-text text-base">Team info design company</a>
+                                                    <span class="time-duration grey-text text-lighten-7">10 min ago</span>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="notification_icon">
+                                                    <span class="icon-noti grey lighten-9">
+															<i class="material-icons white-text">person</i>
+														</span>
+                                                </div>
+
+                                                <div class="notification-text">
+                                                    <p>Sierra Dickinson <span class="grey-text text-lighten-7">is now added as a customer</span></p>
+                                                    <a href="javascript:void(0)" class="light-blue-text text-base">Robbing Hoods Car Detailing</a>
+                                                    <span class="time-duration grey-text text-lighten-7">2 hours ago</span>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="notification_icon">
+                                                    <span class="icon-noti yellow lighten-4">
+															<i class="material-icons white-text">work</i>
+														</span>
+                                                </div>
+
+                                                <div class="notification-text">
+                                                    <p>Olivia Kelly <span class="grey-text text-lighten-7">created a job</span></p>
+                                                    <a href="javascript:void(0)" class="light-blue-text text-base">Fresh Prince of Bel-Air</a>
+                                                    <span class="time-duration grey-text text-lighten-7">20 min ago</span>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="notification_icon">
+                                                    <span class="icon-noti blue-grey darken-4">
+															<i class="material-icons white-text">receipt</i>
+														</span>
+                                                </div>
+
+                                                <div class="notification-text">
+                                                    <p>Allison Faber <span class="grey-text text-lighten-7">created a quote.</span></p>
+                                                    <a href="javascript:void(0)" class="light-blue-text text-base">Think Promotional</a>
+                                                    <span class="time-duration grey-text text-lighten-7">7 July, 2017</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="notification_icon">
+                                                    <span class="icon-noti purple">
+															<i class="material-icons white-text">my_location</i>
+														</span>
+                                                </div>
+
+                                                <div class="notification-text">
+                                                    <p>Kate Winslet <span class="grey-text text-lighten-7">added a new lead</span></p>
+                                                    <a href="javascript:void(0)" class="light-blue-text text-base">Pen printing and T-shirts design</a>
+                                                    <span class="time-duration grey-text text-lighten-7">12 July 2017</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!--   /End Side Navbar  -->
+
+        <!--****  Mobile Search  ****-->
+        <div class="responsive-search">
+            <div class="input-field custom-search bordered white">
+                <div class="input">
+                    <i class="material-icons">search</i>
+                    <input placeholder="Search here..." id="first_name" class="validate" type="text">
+                </div>
+            </div>
+        </div>
+        <!--****  /End Mobile Search  ****-->
+
+        <!--******     Main Content Starts      ******-->
+
+        <main id="content_wrapper" class="add-quote-wapper">
+            <section>
+                <div class="row row-padding">
+                    <div class="quote-container white clearfix">
+                        <div class="quote-header clearfix">
+                            <div class="col l6 m6 s12 add-quote-search no-padding-left">
+                                <div class="input-field custom-search bordered">
+                                    <div class="input">
+                                        <i class="material-icons">search</i>
+                                        <input placeholder="Search or add customer" id="first_name" type="text" class="validate">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col l6 m6 s12 quote-video no-padding-right">
+                                <div class="button-watch-vodeo">
+                                    <a class="waves-effect waves-dark btn-flat white btn-large light-blue-border light-blue-text right" href="javascript:void(0)"><i class="material-icons left">play_circle_filled</i>Watch the video</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!--******     /Main Content Ends      ******-->
+
+    </div>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/bin/materialize.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>

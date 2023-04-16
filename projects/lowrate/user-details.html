@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<title>User Details</title>
+		<!--Import Material Icon Font-->
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Import Catamaran Font-->
+		<link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="sass/lowrate.css"  media="screen,projection"/>
+		<link type="text/css" rel="stylesheet" href="sass/tokbox.css"  media="screen,projection"/>
+		<link type="text/css" rel="stylesheet" href="sass/font.css"/>
+		<!--Let browser know website is optimized for mobile-->
+		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,600,700" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body class="lowrate grey darken-2">
+    	<div class="main-wrapper">
+			<!--*****   SIDEBAR NAVIGATION   *****-->
+            <div class="side-nav fixed white" id="main_navigation">
+            	<div class="current_user">
+            		<div class="name_user">
+            			<span class="user_thumb">
+            				<img class="img-responsive" src="images/user.png">
+            			</span>
+            			<p class="userName">Frank</p>
+            		</div>
+            	</div>
+	            <ul class="main-menu">
+					<li><a href="javascript:void(0)"><i class="material-icons">dashboard</i><span class="nav_link_text">Dashboard</span></a></li>
+					<li><a href="dashboard-user.html"><i class="material-icons">people</i><span class="nav_link_text">Users</span></a></li>
+					<li><a href="javascript:void(0)"><i class="material-icons">call</i><span class="nav_link_text">Calls</span></a></li>
+					<li><a href="javascript:void(0)"><i class="material-icons">monetization_on</i><span class="nav_link_text">Payments</span></a></li>
+					<li><a href="javascript:void(0)"><i class="material-icons">call</i><span class="nav_link_text">Calls</span></a></li>
+					<li><a href="javascript:void(0)"><i class="material-icons">message</i><span class="nav_link_text">Messages</span></a></li>
+	            </ul>
+	            <ul class="main-menu bottomControls">
+					<li><a href="javascript:void(0)"><i class="material-icons">settings</i></a></li>
+					<li><a href="javascript:void(0)"><i class="material-icons">power_settings_new</i></a></li>
+	            </ul>
+
+            </div>
+
+	        <header id="header" class="navbar-fixed">
+				<nav class="navbar_header white row">
+				    <div class="nav-wrapper">
+				      <a href="#" class="brand-logo"><img src="images/logo.png" alt="lowrate"></a>
+				      <ul id="nav-mobile" class="right hide-on-med-and-down headerNav">
+<!-- 				        <li><a href="javascript:void(0)"><i class="material-icons">local_phone</i>Call Agent</a></li>
+				        <li><a href="javascript:void(0)"><i class="material-icons">attach_money</i>Pay</a></li>
+				        <li><a href="javascript:void(0)"><i class="material-icons rotateX180">file_download</i>Upload</a></li> -->
+				        <li class="notifications noBorder">
+				            <a class="message" href="javascript:void(0)"><i class="material-icons rotateY180">message</i></a>
+				            <a class="bellNoti" href="javascript:void(0)"><i class="material-icons">notifications_none</i></a>
+				        </li>
+				      </ul>
+				    </div>
+				</nav>
+	        </header>
+
+          <!--   /End Side Navbar  -->
+
+          <!--******     Main Content Starts      ******-->
+			<main id="content_wrapper">
+		    	<section class="row panel_u_Detail">
+		    		<div class="col l9 m9 s12 no-padding-left left_panel_u_detail">
+		    		 <div class="singleUserDetail">
+		    		     <div class="detailSwapper white">
+			    		     <div class="detail_User">
+			    		         <div class="detail_icon green lighten-5">
+			    		            <img src="images/detail_img.png" alt="User">
+			    		         </div>
+			    		         <div class="userContact">
+			    		             <h2>John Doe</h2>
+			    		             <p><i class="material-icons">email</i>john.doe@gmail.com</p>
+			    		             <p><i class="material-icons">call</i>999-999-9809</p>
+			    		         </div>
+			    		    </div>
+			    		    <div class="policies_owned">
+			    		        <p>Policies Owned</p>
+			    		        <div class="policy_labls">
+				    		        <span class="tbl_lable grey darken-2">Auto Insurance</span>
+				    		        <span class="tbl_lable grey darken-2">Renter's Insurance</span>
+				    		    </div>    
+			    		    </div>
+			    		    <div class="doc_uploaded">
+			    		        <span class="Doc_icon">
+
+			    		        </span>
+			    		        <div class="count_uploaded">
+			    		            <p class="docNumber">6</p>
+			    		            <p>Documents Uploaded</p>
+			    		        </div>
+			    		    </div>
+			    		    <div class="doc_uploaded">
+			    		        <span class="Doc_icon calls">
+			    		        </span>
+			    		        <div class="count_uploaded">
+			    		            <p class="docNumber">3</p>
+			    		            <p>Calls made</p>
+			    		        </div>
+			    		    </div>
+			    		    <span class="registerTIme">Registered: 10 November, 2017</span>
+		    		     </div>
+		    		 </div>
+		    		 <div class="buttonControls">
+		    		     <a class="waves-effect btn-large green lighten-5 btn-flat btn-icon white-text modal-trigger" href="#uploadDoc"><i class="material-icons rotateX180 left">file_download</i> Upload Document</a>
+		    		 </div>		    		 
+	    		     <div class="detail_Tabs">
+	    		     	<div class="btn_group">
+		    		        <ul class="tab_Group">
+		    		            <li>
+		    		                <a id="userpolicy" class="tab_btn btn-flat raddius25 btn-large der" href="javascript:void(0)"><small class="dotCircle"><i class="material-icons">attach_money</i></small>Policies <span>(2)</span></a>
+		    		            </li>
+		    		            <li>
+		    		                <a class="tab_btn btn-flat raddius25 btn-large grn" href="javascript:void(0)"><small class="dotCircle"><i class="material-icons">credit_card</i></small>ID Cards <span>(2)</span></a>
+		    		            </li>
+		    		            <li>
+		    		                <a class="tab_btn btn-flat raddius25 btn-large blu" href="javascript:void(0)"><small class="dotCircle"><i class="material-icons">receipt</i></small>Payment Receipts <span>(2)</span></a>
+		    		            </li>
+		    		            <li>
+		    		                <a class="tab_btn btn-flat raddius25 btn-large pnk" href="javascript:void(0)"><small class="dotCircle"><i class="material-icons">folder</i></small>Exchange Folder</a>
+		    		            </li>
+		    		            <li>
+		    		                <a id="userCalls" class="tab_btn btn-flat raddius25 btn-large der" href="javascript:void(0)"><small class="dotCircle"><i class="material-icons">call</i></small>Calls <span>(2)</span></a>
+		    		            </li>
+		    		            <li>
+		    		                <a id="chat" class="tab_btn btn-flat raddius25 btn-large prpl" href="javascript:void(0)"><small class="dotCircle"><i class="material-icons">chat_bubble_outline</i></small>Chat History</a>
+		    		            </li>
+		    		            <li>
+		    		                <a class="tab_btn btn-flat raddius25 btn-large" href="javascript:void(0)"><small class="dotCircle"><i class="material-icons">attach_money</i></small>Payments</a>
+		    		            </li>
+<!-- 		    		            <li id="MoreTabs">
+		    		                <a class="more_options dropdown-button" href="javascript:void(0)" data-beloworigin="true" data-activates="moreList">More<i class="material-icons">arrow_drop_down</i></a>
+									<ul id="moreList" class='dropdown-content'>
+									</ul>
+		    		            </li> -->
+		    		        </ul>
+	    		         </div>
+	    		         <div class="containerTabs">
+	    		            <div class="tab tab_one">
+								<div class="custom_table">
+									<table class="gridTable">
+										<thead>
+										<tr>
+											<th class="checkHead"></th>
+											<th><div class="theader">DOCUMENT<i class="material-icons">sort</i></div></th>
+											<th><div class="theader">FILE SIZE<i class="material-icons">sort</i></div></th>
+											<th><div class="theader">UPLOADED <i class="material-icons">sort</i></div></th>
+											<th class="opt_more"><div class="theader"></div></th>
+										</tr>
+										</thead>
+
+										<tbody>
+										<tr>
+											<td>
+												<input class="filled-in" id="chk_all" type="checkbox"/>
+											 	<label for="chk_all"></label>														
+											</td>
+											<td>
+												<div class="doc_name">
+													<img src="images/pdf.png" align="PDF"/>
+													<span class="file_name">Payment receipt for Auto insurance</span>
+													<span class="lbl_status blue-grey lighten-05">not Seen</span>
+												</div>
+											</td>											
+											<td>1MB</td>
+											<td>20 November, 2017</td>
+											<td><div class="tbl_options">
+											    <span class="mail"><i class="material-icons">remove_red_eye</i></span>
+											    <span class="mail"><i class="material-icons">file_download</i></span>
+											    <span class="mail"><i class="material-icons">delete</i></span>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<input class="filled-in" id="chk_all" type="checkbox"/>
+											 	<label for="chk_all"></label>														
+											</td>
+											<td>
+												<div class="doc_name">
+													<img src="images/do.png" align="PDF"/>
+													<span class="file_name">Terms &amp; conditions for Renter’s Insurance</span>
+												</div>
+											</td>											
+											<td>1MB</td>
+											<td>20 November, 2017</td>
+											<td><div class="tbl_options">
+											    <span class="mail"><i class="material-icons">remove_red_eye</i></span>
+											    <span class="mail"><i class="material-icons">file_download</i></span>
+											    <span class="mail"><i class="material-icons">delete</i></span>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<input class="filled-in" id="chk_all" type="checkbox"/>
+											 	<label for="chk_all"></label>														
+											</td>
+											<td>
+												<div class="doc_name">
+													<img src="images/jpg.png" align="PDF"/>
+													<span class="file_name">Claim policies for Auto Insurance</span>
+												</div>
+											</td>											
+											<td>1MB</td>
+											<td>20 November, 2017</td>
+											<td><div class="tbl_options">
+											    <span class="mail"><i class="material-icons">remove_red_eye</i></span>
+											    <span class="mail"><i class="material-icons">file_download</i></span>
+											    <span class="mail"><i class="material-icons">delete</i></span>
+											</td>
+										</tr>
+									</tbody>
+									</table>									    
+								</div>	    		             
+	    		            </div>
+						    <div class="tab tab_two">
+								<div class="custom_table">
+									<table class="gridTable">
+										<thead>
+										<tr>
+											<th class="checkHead"></th>
+											<th><div class="theader">ID<i class="material-icons">sort</i></div></th>
+											<th><div class="theader">CALL TIME<i class="material-icons">sort</i></div></th>
+											<th><div class="theader">CALL DURATION<i class="material-icons">sort</i></div></th>
+											<th><div class="theader">CALL TYPE</div></th>
+											<th><div class="theader">RECORDED <i class="material-icons">sort</i></div></th>
+											<th><div class="theader">TAGS <i class="material-icons">sort</i></div></th>
+										</tr>
+										</thead>
+
+										<tbody>
+										<tr>
+											<td>
+												<input class="filled-in" id="chk_all" type="checkbox"/>
+											 	<label for="chk_all"></label>														
+											</td>
+											<td><a class="blue-text" href="javascript:void(0)">Micheal</a></td>
+											<td>09/11/2017 10:24:20 AM</td>
+											<td>00:10:20</td>
+											<td><span class="red-text">Missed</span></td>
+											<td class="record"><a href="javascript:void(0)"><i class="material-icons mic_off">mic_off</i></a></td>
+											<td>Claim</td>
+										</tr>
+										<tr>
+											<td>
+												<input class="filled-in" id="chk_s" type="checkbox"/>
+											 	<label for="chk_s"></label>														
+											</td>
+											<td><a class="blue-text" href="javascript:void(0)">Sam</a></td>
+											<td>09/11/2017 10:24:20 AM</td>
+											<td>00:10:20</td>
+											<td><span class="green-text">Incoming</span></td>
+											<td class="record"><a href="javascript:void(0)"><i class="material-icons mic_on">mic</i><span class="duration_call">00:05:04</span></a></td>
+											<td>policies, pricing</td>
+										</tr>
+										<tr>
+											<td>
+												<input class="filled-in" id="chk_s" type="checkbox"/>
+											 	<label for="chk_s"></label>														
+											</td>
+											<td><a class="blue-text" href="javascript:void(0)">John Doe</a></td>
+											<td>09/11/2017 10:24:20 AM</td>
+											<td>00:10:20</td>
+											<td><span class="blue-text">Outgoing</span></td>
+											<td class="record"><a href="javascript:void(0)"><i class="material-icons mic_on">mic</i><span class="duration_call">00:05:04</span></a></td>
+											<td>policies, pricing</td>
+										</tr>																				
+										</tbody>
+									</table>									    
+								</div>		
+							</div>
+							<div class="tab tab_call">
+							    <div class="chat_wrapper white">
+							    	<div class="chat_msgs">
+							    	    <ul class="chat_container">
+							    	        <li class="clearfix">
+							    	      		<div class="received">
+								    	        	<span class="sender_name">John Doe</span>
+								    	        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+								    	        	<span class="timeLine">19/11/2017, 01:20 pm</span>
+							    	        	</div>
+							    	        </li>
+							    	        <li class="clearfix">
+							    	      		<div class="sent">
+								    	        	<span class="sender_name">Grant</span>
+								    	        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+								    	        	<span class="timeLine seen"><i class="material-icons">done_all</i>19/11/2017, 01:20 pm</span>
+							    	        	</div>
+							    	        </li>
+							    	        <li class="clearfix">
+							    	      		<div class="received">
+								    	        	<span class="sender_name">John Doe</span>
+								    	        	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+								    	        	<span class="timeLine">19/11/2017, 01:20 pm</span>
+							    	        	</div>
+							    	        </li>
+							    	        <li class="received clearfix">
+<!-- 											<div class="browser-screen-loading-content">
+											  <div class="loading-dots dark-gray">
+											      <i></i><i></i><i></i>
+											  </div>
+											</div> -->	
+											<div class="spinner">
+											  <div class="bounce1"></div>
+											  <div class="bounce2"></div>
+											  <div class="bounce3"></div>
+											</div>																	    	        
+							    	        </li>						    	        						    	        
+							    	    </ul>
+							    	</div>
+							        <div class="msg_text">
+							            <textarea id="chatArea" placeholder="Type a message here" class="materialize-textarea white"></textarea>
+							            <div class="chat_options">
+							                <span class="emoji"><i class="material-icons">tag_faces</i></span>
+							                <span class="send_message grey darken-7"><i class="material-icons white-text">send</i></span>
+							            </div>
+							        </div>
+							    </div>
+							</div>
+					    </div>
+	    		     </div>
+				    </div>	
+			        <div class="ongoingCall active white col l3 m3 s12">
+			        	<div class="top_section">
+			      			<div class="onCall_header clearfix">
+			      				<div class="left_call">
+				      			    <div class="userCall">
+				      			         <span class="callerIcon">
+				      			             <img src="images/user.png" alt="caller">
+				      			         </span>		      			         
+				      			    </div>
+				      			    <div class="name_user">
+				      			        <span class="name">John Doe</span>
+				      			        <span class="callStatus">Ongoind Call...</span>
+				      			    </div>
+			      			    </div>
+			      			    <div class="right_call">
+			      			        <span class="action"><i class=" material-icons">stop</i></span>
+			      			        <span class="timing">01.22</span>
+			      			    </div>
+			      			</div>
+			      			<div class="video_Streaming">
+			      				<div class="talk_box hide">
+			      			    	<div class="video_main">
+			      			    	    <img src="images/call_user.png">
+			      			    	</div>
+			      			    	<div class="video_thumb">
+			      			    	    <img src="images/call_thumb.png">
+			      			    	</div>
+			      			    	<span class="fullScreen material-icons">fullscreen</span>
+			      			    	<p class="call_queue">Your Call is in Queue...</p>
+			      			    	<span class="duration_time">00.00.00</span>
+			      			    </div>
+			      			    <div class="dialing_box black">
+			      			        <div class="dialer_wrapper">
+			      			           <div class="outGoing">
+		      			               		<img src="images/detail_img.png" alt="user">
+			      			           </div>
+										<div class="callGoing">
+											<div></div>
+											<div></div>
+											<div></div>
+											<div></div>				
+										</div>
+										<div class="caller_icn">
+										    <span class="icon pulse">
+										        <i class="material-icons white-text">call</i>
+										    </span>
+										</div>				      			           
+			      			        </div>
+			      			    </div>
+			      			    <div class="disconnected">
+			      			        <p class="blink">Disconnected</p>
+			      			    </div>
+			      			</div>
+			      			<div class="call_controls blue lighten-01">
+			      			    <div class="call_options">
+			      			        <span class=""><i class="material-icons">phone_paused</i></span>
+			      			        <span class=""><i class="material-icons">mic_off</i></span>
+			      			        <span class=""><i class="material-icons">screen_share</i></span>
+			      			        <span class=""><div class="blink_circle red"></div><i class="material-icons call_chat">chat</i></span>
+			      			        <span class="endcall"><i class="material-icons end_call">call_end</i></span>
+			      			    </div>
+			      			</div>
+			      		</div>			
+		      			<!-- <div class="post_options blue lighten-01">
+		      			    <div class="wrapper">
+		      			        <div class="add_comment">
+		      			            <a href="javascript:void(0)"><i class="material-icons">chat_bubble_outline</i>Add comment</a>
+		      			        </div>
+		      			        <div class="add_tag">
+		      			        	<a href="javascript:void(0)"><i class="material-icons">label_outline</i>Add comment</a>
+		      			        </div>
+		      			    </div>
+		      			</div> -->
+		      			<div class="chat">
+							<div class="tab tab_call">
+								<div class="chat_wrapper white">
+									<div class="chat_msgs">
+										<ul class="chat_container">
+											<li class="chatDay">
+												<span>Today</span>
+											</li>
+											<li class="clearfix">
+												<div class="received">										
+													<p>Hi, how are you <small class="time">1 min ago</small></p>
+												</div>
+											</li>
+											<li class="clearfix">
+												<div class="sent">
+													<p>Hi John, I am fine how are you doing? <small class="time">11:00 am</small></p>
+												</div>
+											</li>
+											<li class="clearfix">
+												<div class="received">										
+													<p>I want to know about motorcycle insurance</p>
+												</div>
+											</li>																				
+											<li class="received clearfix">
+												<div class="spinner">
+												<div class="bounce1"></div>
+												<div class="bounce2"></div>
+												<div class="bounce3"></div>
+												</div>														    	        
+											</li>						    	        						    	        
+										</ul>
+									</div>
+								</div>
+							</div>		      			
+		      			</div>
+						<div class="msg_text">
+							<div class="emoji">
+								<span class="material-icons">tag_faces</span>
+							</div>
+							<textarea id="chatArea" placeholder="Type a message here" class="materialize-textarea white"></textarea>
+							<div class="chat_options">
+								<span class="send_message grey darken-7"><i class="material-icons white-text">send</i></span>
+							</div>
+						</div>
+			        </div>    
+	    		</section>
+	   		</main>
+          <!--******     /Main Content Ends      ******-->
+		</div>
+		
+		
+		<div id="uploadDoc" class="modal modalGeneric modal_upload_doc">
+	        <div class="modalHeader singleHeading blue">
+	            <h5 class="white-text">Upload Document</h5>
+	            <a href="javascript:void(0)" class="modal-action modal-close closeModal"><i class="material-icons">close</i></a>
+	        </div>
+	        <div class="modal-content center-align white">
+	            <div class="folder_select">
+	                <div class="input-field">
+	                  <select>
+	                    <option value="2" selected="">Choose Folder</option>
+	                    <option value="3">Policies</option>
+	                    <option value="3">Id Cards</option>
+	                    <option value="3">Payment Receipts</option>
+	                    <option value="3">Exchange Folder</option>
+	                  </select>
+	                </div>
+	            </div>
+	            <div class="uploaded_files">
+	                <div class="fileName">
+	                	<div class="filename_inner">
+	                		<p>Document.text</p>
+							<div class="progress">
+							    <div class="determinate" style="width: 70%"></div>
+							</div>
+							<span class="percent_uploaded">70%</span>
+							<span class="material-icons remove_file">clear</span>       
+	                	</div>
+	                	<div class="filename_inner">
+	                		<p>fileUpladDoc.text</p>
+							<div class="progress">
+							    <div class="determinate" style="width: 50%"></div>
+							</div>
+							<span class="percent_uploaded">50%</span>
+							<span class="material-icons remove_file">clear</span>       
+	                	</div>
+	                	<div class="filename_inner">
+	                		<p>changesRequired.text</p>
+							<div class="progress">
+							    <div class="determinate" style="width: 95%"></div>
+							</div>
+							<span class="percent_uploaded">95%</span>
+							<span class="material-icons remove_file">clear</span>       
+	                	</div>
+	                	<div class="filename_inner">
+	                		<p>file.text</p>
+							<div class="progress">
+							    <div class="determinate" style="width: 35%"></div>
+							</div>
+							<span class="percent_uploaded">35%</span>
+							<span class="material-icons remove_file">clear</span>       
+	                	</div>
+	                	<div class="filename_inner">
+	                		<p>file.text</p>
+							<div class="progress">
+							    <div class="determinate" style="width: 80%"></div>
+							</div>
+							<span class="percent_uploaded">80%</span>
+							<span class="material-icons remove_file">clear</span>       
+	                	</div>	                		                		                		                	
+	                </div>
+	                <div class="no_file hide">
+	                	<span class="material-icons">insert_drive_file</span>	
+	                    <p>No File Selected</p>
+	                </div>
+	            </div>
+	            <div class="bottom_Btns">
+		            <div class="doc_select">
+					    <div class="file-field input-field">
+					      <div class="btn raddius25 white-text btn-large blue">
+					        <span>Select file</span>
+					        <input type="file">
+					      </div>
+					      <div class="file-path-wrapper">
+					        <input class="file-path validate" placeholder="Select file to upload" type="text">
+					      </div>
+					    </div>	                
+		            </div>	            
+	                <a class="waves-effect raddius25 waves-light btn-large green lighten-5 modal-action modal-close" href="javascript:void(0)">Submit</a>
+	            </div>
+	        </div>
+		</div>    
+		
+		
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/bin/materialize.min.js"></script>
+      <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>

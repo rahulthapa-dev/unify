@@ -1,0 +1,2200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Smarter:Time</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+    
+    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="vendor/simple-line-icons/css/simple-line-icons.css">
+    <link rel="stylesheet" href="vendor/device-mockups/device-mockups.css">
+
+    <!-- Theme CSS -->
+    <link href="css/custom.css?v=1.0.2" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <!-- Owl Carousel Assets -->
+    <link href="owl-carousel/owl.carousel.css" rel="stylesheet">
+    <link href="owl-carousel/owl.theme.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<script src="https://use.typekit.net/zbj3iob.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+</head>
+
+<body id="page-top">
+
+    <section id="features" class="features">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="section-heading text-center">
+                        <img src="img/logo-big.png" alt="" class="img-responsive">
+                        <h2>Sneak a peak</h2>
+                        <p>Click on a blue circle to discover a part of the app</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-md-4-custom col-sm-4 col-left">
+                    <div class="left-section calender-section">
+                        <div class="left-content calender-left-content">
+                            <h4>CALENDAR</h4>
+                            <p>Switch in and out of calendar view to get a broad summary of your time use or a precise chronology of your day.</p>  
+                        </div>
+                        <div class="dotted-image-calender">
+                            <img src="img/calender-dotted.png" alt="" class="">
+                        </div>
+                    </div>
+                    <div class="left-section automated-section">
+                        <div class="left-content calender-left-content">
+                            <h4>Automated Tracking</h4>
+                            <p>The app guesses what you’re doing. No timers to start and stop, a timeslot is added whenever you start a new activity.</p>  
+                        </div>
+                        <div class="dotted-image-calender">
+                            <img src="img/automated-dotted.png" alt="" class="">
+                        </div>
+                    </div>
+                    <div class="left-section timelineedit-section">
+                        <div class="left-content calender-left-content">
+                            <h4>Edit</h4>
+                            <p>In app, you can edit everything: activity, location, time, insert or merge. But hopefully, you will barely need to!</p>  
+                        </div>
+                        <div class="dotted-image-calender">
+                            <img src="img/timlineedit-dotted.png" alt="" class="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-4 center-device-outer" style="z-index:99;">
+                    <div class="center-device" style="">
+                        <div class="device-container">
+                            <div class="device-mockup nexus6 portrait black">
+                                <div class="device">
+                                    <!-- <div id="device-time-top">
+                                        10:18
+                                    </div> -->
+                                    <div class="screen">
+                                        
+                                    	<div class="box up">
+                                            <a href="#" class="up">
+                                                <i class="fa fa-caret-up" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                        <div class="box down">
+                                            <a href="#" class="down">
+                                                <i class="fa fa-caret-down" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                        <div id="main-tab-container" class="outer-content">
+                                            <div class="heading-section col-md-12">
+                                                <div class="logo">
+                                                    <img src="img/logo.png" alt="" class="img-responsive">
+                                                </div>
+                                            </div>
+                                            <div class="menu-tabs">
+                                                <div class="nav-tabs-outer">
+                                                    <ul class="nav nav-tabs" role="tablist">
+                                                        <li role="presentation" class="active">
+                                                            <a rel="active" href="#timeline" aria-controls="timeline" role="tab" data-toggle="tab">TIMELINE</a>
+                                                        </li>
+                                                        <li role="presentation">
+                                                            <a href="#stats" aria-controls="stats" role="tab" data-toggle="tab">STATS</a>
+                                                        </li>
+                                                        <li role="presentation">
+                                                            <a href="#goals" aria-controls="goals" role="tab" data-toggle="tab">GOALS</a>
+                                                        </li>
+                                                        <li role="presentation">
+                                                            <a href="#map" aria-controls="map" role="tab" data-toggle="tab">MAP</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div id="content-1" class="" data-mcs-theme="minimal-dark">
+                                                    <div class="tab-content">
+                                                        <div role="tabpanel" class="tab-pane active" id="timeline">
+                                                            <div id="timline"class="table-content">
+                                                            <div class="outer-section">
+                                                                    <div> <!-- div start -->
+                                                                        <div class="activity color-g" style="width:95%">
+                                                                            <div class="section">
+                                                                                <div class="icon smartertime" style="width:17%">
+                                                                                    <img src="img/smarter.png" alt="" class="mCS_img_loaded">
+                                                                                </div>
+                                                                                <div class="time">
+                                                                                    <p class="badge smartertime">12:11</p>
+                                                                                </div>
+                                                                                <div style="width:64%; padding-top: 2.1em;" class="activity-title smartertime" data-top="#ff0a32" data-bottom="#ff0a32">
+                                                                                    <p>Browsing Smarter Time</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>  <!-- div end -->  
+                                                                </div>
+                                                                <div class="outer-section data-hour placeholder-slot" data-hour="00:00" style="display: none">
+                                                                    <div> <!-- div start -->
+                                                                        <div class="activity color-r">
+                                                                            <div class="section">
+                                                                                <div class="icon">
+                                                                                    <img src="img/reading.png" alt="">
+                                                                                </div>
+                                                                                <div class="time">
+                                                                                    <p class="badge">00:00</p>
+                                                                                </div>
+                                                                                <div class="activity-title"  data-top="#503b6b" data-bottom="#808080">
+                                                                                    <p class="p reading">Reading</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="location">
+                                                                            <p></p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div> 
+                                                                <div class="outer-section color-v data-hour" data-hour="22:10">
+                                                                    <div class="activity color-v">
+                                                                        <div class="section">
+                                                                            <div class="data-hour" data-hour="23:52">
+                                                                                <div class="icon">
+                                                                                    <img src="img/reading.png" alt="">
+                                                                                </div>
+                                                                                <div class="time">
+                                                                                    <p>23:50</p>
+                                                                                </div>
+                                                                                <div class="activity-title" alt="Music Listening" data-top="#a596d7" data-bottom="#a596d7">
+                                                                                    <p class="p reading">Reading</p>
+                                                                                </div>
+                                                                            </div>
+                                                                            <section class="edit-section">
+                                                                                <div>
+                                                                                    <div class="edit-time-icon">
+                                                                                        <span>10:32</span>
+                                                                                        <span><img src="img/m-music.png" alt=""></span>
+                                                                                        <span>09:12</span>
+                                                                                    </div>
+                                                                                    <div class="edit-place-activity">
+                                                                                        <span class="text-right check"><img src="img/check.png" alt=""></span>
+                                                                                        <input readonly="readonly" type="text" placeholder="" class="location-edit" maxlength="12">
+                                                                                        <input readonly="readonly" type="text" placeholder="News Browsing" class="activity-edit" maxlength="15">
+                                                                                    </div>
+                                                                                </div>        
+                                                                            </section>
+                                                                        </div>
+                                                                        <div class="section data-hour" data-hour="23:50">
+                                                                            <div class="icon color-v">
+                                                                                <img src="img/tv.png" alt="">
+                                                                            </div>
+                                                                            <div class="time">
+                                                                                <p class="badge">22:10</p>
+                                                                            </div>
+                                                                            <div class="activity-title" alt="Video Games" data-top="#a596d7" data-bottom="#a5559b">
+                                                                                <p class="p netflix">Netflix & Chill</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="location">
+                                                                        <p>HOME</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="outer-section color-vd data-hour" data-hour="22:10">
+                                                                    <div class="activity color-vd">
+                                                                        <div class="section">
+                                                                            <div class="icon">
+                                                                                <img src="img/food.png" alt="">
+                                                                            </div>
+                                                                            <div class="time">
+                                                                                <p class="badge">20:51</p>
+                                                                            </div>
+                                                                            <div class="activity-title"  data-top="#a596d7" data-bottom="#8bc53f">
+                                                                                <p class="p eating">Eating Out</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="location" alt="THAI CAFE">
+                                                                        <p>THE ITALIAN PLACE</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="outer-section data-hour" data-hour="20:51">
+                                                                    <div> <!-- div start -->
+                                                                        <div class="activity color-g">
+                                                                            <div class="section">
+                                                                                <div class="icon">
+                                                                                    <img src="img/shower.png" alt="">
+                                                                                </div>
+                                                                                <div class="time">
+                                                                                    <p class="badge">20:30</p>
+                                                                                </div>
+                                                                                <div class="activity-title" alt="Pampering"  data-top="#a5559b" data-bottom="#4fc3f7">
+                                                                                    <p class="p shower">Shower</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="location">
+                                                                            <p>Home</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="outer-section data-hour" data-hour="20:30">
+                                                                    <div> <!-- div start -->
+                                                                        <div class="activity color-b">
+                                                                            <div class="section">
+                                                                                <div class="icon">
+                                                                                    <img src="img/car.png" alt="">
+                                                                                </div>
+                                                                                <div class="time">
+                                                                                    <p class="badge">20:02</p>
+                                                                                </div>
+                                                                                <div class="activity-title" alt="Subway"  data-top="#8bc53f" data-bottom="#ff9100">
+                                                                                    <p class="p vehicle">Vehicle</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="location">
+                                                                            <p></p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>    
+                                                                <div class="outer-section data-hour" data-hour="20:02">
+                                                                    <div> <!-- div start -->
+                                                                        <div class="activity color-y">
+                                                                            <div class="section">
+                                                                                <div class="icon icon-gym">
+                                                                                    <img src="img/gym.png" alt="">
+                                                                                </div>
+                                                                                <div class="time">
+                                                                                    <p class="badge">19:24</p>
+                                                                                </div>
+                                                                                <div class="activity-title" alt="Running"  data-top="#4fc3f7" data-bottom="#a5559b">
+                                                                                    <p class="p gym">Gym </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="location" alt="CENTRAL PARK">
+                                                                            <p>Anytime Fitness</p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="outer-section data-hour" data-hour="19:24">          
+                                                                    <div> <!-- div start -->
+                                                                        <div class="activity color-vd">
+                                                                            <div class="section">
+                                                                                <div class="icon">
+                                                                                    <img src="img/drink.png" alt="">
+                                                                                </div>
+                                                                                <div class="time">
+                                                                                    <p class="badge">18:11</p>
+                                                                                </div>
+                                                                                <div class="activity-title"  data-top="#ff9100" data-bottom="#ff0a32">
+                                                                                    <p class="p drinks">Drinks</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="location" alt="THE RED">
+                                                                            <p>o'Malley's</p>
+                                                                        </div>
+                                                                    </div>  <!-- div end -->
+                                                                </div>
+                                                                <div class="outer-section data-hour" data-hour="15:21">    
+                                                                    <div> <!-- div start -->
+                                                                        <div  class="activity">
+                                                                            <div class="work-expanded data-hour" data-hour="18:11">
+                                                                                <div class="section color-r">
+                                                                                    <div class="icon">
+                                                                                        <img src="img/work.png" alt="">
+                                                                                    </div>
+                                                                                    <div class="time">
+                                                                                        <p class="">15:58</p>
+                                                                                    </div>
+                                                                                    <div class="activity-title"  data-top="#a5559b" data-bottom="#a596d7">
+                                                                                        <p class="p work">Work</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="data-hour" data-hour="15:58">
+                                                                                <div class="section color-v">
+                                                                                    <div class="icon">
+                                                                                        <img src="img/news.png" alt="">
+                                                                                    </div>
+                                                                                    <div class="time">
+                                                                                        <p class="">15:21</p>
+                                                                                    </div>
+                                                                                    <div class="activity-title" alt="Social Media"  data-top="#ff0a32" data-bottom="#ff0a32">
+                                                                                        <p class="p news">News Browsing</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="data-hour" data-hour="15:21">
+                                                                                <div class="section color-r">
+                                                                                    <div class="icon">
+                                                                                        <img src="img/meeting.png" alt="">
+                                                                                    </div>
+                                                                                    <div class="time">
+                                                                                        <p class="badge">13:42</p>
+                                                                                    </div>
+                                                                                    <div class="activity-title" alt="Call"  data-top="#a596d7" data-bottom="#8bc53f">
+                                                                                        <p class="p meeting">Meeting</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>        
+                                                                        <div class="location">
+                                                                            <p>office</p>
+                                                                        </div>
+                                                                    </div>  <!-- div end -->  
+                                                                </div> 
+                                                                <div class="outer-section data-hour" data-hour="13:42">
+                                                                    <div> <!-- div start -->
+                                                                        <div class="activity color-g">
+                                                                            <div class="section">
+                                                                                <div class="icon">
+                                                                                    <img src="img/food.png" alt="">
+                                                                                </div>
+                                                                                <div class="time">
+                                                                                    <p class="badge">12:11</p>
+                                                                                </div>
+                                                                                <div class="activity-title"  data-top="#ff0a32" data-bottom="#ff0a32">
+                                                                                    <p class="p lunch">Lunch</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="location" alt="STEAK HOUSE">
+                                                                            <p>salad bar</p>
+                                                                        </div>
+                                                                    </div>  <!-- div end -->  
+                                                                </div>
+                                                                <div class="outer-section data-hour" data-hour="10:14">
+                                                                    <div> <!-- div start -->
+                                                                        <div  class="activity">
+                                                                            <div class="work-expanded data-hour" data-hour="12:11">
+                                                                                <div class="section color-r">
+                                                                                    <div class="icon">
+                                                                                        <img src="img/work.png" alt="">
+                                                                                    </div>
+                                                                                    <div class="time">
+                                                                                        <p class="">10:32</p>
+                                                                                    </div>
+                                                                                    <div class="activity-title" alt="Writing" data-top="#8bc53f" data-bottom="#a5559b">
+                                                                                        <p class="p work">Work</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="data-hour" data-hour="10:32">
+                                                                                <div class="section color-vd">
+                                                                                    <div class="icon">
+                                                                                        <img src="img/coffee.png" alt="">
+                                                                                    </div>
+                                                                                    <div class="time">
+                                                                                        <p class="">10:14</p>
+                                                                                    </div>
+                                                                                    <div class="activity-title" alt="Smoke Break"  data-top="#ff0a32" data-bottom="#ff0a32">
+                                                                                        <p class="p coffee">Coffee Break</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="work-expanded data-hour" data-hour="10:14">
+                                                                                <div class="section color-r">
+                                                                                    <div class="icon">
+                                                                                        <img src="img/work.png" alt="">
+                                                                                    </div>
+                                                                                    <div class="time">
+                                                                                        <p class="badge">08:27</p>
+                                                                                    </div>
+                                                                                    <div class="activity-title"  data-top="#a5559b" data-bottom="#4fc3f7">
+                                                                                        <p class="p work">Work</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>        
+                                                                        <div class="location">
+                                                                            <p>office</p>
+                                                                        </div>
+                                                                    </div>  <!-- div end --> 
+                                                                </div> 
+                                                                <div class="outer-section data-hour" data-hour="8:27">
+                                                                    <div> <!-- div start -->
+                                                                        <div class="activity color-b">
+                                                                            <div class="section">
+                                                                                <div class="icon">
+                                                                                    <img src="img/car.png" alt="">
+                                                                                </div>
+                                                                                <div class="time">
+                                                                                    <p class="badge">07:58</p>
+                                                                                </div>
+                                                                                <div class="activity-title" alt="Subway"  data-top="#ff0a32" data-bottom="#8bc53f">
+                                                                                    <p class="p vehicle">Vehicle</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="location">
+                                                                            <p></p>
+                                                                        </div>
+                                                                    </div> <!-- div end -->
+                                                                </div>
+                                                                <div class="outer-section data-hour" data-hour="00:21">
+                                                                    <div> <!-- div start -->
+                                                                        <div  class="activity">
+                                                                            <div class=" data-hour" data-hour="7:58">
+                                                                                <div class="section color-g">
+                                                                                    <div class="icon">
+                                                                                        <img src="img/food.png" alt="">
+                                                                                    </div>
+                                                                                    <div class="time">
+                                                                                        <p class="">07:32</p>
+                                                                                    </div>
+                                                                                    <div class="activity-title" alt="Pampering"  data-top="#4fc3f7" data-bottom="#8bc53f">
+                                                                                        <p class="p breakfast">Breakfast</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="something data-hour" data-hour="7:32">
+                                                                                <div class="section color-g">
+                                                                                    <div class="icon">
+                                                                                        <img src="img/shower.png" alt="">
+                                                                                    </div>
+                                                                                    <div class="time">
+                                                                                        <p class="">07:15</p>
+                                                                                    </div>
+                                                                                    <div class="activity-title" alt="Bath"  data-top="#8bc53f" data-bottom="#0097a7">
+                                                                                        <p class="p shower">Shower</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="work-expanded data-hour" data-hour="7:15">
+                                                                                <div class="section color-m">
+                                                                                    <div class="icon">
+                                                                                        <img src="img/sleep.png" alt="">
+                                                                                    </div>
+                                                                                    <div class="time">
+                                                                                        <p class="">00:21</p>
+                                                                                    </div>
+                                                                                    <div class="activity-title"  data-top="#8bc53f" data-bottom="#a5559b">
+                                                                                        <p class="p sleep">Sleep</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class=" data-hour" data-hour="00:21">
+                                                                                <div class="section color-v">
+                                                                                    <div class="icon">
+                                                                                        <img src="img/reading.png" alt="">
+                                                                                    </div>
+                                                                                    <div class="time">
+                                                                                        <p class=""></p>
+                                                                                    </div>
+                                                                                    <div class="activity-title" alt="Music Listening"  data-top="#0097a7" data-bottom="#bdbdbd">
+                                                                                        <p class="p reading">Reading</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>        
+                                                                        <div class="location">
+                                                                            <p>home</p>
+                                                                        </div>
+                                                                    </div>  <!-- div end --> 
+                                                                </div> 
+                                                                <div class="outer-section endTimelineDaynote">
+                                                                    <div class="text-center day-note datetoday">Thursday 28 may</div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="table-content" id="calender">
+                                                                <div class="calender-duration">
+                                                                    <div class="text-center day-note border-bottom first-time">G</div>
+                                                                    <div class="text-center day-note">3H</div>
+                                                                    <div class="text-center day-note">6H</div>       
+                                                                    <div class="text-center day-note">9H</div>
+                                                                    <div class="text-center day-note">12H</div>
+                                                                    <div class="text-center day-note">15H</div>
+                                                                    <div class="text-center day-note">18H</div>
+                                                                    <div class="text-center day-note">21H</div>
+                                                                </div>
+                                                                <div class="calender-day-activity">
+                                                                    <div class="calender-detail-1 calender-detail">
+                                                                        <div class="text-center day-note border-bottom dateyesterday">WED 19 AUG</div>
+                                                                        <div class="reading">
+                                                                            <div class="color-duration color-v"></div>
+                                                                            <div class="calender-activity-name">
+                                                                                <p class="color-v">Reading</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="reading">
+                                                                            <div class="color-duration color-m sleep"></div>
+                                                                            <div class="calender-activity-name">
+                                                                                <p class="color-m">Sleep</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="shower">
+                                                                            <div class="color-duration color-g"></div>
+                                                                            <div class="calender-activity-name">
+                                                                                <p class="color-g"></p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="vehicle border-top">
+                                                                            <div class="color-duration color-b"></div>
+                                                                            <div class="calender-activity-name">
+                                                                                <p class="color-b"></p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="work border-top">
+                                                                            <div class="color-duration color-r"></div>
+                                                                            <div class="calender-activity-name">
+                                                                                <p class="color-r">Work</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="break">
+                                                                            <div class="color-duration color-vd"></div>
+                                                                            <div class="calender-activity-name">
+                                                                                <p class="color-vd">Coffee Break</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="work border-bottom">
+                                                                            <div class="color-duration color-r"></div>
+                                                                            <div class="calender-activity-name">
+                                                                                <p class="color-r">Work</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="shower border-bottom">
+                                                                            <div class="color-duration color-g shower lunch"></div>
+                                                                            <div class="calender-activity-name">
+                                                                                <p class="color-g">Lunch</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="work meeting">
+                                                                            <div class="color-duration color-r"></div>
+                                                                            <div class="calender-activity-name">
+                                                                                <p class="color-r">Meeting</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="newsBrowsing">
+                                                                            <div class="color-duration color-v reading"></div>
+                                                                            <div class="calender-activity-name">
+                                                                                <p class="color-v">News Browsing</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="work meeting border-bottom">
+                                                                            <div class="color-duration color-r"></div>
+                                                                            <div class="calender-activity-name">
+                                                                                <p class="color-r">Work</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="break drinks">
+                                                                            <div class="color-duration color-vd"></div>
+                                                                            <div class="calender-activity-name">
+                                                                                <p class="color-vd">Drinks</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="gym border-top">
+                                                                            <div class="color-duration color-y"></div>
+                                                                            <div class="calender-activity-name">
+                                                                                <p class="color-vd"></p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="vehicle border-top">
+                                                                            <div class="color-duration color-b"></div>
+                                                                            <div class="calender-activity-name">
+                                                                                <p class="color-b"></p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="shower night-shower border-top">
+                                                                            <div class="color-duration color-g shower lunch"></div>
+                                                                            <div class="calender-activity-name">
+                                                                                <p class="color-g"></p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="break drinks border-top border-bottom">
+                                                                            <div class="color-duration color-vd"></div>
+                                                                            <div class="calender-activity-name">
+                                                                                <p class="color-vd">Eating Out</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="newsBrowsing netflix">
+                                                                            <div class="color-duration color-v reading"></div>
+                                                                            <div class="calender-activity-name">
+                                                                                <p class="color-v">Netflix & Chill <br> Reading</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="calender-detail">
+                                                                        <div class="text-center day-note border-bottom datetoday">THU 20 AUG</div>
+                                                                         <div class="reading calendar-act data-hour" data-hour="00:21">
+                                                                            <div class="color-duration color-v"></div>
+                                                                            <div class="calender-activity-name">
+                                                                                <p class="color-v">Reading</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="reading calendar-act data-hour" data-hour="7:15">
+                                                                            <div class="color-duration color-m sleep"></div>
+                                                                            <div class="calender-activity-name">
+                                                                                <p class="color-m">Sleep</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="shower calendar-act data-hour" data-hour="7:32">
+                                                                            <div class="color-duration color-g"></div>
+                                                                            <div class="calender-activity-name">
+                                                                                <p class="color-g"></p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="vehicle border-top calendar-act data-hour" data-hour="7:58">
+                                                                            <div class="color-duration color-b"></div>
+                                                                            <div class="calender-activity-name">
+                                                                                <p class="color-b"></p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="work border-top calendar-act data-hour" data-hour="10:14">
+                                                                            <div class="color-duration color-r"></div>
+                                                                            <div class="calender-activity-name">
+                                                                                <p class="color-r">Work</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="break calendar-act data-hour" data-hour="10:32">
+                                                                            <div class="color-duration color-vd"></div>
+                                                                            <div class="calender-activity-name">
+                                                                                <p class="color-vd">Coffee Break</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="work border-bottom calendar-act data-hour" data-hour="12:11">
+                                                                            <div class="color-duration color-r"></div>
+                                                                            <div class="calender-activity-name">
+                                                                                <p class="color-r">Work</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="shower border-bottom calendar-act data-hour" data-hour="13:42">
+                                                                            <div class="color-duration color-g shower lunch"></div>
+                                                                            <div class="calender-activity-name">
+                                                                                <p class="color-g">Lunch</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="work meeting calendar-act data-hour" data-hour="15:21">
+                                                                            <div class="color-duration color-r"></div>
+                                                                            <div class="calender-activity-name">
+                                                                                <p class="color-r">Meeting</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="newsBrowsing calendar-act data-hour" data-hour="15:58">
+                                                                            <div class="color-duration color-v reading"></div>
+                                                                            <div class="calender-activity-name">
+                                                                                <p class="color-v">News Browsing</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="work meeting border-bottom calendar-act data-hour" data-hour="18:11">
+                                                                            <div class="color-duration color-r"></div>
+                                                                            <div class="calender-activity-name">
+                                                                                <p class="color-r">Work</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="break drinks calendar-act data-hour" data-hour="19:24">
+                                                                            <div class="color-duration color-vd"></div>
+                                                                            <div class="calender-activity-name">
+                                                                                <p class="color-vd">Drinks</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="gym border-top calendar-act data-hour" data-hour="20:02">
+                                                                            <div class="color-duration color-y"></div>
+                                                                            <div class="calender-activity-name">
+                                                                                <p class="color-vd"></p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="vehicle border-top calendar-act data-hour" data-hour="20:30">
+                                                                            <div class="color-duration color-b"></div>
+                                                                            <div class="calender-activity-name">
+                                                                                <p class="color-b"></p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="shower night-shower border-top calendar-act data-hour" data-hour="20:51">
+                                                                            <div class="color-duration color-g shower lunch"></div>
+                                                                            <div class="calender-activity-name">
+                                                                                <p class="color-g"></p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="break drinks border-top border-bottom calendar-act data-hour" data-hour="22:10">
+                                                                            <div class="color-duration color-vd"></div>
+                                                                            <div class="calender-activity-name">
+                                                                                <p class="color-vd">Eating Out</p>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="smarter">
+                                                                            <div class="color-duration color-gr"></div>
+                                                                            <div class="calender-activity-name">
+                                                                                <p class="color-gr">Browsing Smarter Time</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div role="tabpanel" class="tab-pane" id="stats">
+                                                            <div class="table-content">
+                                                                <div class="outer-section">
+                                                                    <div class="text-center day-note day-note-stats datetoday">WEDNESDAY 3rd OF JUNE</div>
+                                                                </div>
+                                                                <div class="outer-section stats-outer-two" style="border-bottom:0;">
+                                                                    <div class="inner-section">
+                                                                        <div class="section" style="cursor:default;margin-top:11px;">
+                                                                            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                                                                <div class="panel panel-default  color-r" rel="professional-life">
+                                                                                    <div class="panel-heading" role="tab" id="headingOne">
+                                                                                        <h4 class="panel-title">
+                                                                                            <p class="detail-page">PROFESSIONAL LIFE</p>
+                                                                                            <div>
+                                                                                                <a class="collapsed" role="button" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                                                                    <span class="arrow-span"><img src="img/red-arrow.png" alt=""></span>
+                                                                                                </a>
+                                                                                                <div class="progress detail-page">
+                                                                                                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                                                                                                        <span class="sr-only">30% Complete</span>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </h4>
+                                                                                        <div class="percentage detail-page">
+                                                                                            <h3>30 <small>%</small></h3>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                                                                        <div class="panel-body">
+                                                                                            <div class="color-r inner-details">
+                                                                                                <a href="" class="detail-page">
+                                                                                                    <div class="icon-bar">
+                                                                                                        <span><img src="img/red-work.png" alt=""></span>
+                                                                                                        <p class="work">Work</p>
+                                                                                                        <div class="progress">
+                                                                                                            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="70" style="width: 70%;">
+                                                                                                                <span class="sr-only">23% Complete</span>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>        
+                                                                                                    <div class="percentage">
+                                                                                                        <h3>23%</h3>
+                                                                                                    </div>
+                                                                                                </a>
+                                                                                                <a href="" class="detail-page">
+                                                                                                    <div class="icon-bar">
+                                                                                                        <span><img src="img/red-meeting.png" alt=""></span>
+                                                                                                        <p class="meeting">Meeting</p>
+                                                                                                        <div class="progress">
+                                                                                                            <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="71" style="width: 21%;">
+                                                                                                                <span class="sr-only">7% Complete</span>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>        
+                                                                                                    <div class="percentage">
+                                                                                                        <h3>7%</h3>
+                                                                                                    </div>
+                                                                                                </a>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="panel panel-default color-m" rel="resting">
+                                                                                    <div class="panel-heading" role="tab" id="headingTwo">
+                                                                                        <h4 class="panel-title">
+                                                                                            <p class="detail-page">RESTING</p>
+                                                                                            <div>
+                                                                                                <a class="collapsed" role="button" data-toggle="collapse" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                                                                                    <span class="arrow-span"><img src="img/m-arrow.png" alt=""></span>
+                                                                                                </a>
+                                                                                                
+                                                                                                <div class="progress detail-page">
+                                                                                                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                                                                                                        <span class="sr-only">29% Complete</span>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </h4>
+                                                                                        <div class="percentage detail-page">
+                                                                                            <h3>29 <small>%</small></h3>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                                                                        <div class="panel-body">
+                                                                                            <div class="color-m inner-details">
+                                                                                                <a href="" class="detail-page">
+                                                                                                    <div class="icon-bar">
+                                                                                                        <span><img src="img/m-sleep.png" alt=""></span>
+                                                                                                        <p class="sleep">Sleep</p>
+                                                                                                        <div class="progress">
+                                                                                                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                                                                                                                <span class="sr-only">29% Complete</span>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>        
+                                                                                                    <div class="percentage">
+                                                                                                        <h3>29%</h3>
+                                                                                                    </div>
+                                                                                                </a>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="panel panel-default color-v" rel="arts-entertainment">
+                                                                                    <div class="panel-heading" role="tab" id="headingThree">
+                                                                                        <h4 class="panel-title">
+                                                                                            <p class="detail-page">ART & ENTERTAINMENT</p>
+                                                                                            <div>
+                                                                                                <a class="collapsed" role="button" data-toggle="collapse" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                                                                                    <span class="arrow-span"><img src="img/v-arrow.png" alt=""></span>
+                                                                                                </a>
+                                                                                                
+                                                                                                <div class="progress detail-page">
+                                                                                                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
+                                                                                                        <span class="sr-only">12% Complete</span>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </h4>
+                                                                                        <div class="percentage detail-page">
+                                                                                            <h3>12 <small>%</small></h3>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                                                                        <div class="panel-body">
+                                                                                            <div class="color-v inner-details">
+                                                                                                <a href="" class="detail-page">
+                                                                                                    <div class="icon-bar">
+                                                                                                        <span><img src="img/reading-c.png" alt=""></span>
+                                                                                                        <p class="reading">Reading</p>
+                                                                                                        <div class="progress">
+                                                                                                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                                                                                                                <span class="sr-only">8% Complete</span>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>        
+                                                                                                    <div class="percentage">
+                                                                                                        <h3>4%</h3>
+                                                                                                    </div>
+                                                                                                </a>
+                                                                                                
+                                                                                                <a href="" class="detail-page">
+                                                                                                    <div class="icon-bar">
+                                                                                                        <span><img src="img/netflix-c.png" alt=""></span>
+                                                                                                        <p class="netflix">Netflix & Chill</p>
+                                                                                                        <div class="progress">
+                                                                                                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                                                                                                                <span class="sr-only">4% Complete</span>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>        
+                                                                                                    <div class="percentage">
+                                                                                                        <h3>4%</h3>
+                                                                                                    </div>
+                                                                                                </a>
+                                                                                                
+                                                                                                <a href="" class="detail-page">
+                                                                                                    <div class="icon-bar">
+                                                                                                        <span><img src="img/news-c.png" alt=""></span>
+                                                                                                        <p class="news">News Browsing</p>
+                                                                                                        <div class="progress">
+                                                                                                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                                                                                                                <span class="sr-only">4% Complete</span>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>        
+                                                                                                    <div class="percentage">
+                                                                                                        <h3>4%</h3>
+                                                                                                    </div>
+                                                                                                </a>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="panel panel-default color-vd" rel="social">
+                                                                                    <div class="panel-heading" role="tab" id="headingFour">
+                                                                                        <h4 class="panel-title">
+                                                                                            <p class="detail-page">SOCIAL</p>
+                                                                                            <div>
+                                                                                                <a class="collapsed" role="button" data-toggle="collapse" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                                                                                    <span class="arrow-span"><img src="img/vd-arrow.png" alt=""></span>
+                                                                                                </a>
+                                                                                                <div class="progress detail-page">
+                                                                                                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
+                                                                                                        <span class="sr-only">12% Complete</span>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </h4>
+                                                                                        <div class="percentage detail-page">
+                                                                                            <h3>12 <small>%</small></h3>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                                                                                        <div class="panel-body">
+                                                                                            <div class="color-vd inner-details">
+                                                                                                <a href="" class="detail-page">
+                                                                                                    <div class="icon-bar">
+                                                                                                        <span><img src="img/drinks-c.png" alt=""></span>
+                                                                                                        <p class="drinks">Drinks</p>
+                                                                                                        <div class="progress">
+                                                                                                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                                                                                                                <span class="sr-only">8% Complete</span>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>        
+                                                                                                    <div class="percentage">
+                                                                                                        <h3>4%</h3>
+                                                                                                    </div>
+                                                                                                </a>
+                                                                                                <a href="" class="detail-page">
+                                                                                                    <div class="icon-bar">
+                                                                                                        <span><img src="img/coffee-c.png" alt=""></span>
+                                                                                                        <p class="coffee">Coffee Break</p>
+                                                                                                        <div class="progress">
+                                                                                                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                                                                                                                <span class="sr-only">4% Complete</span>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>        
+                                                                                                    <div class="percentage">
+                                                                                                        <h3>4%</h3>
+                                                                                                    </div>
+                                                                                                </a>
+
+                                                                                                <a href="" class="detail-page">
+                                                                                                    <div class="icon-bar">
+                                                                                                        <span><img src="img/eating-c.png" alt=""></span>
+                                                                                                        <p class="eating">Eating Out</p>
+                                                                                                        <div class="progress">
+                                                                                                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                                                                                                                <span class="sr-only">4% Complete</span>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>        
+                                                                                                    <div class="percentage">
+                                                                                                        <h3>4%</h3>
+                                                                                                    </div>
+                                                                                                </a>
+
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="panel panel-default color-g" rel="health-hygiene">
+                                                                                    <div class="panel-heading" role="tab" id="headingFive">
+                                                                                        <h4 class="panel-title">
+                                                                                           <p class="detail-page">HEALTH & HYGIENE</p>
+                                                                                            <div>
+                                                                                                 <a class="collapsed" role="button" data-toggle="collapse" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                                                                                    <span class="arrow-span" ><img src="img/g-arrow.png" alt=""></span>
+                                                                                                </a>
+                                                                                                <div class="progress detail-page">
+                                                                                                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                                                                                                        <span class="sr-only">11% Complete</span>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </h4>
+                                                                                        <div class="percentage detail-page">
+                                                                                            <h3>11 <small>%</small></h3>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                                                                                        <div class="panel-body">
+                                                                                            <div class="color-g inner-details">
+                                                                                            <a href="" class="detail-page">
+                                                                                                    <div class="icon-bar">
+                                                                                                        <span><img src="img/lunch-c.png" alt=""></span>
+                                                                                                        <p class="lunch">Lunch</p>
+                                                                                                        <div class="progress">
+                                                                                                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
+                                                                                                                <span class="sr-only">4% Complete</span>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>        
+                                                                                                    <div class="percentage">
+                                                                                                        <h3>5%</h3>
+                                                                                                    </div>
+                                                                                                </a>
+
+                                                                                                <a href="" class="detail-page">
+                                                                                                    <div class="icon-bar">
+                                                                                                        <span><img src="img/shower-c.png" alt=""></span>
+                                                                                                        <p class="shower">Shower</p>
+                                                                                                        <div class="progress">
+                                                                                                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                                                                                                                <span class="sr-only">11% Complete</span>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>        
+                                                                                                    <div class="percentage">
+                                                                                                        <h3>4%</h3>
+                                                                                                    </div>
+                                                                                                </a>    
+
+                                                                                                <a href="" class="detail-page">
+                                                                                                    <div class="icon-bar">
+                                                                                                        <span><img src="img/breakfast-c.png" alt=""></span>
+                                                                                                        <p class="breakfast">Breakfast</p>
+                                                                                                        <div class="progress">
+                                                                                                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 20%;">
+                                                                                                                <span class="sr-only">4% Complete</span>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>        
+                                                                                                    <div class="percentage">
+                                                                                                        <h3>2%</h3>
+                                                                                                    </div>
+                                                                                                </a>
+
+                                                                                                
+
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="panel panel-default color-b" rel="transport">
+                                                                                    <div class="panel-heading" role="tab" id="headingSix">
+                                                                                        <h4 class="panel-title">
+                                                                                            <p class="detail-page">TRANSPORT</p>
+                                                                                            <div>
+                                                                                                <a class="collapsed" role="button" data-toggle="collapse" href="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                                                                                                    <span class="arrow-span"><img src="img/b-arrow.png" alt=""></span>
+                                                                                                </a>    
+                                                                                                <div class="progress detail-page">
+                                                                                                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
+                                                                                                        <span class="sr-only">4% Complete</span>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </h4>
+                                                                                        <div class="percentage detail-page">
+                                                                                            <h3>4 <small>%</small></h3>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div id="collapseSix" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSix">
+                                                                                        <div class="panel-body">
+                                                                                            <div class="color-b inner-details">
+                                                                                                <a href="" class="detail-page">
+                                                                                                    <div class="icon-bar">
+                                                                                                        <span><img src="img/vehicle-c.png" alt=""></span>
+                                                                                                        <p class="vehicle">Vehicle</p>
+                                                                                                        <div class="progress">
+                                                                                                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                                                                                                                <span class="sr-only">4% Complete</span>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>        
+                                                                                                    <div class="percentage">
+                                                                                                        <h3>4%</h3>
+                                                                                                    </div>
+                                                                                                </a>  
+                                                                                                  
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="panel panel-default color-y" rel="sports">
+                                                                                    <div class="panel-heading" role="tab" id="headingSeven">
+                                                                                        <h4 class="panel-title">
+                                                                                            <p class="detail-page">SPORTS</p>
+                                                                                            <div>
+                                                                                                <a class="collapsed" role="button" data-toggle="collapse" href="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                                                                                                    <span class="arrow-span"><img src="img/y-arrow.png" alt=""></span>
+                                                                                                </a>
+                                                                                                <div class="progress detail-page">
+                                                                                                    <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 15%;">
+                                                                                                        <span class="sr-only">2% Complete</span>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </h4>
+                                                                                        <div class="percentage detail-page">
+                                                                                            <h3>2 <small>%</small></h3>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div id="collapseSeven" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingSeven">
+                                                                                        <div class="panel-body">
+                                                                                            <div class="color-b inner-details">
+                                                                                                <a href="" class="detail-page">
+                                                                                                    <div class="icon-bar">
+                                                                                                        <span><img src="img/gym-c.png" alt=""></span>
+                                                                                                        <p class="gym">Gym</p>
+                                                                                                        <div class="progress">
+                                                                                                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;">
+                                                                                                                <span class="sr-only">2% Complete</span>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>        
+                                                                                                    <div class="percentage">
+                                                                                                        <h3>2%</h3>
+                                                                                                    </div>
+                                                                                                </a>  
+ 
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>    
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div role="tabpanel" class="tab-pane" id="goals">
+                                                          <div class="tab-img">
+                                                              <img src="img/goals.jpg" alt="" class="img-resposive">
+                                                          </div>
+                                                        </div>
+                                                        <div role="tabpanel" class="tab-pane" id="map">
+                                                            <div class="tab-img">
+                                                              <img src="img/map.jpg" alt="" class="img-resposive">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="detail-container" class="outer-content stats-detail-screen">
+                                            <div class="table-content">
+                                                <div class="heading-section col-md-12">
+                                                    <div class="logo text-left title-inner-pages">
+                                                        <h3><span class="arrow-back"><img src="img/left-arrw.png" alt=""></span> Professional Life</h3>
+                                                    </div>
+                                                </div>
+                                                <div style="display:inline-block;">
+                                                    <div id="content-2" class="inner-stats " data-mcs-theme="minimal-dark">
+                                                    	<div class="tab-content details">
+	                                                        <div class="text-center day-note day-note-stats datetoday" style="margin-bottom:0;">
+	                                                            WEDNESDAY 3rd OF JUNE
+	                                                        </div>
+	                                                        <div class="card">
+	                                                            <div class="card-title card-title-chart">
+	                                                                <h4><span><img src="img/chart-title.png" alt="" class="heading-icon"></span> Charts</h4>
+	                                                            </div>
+	                                                            <div class="card-content">
+	                                                                <img src="img/StatsCharts/charts-professional-life.png" alt="" class="img-responsive charts-img">
+	                                                            </div>
+	                                                        </div>
+	                                                        <div class="card card-timline">
+	                                                            <div class="card-title">
+	                                                                <h4 class="timeline-title"><span><img src="img/timeline-title.png" alt="" class="heading-icon"></span> Timeline</h4>
+	                                                            </div>
+	                                                            <div class="card-content">
+	                                                                <div class="outer-section">
+	                                                                    <div class="card-day stats-details">wednesday 3 june</div>
+	                                                                    <div class="stats-detail professional-life">
+	                                                                        <div class="activity color-r">
+	                                                                            <div class="section">
+	                                                                                <div class="card-icon-content">
+	                                                                                    <div class="icon">
+	                                                                                        <img src="img/work.png" alt="">
+	                                                                                    </div>
+	                                                                                    <div class="time">
+	                                                                                        <p class="time-start">18:11</p>
+	                                                                                        <p class="time-end">15:58</p>
+	                                                                                    </div>
+	                                                                                    <div class="activity-title"  data-top="#a596d7" data-bottom="#a5559b">
+	                                                                                        <p data-slot="18:11">Work</p>
+	                                                                                    </div>
+	                                                                                </div>
+	                                                                            </div>
+	                                                                            <div class="section">
+	                                                                                <div class="card-icon-content">
+	                                                                                    <div class="icon">
+	                                                                                        <img src="img/meeting.png" alt="">
+	                                                                                    </div>
+	                                                                                    <div class="time">
+	                                                                                        <p class="time-start">15:21</p>
+	                                                                                        <p class="time-end">13:42</p>
+	                                                                                    </div>
+	                                                                                    <div class="activity-title"  data-top="#a596d7" data-bottom="#a5559b">
+	                                                                                        <p data-slot="15:21">Meeting</p>
+	                                                                                    </div>
+	                                                                                </div>
+	                                                                            </div>
+	                                                                        </div>
+	                                                                        <div class="location">
+	                                                                            <p>OFFICE</p>
+	                                                                        </div>
+	                                                                        <div class="division-day"></div>
+	                                                                    </div>
+	                                                                    <div class="stats-detail professional-life">
+	                                                                        <div class="activity color-r">
+	                                                                            <div class="section">
+	                                                                                <div class="card-icon-content">
+	                                                                                    <div class="icon">
+	                                                                                        <img src="img/work.png" alt="">
+	                                                                                    </div>
+	                                                                                    <div class="time">
+	                                                                                        <p class="time-start">12:11</p>
+	                                                                                        <p class="time-end">10:32</p>
+	                                                                                    </div>
+	                                                                                    <div class="activity-title"  data-top="#a596d7" data-bottom="#a5559b">
+	                                                                                        <p data-slot="12:11">Work</p>
+	                                                                                    </div>
+	                                                                                </div>
+	                                                                            </div>
+	                                                                            <div class="section">
+	                                                                                <div class="card-icon-content">
+	                                                                                    <div class="icon">
+	                                                                                        <img src="img/work.png" alt="">
+	                                                                                    </div>
+	                                                                                    <div class="time">
+	                                                                                        <p class="time-start">10:14</p>
+	                                                                                        <p class="time-end">08:27</p>
+	                                                                                    </div>
+	                                                                                    <div class="activity-title"  data-top="#a596d7" data-bottom="#a5559b">
+	                                                                                        <p data-slot="10:14">Work</p>
+	                                                                                    </div>
+	                                                                                </div>
+	                                                                            </div>
+	                                                                        </div>
+	                                                                        <div class="location">
+	                                                                            <p>OFFICE</p>
+	                                                                        </div>
+
+	                                                                    </div>
+
+                                                                        <div class="stats-detail resting">
+                                                                           <!--  <div class="division-day"></div> -->
+                                                                            <div class="activity color-m">
+                                                                                <div class="section">
+                                                                                    <div class="card-icon-content">
+                                                                                        <div class="icon">
+                                                                                            <img src="img/sleep.png" alt="">
+                                                                                        </div>
+                                                                                        <div class="time">
+                                                                                            <p class="time-start">07:15</p>
+                                                                                            <p class="time-end">00:21</p>
+                                                                                        </div>
+                                                                                        <div class="activity-title"  data-top="#a596d7" data-bottom="#a5559b">
+                                                                                            <p data-slot="07:15">Sleep</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="location">
+                                                                                <p>HOME</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="stats-detail arts-entertainment">
+                                                                            <!-- <div class="division-day"></div> -->
+                                                                            <div class="activity color-v">
+                                                                                <div class="section">
+                                                                                    <div class="card-icon-content">
+                                                                                        <div class="icon">
+                                                                                            <img src="img/reading.png" alt="">
+                                                                                        </div>
+                                                                                        <div class="time">
+                                                                                            <p class="time-start">00:00</p>
+                                                                                            <p class="time-end">23:50</p>
+                                                                                        </div>
+                                                                                        <div class="activity-title"  data-top="#a596d7" data-bottom="#a5559b">
+                                                                                            <p data-slot="23:59">Reading</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="section">
+                                                                                    <div class="card-icon-content">
+                                                                                        <div class="icon">
+                                                                                            <img src="img/tv.png" alt="">
+                                                                                        </div>
+                                                                                        <div class="time">
+                                                                                            <p class="time-start">23:50</p>
+                                                                                            <p class="time-end">22:10</p>
+                                                                                        </div>
+                                                                                        <div class="activity-title"  data-top="#a596d7" data-bottom="#a5559b">
+                                                                                            <p data-slot="10:14">Netflix & Chill</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="section">
+                                                                                    <div class="card-icon-content">
+                                                                                        <div class="icon">
+                                                                                            <img src="img/news.png" alt="">
+                                                                                        </div>
+                                                                                        <div class="time">
+                                                                                            <p class="time-start">15:58</p>
+                                                                                            <p class="time-end">15:21</p>
+                                                                                        </div>
+                                                                                        <div class="activity-title"  data-top="#a596d7" data-bottom="#a5559b">
+                                                                                            <p data-slot="15:58">News Browsing</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="section">
+                                                                                    <div class="card-icon-content">
+                                                                                        <div class="icon">
+                                                                                            <img src="img/reading.png" alt="">
+                                                                                        </div>
+                                                                                        <div class="time">
+                                                                                            <p class="time-start">00:21</p>
+                                                                                            <p class="time-end"></p>
+                                                                                        </div>
+                                                                                        <div class="activity-title"  data-top="#a596d7" data-bottom="#a5559b">
+                                                                                            <p data-slot="00:21">Reading</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                            </div>
+                                                                            <div class="location">
+                                                                                <p>HOME</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="stats-detail social">
+                                                                           <!--  <div class="division-day"></div> -->
+                                                                            <div class="activity color-vd">
+                                                                                
+                                                                                <div class="section">
+                                                                                    <div class="card-icon-content">
+                                                                                        <div class="icon">
+                                                                                            <img src="img/food.png" alt="">
+                                                                                        </div>
+                                                                                        <div class="time">
+                                                                                            <p class="time-start">22:10</p>
+                                                                                            <p class="time-end">20:51</p>
+                                                                                        </div>
+                                                                                        <div class="activity-title"  data-top="#a596d7" data-bottom="#a5559b">
+                                                                                            <p data-slot="22:10">Eating Out</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="section">
+                                                                                    <div class="card-icon-content">
+                                                                                        <div class="icon">
+                                                                                            <img src="img/drink.png" alt="">
+                                                                                        </div>
+                                                                                        <div class="time">
+                                                                                            <p class="time-start">19:24</p>
+                                                                                            <p class="time-end">18:11</p>
+                                                                                        </div>
+                                                                                        <div class="activity-title"  data-top="#a596d7" data-bottom="#a5559b">
+                                                                                            <p data-slot="19:24">Drinks</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="section">
+                                                                                    <div class="card-icon-content">
+                                                                                        <div class="icon">
+                                                                                            <img src="img/coffee.png" alt="">
+                                                                                        </div>
+                                                                                        <div class="time">
+                                                                                            <p class="time-start">10:32</p>
+                                                                                            <p class="time-end">10:14</p>
+                                                                                        </div>
+                                                                                        <div class="activity-title"  data-top="#a596d7" data-bottom="#a5559b">
+                                                                                            <p data-slot="10:32">Coffee Break</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+
+                                                                            </div>
+                                                                            <div class="location">
+                                                                                <p>HOME</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="stats-detail health-hygiene">
+                                                                            <!-- <div class="division-day"></div> -->
+                                                                            <div class="activity color-g">
+
+                                                                                <div class="section">
+                                                                                    <div class="card-icon-content">
+                                                                                        <div class="icon">
+                                                                                            <img src="img/shower.png" alt="">
+                                                                                        </div>
+                                                                                        <div class="time">
+                                                                                            <p class="time-start">20:51</p>
+                                                                                            <p class="time-end">20:30</p>
+                                                                                        </div>
+                                                                                        <div class="activity-title"  data-top="#a596d7" data-bottom="#a5559b">
+                                                                                            <p data-slot="20:51">Shower</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="section">
+                                                                                    <div class="card-icon-content">
+                                                                                        <div class="icon">
+                                                                                            <img src="img/food.png" alt="">
+                                                                                        </div>
+                                                                                        <div class="time">
+                                                                                            <p class="time-start">13:42</p>
+                                                                                            <p class="time-end">12:11</p>
+                                                                                        </div>
+                                                                                        <div class="activity-title"  data-top="#a596d7" data-bottom="#a5559b">
+                                                                                            <p data-slot="13:42">Lunch</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="section">
+                                                                                    <div class="card-icon-content">
+                                                                                        <div class="icon">
+                                                                                            <img src="img/food.png" alt="">
+                                                                                        </div>
+                                                                                        <div class="time">
+                                                                                            <p class="time-start">07:58</p>
+                                                                                            <p class="time-end">07:32</p>
+                                                                                        </div>
+                                                                                        <div class="activity-title"  data-top="#a596d7" data-bottom="#a5559b">
+                                                                                            <p data-slot="07:58">Breakfast</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="section">
+                                                                                    <div class="card-icon-content">
+                                                                                        <div class="icon">
+                                                                                            <img src="img/shower.png" alt="">
+                                                                                        </div>
+                                                                                        <div class="time">
+                                                                                            <p class="time-start">07:32</p>
+                                                                                            <p class="time-end">07:15</p>
+                                                                                        </div>
+                                                                                        <div class="activity-title"  data-top="#a596d7" data-bottom="#a5559b">
+                                                                                            <p data-slot="07:32">Shower</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="stats-detail transport">
+                                                                        <!--    <div class="division-day"></div> -->
+                                                                            <div class="activity color-b">
+                                                                                <div class="section">
+                                                                                    <div class="card-icon-content">
+                                                                                        <div class="icon">
+                                                                                            <img src="img/car.png" alt="">
+                                                                                        </div>
+                                                                                        <div class="time">
+                                                                                            <p class="time-start">20:30</p>
+                                                                                            <p class="time-end">20:02</p>
+                                                                                        </div>
+                                                                                        <div class="activity-title"  data-top="#a596d7" data-bottom="#a5559b">
+                                                                                            <p data-slot="20:30">Vehicle</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                                <div class="section">
+                                                                                    <div class="card-icon-content">
+                                                                                        <div class="icon">
+                                                                                            <img src="img/car.png" alt="">
+                                                                                        </div>
+                                                                                        <div class="time">
+                                                                                            <p class="time-start">08:27</p>
+                                                                                            <p class="time-end">07:58</p>
+                                                                                        </div>
+                                                                                        <div class="activity-title"  data-top="#a596d7" data-bottom="#a5559b">
+                                                                                            <p data-slot="08:27">Vehicle</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="stats-detail sports">
+                                                                            <!-- <div class="division-day"></div> -->
+                                                                            <div class="activity color-y">
+                                                                                
+                                                                                <div class="section">
+                                                                                    <div class="card-icon-content">
+                                                                                        <div class="icon">
+                                                                                            <img src="img/gym.png" alt="">
+                                                                                        </div>
+                                                                                        <div class="time">
+                                                                                            <p class="time-start">20:02</p>
+                                                                                            <p class="time-end">19:24</p>
+                                                                                        </div>
+                                                                                        <div class="activity-title"  data-top="#a596d7" data-bottom="#a5559b">
+                                                                                            <p data-slot="20:02">Gym</p>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>  
+
+                                                                            </div>
+                                                                            <div class="location">
+                                                                                <p>HOME</p>
+                                                                            </div>
+                                                                        </div>
+	                                                                </div>
+	                                                            </div>
+	                                                        </div>
+	                                                    </div> <!-- tab content -->
+                                                    </div>    
+                                                </div>       
+                                            </div>        
+                                        </div>
+                                    </div>            
+                                </div>    
+                            </div>
+                        </div>
+                        <div class="owl-outer">
+                            <div id="owl-demo" class="owl-carousel owl-theme">
+                                <div class="item">
+                                    <div class="left-section calender-section">
+                                        <div class="left-content calender-left-content">
+                                            <h4>CALENDAR</h4>
+                                            <p>Switch in and out of calendar view to get a broad summary of your time use or a precise chronology of your day.</p>  
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="left-section automated-section">
+                                        <div class="left-content calender-left-content">
+                                            <h4>Automated Tracking</h4>
+                                            <p>The app guesses what you’re doing. No timers to start and stop, a timeslot is added whenever you start a new activity.</p>  
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="left-section timelineedit-section">
+                                        <div class="left-content calender-left-content">
+                                            <h4>Edit</h4>
+                                            <p>In app, you can edit everything: activity, location, time, insert or merge. But hopefully, you will barely need to!</p>  
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="right-section anayltics-section">
+                                        <div class="right-content">
+                                            <h4>Analytics</h4>
+                                            <p>Get the precise breakdown of your time use into customisable categories, daily, weekly, monthly, or from the dawn of time.</p>  
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="right-section activitydetail-section">
+                                        <div class="right-content">
+                                            <h4>activity detail</h4>
+                                            <p>Observe general trends through the category view, or zoom in on the activity breakdowm for detailed information.</p>  
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item skyBlue">
+                                    <div class="right-section activitydetail-section">
+                                        <div class="right-content">
+                                            <h4>activity detail</h4>
+                                            <p>Observe general trends through the category view, or zoom in on the activity breakdowm for detailed information.</p>  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+                <div class="col-md-4 col-md-4-custom col-sm-4 col-right">
+                    <div class="right-section anayltics-section">
+                        <div class="right-content">
+                            <h4>Analytics</h4>
+                            <p>Get the precise breakdown of your time use into customisable categories, daily, weekly, monthly, or from the dawn of time.</p>  
+                            <div class="dotted-image-calender">
+                                <img src="img/analytics-dotted.png" alt="" class="">
+                            </div>
+                        </div>
+                    </div>                        
+                    <div class="right-section activitydetail-section">
+                        <div class="right-content">
+                            <h4>activity detail</h4>
+                            <p>Observe general trends through the category view, or zoom in on the activity breakdowm for detailed information.</p>  
+                            <div class="dotted-image-calender">
+                                <img src="img/activitydetail-dotted.png" alt="" class="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-section analyticshistory-section">
+                        <div class="right-content">
+                            <h4>Analytics history</h4>
+                            <p>View a category or activity evolution over time, discover your life patterns and work on your progression curve!</p>  
+                            <div class="dotted-image-calender">
+                                <img src="img/analyticshistory-dotted.png" alt="" class="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 bottom-text">
+                    <p><strong>5</strong> discoveries left to be made</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="owl-carousel/owl.carousel.js"></script>
+    <script>
+
+        var alreadyAdjusted = false;
+    	function checkStatsSize() {
+    		contentHeight = $('.tab-content').height();
+    		curTop = $('.tab-content').css('top');
+    		curTop = curTop.split('px');
+            curTop = curTop[0];
+    		parentHeight = $('.tab-content').parent().height();
+    		console.log(curTop, parentHeight, contentHeight);
+    		movableUp = parentHeight - curTop;
+    		if(movableUp < contentHeight) {
+    			$('.box.down').show()
+    		} else {
+    			$('.box.down').hide()
+    		}
+
+    		if(curTop < 0) {
+    			$('.box.up').show()
+    		} else {
+    			$('.box.up').hide()
+    		}
+
+    	}
+
+        (function($){
+
+            var d = new Date();
+            var n = d.getHours();
+            var m = d.getMinutes();
+            if(n == '0') { 
+                n = '00'; 
+                $('.placeholder-slot').show();
+                
+            }
+            $('.badge.smartertime').text(n+':'+m);
+            $('#device-time-top').text(n+':'+m);
+
+            console.log('Hour: '+n, 'Minute: '+m);
+
+            $('.data-hour').each(function(){
+                slotHour = $(this).data('hour');
+                slotHour = slotHour.split(':');
+                slotMinute = slotHour[1];
+                slotHour = slotHour[0];
+
+                currentHour = n;
+                currentMinute = m;
+
+                if(slotHour > currentHour) {
+                    moveSlot($(this));//$(this).hide();
+                } else if (slotHour == currentHour) {
+                    if(slotMinute > currentMinute) {
+                        moveSlot($(this));//$(this).hide();
+                    }
+                }
+
+            })
+
+            function moveSlot(slot) {
+                if(slot.hasClass('outer-section')) {
+                    slot.appendTo('#timline');
+                    //$('.endTimelineDaynote').appendTo('#timline');
+                } else if(slot.hasClass('calendar-act')) {
+                    slot.remove();
+                }
+            }
+
+            $(window).on("load",function(){
+                if($(window).width() > 949) {
+                    $("#content-1,#content-2").addClass('mCustomScrollbar');
+                      $("#content-1,#content-2").mCustomScrollbar({
+                            autoHideScrollbar:true,
+                            theme:"minimal"
+                        });
+                } 
+            });
+
+            $('#accordion').on('hidden.bs.collapse', function () {
+			  // do something…
+			  checkStatsSize();
+			})
+
+			$('#accordion').on('shown.bs.collapse', function () {
+			  // do something…
+			  checkStatsSize();
+			})
+
+
+            $('.box a.down').on('click',function(){
+                $('#content-1, #content-2').css({overflow: 'hidden', position: 'relative'});
+                $('.tab-content').css('position', 'absolute');
+                curTop = $('.tab-content').css('top');
+                console.log(curTop);
+                curTop = curTop.split('px');
+                curTop = curTop[0];
+                tabHeight = $('.tab-content').height();
+                parentHeight = $('.tab-content').parent().height();
+                if(tabHeight < 1) {
+                	tabHeight = $('.tab-content.details').height();
+                	parentHeight = $('.tab-content.details').parent().height();
+                	$('.box.up').css('top', '34px');
+                } else {
+                	$('.box.up').css('top', '75px');
+                }
+
+				console.log(curTop, tabHeight, parentHeight);
+                parentHeightSeventyFive = parentHeight / 1.5;
+                newTop = (parentHeightSeventyFive + (curTop * -1));
+				//newTop = tabHeight - parentHeightSeventyFive - (curTop * -1);
+                //console.log(curTop, tabHeight, parentHeightSeventyFive);
+
+                if(newTop >= (tabHeight - parentHeight)) {
+                	newTop = (tabHeight - parentHeight) + 6;
+                	$(this).parents('.box').hide();
+                }
+                if(tabHeight > (parentHeight - 5) ) {
+                $('.box.up').show();
+                //console.log('new Top: ', newTop);
+               // if( )
+            	    $('.tab-content').css('top', 0-newTop);
+            	}
+            	return false;
+            });
+
+			$('.box a.up').on('click',function(){
+                $('#content-1, #content-2').css({overflow: 'hidden', position: 'relative'});
+                $('.tab-content').css('position', 'absolute');
+                curTop = $('.tab-content').css('top');
+                console.log(curTop);
+                curTop = curTop.split('px');
+                curTop = curTop[0];
+                tabHeight = $('.tab-content').height();
+                parentHeight = $('.tab-content').parent().height();
+                if(tabHeight < 1) {
+                	tabHeight = $('.tab-content.details').height();
+                	parentHeight = $('.tab-content.details').parent().height();
+                }
+                parentHeightSeventyFive = parentHeight / 1.5;
+                newTop = curTop * 1 + parentHeightSeventyFive * 1;
+                //console.log(curTop, tabHeight, parentHeightSeventyFive);
+
+                if(newTop > 1) {
+                	newTop = 0;
+                	$(this).parents('.box').hide();
+                }
+
+                $('.box.down').show();
+                //console.log('new Top: ', newTop);
+              
+            	$('.tab-content').css('top', newTop);
+
+            	return false;
+            });
+
+            $("#timline .activity-title").click(function(){
+                if($(this).hasClass('smartertime')) return false;
+                $('.activity-title').removeClass('clicked');
+                $(this).addClass('clicked');
+                activityIndex = $('.activity-title').index($(this));
+                
+                if(activityIndex == 1) $(this).data('top', '#503b6b');
+
+                $(".edit-section").hide();
+                $('.section > div').show();
+                $('.section > div.time').css('display', 'inline-block');
+                color = $(this).children('p').css('color');
+                activity = $(this).children('p').text();
+                
+
+                topBorder = $(this).data('top');
+                bottomBorder = $(this).data('bottom');
+                console.log(topBorder, bottomBorder);
+
+                $(this).parents('#timline .section')
+                .append($('.edit-section'))
+                .children('.edit-section')
+                .toggle();
+
+                $(this).parents('#timline .section')
+                .children('.icon, .time, .activity-title').hide();
+
+                $('.activity-edit')
+                .val(activity)
+                .css('color',color);
+
+                place = $(this).parents('.outer-section').find('.location').children('p').text();
+                console.log(place);
+                $('.location-edit')
+                .val(place)
+                .css('color','#503b6b');
+
+
+                $('.edit-section > div').css('border-top-color',topBorder);
+                $('.edit-section > div').css('border-bottom-color',bottomBorder);
+                icon = activity.split(' ');
+                icon = 'img/'+icon[0].toLowerCase()+'-c.png';
+                $('.edit-time-icon').find('img').attr('src',icon);
+                $(this).parents('.section > div').hide();
+                if( $(this).parent().parent().prev().find('.time').length < 1)
+                    $(this).parents('.outer-section').prev().find('div.time .badge').hide();
+
+                $(this).parent().parent().prev().find('.time').hide();
+                $(this).parent().prev().find('.time').hide();
+            });
+            $(".detail-page").click(function(){
+                $("#main-tab-container").hide();
+                $("#detail-container").show();
+                $(".box.up").hide();
+                $(".box.down").show();
+                $('.tab-content.details').css('top', 0);
+                category = $(this).parents('.panel').attr('rel');
+                categoryName = $(this).parents('.panel').find('p.detail-page').text().toLowerCase();
+                barBackandHeading = '<span class="arrow-back"><img src="img/left-arrw.png" alt=""></span> '+categoryName;
+                $('#detail-container h3').html(barBackandHeading);
+                $('.card-content .stats-detail').hide();
+                $('.card-content .stats-detail.'+category).show();
+                $('.charts-img').attr('src','img/StatsCharts/charts-'+category+'.png');
+               // colorPost = 'color-'+colorPost[1];
+
+                return false;
+            });
+            $("#detail-container").on('click','.arrow-back', function(){
+                $("#main-tab-container").show();
+                $("#detail-container").hide();
+                $(".box.up").hide();
+                $(".box.down").show();
+                $('.tab-content').css('top', 0);
+            });
+            $('.check').click(function(){
+                $(".edit-section").hide();
+                $('.section > div').show();
+                $('.section > div.time').css('display', 'inline-block');
+                p = $(this).parents('.activity').find('.activity-title.clicked').children('p');
+                curTitle = p.text();
+                newTitle = $('.activity-edit').val();
+                p.text(newTitle);
+                
+                hour = $(this).parents('.activity').find('.activity-title.clicked').parents('.data-hour').data('hour');
+
+                calText = $('.calendar-act[data-hour="'+hour+'"] p').text();
+                if(calText.trim().length > 2) $('.calendar-act[data-hour="'+hour+'"] p').text(newTitle);
+                $('p[data-slot="'+hour+'"], p[data-slot="0'+hour+'"]').text(newTitle);
+
+                newIcon = newTitle.split(' ');
+                icon = 'img/'+newIcon[0].toLowerCase()+'.png';
+                iconC = 'img/'+newIcon[0].toLowerCase()+'-c.png';
+                $('p[data-slot="'+hour+'"], p[data-slot="0'+hour+'"]').parents('.card-icon-content').find('img').attr('src', icon);
+                $(this).parents('.activity').find('.activity-title.clicked').siblings('div.icon').children('img').attr('src',icon);
+
+                curTitleFirst = curTitle.split(' ');
+                curTitleFirst = curTitleFirst[0].toLowerCase();
+
+                p.removeClass(curTitleFirst);
+                p.addClass(newIcon[0].toLowerCase());
+                
+                numActivity = $('p.p.'+curTitleFirst).length;
+
+                barP = $('.detail-page .icon-bar p.'+curTitleFirst);
+
+                if(newTitle != curTitle) {
+                    newPng = 'img/'+newIcon[0].toLowerCase()+'-c.png';
+                    if(numActivity < 1) {
+                         
+                         newTitleFirst = newIcon[0].toLowerCase();
+                         if($('.detail-page .icon-bar p.'+newTitleFirst).length == 0) {
+
+                            barP.addClass(newIcon[0].toLowerCase);
+                            barP.text(newTitle);
+                            barP.siblings('span').children('img').attr('src', newPng);
+                            barP.removeClass(curTitleFirst);
+                        } else {
+                            parent = barP.parents('a.detail-page');
+                            newPrcnt = parent.find('h3').text();
+                            newPrcnt = newPrcnt.replace('%','');
+                            parent.remove();
+                            parent = $('.detail-page .icon-bar p.'+newIcon[0].toLowerCase()).parents('a.detail-page');
+                            curPrcnt = parent.find('h3').text();
+                            curPrcnt = curPrcnt.split('%');
+                            curPrcntInt = curPrcnt = curPrcnt[0] * 1;
+                            curPrcnt = curPrcnt + newPrcnt * 1;
+                            parent.find('h3').text(curPrcnt+'%');
+                            parent.find('img').attr('src', iconC);
+
+                            curwid = parent.find('.progress-bar').css('width');
+                            curwid = curwid.split('%');
+                            curwid = curwid[0];
+                            parent.find('.progress-bar').css('width', curwid * (curPrcnt / curPrcntInt) + '%');
+                        }
+
+                    } else {
+                        parent = barP.parents('a.detail-page');
+                        curPrcnt = parent.find('h3').text();
+                        curPrcnt = curPrcnt.split('%');
+                        curPrcntInt = curPrcnt = curPrcnt[0];
+                        newPrcnt = curPrcnt / (numActivity+1);
+                        newPrcnt = Math.floor(newPrcnt);
+                        curPrcnt = curPrcnt - newPrcnt;
+                        parent.find('h3').text(curPrcnt+'%');
+                        //parent.find('img').attr('src', iconC);
+                        curwid = parent.find('.progress-bar').css('width');
+                        curwid = curwid.split('%');
+                        curwid = curwid[0];
+                        parent.find('.progress-bar').css('width', curwid * (curPrcnt / curPrcntInt) + '%');
+                        newTitleFirst = newIcon[0].toLowerCase();
+                        
+
+                        clone = parent.clone();
+                        clone.find('p.'+curTitleFirst).addClass(newIcon[0].toLowerCase()).removeClass(curTitleFirst).text(newTitle);
+                        clone.find('h3').text(newPrcnt+'%');
+                        clone.find('img').attr('src', iconC);
+                        clonePrcnt = curwid - (curwid * (curPrcnt / curPrcntInt));
+
+                        clone.find('.progress-bar').css('width', Math.floor(clonePrcnt) + '%');
+                        clone.insertAfter(parent);
+                    }
+                }
+
+                $(this).parents('.outer-section').find('.location').children('p').text($('.location-edit').val());
+                $('div.time .badge').show();
+                $('div.time').css('display','inline-block');
+
+                return false; // prevent from calling .edit-section click event
+            });
+            $('.edit-section').on('click', function(){
+                    console.log('edit section click worked');
+                    parClicked = $(this).parents('.activity').find('.activity-title.clicked');
+                    
+                    if(parClicked.attr('alt')) {
+
+                        act1 = $('.activity-edit').val();
+                        
+                        act2= $('.activity-edit').parents('.activity').find('.activity-title.clicked').attr('alt');
+
+                        $(this).parents('.activity').find('.activity-title.clicked').attr('alt', act1);
+                        if($('.activity-edit').val() == act1)
+                            $('.activity-edit').val(act2);
+                        else
+                            $('.activity-edit').val(act1);
+                    }
+
+
+
+                    icon = $('.activity-edit').val().toLowerCase();
+                    icon = icon.split(' ');
+                    icon = 'img/'+icon[0]+'-c.png';
+                    console.log(icon);
+                    $('.edit-time-icon span img').attr('src', icon);
+
+                    loc1 = $('.location-edit').val();
+                    loc2= $(this).parents('.outer-section').find('.location').attr('alt');
+                    if(!loc2) return false;
+
+                    $(this).parents('.outer-section').find('.location').attr('alt', loc1);
+
+
+                    if($('.location-edit').val() == loc1)
+                        $('.location-edit').val(loc2);
+                    else
+                        $('.location-edit').val(loc1);
+                
+
+                return false;
+            });
+            $(".nav-tabs li a[aria-controls=timeline]").click(switchVisible);
+            $(".nav-tabs li a[aria-controls=stats]").click(inactivetimeline2);
+            $(".nav-tabs li a[aria-controls=goals]").click(inactivetimeline);
+            $(".nav-tabs li a[aria-controls=map]").click(inactivetimeline);
+
+        })(jQuery);
+        function inactivetimeline () {
+            // body...
+            if($(window).width() < 949) {
+                 $('.tab-content').css('top', 0);
+            }
+            $(".nav-tabs li a[aria-controls=timeline]").attr('rel','inactive');
+            $('.box').hide();
+         
+        }
+        function inactivetimeline2 () {
+            // body...
+            if($(window).width() < 949) {
+                 $('.tab-content').css('top', 0);
+            }
+            $(".nav-tabs li a[aria-controls=timeline]").attr('rel','inactive');
+
+            if($(window).width() < 949)
+                $('.box.down').show();
+        }
+        function switchVisible() {
+            if($(window).width() < 949) {
+                 $('.tab-content').css({top: 0, position: 'absolute'});
+                 $('#content-1, #content-2').css('position', 'relative');
+            }
+            $('.box.down').show();
+            $('.mCSB_container').css('height', 'auto');
+            if($(".nav-tabs li a[aria-controls=timeline]").attr('rel') == 'active')
+            {
+                if (document.getElementById('timline')) {
+
+                    if (document.getElementById('timline').style.display == 'none') {
+                        $('a[aria-controls=timeline]').text('TIMELINE');
+                        document.getElementById('timline').style.display = 'block';
+                        document.getElementById('calender').style.display = 'none';
+                    }
+                    else {
+                        
+                        $('a[aria-controls=timeline]').text('CALENDAR');
+                        document.getElementById('timline').style.display = 'none';
+                        document.getElementById('calender').style.display = 'block';
+
+                        $('#mCSB_1_scrollbar_vertical').hide();
+                        parHeight = $('#content-1').height();
+                        $('#calender').css('height', parHeight);
+            			$('.box').hide();
+
+                        if(!alreadyAdjusted)
+                            getCalendarheightRight();
+                    }
+                }
+            } else {
+                $(".nav-tabs li a[aria-controls=timeline]").attr('rel','active');
+            }
+        }
+
+    function getCalendarheightRight() {
+        alreadyAdjusted = true;
+        calHeight = $('.calender-detail-1').height();
+        numElements = $('.calender-detail-1 .color-duration').length;
+        screenHeight = $('#content-1').height();
+        additionalHeight = screenHeight - calHeight;
+        additionalDivided = additionalHeight / numElements;
+        if(additionalHeight > 1) {
+
+            $('.color-duration').each(function(){
+                curHeight = $(this).height();
+                newHeight = curHeight + additionalDivided;
+                $(this).css('height', newHeight);
+            });
+        } else {
+            $('.netflix .calender-activity-name p').css('line-height', '1.5em');
+            curHeight = $('.color-duration.sleep').height();
+            
+            //console.log(curHeight, newHeight, additionalDivided);
+            netFlix = $('.netflix.newsBrowsing .color-duration.reading').height();
+            $('.netflix.newsBrowsing .color-duration.reading').css('height', netFlix/3);
+            netFlix = (netFlix / 3) * 2;
+            newHeight = curHeight + additionalHeight + netFlix;
+            $('.color-duration.sleep').css('height', newHeight);
+
+            $('.calender-duration .first-time').css('margin-bottom', 0);
+        }
+
+        durationHeight  = $('.calender-duration').height();
+        durationShortBy = screenHeight - durationHeight;
+        totalDurationDivs = $('.calender-duration .day-note').length - 1;
+        durationDivided = durationShortBy / totalDurationDivs;
+        $('.calender-duration .day-note').each(function(){
+            curHeight = $(this).height();
+            newHeight = curHeight + durationDivided;
+            $(this).css('height', newHeight); 
+        });
+
+        console.log(durationHeight, screenHeight, durationShortBy, totalDurationDivs, durationDivided);
+    }
+
+       function fix_screen_size(){
+            dscreen = $('.screen').height()
+                heading = $('.heading-section').height();    
+                tabs = $('.nav.nav-tabs').height();
+                pad = $('.heading-section').css('padding-top');
+                pad = pad.split('px');
+                pad = pad[0] * 2;
+                console.log('screen: '+dscreen+' heading: '+heading+' tabs: '+tabs+ ' pad: '+ pad);
+                scroll_height = dscreen - heading - tabs - pad;
+                content2Height = dscreen-heading-pad;
+                $('#content-1').css('height',scroll_height);
+                $('#content-2').css('height',content2Height);
+        };
+    $(document).ready(function() {
+
+        fix_screen_size();
+        
+        $(window).resize(function(){
+            fix_screen_size();
+        })
+      //Sort random function
+      function random(owlSelector){
+        owlSelector.children().sort(function(){
+            return Math.round(Math.random()) - 0.5;
+        }).each(function(){
+          $(this).appendTo(owlSelector);
+        });
+      }
+      
+        $("#owl-demo").owlCarousel({
+            autoPlay: 3000, //Set AutoPlay to 3 seconds
+            items : 1,
+            itemsDesktop : [1199,1],
+            itemsDesktopSmall : [979,1],
+            itemsTablet : [768,1],
+            itemsMobile : [479,1],
+            navigation: true,
+            navigationText: [
+            "<i class='fa fa-caret-left'></i>",
+            "<i class='fa fa-caret-right'></i>"
+            ],
+            //Call beforeInit callback, elem parameter point to $("#owl-demo")
+            beforeInit : function(elem){
+                random(elem);
+            }
+      
+        });
+
+
+        var d1 = new Date();
+        $('.datetoday, .stats-details').text(dateFormatted(d1));
+        $('.dateyesterday').text(yesterdayDate(d1));
+
+    });
+    
+    function dateFormatted(date) {
+        date = date + '';
+        date = date.split(' ');
+        fullname = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+        shortname = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']; 
+        
+        
+        date = fullname[shortname.indexOf(date[0])]+' '+date[2]+' '+date[1];
+        return date;
+    }
+
+    function yesterdayDate() {
+        var todayTimeStamp = +new Date; // Unix timestamp in milliseconds
+        var oneDayTimeStamp = 1000 * 60 * 60 * 24; // Milliseconds in a day
+        var diff = todayTimeStamp - oneDayTimeStamp;
+        var yesterdayDate = new Date(diff);
+        //var yesterdayString = yesterdayDate.getFullYear() + '-' + (yesterdayDate.getMonth() + 1) + '-' + yesterdayDate.getDate();
+        
+        return dateFormatted(yesterdayDate);
+
+    }
+
+    </script>
+        
+
+
+</body>
+
+</html>

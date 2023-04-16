@@ -1,0 +1,26 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 525 1512" width="525" height="1512">
+	<title>mobile-value-bg-svg</title>
+	<defs>
+		<linearGradient id="grd1" gradientUnits="userSpaceOnUse"  x1="78.167" y1="143.275" x2="230.674" y2="1262.56">
+			<stop offset="0" stop-color="#7dffd4"  />
+			<stop offset="1" stop-color="#26b3bc"  />
+		</linearGradient>
+		<linearGradient id="grd2" gradientUnits="userSpaceOnUse"  x1="258.777" y1="1008.47" x2="411.284" y2="1785.776">
+			<stop offset="0" stop-color="#7dffd4"  />
+			<stop offset="1" stop-color="#26b3bc"  />
+		</linearGradient>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { opacity: 0.271;fill: url(#grd1) } 
+		.shp1 { opacity: 0.22;fill: url(#grd2) } 
+	</style>
+	<g id="Group_3248">
+		<g id="Layer">
+			<path id="Path_1791-2" class="shp0" d="M-12.7 0C-12.7 0 421.94 209.86 332.33 552.63C242.71 895.4 101.5 342.77 55.33 482.67C9.17 622.58 120.51 699.53 112.36 804.46C104.21 909.39 -12.7 853.43 -12.7 853.43L-12.7 0Z" />
+		</g>
+		<g id="Layer">
+			<path id="Path_1792-2" class="shp1" d="M525 1512C525 1512 90.36 1366.26 179.98 1128.22C269.59 890.18 410.81 1273.96 456.97 1176.8C503.14 1079.64 391.8 1026.2 399.95 953.33C408.09 880.46 525 919.32 525 919.32L525 1512Z" />
+		</g>
+	</g>
+</svg>

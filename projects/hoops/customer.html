@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+		<title>Customers List</title>
+		<!--Import Material Icon Font-->
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--Import Catamaran Font-->
+		<link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+		<!--Import materialize.css-->
+		<link type="text/css" rel="stylesheet" href="sass/hoops-crm.css"  media="screen,projection"/>
+		<link type="text/css" rel="stylesheet" href="sass/nouislider.css"  media="screen,projection"/>
+		<!--Let browser know website is optimized for mobile-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+    <body class="hoops-UIkit grey body-light">
+
+	    <!-- add contacts -->
+		<div id="addContacts" class="modal globalModalStyle">
+		    <div class="modal-content">
+		    	<div class="header-and">
+		    		<h3>Add contacts</h3>
+		    	</div>
+
+		    	<div class="form-wrapper">
+		    		<form class="add-decoration-frm">
+		    			<div class="inner-form">
+			    			<div class="field row">
+							  	<div class="input-field clearfix">
+							  		<div class="col l6 no-padding-left">
+							  			<span class="input-label">First name</span>
+						  				<input type="text" placeholder="Edward" class="validate" name="">
+							  		</div>
+
+							  		<div class="col l6 no-padding-right">
+							  			<span class="input-label">Last name</span>
+							  			<input type="text" placeholder="Edward" class="validate" name="">
+							  		</div>
+							    </div>
+			    			</div>
+			    			<div class="field">
+			    				<span class="input-label">Email</span>
+								<div class="input-field">
+								    <input type="email" placeholder="qwerty@teletworm.us" class="validate">
+								</div>
+			    			</div>
+			    			<div class="field">
+			    				<span class="input-label">Phone</span>
+								<div class="input-field">
+								    <input type="tel" placeholder="+1-253-256-9652" class="validate">
+								</div>
+			    			</div>
+
+			    		</div>	
+		    			<div class="form-buttons">
+	    					<a class="text-link grey-text text-lighten-7 modal-action modal-close" href="javascript:void(0)"><i class="material-icons icon-left">clear</i> Cancel</a><a class="waves-effect waves-light btn-flat btn-large light-blue white-text" href="javascript:void(0)">Save</a>
+		    			</div>
+		    		</form>
+		    	</div>
+		    	<span class="close-model modal-action modal-close"><i class="material-icons">close</i></span>
+		    </div>
+		</div>
+		<!-- //add contacts -->
+
+		<!-- Import customers -->
+		<div id="importCustomer" class="modal globalModalStyle">
+		    <div class="modal-content">
+		    	<div class="header-and">
+		    		<h3>Import / Export</h3>
+		    	</div>
+
+		    	<div class="form-wrapper">
+		    		<form class="add-decoration-frm">
+		    			<div class="inner-form">
+			    			<div class="field row">
+							  	<div class="drag-n-drop-wrapper">
+									<div class="drag-n-drop">
+										<div class="drop-file center-align">
+											<div class="upload-icon grey upload"><i class="material-icons">cloud_upload</i></div>
+											<h4>Drag and drop</h4>
+											<p>your file here, or <a href="#">click to locate file</a></p>
+										</div>	
+									</div>
+							    </div>
+			    			</div>
+
+			    			<div class="field row">
+							  	<div class="input-field clearfix">
+							  		<div class="col l6 no-padding-left">
+							  			<a href="javascript:;" class="light-blue-text">Download CSV Template</a>
+							  		</div>
+
+							  		<div class="col l6 no-padding-right">
+							  			<a href="javascript:;" class="light-blue-text right">Export Customers to CSV</a>
+							  		</div>
+							    </div>
+			    			</div>
+
+			    		</div>
+		    			<div class="form-buttons">
+	    					<a class="text-link grey-text text-lighten-7 modal-action modal-close" href="javascript:void(0)"><i class="material-icons icon-left">clear</i> Cancel</a><a class="waves-effect waves-light btn-flat btn-large light-blue white-text" href="javascript:void(0)">Save</a>
+		    			</div>
+		    		</form>
+		    	</div>
+		    	<span class="close-model modal-action modal-close"><i class="material-icons">close</i></span>
+		    </div>
+		</div>
+		<!-- //Import customers -->
+
+	    <!-- add customer -->
+	    <div id="includedCustContent">
+	    	<div id="add_client" class="customModal full_screen">
+				<div class="modal-heading">
+					<h3>Add customers</h3>
+					<div class="flex right topActionCust">
+						<a class="text-link grey-text text-lighten-7 closeBtnCust" href="javascript:;"><i class="material-icons icon-left">clear</i> Cancel</a>
+						<a class="waves-effect waves-light btn-flat btn-large light-blue white-text" href="javascript:void(0)">Add</a>
+					</div>
+				</div>
+
+				<div class="modal-content">
+				  	
+				  	<div class="row flex">
+				  		<!-- left section -->
+				  		<div class="col l7 m7 flex customerForm">
+				  			<div class="card z-depth-1">				  				
+				  				<div class="icon_title">
+					  				<div class="left"><i class="material-icons light-blue-text left">person</i> Customer information</div>
+					  				<a href="#importCustomer" onclick="addContacts()" data-target="modal" class="light-blue-text right modal-trigger">Import / Export</a>
+					  				<div class="clear5"></div>
+				  				</div>
+				  				<!-- row start -->
+				  				<div class="row no_padding">				  					
+				  					<div class="col l6 no-padding-left">
+							  			<span class="label">Company name</span>
+							  			<input type="text" name="company-name">
+							  		</div>
+				  					<div class="col l6 no-padding-left">
+							  			<span class="label">Contact name</span>
+							  			<div class="clear"></div>
+							  			<div class="col s2 pad0"><select><option>Mr.</option><option>Ms.</option></select></div>
+							  			<div class="col s5"><input type="text" name="City/Town" placeholder="First name"></div>
+							  			<div class="col s5 pad0"><input type="text" name="City/Town" placeholder="last name"></div>	
+							  		</div>
+				  				</div>
+				  				<!-- row end -->
+
+				  				<!-- row start -->
+				  				<div class="row no_padding">				  					
+				  					<div class="col l6 no-padding-left">
+							  			<span class="label">Contact email</span>
+							  			<input type="text" name="email" placeholder="emilia@thinkpromotional.com.au">
+							  			<a href="javascript:;" class="light-blue-text addMore right"><i class="material-icons">add</i>Add more</a>
+							  		</div>
+				  					<div class="col l6 no-padding-left">
+							  			<span class="label">Contact number</span>
+							  			<input type="text" name="number" placeholder="+1-415-555-2671">
+							  			<a href="javascript:;" class="light-blue-text addMore right"><i class="material-icons">add</i>Add more</a>
+							  		</div>
+				  				</div>
+				  				<!-- row end -->
+
+				  				<!-- row start -->
+				  				<div class="row no_padding">				  					
+				  					<div class="col m3 s12 no-padding-left">
+							  			<span class="label">Minimum margin</span>
+							  			<input type="text" name="margin" placeholder="emilia@thinkpromotional.com.au">
+							  		</div>
+				  					<div class="col m3 s12 no-padding-left">
+							  			<span class="label">Sales discount</span>
+							  			<input type="text" name="discount" placeholder="+1-415-555-2671">
+							  		</div>
+							  		<div class="col m3 s12 no-padding-left">
+							  			<span class="label">Customer rep</span>
+							  			<select><option>Robert De Niro</option><option>Al Pacino</option></select>
+							  		</div>
+							  		<div class="col m3 s12 no-padding-left">
+							  			<span class="label">Found us how</span>
+							  			<select><option>Google search</option><option>Yahoo search</option></select>
+							  		</div>
+				  				</div>
+				  				<!-- row end -->
+
+				  				<!-- row start -->
+				  				<div class="row no_padding">				  					
+				  					<div class="col l12 no-padding-left">
+							  			<span class="label">Tags </span>
+							  			<input type="text" name="State" placeholder="emilia@thinkpromotional.com.au">
+							  			<div class="clear10"></div>
+							  			<div class="tags">
+								  			<a href="javascript:void(0)" class="tag-flat grey lighten-55">Fresh material<i class="material-icons removeTag">clear</i></a>
+								  			<a href="javascript:void(0)" class="tag-flat grey lighten-55">Fresh material<i class="material-icons removeTag">clear</i></a>
+								  			<a href="javascript:void(0)" class="tag-flat grey lighten-55">Fresh material<i class="material-icons removeTag">clear</i></a>
+							  			</div>
+							  		</div>
+				  				</div>
+				  				<!-- row end -->
+
+				  				<!-- row start -->
+				  				<div class="row no_padding">				  					
+				  					<div class="col l12 no-padding-left">
+							  			<span class="label">Profile </span>
+							  			<textarea id="textarea1" class="materialize-textarea" placeholder="Enter your text here..."></textarea>
+							  		</div>
+				  				</div>
+				  				<!-- row end -->
+
+				  			</div>
+				  		</div>
+				  		<!-- //left section -->
+
+				  		<!-- right section -->
+
+				  		<div class="col l5 m5 flex customerForm">  			
+				  			<div class="card z-depth-1">
+				  				
+				  				<div class="icon_title flex"><i class="material-icons light-blue-text">contact_mail</i> Address information</div>
+
+				  				<div class="row no_padding">				  					
+				  					<div class="col l6 no-padding-left">
+							  			<span class="label">Billing address</span>
+							  			<input type="text" name="Billing address">
+							  		</div>
+
+				  					<div class="col l6 no-padding-left">
+							  			<div class="filter-drop">
+								        	<span class="label">Country</span>
+										  	<div class="input-field">
+											    <select>
+											      <option value="1">USA</option>
+											      <option value="2">India</option>
+											    </select>
+										    </div>
+								        </div>
+							  		</div>
+				  				</div>
+
+				  				<div class="row no_padding">				  					
+				  					<div class="col l6 no-padding-left">
+							  			<span class="label">State</span>
+							  			<input type="text" name="State">
+							  		</div>
+				  					<div class="col l6 no-padding-left">
+							  			<span class="label">City/Town</span>
+							  			<input type="text" name="City/Town">
+							  		</div>
+				  				</div>
+
+				  				<div class="row no_padding">				  					
+				  					<div class="col l6 no-padding-left">
+							  			<span class="label">Postal code</span>
+							  			<input type="text" name="City/Town">
+							  		</div>
+				  				</div>
+
+				  				<div class="row no_padding">				  					
+			  						<div class="switch showAddress">
+	                                  <label>
+		                                  <input type="checkbox"><span class="lever"></span>
+		                                  <strong class="text-black">Use different address for shipping</strong>
+	                                  </label>
+	                                </div>
+				  				</div>
+
+				  				<!-- Shipping address -->
+				  				<div class="shippingAddress">
+				  					<div class="row no_padding">				  					
+					  					<div class="col l6 no-padding-left">
+								  			<span class="label">Shipping address</span>
+								  			<input type="text" name="Billing address">
+								  		</div>
+
+					  					<div class="col l6 no-padding-left">
+								  			<div class="filter-drop">
+									        	<span class="label">Country</span>
+											  	<div class="input-field">
+												    <select>
+												      <option value="1">USA</option>
+												      <option value="2">India</option>
+												    </select>
+											    </div>
+									        </div>
+								  		</div>
+					  				</div>
+
+					  				<div class="row no_padding">				  					
+					  					<div class="col l6 no-padding-left">
+								  			<span class="label">State</span>
+								  			<input type="text" name="State">
+								  		</div>
+					  					<div class="col l6 no-padding-left">
+								  			<span class="label">City/Town</span>
+								  			<input type="text" name="City/Town">
+								  		</div>
+					  				</div>
+
+					  				<div class="row no_padding">				  					
+					  					<div class="col l6 no-padding-left">
+								  			<span class="label">Postal code</span>
+								  			<input type="text" name="City/Town">
+								  		</div>
+					  				</div>
+				  				</div>
+				  				<!-- //Shipping address -->
+
+
+							    <div class="table_heading">Contacts (3)</div>
+
+							    <table class="table bordered" id="contacts_list">
+							    	<thead>
+							    		<tr>
+							    			<th>Name</th>
+							    			<th>Email</th>
+							    			<th>Phone</th>
+							    			<th width="50"></th>
+							    		</tr>
+							    	</thead>
+							    	<tbody>
+							    		<tr>
+							    			<td><input readonly="readonly" type="text" value="Keira Knightley"></td>
+							    			<td><input readonly="readonly" type="text" value="keira.knightley@gmail.com"></td>
+							    			<td><input readonly="readonly" type="text" value="125-532-9568"></td>
+							    			<td>
+							    				<div class="table_actions">
+							    					<a class="action blue-grey-text text-lighten-3" href="javascript:void(0)"><i class="material-icons">mode_edit</i></a>
+							    					<a class="action blue-grey-text text-lighten-3" href="javascript:void(0)"><i class="material-icons">delete</i></a>
+							    				</div>
+							    			</td>
+							    		</tr>
+							    		<tr>
+							    			<td><input readonly="readonly" type="text" value="Vin Diesel"></td>
+							    			<td><input readonly="readonly" type="text" value="vin.diesel@yahoo.com"></td>
+							    			<td><input readonly="readonly" type="text" value="125-458-625"></td>
+							    			<td>
+							    				<div class="table_actions">
+							    					<a class="action blue-grey-text text-lighten-3" href="javascript:void(0)"><i class="material-icons">mode_edit</i></a>
+							    					<a class="action blue-grey-text text-lighten-3" href="javascript:void(0)"><i class="material-icons">delete</i></a>
+							    				</div>
+							    			</td>
+							    		</tr>
+							    		<tr>
+							    			<td><input readonly="readonly" type="text" value="Matt Damon"></td>
+							    			<td><input readonly="readonly" type="text" value="matt.damon@gmail.com"></td>
+							    			<td><input readonly="readonly" type="text" value="235-512-852"></td>
+							    			<td>
+							    				<div class="table_actions">
+							    					<a class="action blue-grey-text text-lighten-3" href="javascript:void(0)"><i class="material-icons">mode_edit</i></a>
+							    					<a class="action blue-grey-text text-lighten-3" href="javascript:void(0)"><i class="material-icons">delete</i></a>
+							    				</div>
+							    			</td>
+							    		</tr>
+							    	</tbody>
+							    </table>
+
+							    <div class="flex right row_add_more">
+							    	
+							    	<a class="btn-flat white grey-border-light darken-01-text text-darken-01 modal-trigger" href="#addContacts" onclick="addContacts()" data-target="modal">Add more</a>
+
+							    </div>
+
+				  			</div>
+
+				  		</div>
+				  		<!-- //right section -->
+
+				  	</div>	
+
+				</div>
+
+				<div class="modal-footer">
+					<div class="row no_padding">
+						
+						<div class="col l6 m6 s6">
+							
+						</div>
+
+						<div class="flex right btnWrapperInc">
+							<a class="text-link grey-text text-lighten-7 closeBtnCust" href="javascript:;"><i class="material-icons icon-left">clear</i> Cancel</a>
+							<a class="waves-effect waves-light btn-flat btn-large light-blue white-text" href="javascript:void(0)">Add</a>
+						</div>
+
+					</div>  	
+				</div>
+			</div>
+	    </div>
+	    <!-- add customer -->
+
+
+    	<div class="main-wrapper">
+    		<!--*****   SIDEBAR NAVIGATION   *****-->
+            <div class="side-nav fixed white" id="main_navigation">
+
+            	<div class="logo">
+            		<a href="javascript:void(0)"><img src="images/logo.png" alt="hoops crm"/></a>
+            	</div>
+
+            	<div class="logo-small hide">
+            		<a href="javascript:void(0)"><img src="images/logo-small.png" alt="hoops crm"/></a>
+            	</div>
+            	<div class="current_user">
+            		<div class="name_user dropdown-button pointer" data-activates='user-dropdown' data-beloworigin="true">
+            			<span class="user_thumb">
+            				<img class="img-responsive" src="images/img-user.png">
+            			</span>
+            			<a class="user-log" href="javascript:void(0)">Kate Winslet <i class="material-icons">keyboard_arrow_down</i></a>
+	    			    <ul id='user-dropdown' class='dropdown-content'>
+						    <li><a href="javascript:void(0)"><i class="material-icons">account_circle</i>My Profile</a></li>
+						    <li class="divider"></li>
+						    <li><a href="javascript:void(0)"><i class="material-icons">https</i>Change Password</a></li>
+						    <li class="divider"></li>
+						    <li><a href="javascript:void(0)"><i class="material-icons">power_settings_new</i>Logout </a></li>
+					    </ul>
+            			
+            		</div>
+            	</div>
+
+	            <ul class="main-menu">
+					<li><a class="tooltipped" data-position="right" data-delay="50" data-tooltip="Dashboadrd" href="#/"><i class="material-icons">dashboard</i><span class="nav_link_text">Dashboard</span></a></li>
+					<li><a class="active tooltipped" href="customer.html" data-position="right" data-delay="50" data-tooltip="Customers"><i class="material-icons">person</i><span class="nav_link_text">Customers</span></a></li>
+					<li><a class="tooltipped" href="product-catalog.html" data-position="right" data-delay="50" data-tooltip="Catalogue"><i class="material-icons">view_list</i><span class="nav_link_text">Catalogue</span></a></li>
+					<li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Leads"><i class="material-icons">my_location</i><span class="nav_link_text">Leads</span></a></li>
+					<li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Quotes"><i class="material-icons">book</i><span class="nav_link_text">Quotes</span></a></li>
+					<li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Jobs"><i class="material-icons">assignment</i><span class="nav_link_text">Jobs</span></a></li>
+					<li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Calender"><i class="material-icons">today</i><span class="nav_link_text">Calender</span></a></li>
+					<li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Purchase Orders"><i class="material-icons">description</i><span class="nav_link_text">Purchase Orders</span></a></li>
+					<li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Purchase Orders"><i class="material-icons">view_carousel</i><span class="nav_link_text">Presentations</span></a></li>
+					<li><a class="tooltipped" href="#" data-position="right" data-delay="50" data-tooltip="Reports"><i class="material-icons">poll</i><span class="nav_link_text">Reports</span></a></li>
+					
+	            </ul>
+
+            </div>
+
+	        <header id="header">
+	               <nav class="navbar_header light-blue lighten-5 row">
+	                  <div class="nav-wrapper col s12">
+	                  <a href="#" data-activates="main_navigation" class="button-collapse"><i class="material-icons">menu</i></a>
+	                  	<div class="toggles">
+		                    <a href="#" class="toggle-sidebar hide-on-med-and-down"><i class="material-icons white-text">chevron_left</i></a>
+		                    <a href="#" class="expand-sidebar hide"><i class="material-icons white-text">menu</i></a>
+		                 </div> 
+
+	                    <ul id="nav-mobile" class="right">
+                    		<li class="dropMenu" id="search_place">	                      
+                        		<a class='search_button-open' href='#'>
+                           			<i class="material-icons white-text">search</i>
+                        		</a> 
+
+	                            <div class="input-field search_header">
+						          <input id="header-search" class="white" placeholder="Enter your search here..." id="search_header" type="text" class="validate">
+						          <i id="close-header-search" class="material-icons white-text grey-text text-lighten-8">search</i>
+						        </div>
+
+                     		 </li>
+
+							<li class="dropMenu">
+								<a class='dropdown-button' href='#' data-beloworigin="true" data-constrainWidth="false" data-alignment="right" data-activates='addCustomer'>
+									<i class="material-icons white-text">add_circle</i>
+								</a>
+								<div id='addCustomer' class='dropdown-content dropdown-eq'>
+									<ul>
+										<li><a href="#!"><i class="material-icons">person_add</i>Add Customers</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">my_location</i>Add Leads</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">receipt</i>Create Quotes</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">work</i>Schedule Jobs</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">event_note</i>Add to Calendar</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">library_add</i>Add Catalogue</a></li>
+									</ul>
+								</div>
+							</li>
+	                        <li class="dropMenu">
+								<a class='dropdown-button' href='#' data-beloworigin="true" data-constrainWidth="false" data-alignment="right" data-activates='setting'>
+									<i class="material-icons white-text">settings</i>
+								</a>
+								<div id='setting' class='dropdown-content dropdown-eq'>
+									<ul>
+										<li><a href="#!"><i class="material-icons">wb_incandescent</i>Decorations</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">group</i>Vendors</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">info</i>General</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">extension</i>Integrations</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">drafts</i>Email Templates</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">check_box</i>Job Tasks</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">person</i>Users</a></li>
+										<li class="divider"></li>
+										<li><a href="#!"><i class="material-icons">attach_money</i>Billing</a></li>
+									</ul>
+								</div>
+	                        </li>
+
+	                        <li class="relative">
+	                      		<a href="#" class='dropdown-button' href='#' data-beloworigin="true" data-constrainWidth="false" data-alignment="right" data-activates='notification'>
+	                  				<i class="material-icons white-text">notifications</i> <span class="notification-number pulse ">3</span>
+	                  			</a>
+								<ul id='notification' class='dropdown-content'>
+									<li>
+										<div class="notification_wrapper">
+											<ul class="clearfix">
+												<li>
+													<div class="notification_icon">
+														<span class="icon-noti purple">
+															<i class="material-icons white-text">my_location</i>
+														</span>
+													</div>
+
+													<div class="notification-text">
+														<p>Alexandra Jones <span class="grey-text text-lighten-7">added a new lead</span></p>
+														<a href="javascript:void(0)" class="light-blue-text text-base">Team info design company</a>
+														<span class="time-duration grey-text text-lighten-7">10 min ago</span>
+													</div>
+												</li>
+
+												<li>
+													<div class="notification_icon">
+														<span class="icon-noti grey lighten-9">
+															<i class="material-icons white-text">person</i>
+														</span>
+													</div>
+
+													<div class="notification-text">
+														<p>Sierra Dickinson <span class="grey-text text-lighten-7">is now added as a customer</span></p>
+														<a href="javascript:void(0)" class="light-blue-text text-base">Robbing Hoods Car Detailing</a>
+														<span class="time-duration grey-text text-lighten-7">2 hours ago</span>
+													</div>
+												</li>
+
+												<li>
+													<div class="notification_icon">
+														<span class="icon-noti yellow lighten-4">
+															<i class="material-icons white-text">work</i>
+														</span>
+													</div>
+
+													<div class="notification-text">
+														<p>Olivia Kelly <span class="grey-text text-lighten-7">created a job</span></p>
+														<a href="javascript:void(0)" class="light-blue-text text-base">Fresh Prince of Bel-Air</a>
+														<span class="time-duration grey-text text-lighten-7">20 min ago</span>
+													</div>
+												</li>
+
+												<li>
+													<div class="notification_icon">
+														<span class="icon-noti blue-grey darken-4">
+															<i class="material-icons white-text">receipt</i>
+														</span>
+													</div>
+
+													<div class="notification-text">
+														<p>Allison Faber <span class="grey-text text-lighten-7">created a quote.</span></p>
+														<a href="javascript:void(0)" class="light-blue-text text-base">Think Promotional</a>
+														<span class="time-duration grey-text text-lighten-7">7 July, 2017</span>
+													</div>
+												</li>
+												<li>
+													<div class="notification_icon">
+														<span class="icon-noti purple">
+															<i class="material-icons white-text">my_location</i>
+														</span>
+													</div>
+
+													<div class="notification-text">
+														<p>Kate Winslet <span class="grey-text text-lighten-7">added a new lead</span></p>
+														<a href="javascript:void(0)" class="light-blue-text text-base">Pen printing and T-shirts design</a>
+														<span class="time-duration grey-text text-lighten-7">12 July 2017</span>
+													</div>
+												</li>
+											</ul>
+										</div>
+									</li>		
+								</ul>
+                  		    </li>
+
+	                    </ul>
+	                  </div>
+	                </nav>
+	        </header>
+          <!--   /End Side Navbar  -->
+
+          <!--****  Mobile Search  ****-->
+          	<div class="responsive-search">
+          		<div class="input-field custom-search bordered white">
+			        <div class="input">
+			        	<i class="material-icons">search</i>
+			        	<input placeholder="Search here..." id="first_name" class="validate" type="text">
+			        </div>
+		        </div>
+          	</div>
+		  <!--****  /End Mobile Search  ****-->
+
+          <!--******  Main Content Starts   ******-->
+
+		    <main id="content_wrapper" class="product-catalog-wapper qoute-list-wrapper customer-list">
+			    <div class="prod-cata-wrap">
+			    	<!-- top action bar section -->
+			    	<div class="row row-padding filters-header">
+			    		<div class="col l4 m4 s12 flex">
+							<h3>Customers</h3>		
+			    		</div>
+
+			    		<div class="col l8 m8 s12 filter-right-catalog">
+			    			<div class="catalog-filters">
+			    				<div class="applied-filters">
+			    					<a href="javascript:void(0)" class="filter-chips grey lighten-55 grey-text text-lighten-56">Clear filter <i class="material-icons icon-left">clear</i></a>
+			    					<a href="javascript:void(0)" data-activates="filter-select" class="applied-filter button-collapse-right" onclick="hideoverlay()"><span class="show-applied-filter light-blue white-text">3</span><i class="material-icons">filter_list</i>Filter</a>
+
+			    					<!-- ** FILTERS TO SELECT ***  -->
+									<div id="filter-select" class="side-nav">	
+										<div class="filter-header">
+											<h2>Filter</h2>
+											<p>Select the following items to filter the customers</p>
+									        <div class="apply-flter-btns">
+									        	<a class="waves-effect btn-flat waves-light btn-large light-blue white-text">Apply</a>
+									        	<a href="javascript:void(0)" class="filter-chips grey lighten-55 grey-text text-lighten-56 right">Clear filter <i class="material-icons icon-left">clear</i></a>
+									        </div>
+										</div>
+
+								        <div class="filter-body">
+									        <div class="input-field search-bordered">
+										        <div class="input">
+										        	<input placeholder="Search company, contact" id="first_name" type="text" class="validate">
+										        </div>
+									        </div>
+
+									        <div class="filter-drop tags">
+									        	<h4><a href="javascript:void(0)">Tags <i class="material-icons">keyboard_arrow_up</i></a></h4>
+											  	<div class="input-field custom-dropdown">
+											  		<i class="material-icons dop-icon">keyboard_arrow_down</i>
+												    <select multiple="multiple">
+												      <option value="" disabled selected>Select</option>
+												      <option value="1">Option 1</option>
+												      <option value="2">Option 2</option>
+												      <option value="3">Option 3</option>
+												    </select>
+												    <div class="clear10"></div>
+												    <a href="javascript:void(0)" class="tag-flat grey lighten-55">Fresh material<i class="material-icons removeTag">clear</i></a>
+												    <a href="javascript:void(0)" class="tag-flat grey lighten-55">Fresh material<i class="material-icons removeTag">clear</i></a>
+											    </div>
+									        </div>
+									        <div class="filter-drop">
+									        	<h4><a href="javascript:void(0)">Product Category Purchased <i class="material-icons">keyboard_arrow_up</i></a></h4>
+											  	<div class="input-field custom-dropdown">
+											  		<i class="material-icons dop-icon">keyboard_arrow_down</i>
+												    <select multiple="multiple">
+												      <option value="" disabled selected>T-shirts</option>
+												      <option value="1">Option 1</option>
+												      <option value="2">Option 2</option>
+												      <option value="3">Option 3</option>
+												    </select>
+											    </div>
+									        </div>
+
+									        <div class="filter-drop">
+									        	<h4><a href="javascript:void(0)">Most recent order value<i class="material-icons">keyboard_arrow_up</i></a></h4>
+											  	<div class="range-slider">
+											  		 <div id="range-slider">
+													    <p class="range-field">
+													      <input type="range" id="test5" min="0" max="100" />
+													    </p>
+											  		 </div>
+											  		 <div class="rangeInput">
+											  		 	<input type="text" name="" value="50">
+											  		 	<input type="text" name="" value="100">
+											  		 </div>
+											    </div>
+									        </div>
+
+									        <div class="filter-drop pick-date">
+									        	<h4><a href="javascript:void(0)">Certain date<i class="material-icons">keyboard_arrow_up</i></a></h4>
+											  	<div class="input-field clearfix">
+											  		<div class="col l6 no-padding-left custom-picker">
+											  		<span>After</span>
+											  			<input type="text" class="datepicker" placeholder="10 Jul, 2017">
+											  		</div>
+
+											  		<div class="col l6 no-padding-right custom-picker">
+											  		<span>Before </span>
+										  				<input type="text" class="datepicker" placeholder="10 Jul, 2017">
+											  		</div>
+											    </div>
+									        </div>
+
+									        <div class="filter-drop">
+									        	<h4><a href="javascript:void(0)">Customer rep<i class="material-icons">keyboard_arrow_up</i></a></h4>
+											  	<div class="input-field custom-dropdown">
+											  		<i class="material-icons dop-icon">keyboard_arrow_down</i>
+												    <select>
+												      <option value="" disabled selected>Select</option>
+												      <option value="1">Johnny Depp</option>
+												      <option value="2">Al Pacino</option>
+												      <option value="2">Robert De Niro</option>
+												      <option value="2">Kevin Spacey</option>
+												    </select>
+											    </div>
+									        </div>
+
+
+											<div class="apply-flter-btns">
+											    <a class="waves-effect btn-flat waves-light btn-large light-blue white-text">Apply</a>
+											    <a href="javascript:void(0)" class="filter-chips grey lighten-55 grey-text text-lighten-56 right">Clear filter <i class="material-icons icon-left">clear</i></a>
+											</div>
+								        </div>
+										<span class="close-filters" onclick="closenav()"><i class="material-icons">close</i></span>
+
+									</div>
+									<!--***  /ENDS SELECT FILTERS  ***-->
+							        <div class="input-field search-bordered w-icon">
+								        <div class="input">
+								      		<i class="material-icons">search</i>
+								        	<input placeholder="Enter your search here..." id="first_name" type="text" class="white validate">
+								        </div>
+						        	</div>
+						        	<div class="add-quote-btn">
+						        		<a class="waves-effect btn-flat waves-light btn-large green darken-1 white-text addCust"><i class="material-icons left">add</i>Add new</a>
+						        	</div>
+			    				</div>
+			    			</div>
+			    		</div>
+			    	</div>
+			    	<!-- //top action bar section -->
+
+			    	<!--****   Products Starts    ****-->
+			    	<div class="row row-padding">
+						<div class="custom-table white clearfix">
+							<table class="bordered highlight responsive-table">
+								<thead>
+									<tr>
+										<th class="center-align">#</th>
+										<th>
+											<div class="flex">
+												<div class="user-icon invisible">
+													<span class="icon-img">
+														<img src="images/img.png"/>
+													</span>
+												</div>
+												<div class="sort-wrap">Company
+													<span class="sortin-icons">
+														  <i class="material-icons">keyboard_arrow_up</i>
+														  <i class="material-icons">keyboard_arrow_down</i>
+													</span>
+												</div>
+											</div>	
+										</th>
+										<th>
+											<div class="sort-wrap">Contact
+												<span class="sortin-icons">
+													  <i class="material-icons">keyboard_arrow_up</i>
+													  <i class="material-icons">keyboard_arrow_down</i>
+												</span>
+											</div>
+										</th>
+										<th>
+											<div class="sort-wrap">Email
+												<span class="sortin-icons">
+													  <i class="material-icons">keyboard_arrow_up</i>
+													  <i class="material-icons">keyboard_arrow_down</i>
+												</span>
+											</div>
+										</th>
+
+										<th>
+											<div class="sort-wrap">Phone
+												<span class="sortin-icons">
+													  <i class="material-icons">keyboard_arrow_up</i>
+													  <i class="material-icons">keyboard_arrow_down</i>
+												</span>
+											</div>
+										</th>
+										<th>
+											<div class="sort-wrap">Customer rep
+												<span class="sortin-icons">
+													  <i class="material-icons">keyboard_arrow_up</i>
+													  <i class="material-icons">keyboard_arrow_down</i>
+												</span>
+											</div>
+										</th>
+
+										<th class="center-align">Action</th>
+									</tr>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td class="center-align"><div>1</div></td>
+										<td>
+											<div class="flex">
+												<div class="user-icon">
+													<span class="icon-img">
+														<img src="images/img.png"/>
+													</span>
+												</div>
+												<a href="customer-detail.html">Think Promotional</a>
+											</div>
+										</td>
+										<td>
+											<div>Darth Vader <span class="label white grey-text more-options dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table-more'>3 more </span></div>
+											  <ul id='dropdown-table-more' class='dropdown-content more-options-list'>
+											    <li>
+											    	<p>Kate Winslet</p>
+											    	<p><a href="#!"><i class="material-icons">email</i>kate.winslet@gmail.com</a></p>
+											    	<p><a href="#!"><i class="material-icons">call</i>818-373-9057</a></p>
+											    </li>
+
+											    <li>
+											    	<p>Keanu Reeves</p>
+											    	<p><a href="#!"><i class="material-icons">email</i>keanu.reeves@gmail.com</a></p>
+											    	<p><a href="#!"><i class="material-icons">call</i>818-373-9057</a></p>
+											    </li>
+
+											    <li>
+											    	<p>Nicolas Cage</p>
+											    	<p><a href="#!"><i class="material-icons">email</i>nicolas.cage@gmail.com</a></p>
+											    	<p><a href="#!"><i class="material-icons">call</i>818-373-9057</a></p>
+											    </li>
+											  </ul>
+										</td>
+										<td>
+											<div>benjamin.askinas@gmail.com <span class="label white grey-text more-options dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table-more1'>2 more </span></div>
+											  <ul id='dropdown-table-more1' class='dropdown-content more-options-list'>
+											    <li>
+											    	<p><a href="#!">kate.winslet@gmail.com</a></p>
+											    	<p><a href="#!">nicolas.cage@gmail.com</a></p>
+											    </li>
+											  </ul>
+										</td>
+										<td>
+											<div>818-373-9057 <span class="label white grey-text more-options dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table-more2'>3 more </span></div>
+											  <ul id='dropdown-table-more2' class='dropdown-content more-options-list'>
+											    <li>
+											    	<p><a href="#!">125-512-6521</a></p>
+											    	<p><a href="#!">112-554-5546</a></p>
+											    	<p><a href="#!">659-856-5986</a></p>
+											    </li>
+											  </ul>
+											</td>
+										<td><div>Tom Hanks</div></td>
+										<td class="center-align icon-more">
+											<a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+											  <ul id='dropdown-table' class='dropdown-content'>
+											    <li><a href="#!"><i class="material-icons">email</i>Send email</a></li>
+											    <li><a href="#!"><i class="material-icons">remove_red_eye</i>View</a></li>
+											    <li><a href="#!"><i class="material-icons">local_printshop</i>Print Shipping Label</a></li>
+											    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+											    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+											    <li class="divider"></li>
+											  </ul>
+										</td>
+									</tr>
+									<tr>
+										<td class="center-align"><div>2</div></td>
+										<td>
+											<div class="flex">
+												<div class="user-icon">
+													<span class="icon-img">
+														<img src="images/img-1.png"/>
+													</span>
+												</div>
+												<a href="customer-detail.html">Hoops CRM</a>
+											</div>
+										</td>
+										<td><div>Brad</div></td>
+										<td><div>-</div></td>
+										<td><div>213-201-1561</div></td>
+										<td><div>Charlize Theron</div></td>
+										<td class="center-align icon-more">
+											<a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+											  <ul id='dropdown-table' class='dropdown-content'>
+											    <li><a href="#!"><i class="material-icons">email</i>Send email</a></li>
+											    <li><a href="#!"><i class="material-icons">remove_red_eye</i>View</a></li>
+											    <li><a href="#!"><i class="material-icons">local_printshop</i>Print Shipping Label</a></li>
+											    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+											    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+											    <li class="divider"></li>
+											  </ul>
+										</td>
+									</tr>
+									<tr>
+										<td class="center-align"><div>3</div></td>
+										<td>
+											<div class="flex">
+												<div class="user-icon">
+													<span class="icon-img">
+														<img src="images/img-2.png"/>
+													</span>
+												</div>
+												<a href="customer-detail.html">Fresh Prince of Bel-Air</a>
+											</div>
+										</td>
+										<td><div>Emilia Musgrave</div></td>
+										<td><div>dean.swartz@gmail.com</div></td>
+										<td><div>310-993-1891</div></td>
+										<td><div>Edward Norton</div></td>
+										<td class="center-align icon-more">
+											<a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+											  <ul id='dropdown-table' class='dropdown-content'>
+											    <li><a href="#!"><i class="material-icons">email</i>Send email</a></li>
+											    <li><a href="#!"><i class="material-icons">remove_red_eye</i>View</a></li>
+											    <li><a href="#!"><i class="material-icons">local_printshop</i>Print Shipping Label</a></li>
+											    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+											    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+											    <li class="divider"></li>
+											  </ul>
+										</td>
+									</tr>
+									<tr>
+										<td class="center-align"><div>4</div></td>
+										<td>
+											<div class="flex">
+												<div class="user-icon">
+													<span class="icon-img">
+														<img src="images/img-1.png"/>
+													</span>
+												</div>
+												<a href="customer-detail.html">Telemericorp</a>
+											</div>
+										</td>
+										<td><div>Will Smith</div></td>
+										<td><div>ajenkins@inhealthonline.com</div></td>
+										<td><div>310-579-5359</div></td></td>
+										<td><div>Charlize Theron</div></td>
+										<td class="center-align icon-more">
+											<a class="dropdown-button" data-beloworigin="true" href="javascript:void(0)" data-activates='dropdown-table'><i class="material-icons">more_horiz</i></a>
+											  <ul id='dropdown-table' class='dropdown-content'>
+											    <li><a href="#!"><i class="material-icons">email</i>Send email</a></li>
+											    <li><a href="#!"><i class="material-icons">remove_red_eye</i>View</a></li>
+											    <li><a href="#!"><i class="material-icons">local_printshop</i>Print Shipping Label</a></li>
+											    <li><a href="#!"><i class="material-icons">edit</i>Edit</a></li>
+											    <li><a href="#!"><i class="material-icons">delete</i>Delete</a></li>
+											    <li class="divider"></li>
+											  </ul>
+										</td>
+									</tr>
+										
+								</tbody>
+							</table>
+						</div>
+
+			    	</div>
+			    	<!--***   Products Ends    ***-->
+			    </div>
+	   		</main>
+
+          <!--******     /Main Content Ends      ******-->
+
+    	</div>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script type="text/javascript" src="js/bin/materialize.min.js"></script>
+      <script type="text/javascript" src="js/script.js"></script>
+      <script type="text/javascript" src="js/nouislider.min.js"></script>
+    </body>
+</html>
