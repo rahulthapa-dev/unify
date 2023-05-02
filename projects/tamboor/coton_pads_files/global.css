@@ -8452,7 +8452,7 @@ section#product_section {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-family: 'gotham_roundedbold';
+    /* font-family: 'gotham_roundedbold'; */
     color: var(--text-white);
     background-color: var(--color-primary);
     font-size: 36px;
