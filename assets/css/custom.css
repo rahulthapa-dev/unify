@@ -217,6 +217,7 @@ body {
     opacity: 1;
     color: #000;
     margin-bottom: 0;
+    font-weight: 400;
 }
 .team-member p {
     font-size: 14px;
@@ -430,8 +431,10 @@ div.footer-nav a{
     letter-spacing: 2px;
 }
 .section-title, h2 {
-    letter-spacing: 4px;
+    letter-spacing: 1px;
     text-transform: uppercase;
+    font-weight: normal;
+    font-size: calc(1.259375rem + 1.1125vw);
 }
 .navbar-nav  .nav-item {
     padding: 0 .5rem;
